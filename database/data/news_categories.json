@@ -1,0 +1,26 @@
+{
+  "announcement": {
+    "tab": "إعلانات رسمية",
+    "short": "إعلان رسمي",
+    "chipClass": "border-gold-500/50 bg-gold-500/10 text-gold-700",
+    "dotClass": "bg-gold-500"
+  },
+  "admissions": {
+    "tab": "مواعيد القبول والجامعات",
+    "short": "القبول والتسجيل",
+    "chipClass": "border-forest-600/40 bg-forest-50 text-forest-700",
+    "dotClass": "bg-forest-600"
+  },
+  "meetings": {
+    "tab": "ملتقيات الملحقيات",
+    "short": "فعاليات وملتقيات",
+    "chipClass": "border-teal-500/40 bg-teal-500/10 text-teal-700",
+    "dotClass": "bg-teal-500"
+  },
+  "partnerships": {
+    "tab": "شراكات استراتيجية",
+    "short": "شراكات استراتيجية",
+    "chipClass": "border-orange-500/40 bg-orange-500/10 text-orange-700",
+    "dotClass": "bg-orange-500"
+  }
+}

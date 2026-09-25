@@ -1,0 +1,272 @@
+[
+  {
+    "id": "mit",
+    "rank": 1,
+    "nameEn": "MIT",
+    "nameAr": "معهد ماساتشوستس للتقنية",
+    "city": "كامبريدج",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "هندسة",
+      "حاسب",
+      "ذكاء اصطناعي"
+    ],
+    "acceptance": "٪4"
+  },
+  {
+    "id": "imperial",
+    "rank": 2,
+    "nameEn": "Imperial College London",
+    "nameAr": "إمبريال كوليدج لندن",
+    "city": "لندن",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "طب",
+      "هندسة",
+      "طاقة"
+    ],
+    "acceptance": "٪14"
+  },
+  {
+    "id": "oxford",
+    "rank": 3,
+    "nameEn": "University of Oxford",
+    "nameAr": "جامعة أكسفورد",
+    "city": "أكسفورد",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "علوم سياسية",
+      "طب",
+      "قانون"
+    ],
+    "acceptance": "٪17"
+  },
+  {
+    "id": "harvard",
+    "rank": 4,
+    "nameEn": "Harvard University",
+    "nameAr": "جامعة هارفارد",
+    "city": "كامبريدج",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "طب",
+      "إدارة أعمال",
+      "قانون"
+    ],
+    "acceptance": "٪4"
+  },
+  {
+    "id": "cambridge",
+    "rank": 5,
+    "nameEn": "University of Cambridge",
+    "nameAr": "جامعة كامبريدج",
+    "city": "كامبريدج",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "رياضيات",
+      "هندسة",
+      "طب"
+    ],
+    "acceptance": "٪21"
+  },
+  {
+    "id": "stanford",
+    "rank": 6,
+    "nameEn": "Stanford University",
+    "nameAr": "جامعة ستانفورد",
+    "city": "ستانفورد",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "حاسب",
+      "ريادة أعمال",
+      "ذكاء اصطناعي"
+    ],
+    "acceptance": "٪4"
+  },
+  {
+    "id": "eth",
+    "rank": 7,
+    "nameEn": "ETH Zürich",
+    "nameAr": "المعهد الفدرالي السويسري للتقنية",
+    "city": "زيورخ",
+    "country": "سويسرا",
+    "region": "europe",
+    "fields": [
+      "فيزياء",
+      "هندسة",
+      "روبوتات"
+    ],
+    "acceptance": "٪27"
+  },
+  {
+    "id": "nus",
+    "rank": 8,
+    "nameEn": "National Univ. of Singapore",
+    "nameAr": "جامعة سنغافورة الوطنية",
+    "city": "سنغافورة",
+    "country": "سنغافورة",
+    "region": "asia",
+    "fields": [
+      "هندسة",
+      "تقنية حيوية",
+      "اقتصاد"
+    ],
+    "acceptance": "٪5"
+  },
+  {
+    "id": "ucl",
+    "rank": 9,
+    "nameEn": "UCL",
+    "nameAr": "يونيفرسيتي كوليدج لندن",
+    "city": "لندن",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "عمارة",
+      "أعصاب",
+      "تعليم"
+    ],
+    "acceptance": "٪30"
+  },
+  {
+    "id": "caltech",
+    "rank": 10,
+    "nameEn": "Caltech",
+    "nameAr": "معهد كاليفورنيا للتقنية",
+    "city": "باسادينا",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "فضاء",
+      "فيزياء",
+      "كيمياء"
+    ],
+    "acceptance": "٪6"
+  },
+  {
+    "id": "tokyo",
+    "rank": 32,
+    "nameEn": "University of Tokyo",
+    "nameAr": "جامعة طوكيو",
+    "city": "طوكيو",
+    "country": "اليابان",
+    "region": "asia",
+    "fields": [
+      "روبوتات",
+      "هندسة",
+      "طاقة هيدروجين"
+    ],
+    "acceptance": "٪34"
+  },
+  {
+    "id": "melbourne",
+    "rank": 13,
+    "nameEn": "University of Melbourne",
+    "nameAr": "جامعة ملبورن",
+    "city": "ملبورن",
+    "country": "أستراليا",
+    "region": "oceania",
+    "fields": [
+      "طب",
+      "قانون",
+      "علوم بيئة"
+    ],
+    "acceptance": "٪40"
+  },
+  {
+    "id": "tsinghua",
+    "rank": 20,
+    "nameEn": "Tsinghua University",
+    "nameAr": "جامعة تسينغهوا",
+    "city": "بكين",
+    "country": "الصين",
+    "region": "asia",
+    "fields": [
+      "هندسة",
+      "حاسب",
+      "اقتصاد"
+    ],
+    "acceptance": "٪2"
+  },
+  {
+    "id": "sorbonne",
+    "rank": 63,
+    "nameEn": "Sorbonne Université",
+    "nameAr": "جامعة السوربون",
+    "city": "باريس",
+    "country": "فرنسا",
+    "region": "europe",
+    "fields": [
+      "فلسفة",
+      "رياضيات",
+      "فنون"
+    ],
+    "acceptance": "٪32"
+  },
+  {
+    "id": "kaist",
+    "rank": 53,
+    "nameEn": "KAIST",
+    "nameAr": "المعهد الكوري المتقدم للعلوم والتقنية",
+    "city": "دايجون",
+    "country": "كوريا الجنوبية",
+    "region": "asia",
+    "fields": [
+      "ذكاء اصطناعي",
+      "روبوتات",
+      "مواد"
+    ],
+    "acceptance": "٪20"
+  },
+  {
+    "id": "toronto",
+    "rank": 21,
+    "nameEn": "University of Toronto",
+    "nameAr": "جامعة تورنتو",
+    "city": "تورونتو",
+    "country": "كندا",
+    "region": "na",
+    "fields": [
+      "طب",
+      "تعلم آلي",
+      "صحة عامة"
+    ],
+    "acceptance": "٪43"
+  },
+  {
+    "id": "delft",
+    "rank": 49,
+    "nameEn": "TU Delft",
+    "nameAr": "جامعة دلفت للتقنية",
+    "city": "دلفت",
+    "country": "هولندا",
+    "region": "europe",
+    "fields": [
+      "عمارة",
+      "مياه",
+      "طيران"
+    ],
+    "acceptance": "٪42"
+  },
+  {
+    "id": "sydney",
+    "rank": 18,
+    "nameEn": "University of Sydney",
+    "nameAr": "جامعة سيدني",
+    "city": "سيدني",
+    "country": "أستراليا",
+    "region": "oceania",
+    "fields": [
+      "تمريض",
+      "حقوق",
+      "زراعة ذكية"
+    ],
+    "acceptance": "٪30"
+  }
+]

@@ -1,0 +1,25 @@
+# قاعدة PostgreSQL اختيارية للمنصّة:
+#   docker compose up -d
+# ثم اضبط DB_CONNECTION=pgsql في ملف .env ونفّذ:
+#   php artisan migrate --seed
+services:
+  db:
+    image: postgres:16-alpine
+    container_name: kasp_postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: kasp
+      POSTGRES_PASSWORD: kasp_secret
+      POSTGRES_DB: kasp_platform
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U kasp -d kasp_platform"]
+      interval: 5s
+      timeout: 4s
+      retries: 10
+
+volumes:
+  pgdata:

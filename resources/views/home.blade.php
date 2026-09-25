@@ -1,0 +1,22 @@
+@extends('layouts.app')
+
+@section('content')
+    @include('home.navbar')
+    <main>
+        @include('home.hero')
+        @include('home.marquee')
+        @include('home.stats')
+        @include('home.tracks')
+        @include('home.matcher')
+        @include('home.universities')
+        @include('home.news')
+        @include('home.roadmap')
+        @include('home.vision')
+        @include('home.assistant')
+        @include('home.faq')
+    </main>
+    @include('home.footer')
+    @include('home.search')
+    @include('home.scroll-top')
+    @include('home.chat-widget')
+@endsection
