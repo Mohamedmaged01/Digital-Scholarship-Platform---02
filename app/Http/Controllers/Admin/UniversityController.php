@@ -8,6 +8,7 @@ use App\Support\DefaultContent;
 use App\Support\Lists;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 use Illuminate\Validation\Rule;
 use Illuminate\View\View;
 
@@ -30,7 +31,13 @@ class UniversityController extends Controller
 
     public function store(Request $request): RedirectResponse
     {
-        University::create($this->validated($request));
+        $data = $this->validated($request);
+        $base = Str::slug($data['name_en']) ?: Str::lower(Str::random(6));
+        $slug = $base;
+        for ($i = 2; University::where('slug', $slug)->exists(); $i++) {
+            $slug = "{$base}-{$i}";
+        }
+        University::create($data + ['slug' => $slug]);
 
         return redirect()->route('admin.universities.index')->with('status', 'تمت إضافة الجامعة');
     }

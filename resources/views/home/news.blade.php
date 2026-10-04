@@ -46,9 +46,15 @@
                 @foreach ($news as $n)
                     <article x-show="featuredId === {{ $n->id }}" @if (! $loop->first) x-cloak @endif
                              x-transition:enter="transition duration-500 ease-out-expo" x-transition:enter-start="translate-y-7 opacity-0" x-transition:enter-end="translate-y-0 opacity-100"
-                             class="pattern-star-dark grain group relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-forest-950 p-8 md:p-10">
+                             class="pattern-star-dark grain group relative flex h-full flex-col overflow-hidden rounded-[2rem] bg-forest-950">
                         <x-star-emblem class="animate-spin-slower absolute -bottom-10 -start-10 size-56 text-white/[0.06]" stroke-width="0.6" />
-                        <div class="relative flex h-full flex-col">
+                        @if ($n->image)
+                            <div class="relative h-52 shrink-0 overflow-hidden">
+                                <img src="{{ asset(ltrim($n->image, '/')) }}" alt="" loading="lazy" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                                <div class="absolute inset-0 bg-gradient-to-t from-forest-950 via-forest-950/20 to-transparent"></div>
+                            </div>
+                        @endif
+                        <div @class(['relative flex h-full flex-col p-8 md:p-10', 'pt-2 md:pt-3' => $n->image])>
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="inline-flex items-center gap-1.5 rounded-full border border-gold-500/50 px-3.5 py-1.5 text-[11px] font-bold text-gold-200">
                                     <x-lucide-radio class="size-3.5" />
@@ -87,7 +93,13 @@
                     <article x-show="inList({{ $n->id }})" @if ($loop->first) x-cloak @endif
                              x-transition:enter="transition duration-450 ease-out-expo" x-transition:enter-start="-translate-x-7 opacity-0" x-transition:enter-end="translate-x-0 opacity-100"
                              @click="open({{ $n->id }})" @keydown.enter="open({{ $n->id }})" tabindex="0" role="button"
-                             class="group flex flex-1 cursor-pointer flex-col justify-between rounded-3xl border border-forest-800/10 bg-white p-6 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50 hover:shadow-[0_24px_50px_-26px_rgba(8,39,29,0.3)] md:p-7">
+                             class="group flex flex-1 cursor-pointer gap-4 rounded-3xl border border-forest-800/10 bg-white p-5 transition-all duration-300 hover:-translate-y-1 hover:border-gold-500/50 hover:shadow-[0_24px_50px_-26px_rgba(8,39,29,0.3)] md:gap-5 md:p-6">
+                        @if ($n->image)
+                            <div class="hidden h-28 w-36 shrink-0 overflow-hidden rounded-2xl border border-forest-800/5 sm:block">
+                                <img src="{{ asset(ltrim($n->image, '/')) }}" alt="" loading="lazy" class="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110">
+                            </div>
+                        @endif
+                        <div class="flex min-w-0 flex-1 flex-col justify-between">
                         <div>
                             <div class="flex flex-wrap items-center gap-2">
                                 <span class="inline-flex items-center gap-1.5 rounded-full border px-3 py-1 text-[11px] font-bold {{ $cats[$n->category]['chipClass'] }}">
@@ -110,6 +122,7 @@
                                 <x-lucide-arrow-left class="size-3.5" />
                             </span>
                         </div>
+                        </div>
                     </article>
                 @endforeach
             </div>
@@ -127,6 +140,9 @@
         <template x-if="selected">
             <article x-trap.noscroll="selected" role="dialog" aria-modal="true" :aria-label="selected.title"
                      class="animate-enter max-h-[86vh] w-full max-w-3xl overflow-y-auto rounded-3xl bg-white shadow-2xl">
+                <template x-if="selected.image">
+                    <img :src="selected.image" alt="" class="h-52 w-full object-cover">
+                </template>
                 <div class="pattern-star-dark relative bg-forest-950 px-7 py-8 md:px-10">
                     <button type="button" @click="selected = null" aria-label="إغلاق"
                             class="absolute end-5 top-5 grid size-10 place-items-center rounded-xl border border-white/15 text-white/70 transition-all hover:border-gold-400/60 hover:text-gold-300">

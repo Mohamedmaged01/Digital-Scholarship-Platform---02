@@ -3,9 +3,9 @@
     "id": "rowad",
     "code": "01",
     "name": "مسار الروّاد",
-    "enSubtitle": "Leadership • Innovation • Global Universities",
-    "badge": "أفضل 30 جامعة عالميًا",
-    "desc": "ابتعاث الطلاب إلى أفضل 30 جامعة ومؤسسة تعليمية على مستوى العالم لدراسة برامج البكالوريوس والماجستير والدكتوراه.",
+    "enSubtitle": "Top 30 Global Universities",
+    "badge": "أفضل 30 مؤسسة تعليمية عالمياً",
+    "desc": "يهدف مسار الرواد لابتعاث الطلاب إلى أفضل 30 مؤسسة تعليمية حول العالم، في جميع التخصصات لمراحل البكالوريوس، الماجستير، والدكتوراه، لتمكين كفاءات سعودية قادرة على المنافسة عالمياً.",
     "icon": "rocket",
     "color": "#c9a338",
     "degrees": [
@@ -13,159 +13,219 @@
       "master",
       "phd"
     ],
-    "gpa": "4.5 من 5.0",
-    "ranking": "أفضل 30 عالميًا",
+    "ranking": "أفضل 30 مؤسسة تعليمية عالمياً",
     "fields": [
-      "الذكاء الاصطناعي",
-      "التقنيات المتقدمة",
-      "السياسات العامة"
+      "كافة التخصصات متاحة"
     ],
-    "extraFields": 2,
+    "extraFields": 0,
     "perks": [
-      "قبول مباشر في أرقى 30 جامعة ومؤسسة عالميًا",
-      "تغطية شاملة للرسوم مع مكافأة تفوق إضافية",
-      "مشرف أكاديمي شخصي وبرامج قيادية عالمية"
+      "متاح لجميع التخصصات بدون استثناء",
+      "التركيز على القوة الأكاديمية والمكانة العالمية للمؤسسة",
+      "يهدف لتخريج قيادات وطنية قادرة على صناعة المستقبل"
     ],
-    "image": "/images/tracks/rowad.jpg"
+    "image": "/images/tracks/rowad.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   },
   {
     "id": "emdad",
     "code": "02",
     "name": "مسار إمداد",
-    "enSubtitle": "Engineering • Technology • Supply & Workforce",
-    "badge": "أفضل 200 جامعة عالميًا",
-    "desc": "تلبية احتياجات سوق العمل الوطني في التخصصات الواعدة والحرجة بأفضل 200 جامعة عالميًا للمرحلتين البكالوريوس والماجستير.",
+    "enSubtitle": "Meeting Labor Market Needs",
+    "badge": "أفضل 200 جامعة (تخصصات محددة)",
+    "desc": "يستهدف سد الفجوة في سوق العمل بتخصصات محددة وواعدة، من خلال الابتعاث لأفضل 200 جامعة عالمياً لدرجتي البكالوريوس والماجستير.",
     "icon": "boxes",
     "color": "#177252",
     "degrees": [
       "bachelor",
       "master"
     ],
-    "gpa": "3.5 من 5.0",
-    "ranking": "أفضل 200 عالميًا",
+    "ranking": "أفضل 200 جامعة عالمياً (وفق التخصص)",
     "fields": [
-      "سلاسل الإمداد واللوجستيات",
       "الأمن السيبراني",
-      "الطاقة المتجددة"
+      "سلاسل الإمداد",
+      "السياحة"
     ],
-    "extraFields": 2,
+    "extraFields": 18,
     "perks": [
-      "تخصصات مرتبطة بخطط القطاعات الوظيفية الوطنية",
-      "ضمان وظيفي بعقود مسبقة مع جهات التوظيف",
-      "معادلة فورية للمؤهلات فور التخرج"
+      "تخصصات مصممة لاحتياج سوق العمل المباشر",
+      "الارتقاء بالمهارات المتخصصة والمستقبلية",
+      "برامج مخصصة للبكالوريوس والماجستير"
     ],
-    "image": "/images/tracks/emdad.jpg"
+    "image": "/images/tracks/emdad.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   },
   {
     "id": "research",
     "code": "03",
     "name": "مسار البحث والتطوير",
-    "enSubtitle": "Scientific Research • AI • Laboratories • Innovation",
+    "enSubtitle": "National Research & Innovation Priorities",
     "badge": "أولويات البحث والابتكار",
-    "desc": "تأهيل الباحثين والعلماء في مجالات الأولويات الوطنية للبحث والتطوير والابتكار في درجات الماجستير والدكتوراه.",
+    "desc": "مخصص لطلبة الدراسات العليا (ماجستير ودكتوراه) للابتعاث في مجالات بحثية دقيقة وأولويات وطنية، في أفضل 200 مؤسسة تعليمية عالمياً لتعزيز منظومة الابتكار.",
     "icon": "flask",
     "color": "#2f8a68",
     "degrees": [
       "master",
       "phd"
     ],
-    "gpa": "4 من 5.0",
-    "ranking": "أفضل 100 عالميًا",
+    "ranking": "أفضل 200 جامعة ومعهد بحثي عالمياً",
     "fields": [
-      "الصحة والحياة",
-      "استدامة البيئة والاحتياجات الأساسية",
-      "الريادة في الطاقة والصناعة"
+      "علوم الفضاء",
+      "التقنية الحيوية",
+      "الطاقة المتجددة"
     ],
-    "extraFields": 1,
+    "extraFields": 12,
     "perks": [
-      "منح بحثية إضافية ودعم كامل للنشر العلمي",
-      "شراكات مع مختبرات عالمية ومراكز أبحاث وطنية",
-      "مسار وظيفي مضمون في منظومة البحث والتطوير"
+      "مخصص لطلبة الدراسات العليا فقط",
+      "يركز على مجالات الأولويات الوطنية للبحث والتطوير",
+      "تأهيل علماء وباحثين لقيادة منظومة الابتكار"
     ],
-    "image": "/images/tracks/research.jpg"
+    "image": "/images/tracks/research.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   },
   {
     "id": "tamayoz",
     "code": "04",
     "name": "مسار التميز",
-    "enSubtitle": "Academic Excellence • High Achievement • Top Universities",
-    "badge": "أفضل 70 مؤسسة دولية",
-    "desc": "الابتعاث في تخصصات نوعية محددة تدعم مشاريع رؤية المملكة 2030 الكبرى في أفضل 70 جامعة دولية.",
+    "enSubtitle": "Specialized Disciplines & Elite Institutions",
+    "badge": "مؤسسات وتخصصات نوعية",
+    "desc": "يربط كل تخصص نوعي (كالقانون، الألعاب الرقمية، الفلسفة) بمؤسسات أكاديمية محددة ومتميزة عالمياً، لتأهيل كوادر تدعم مشاريع الرؤية.",
     "icon": "award",
     "color": "#b08c2f",
     "degrees": [
       "bachelor",
-      "master"
+      "master",
+      "phd",
+      "professional_doctorate"
     ],
-    "gpa": "4.8 من 5.0",
-    "ranking": "أفضل 70 عالميًا",
+    "ranking": "قائمة جامعات مخصصة لكل تخصص",
     "fields": [
-      "فنون الطهي والضيافة الفاخرة",
-      "الإنتاج السينمائي والوسائط الرقمية",
-      "التصميم الحضري والعمارة"
+      "العدالة الجنائية",
+      "إدارة الأعمال",
+      "القانون"
     ],
-    "extraFields": 1,
+    "extraFields": 22,
     "perks": [
-      "تخصصات نوعية مرتبطة بالمشاريع الوطنية الكبرى",
-      "إقامات إبداعية وإشراف من رواد الصناعة العالميين",
-      "محفظة مشاريع تُعرض في المحافل الدولية"
+      "قوائم جامعات محددة مسبقاً لكل تخصص على حدة",
+      "يشمل تخصصات غير تقليدية ونوعية تخدم الرؤية",
+      "متطلبات وقيود دقيقة (كالـ J.D. لتخصص القانون)"
     ],
-    "image": "/images/tracks/tamayoz.jpg"
+    "image": "/images/tracks/tamayoz.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   },
   {
     "id": "sahhi",
     "code": "05",
     "name": "المسار الصحي",
-    "enSubtitle": "Medicine • Healthcare • Medical Research",
-    "badge": "الزمالات والتخصصات النادرة",
-    "desc": "تأهيل الكوادر الطبية والصحية الوطنية في برامج الإقامة الطبية والزمالات الدقيقة والتخصصات الصحية النادرة في أرقى المستشفيات الجامعية.",
+    "enSubtitle": "Medical Residencies & Fellowships",
+    "badge": "زمالات وبرامج إقامة صحية",
+    "desc": "ابتعاث الكوادر والممارسين الصحيين في تخصصات صحية دقيقة ونادرة، وبرامج الإقامة والزمالة الطبية في أرقى المستشفيات والجامعات.",
     "icon": "stethoscope",
     "color": "#12593f",
     "degrees": [
       "master",
       "phd"
     ],
-    "gpa": "4.2 من 5.0",
-    "ranking": "أفضل 50 عالميًا",
+    "ranking": "أرقى المستشفيات والمراكز الطبية العالمية",
     "fields": [
-      "جراحة الأورام الدقيقة",
-      "طب الطوارئ والكوارث",
-      "علم الجينوم الطبي"
+      "برامج الإقامة",
+      "الزمالات الدقيقة",
+      "الطب والصيدلة"
     ],
-    "extraFields": 2,
+    "extraFields": 8,
     "perks": [
-      "إقامة وزمالات في أرقى المستشفيات الجامعية",
-      "اعتماد مهني دولي ومعادلة فورية للزمالة",
-      "عقود مسبقة مع المجمعات الصحية الوطنية"
+      "يستهدف الممارسين الصحيين والكوادر الطبية",
+      "يشمل الزمالات الدقيقة والإقامات الطبية",
+      "شراكات مع أرقى المراكز والمستشفيات عالمياً"
     ],
-    "image": "/images/tracks/sahhi.jpg"
+    "image": "/images/tracks/sahhi.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   },
   {
     "id": "waed",
     "code": "06",
     "name": "مسار واعد",
-    "enSubtitle": "Future Skills • Technology • Digital Transformation",
-    "badge": "الصناعات الواعدة والشراكات",
-    "desc": "ابتعاث الطلاب في قطاعات الابتكار والتقنيات الناشئة والصناعات الاستراتيجية المتقدمة وفق اتفاقيات الرعاية مع كبرى الشركات الوطنية.",
+    "enSubtitle": "Custom Sector-Sponsored Programs",
+    "badge": "برامج مخصصة برعاية القطاعات",
+    "desc": "يعمل بنظام «البرامج» المستقلة، حيث يُصمم كل برنامج (مثل قدرات الفضاء أو السياحة) بالشراكة مع قطاع وطني لتلبية احتياج مباشر بشروط وفترات خاصة.",
     "icon": "satellite",
     "color": "#96742a",
     "degrees": [
       "bachelor",
       "master"
     ],
-    "gpa": "3.8 من 5.0",
-    "ranking": "أفضل 150 عالميًا",
+    "ranking": "حسب البرنامج (تُحدد الجامعات في كل برنامج)",
     "fields": [
-      "صناعة الفضاء والأقمار الاصطناعية",
-      "الهيدروجين الأخضر والطاقة النظيفة",
-      "أشباه الموصلات والرقائق"
+      "صناعة الفضاء",
+      "القدرات السياحية",
+      "برامج الشركاء"
     ],
-    "extraFields": 2,
+    "extraFields": 5,
     "perks": [
-      "رعاية كاملة عبر اتفاقيات مع كبرى الشركات الوطنية",
-      "تدريب صناعي مدمج في منشآت الشركاء الاستراتيجيين",
-      "توظيف مباشر في قطاعات المستقبل فور التخرج"
+      "كل برنامج مستقل بشروطه وأحكامه وفترات تقديمه",
+      "ارتباط مباشر برعاية وشراكات مع جهات وطنية",
+      "مخرجات مصممة خصيصاً لسد احتياج قطاعي مباشر"
     ],
-    "image": "/images/tracks/waed.jpg"
+    "image": "/images/tracks/waed.jpg",
+    "applicationStatus": "not_started",
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [],
+    "specialConditions": [],
+    "policies": [],
+    "differentiationCriteria": [],
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null
   }
 ]

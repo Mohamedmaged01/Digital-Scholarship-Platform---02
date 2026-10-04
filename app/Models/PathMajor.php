@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * ربط المسار بالتخصصات، مع تاريخ سريان لكل ربط.
@@ -26,13 +27,13 @@ class PathMajor extends Model
     }
 
     /** المسار الذي ينتمي إليه هذا السجل — `path_id` هو `tracks.id`. */
-    public function track(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function track(): BelongsTo
     {
         return $this->belongsTo(Track::class, 'path_id');
     }
 
     /** مصدر البيانات الموثّق لهذا السجل. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }

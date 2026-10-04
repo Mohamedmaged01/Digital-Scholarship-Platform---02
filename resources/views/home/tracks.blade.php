@@ -1,6 +1,6 @@
 @php
     $degrees = config('kasp.degrees');
-    $tabs = ['all' => 'كافة المراحل'] + $degrees;
+    $tabs = ['all' => 'كافة المراحل'] + array_intersect_key($degrees, array_flip(['bachelor', 'master', 'phd']));
 @endphp
 
 <section id="tracks" class="relative overflow-hidden bg-cream py-24 md:py-32"
@@ -10,7 +10,7 @@
 
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
         <x-section-heading eyebrow="برنامج تنمية القدرات البشرية"
-                           desc="ستة مسارات نوعية منبثقة من برنامج تنمية القدرات البشرية لتحقيق الريادة الوطنية والتنافسية العالمية.">
+                           desc="ستة مسارات نوعية منبثقة من برنامج تنمية القدرات البشرية لتحقيق الريادة الوطنية والتنافسية العالمية. اضغط على أي مسار لاستعراض الجامعات والتخصصات المتاحة له.">
             مسارات الابتعاث الاستراتيجية —
             <span class="text-shimmer-gold"> اختر المسار المتوافق مع طموحك</span>
         </x-section-heading>
@@ -104,12 +104,19 @@
                             @endif
                         </div>
 
-                        <a href="#matcher" @class([
-                            'group/cta mt-6 inline-flex items-center justify-center gap-2 rounded-full border py-3.5 text-sm font-bold transition-all duration-300',
+                        {{-- رابط ممتد: البطاقة كلها قابلة للنقر --}}
+                        <a href="{{ $t->slug === 'waed' ? route('waed.index') : route('tracks.show', $t) }}" @class([
+                            'group/cta mt-6 after:absolute after:inset-0 inline-flex items-center justify-center gap-2 rounded-full border py-3.5 text-sm font-bold transition-all duration-300',
                             'border-gold-500/70 bg-gold-500/10 text-forest-900 hover:bg-gold-500 hover:text-forest-950 hover:shadow-[0_14px_36px_-12px_rgba(201,163,56,0.7)]' => $featured,
                             'border-forest-800/20 text-forest-800 hover:bg-forest-800 hover:text-gold-300 hover:shadow-[0_14px_36px_-14px_rgba(8,39,29,0.6)]' => ! $featured,
                         ])>
-                            التقديم على هذا المسار
+                            @if ($t->slug === 'waed')
+                                <x-lucide-satellite class="size-4" />
+                                استعراض برامج واعد
+                            @else
+                                <x-lucide-university class="size-4" />
+                                عرض الجامعات والتخصصات المتاحة
+                            @endif
                             <x-lucide-arrow-up-left class="size-4 transition-transform duration-300 group-hover/cta:-translate-x-1 group-hover/cta:-translate-y-1" />
                         </a>
                     </div>

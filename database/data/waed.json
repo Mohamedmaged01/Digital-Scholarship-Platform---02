@@ -1,0 +1,540 @@
+[
+  {
+    "id": "w-space-01",
+    "nameAr": "برنامج تطوير كفاءات الفضاء",
+    "nameEn": "Space Talent Development Program",
+    "company": "شركة سدير للفضاء",
+    "institution": "Massachusetts Institute of Technology (MIT)",
+    "country": "الولايات المتحدة",
+    "city": "كامبريدج",
+    "programType": "scholarship",
+    "duration": "24 شهراً",
+    "degree": "master",
+    "sector": "الفضاء والطيران",
+    "major": "علوم وهندسة الفضاء",
+    "requiredMajors": [
+      "هندسة الطيران والفضاء",
+      "الفيزياء التطبيقية",
+      "الهندسة الكهربائية",
+      "علوم الحاسب والهندسة"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.75",
+      "notes": "أو ما يعادله 2.75 من 4.0"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.5",
+        "notes": "أكاديمي"
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "90",
+        "notes": "بديل مقبول"
+      }
+    ],
+    "tests": [
+      {
+        "name": "GRE",
+        "score": "310",
+        "notes": "يُفضَّل — ليس إلزامياً"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "general",
+        "text": "ألا يكون المتقدم على رأس العمل الحكومي",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "academic",
+        "text": "بكالوريوس في تخصص هندسي أو علمي ذي صلة بالفضاء",
+        "isRequired": true
+      },
+      {
+        "id": "c4",
+        "category": "admission",
+        "text": "القبول النهائي غير المشروط من الجامعة",
+        "isRequired": true
+      },
+      {
+        "id": "c5",
+        "category": "experience",
+        "text": "يُفضَّل وجود مشاريع أو خبرة في قطاع الفضاء أو الطيران",
+        "isRequired": false
+      }
+    ],
+    "applicationStart": null,
+    "applicationEnd": null,
+    "studyStart": null,
+    "status": "upcoming",
+    "description": "برنامج ابتعاث متخصص لتأهيل كفاءات وطنية في مجال علوم وهندسة الفضاء، بالشراكة مع الشركات الوطنية الرائدة في هذا القطاع لدعم رؤية 2030.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": true,
+    "version": "2026-2027",
+    "notes": "البيانات استرشادية — تُراجع الصفحة الرسمية للتفاصيل المعتمدة"
+  },
+  {
+    "id": "w-tourism-01",
+    "nameAr": "برنامج كفاءات السياحة والضيافة",
+    "nameEn": "Tourism & Hospitality Talent Program",
+    "company": "شركة نيوم",
+    "institution": "EHL Hospitality Business School",
+    "country": "سويسرا",
+    "city": "لوزان",
+    "programType": "scholarship",
+    "duration": "36 شهراً",
+    "degree": "bachelor",
+    "sector": "السياحة والترفيه",
+    "major": "إدارة الضيافة والسياحة",
+    "requiredMajors": [
+      "الثانوية العامة — متاح لخريجي الثانوية مباشرة"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.5",
+      "notes": "أو معدل نهائي في الثانوية لا يقل عن 85%"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.0",
+        "notes": "أكاديمي أو عام"
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "80",
+        "notes": "بديل مقبول"
+      }
+    ],
+    "tests": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "general",
+        "text": "عدم الالتحاق بأي مؤسسة دراسية أخرى",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي غير المشروط من المؤسسة التعليمية",
+        "isRequired": true
+      },
+      {
+        "id": "c4",
+        "category": "admission",
+        "text": "اجتياز مقابلة شخصية مع لجنة الشركة الراعية",
+        "isRequired": true
+      },
+      {
+        "id": "c5",
+        "category": "other",
+        "text": "الدراسة بالانتظام الكلي (Full-Time)",
+        "isRequired": true
+      }
+    ],
+    "applicationStart": null,
+    "applicationEnd": null,
+    "studyStart": null,
+    "status": "upcoming",
+    "description": "برنامج ابتعاث لتأهيل كفاءات الضيافة الفاخرة والسياحة، بالتعاون مع شركة نيوم وأفضل مدرسة لإدارة الفنادق في العالم، لدعم مشاريع السياحة الكبرى.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": true,
+    "version": "2026-2027",
+    "notes": "البيانات استرشادية — تُراجع الصفحة الرسمية للتفاصيل المعتمدة"
+  },
+  {
+    "id": "w-ai-01",
+    "nameAr": "برنامج تطوير كفاءات الذكاء الاصطناعي",
+    "nameEn": "AI Talent Development Program",
+    "company": "الهيئة السعودية للذكاء الاصطناعي (SDAIA)",
+    "institution": "Stanford University",
+    "country": "الولايات المتحدة",
+    "city": "ستانفورد",
+    "programType": "scholarship",
+    "duration": "18 شهراً",
+    "degree": "master",
+    "sector": "التقنية والذكاء الاصطناعي",
+    "major": "الذكاء الاصطناعي وعلوم البيانات",
+    "requiredMajors": [
+      "علوم الحاسب وهندسة البرمجيات",
+      "الرياضيات والإحصاء",
+      "الهندسة الكهربائية",
+      "نظم المعلومات"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.8",
+      "notes": "أو ما يعادله 3.0 من 4.0 — لا يُقبل أدنى من ذلك"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "7.0",
+        "notes": "أكاديمي"
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "100",
+        "notes": "بديل مقبول"
+      }
+    ],
+    "tests": [
+      {
+        "name": "GRE",
+        "score": "320",
+        "notes": "مطلوب من معظم التخصصات الاقتصادية بـ Stanford"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "academic",
+        "text": "خبرة أو مشاريع مثبتة في مجال البيانات أو البرمجة (Python/R)",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي غير المشروط",
+        "isRequired": true
+      },
+      {
+        "id": "c4",
+        "category": "other",
+        "text": "الدراسة بالانتظام الكلي (Full-Time) — لا يُقبل عن بُعد",
+        "isRequired": true
+      },
+      {
+        "id": "c5",
+        "category": "age",
+        "text": "لا يتجاوز 35 عاماً عند تاريخ التقديم",
+        "isRequired": false
+      }
+    ],
+    "applicationStart": null,
+    "applicationEnd": null,
+    "studyStart": null,
+    "status": "upcoming",
+    "description": "برنامج ابتعاث لتأهيل خبراء الذكاء الاصطناعي وعلوم البيانات بالشراكة مع الهيئة السعودية للذكاء الاصطناعي، لبناء كفاءات وطنية في أعرق جامعات العالم.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": true,
+    "version": "2026-2027",
+    "notes": "البيانات استرشادية — تُراجع الصفحة الرسمية للتفاصيل المعتمدة"
+  },
+  {
+    "id": "w-energy-01",
+    "nameAr": "برنامج كفاءات الهيدروجين الأخضر",
+    "nameEn": "Green Hydrogen Talent Program",
+    "company": "أرامكو السعودية",
+    "institution": "ETH Zürich",
+    "country": "سويسرا",
+    "city": "زيورخ",
+    "programType": "scholarship",
+    "duration": "24 شهراً",
+    "degree": "master",
+    "sector": "الطاقة والاستدامة",
+    "major": "الهيدروجين الأخضر والطاقة النظيفة",
+    "requiredMajors": [
+      "الهندسة الكيميائية",
+      "هندسة الطاقة",
+      "الهندسة الميكانيكية",
+      "الكيمياء التطبيقية"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.75",
+      "notes": "أو 2.75 من 4.0 أو 90% أو ما يعادلها"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.5",
+        "notes": "أكاديمي — بعض البرامج تقبل الألمانية بديلاً"
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "90",
+        "notes": ""
+      }
+    ],
+    "tests": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "academic",
+        "text": "بكالوريوس في تخصص هندسي كيميائي أو طاقة أو ما يعادله",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي غير المشروط",
+        "isRequired": true
+      },
+      {
+        "id": "c4",
+        "category": "experience",
+        "text": "يُفضَّل خبرة في صناعة الطاقة أو الكيمياء",
+        "isRequired": false
+      },
+      {
+        "id": "c5",
+        "category": "other",
+        "text": "الالتزام بالعمل في القطاع الطاقوي السعودي بعد التخرج",
+        "isRequired": false
+      }
+    ],
+    "applicationStart": null,
+    "applicationEnd": null,
+    "studyStart": null,
+    "status": "upcoming",
+    "description": "برنامج ابتعاث لتأهيل متخصصين في تقنيات الهيدروجين الأخضر وحلول الطاقة المتجددة، بشراكة أرامكو السعودية لدعم أهداف الحياد الكربوني.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": false,
+    "version": "2026-2027",
+    "notes": "البيانات استرشادية — تُراجع الصفحة الرسمية للتفاصيل المعتمدة"
+  },
+  {
+    "id": "w-health-01",
+    "nameAr": "برنامج تطوير الكفاءات الصحية التقنية",
+    "nameEn": "Health Tech Talent Program",
+    "company": "صندوق الاستثمارات العامة (PIF)",
+    "institution": "University of Toronto",
+    "country": "كندا",
+    "city": "تورونتو",
+    "programType": "scholarship",
+    "duration": "24 شهراً",
+    "degree": "master",
+    "sector": "الصحة والعلوم الحيوية",
+    "major": "التقنيات الصحية والصحة الرقمية",
+    "requiredMajors": [
+      "الهندسة الطبية الحيوية",
+      "المعلوماتية الصحية",
+      "الطب أو العلوم الصحية",
+      "هندسة البرمجيات (الصحة الرقمية)"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.5",
+      "notes": "أو ما يعادله من مقياس 4.0"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.5",
+        "notes": ""
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "90",
+        "notes": ""
+      }
+    ],
+    "tests": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "academic",
+        "text": "بكالوريوس في مجال صحي أو تقني ذي صلة",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي من الجامعة",
+        "isRequired": true
+      },
+      {
+        "id": "c4",
+        "category": "experience",
+        "text": "يُفضَّل خبرة أو مشاريع في مجال التقنيات الصحية",
+        "isRequired": false
+      }
+    ],
+    "applicationStart": null,
+    "applicationEnd": null,
+    "studyStart": null,
+    "status": "upcoming",
+    "description": "برنامج لتأهيل كفاءات متخصصة في التقنيات الصحية والصحة الرقمية لدعم التحول الصحي الوطني وقطاع الرعاية الصحية السعودي.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": false,
+    "version": "2026-2027",
+    "notes": "البيانات استرشادية — تُراجع الصفحة الرسمية للتفاصيل المعتمدة"
+  },
+  {
+    "id": "w-semi-past-01",
+    "nameAr": "برنامج أشباه الموصلات والرقائق — دفعة 2025",
+    "nameEn": "Semiconductors & Chips Program (Cohort 2025)",
+    "company": "المركز الوطني للتقنية المتقدمة",
+    "institution": "KAIST",
+    "country": "كوريا الجنوبية",
+    "city": "دايجون",
+    "programType": "scholarship",
+    "duration": "24 شهراً",
+    "degree": "master",
+    "sector": "التقنية والذكاء الاصطناعي",
+    "major": "أشباه الموصلات والرقائق الإلكترونية",
+    "requiredMajors": [
+      "هندسة الإلكترونيات والاتصالات",
+      "هندسة الحاسب",
+      "الفيزياء التطبيقية",
+      "الهندسة الكهربائية"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.8",
+      "notes": "أو ما يعادله — لا يُقبل معدل أدنى من ذلك"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.5",
+        "notes": ""
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "90",
+        "notes": ""
+      }
+    ],
+    "tests": [
+      {
+        "name": "GRE",
+        "score": "315",
+        "notes": "للتقدم لبرامج الدراسات العليا التقنية في KAIST"
+      }
+    ],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "academic",
+        "text": "بكالوريوس في تخصص إلكترونيات أو فيزياء تطبيقية أو ما يعادله",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي غير المشروط",
+        "isRequired": true
+      }
+    ],
+    "applicationStart": "2025-01-15",
+    "applicationEnd": "2025-03-31",
+    "studyStart": "2025-09-01",
+    "status": "closed",
+    "description": "برنامج سابق لتأهيل متخصصين في صناعة أشباه الموصلات. انتهت دفعة 2025 — يُتوقع إطلاق دفعة 2026.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": false,
+    "version": "2025-2026",
+    "notes": "انتهت فترة التقديم — تابع الإعلانات الرسمية للدفعة القادمة"
+  },
+  {
+    "id": "w-robotics-past-01",
+    "nameAr": "برنامج الروبوتات والأتمتة — دفعة 2024",
+    "nameEn": "Robotics & Automation Program (Cohort 2024)",
+    "company": "البريد السعودي / سبل",
+    "institution": "University of Tokyo",
+    "country": "اليابان",
+    "city": "طوكيو",
+    "programType": "scholarship",
+    "duration": "24 شهراً",
+    "degree": "master",
+    "sector": "الصناعة والتصنيع",
+    "major": "الروبوتات والأنظمة الذاتية",
+    "requiredMajors": [
+      "هندسة الميكاترونيكس",
+      "الهندسة الميكانيكية",
+      "الهندسة الكهربائية",
+      "هندسة الحاسب"
+    ],
+    "gpa": {
+      "scale": "5.0",
+      "min": "3.7",
+      "notes": "أو 2.7 من 4.0"
+    },
+    "languages": [
+      {
+        "test": "IELTS",
+        "score": "6.0",
+        "notes": ""
+      },
+      {
+        "test": "TOEFL iBT",
+        "score": "80",
+        "notes": ""
+      }
+    ],
+    "tests": [],
+    "conditions": [
+      {
+        "id": "c1",
+        "category": "general",
+        "text": "الجنسية السعودية",
+        "isRequired": true
+      },
+      {
+        "id": "c2",
+        "category": "academic",
+        "text": "بكالوريوس هندسة ميكانيكية أو كهربائية أو ما يعادله",
+        "isRequired": true
+      },
+      {
+        "id": "c3",
+        "category": "admission",
+        "text": "القبول النهائي من الجامعة",
+        "isRequired": true
+      }
+    ],
+    "applicationStart": "2024-02-01",
+    "applicationEnd": "2024-04-30",
+    "studyStart": "2024-09-01",
+    "status": "archived",
+    "description": "برنامج مكتمل — الدفعة الأولى بدأت الدراسة في طوكيو سبتمبر 2024. يُتوقع فتح دفعة جديدة.",
+    "website": "https://www.moe.gov.sa/ar/pages/scholarship.aspx",
+    "isFeatured": false,
+    "version": "2024-2025",
+    "notes": "الدفعة الأولى في مرحلة الدراسة — يُتوقع فتح دورة 2026"
+  }
+]

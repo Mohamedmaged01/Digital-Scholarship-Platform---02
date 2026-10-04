@@ -179,7 +179,9 @@ class AdminTest extends TestCase
         $this->put("/admin/stations/{$station->id}", ['title' => 'محطة معدلة', 'description' => 'وصف جديد', 'points' => 'أ، ب'])->assertRedirect();
         $this->assertSame(['أ', 'ب'], $station->fresh()->points);
 
-        $this->get('/')->assertSee('مسار تجريبي')->assertSee('جامعة الملك عبدالله')->assertSee('محطة معدلة');
+        // الجامعات لم تعد قائمة عامة في الرئيسية — تظهر داخل صفحة كل مسار
+        $this->get('/')->assertSee('مسار تجريبي')->assertSee('محطة معدلة');
+        $this->assertSame('kaust', $uni->slug);
 
         $this->post('/admin/tracks/reset')->assertRedirect();
         $this->assertSame(6, Track::count());

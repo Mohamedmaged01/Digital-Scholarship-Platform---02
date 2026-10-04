@@ -4,12 +4,19 @@ use App\Http\Controllers\Admin;
 use App\Http\Controllers\AssistantController;
 use App\Http\Controllers\Auth\LoginController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\LegalPageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\TrackController;
+use App\Http\Controllers\WaedController;
 use Illuminate\Support\Facades\Route;
 
 /* ---------------- الواجهة العامة ---------------- */
 Route::get('/', HomeController::class)->name('home');
+Route::get('/tracks/{track:slug}', [TrackController::class, 'show'])->name('tracks.show');
+Route::get('/waed', [WaedController::class, 'index'])->name('waed.index');
+Route::get('/waed/{program:slug}', [WaedController::class, 'show'])->name('waed.show');
+Route::get('/pages/{page}', [LegalPageController::class, 'show'])->name('pages.show');
 
 Route::middleware('throttle:40,1')->group(function () {
     Route::post('/assistant/ask', AssistantController::class)->name('assistant.ask');
@@ -71,6 +78,68 @@ Route::middleware(['auth', 'active'])->prefix('admin')->name('admin.')->group(fu
     Route::middleware('can:delete-content')->group(function () {
         Route::delete('/tracks/{track}', [Admin\TrackController::class, 'destroy'])->name('tracks.destroy');
         Route::post('/tracks/reset', [Admin\TrackController::class, 'reset'])->name('tracks.reset');
+    });
+
+    // الأدلة الاسترشادية
+    Route::get('/guides', [Admin\GuideController::class, 'index'])->name('guides.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::post('/guides', [Admin\GuideController::class, 'store'])->name('guides.store');
+        Route::put('/guides/{guide}', [Admin\GuideController::class, 'update'])->name('guides.update');
+    });
+    Route::middleware('can:delete-content')->group(function () {
+        Route::delete('/guides/{guide}', [Admin\GuideController::class, 'destroy'])->name('guides.destroy');
+        Route::post('/guides/reset', [Admin\GuideController::class, 'reset'])->name('guides.reset');
+    });
+
+    // برامج مسار واعد
+    Route::get('/waed', [Admin\WaedProgramController::class, 'index'])->name('waed.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::post('/waed', [Admin\WaedProgramController::class, 'store'])->name('waed.store');
+        Route::put('/waed/{program}', [Admin\WaedProgramController::class, 'update'])->name('waed.update');
+    });
+    Route::middleware('can:delete-content')->group(function () {
+        Route::delete('/waed/{program}', [Admin\WaedProgramController::class, 'destroy'])->name('waed.destroy');
+        Route::post('/waed/reset', [Admin\WaedProgramController::class, 'reset'])->name('waed.reset');
+    });
+
+    // إدارة العلاقات: مسار ← درجة ← تخصص ← جامعة (للمدير فقط)
+    Route::middleware('can:manage-users')->prefix('relations')->name('relations.')->group(function () {
+        Route::get('/', [Admin\RelationController::class, 'index'])->name('index');
+        Route::put('/{track:slug}/majors', [Admin\RelationController::class, 'updateMajors'])->name('majors');
+        Route::put('/{track:slug}/institutions', [Admin\RelationController::class, 'updateInstitutions'])->name('institutions');
+        Route::patch('/{track:slug}/verify', [Admin\RelationController::class, 'verify'])->name('verify');
+        Route::post('/majors', [Admin\RelationController::class, 'storeMajor'])->name('majors.store');
+        Route::post('/reset', [Admin\RelationController::class, 'reset'])->name('reset');
+    });
+
+    // الإحصاءات والأرقام
+    Route::get('/statistics', [Admin\StatisticController::class, 'index'])->name('statistics.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::post('/statistics', [Admin\StatisticController::class, 'store'])->name('statistics.store');
+        Route::put('/statistics/{statistic}', [Admin\StatisticController::class, 'update'])->name('statistics.update');
+    });
+    Route::delete('/statistics/{statistic}', [Admin\StatisticController::class, 'destroy'])->middleware('can:delete-content')->name('statistics.destroy');
+
+    // وسائل الاتصال
+    Route::get('/contact', [Admin\ContactMethodController::class, 'index'])->name('contact.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::post('/contact', [Admin\ContactMethodController::class, 'store'])->name('contact.store');
+        Route::put('/contact/{contact}', [Admin\ContactMethodController::class, 'update'])->name('contact.update');
+    });
+    Route::middleware('can:delete-content')->group(function () {
+        Route::delete('/contact/{contact}', [Admin\ContactMethodController::class, 'destroy'])->name('contact.destroy');
+        Route::post('/contact/reset', [Admin\ContactMethodController::class, 'reset'])->name('contact.reset');
+    });
+
+    // السياسات والشروط
+    Route::get('/pages', [Admin\LegalPageController::class, 'index'])->name('pages.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::post('/pages', [Admin\LegalPageController::class, 'store'])->name('pages.store');
+        Route::put('/pages/{page:id}', [Admin\LegalPageController::class, 'update'])->name('pages.update');
+    });
+    Route::middleware('can:delete-content')->group(function () {
+        Route::delete('/pages/{page:id}', [Admin\LegalPageController::class, 'destroy'])->name('pages.destroy');
+        Route::post('/pages/reset', [Admin\LegalPageController::class, 'reset'])->name('pages.reset');
     });
 
     // محطات خارطة الطريق

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class Track extends Model
@@ -59,7 +60,7 @@ class Track extends Model
     }
 
     /** مصدر البيانات الموثّق لهذا المسار. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }

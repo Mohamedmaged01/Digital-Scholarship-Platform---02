@@ -3,7 +3,11 @@
 namespace App\Support;
 
 use App\Models\KbEntry;
+use App\Models\Major;
 use App\Models\News;
+use App\Models\PathMajor;
+use App\Models\PathMajorInstitution;
+use App\Models\Program;
 use App\Models\Station;
 use App\Models\Track;
 use App\Models\University;
@@ -13,13 +17,12 @@ use App\Models\University;
  */
 class SiteSearch
 {
-    private const GROUP_ORDER = ['sections', 'tracks', 'universities', 'news', 'journey', 'faq', 'kb'];
+    private const GROUP_ORDER = ['sections', 'tracks', 'majors', 'waed', 'universities', 'news', 'journey', 'faq', 'kb'];
 
     private const SECTION_KEYWORDS = [
         '#home' => 'رئيسية بداية هيرو واجهة',
         '#tracks' => 'مسار مسارات رواد امداد تميز بحث تطوير صحي واعد استراتيجية ابتعاث',
         '#matcher' => 'ذكاء اصطناعي مطابقة توصية توافق اسئلة اختبار توجيه',
-        '#universities' => 'جامعه جامعات تصنيف عوالم قبول دول مدن تخصصات',
         '#news' => 'اخبار اعلانات اعلام مستجدات شراكات ملتقيات قبول',
         '#journey' => 'خارطه طريق محطات رحله خطوات تقديم مستندات ترشيح',
         '#assistant' => 'مساعد ذكي دردشه اسئله اجابات محاوره تواصل لوحه',
@@ -68,12 +71,35 @@ class SiteSearch
             $add("sec-{$l['href']}", 'sections', 'أقسام المنصة', $l['label'], "الانتقال إلى قسم {$l['label']}", $l['href'],
                 $l['label'].' '.(self::SECTION_KEYWORDS[$l['href']] ?? ''));
         }
-        foreach (Track::orderBy('sort')->get() as $t) {
-            $add("track-{$t->id}", 'tracks', 'مسارات الابتعاث', $t->name, "{$t->badge} • {$t->applicationStatusLabel()}", '#tracks',
+        $tracks = Track::orderBy('sort')->get()->keyBy('id');
+        $trackUrl = fn (Track $t) => $t->slug === 'waed' ? route('waed.index') : route('tracks.show', $t);
+
+        foreach ($tracks as $t) {
+            $add("track-{$t->id}", 'tracks', 'مسارات الابتعاث', $t->name, "{$t->badge} • {$t->applicationStatusLabel()}", $trackUrl($t),
                 "{$t->name} مسار {$t->en_subtitle} {$t->badge} {$t->ranking} ".implode(' ', $t->fields));
         }
+        foreach (Program::waed()->orderBy('sort')->get() as $p) {
+            $add("waed-{$p->id}", 'waed', 'برامج واعد', $p->name_ar, "{$p->company_ar} • {$p->statusLabel()}", route('waed.show', $p),
+                "{$p->name_ar} {$p->name_en} {$p->company_ar} {$p->major_name} {$p->sector} برنامج واعد");
+        }
+
+        // التخصص والجامعة يقودان إلى صفحة أول مسار يرتبطان به
+        $majorTracks = PathMajor::select('major_id', 'path_id')->get()->groupBy('major_id');
+        foreach (Major::orderBy('sort')->get() as $m) {
+            $paths = ($majorTracks[$m->id] ?? collect())->pluck('path_id')->unique();
+            if ($paths->isEmpty()) {
+                continue;
+            }
+            $names = $paths->map(fn ($id) => $tracks[$id]?->name)->filter()->implode('، ');
+            $add("major-{$m->id}", 'majors', 'التخصصات', $m->name_ar, "متاح في: {$names}", $trackUrl($tracks[$paths->first()]),
+                "{$m->name_ar} {$m->name_en} تخصص");
+        }
+
+        $uniTracks = PathMajorInstitution::select('institution_id', 'path_id')->get()->groupBy('institution_id');
         foreach (University::orderBy('name_ar')->get() as $u) {
-            $add("uni-{$u->id}", 'universities', 'المؤسسات التعليمية', $u->name_ar, "{$u->city}، {$u->country}", '#universities',
+            $firstPath = ($uniTracks[$u->id] ?? collect())->pluck('path_id')->first();
+            $add("uni-{$u->id}", 'universities', 'المؤسسات التعليمية', $u->name_ar, "{$u->city}، {$u->country}",
+                $firstPath && isset($tracks[$firstPath]) ? $trackUrl($tracks[$firstPath]) : '#tracks',
                 "{$u->name_ar} {$u->name_en} {$u->city} {$u->country} ".implode(' ', $u->fields).' جامعة');
         }
         foreach (News::ordered()->get() as $n) {
@@ -130,8 +156,8 @@ class SiteSearch
 
         return [
             ['id' => 'q1', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'مسارات الابتعاث الستة', 'sub' => 'استكشف المسار الأنسب', 'href' => '#tracks'],
-            ['id' => 'q2', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'المطابقة بالذكاء الاصطناعي', 'sub' => 'أربعة أسئلة فقط', 'href' => '#matcher'],
-            ['id' => 'q3', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'الجامعات العالمية المعتمدة', 'sub' => 'أكثر من 200 جامعة', 'href' => '#universities'],
+            ['id' => 'q2', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'محرك التوجيه الاسترشادي', 'sub' => 'ثلاثة أسئلة فقط', 'href' => '#matcher'],
+            ['id' => 'q3', 'groupId' => 'waed', 'group' => 'روابط سريعة', 'title' => 'برامج مسار واعد', 'sub' => 'برامج برعاية القطاعات الوطنية', 'href' => route('waed.index')],
             ['id' => 'q4', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'خارطة الطريق الأكاديمية', 'sub' => 'ثماني محطات واضحة', 'href' => '#journey'],
             ...$news,
         ];

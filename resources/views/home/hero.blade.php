@@ -1,12 +1,10 @@
 @php
     $destinations = ['أكسفورد', 'هارفارد', 'إم آي تي', 'سنغافورة', 'طوكيو', 'ستانفورد'];
-    // §F: "98% معدّل رضا" و"72h متوسط الفرز" لا مصدر لهما. البديل أرقام
-    // هيكلية يتحقق منها النظام نفسه عند كل طلب.
-    $trust = [
-        ['v' => str_pad((string) $structural['tracks'], 2, '0', STR_PAD_LEFT), 'l' => 'مسارات ابتعاث'],
-        ['v' => str_pad((string) $structural['stations'], 2, '0', STR_PAD_LEFT), 'l' => 'محطات في خارطة الطريق'],
-        ['v' => str_pad((string) $structural['degrees'], 2, '0', STR_PAD_LEFT), 'l' => 'درجات علمية معتمدة'],
-    ];
+    // §F: الأرقام تُدار من اللوحة (موقع «الواجهة الرئيسية»)، وإلا فالأرقام الهيكلية.
+    $trust = collect($heroStats)->map(fn ($s) => [
+        'v' => $s['suffix'] === '' && $s['value'] < 10 ? str_pad((string) $s['value'], 2, '0', STR_PAD_LEFT) : number_format($s['value']).$s['suffix'],
+        'l' => $s['label'],
+    ]);
 @endphp
 
 <section id="home" class="relative overflow-hidden bg-cream pt-28 md:pt-36">

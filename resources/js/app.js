@@ -122,124 +122,114 @@ Alpine.data('tracksFilter', (degreesById) => ({
     },
 }));
 
-/* ---------------- المطابقة الذكية ---------------- */
-const matcherQuestions = [
-    {
-        q: 'ما الدرجة العلمية التي تستهدفها؟',
-        options: [
-            { label: 'بكالوريوس', hint: 'بعد الثانوية مباشرة', boost: { rowad: 2, emdad: 2, waed: 2, tamayoz: 1 } },
-            { label: 'ماجستير', hint: 'تعميق التخصص', boost: { research: 2, tamayoz: 2, emdad: 1 } },
-            { label: 'دكتوراه', hint: 'البحث العلمي الأصيل', boost: { research: 4, rowad: 1 } },
-            { label: 'زمالة / دبلوم مهني', hint: 'خبرة تطبيقية مركزة', boost: { sahhi: 5, emdad: 1 } },
-        ],
-    },
-    {
-        q: 'أي مجال معرفي يشغفك أكثر؟',
-        options: [
-            { label: 'الطب والعلوم الصحية', boost: { sahhi: 4, research: 1 } },
-            { label: 'الحاسب والذكاء الاصطناعي', boost: { rowad: 3, waed: 2 } },
-            { label: 'الهندسة والطاقة', boost: { emdad: 2, waed: 3 } },
-            { label: 'العلوم والبحث الأساسي', boost: { research: 4 } },
-            { label: 'الإدارة والسياسات العامة', boost: { rowad: 2, emdad: 1 } },
-            { label: 'الفنون والسينما والتصميم', boost: { tamayoz: 5 } },
-        ],
-    },
-    {
-        q: 'ما وجهتك الدراسية المفضلة؟',
-        options: [
-            { label: 'أمريكا الشمالية', boost: { rowad: 1 }, region: 'na' },
-            { label: 'أوروبا', boost: { rowad: 1 }, region: 'europe' },
-            { label: 'آسيا', boost: { research: 1 }, region: 'asia' },
-            { label: 'أوقيانوسيا', boost: { emdad: 1 }, region: 'oceania' },
-            { label: 'لا أفضّل وجهة محددة', boost: {}, region: 'all' },
-        ],
-    },
-    {
-        q: 'ما مستوى جاهزيتك للتقديم؟',
-        options: [
-            { label: 'جاهز للتقديم الآن', hint: 'المستندات واللغة مكتملة', boost: {}, ready: 3 },
-            { label: 'أحتاج إعداد اللغة', hint: 'سنة تحضيرية مدعومة بالكامل', boost: { emdad: 1 }, ready: 2 },
-            { label: 'ما زلت أستكشف', hint: 'لا بأس — سنرسم الطريق معًا', boost: {}, ready: 1 },
-        ],
-    },
-];
-
-Alpine.data('matcher', (tracks, universities) => ({
-    questions: matcherQuestions,
+/* ---------------- محرّك التوجيه الاسترشادي ---------------- */
+/*  يطابق (الدرجة، المجال) مع روابط: مسار ← درجة ← تخصص ← جامعة.
+    واعد مستبعد مسبقًا لأنه يعمل بنظام البرامج. */
+Alpine.data('matcher', (data) => ({
+    data,
     step: 0,
-    answers: [],
+    degree: '',
+    field: '',
+    region: 'all',
     done: false,
-    result: null,
-    shownMatch: 0,
-    ringCircumference: 2 * Math.PI * 68,
+    get fields() {
+        return [{ id: 'all', name: 'جميع المجالات' }, ...this.data.fields];
+    },
+    get canNext() {
+        return (this.step === 0 && this.degree) || (this.step === 1 && this.field) || this.step === 2;
+    },
     get progress() {
-        return this.done ? 100 : (this.step / this.questions.length) * 100;
+        return this.done ? 100 : (this.step / 3) * 100;
     },
-    get current() {
-        return this.questions[this.step];
-    },
-    choose(opt) {
-        this.answers = [...this.answers.slice(0, this.step), opt];
-        setTimeout(() => {
-            if (this.step + 1 >= this.questions.length) this.finish();
-            else this.step += 1;
-        }, 260);
-    },
-    back() {
-        if (this.step > 0) this.step -= 1;
-    },
-    finish() {
-        const scores = Object.fromEntries(tracks.map((t) => [t.id, 0]));
-        let region = 'all';
-        let ready = 2;
-        for (const a of this.answers) {
-            for (const [k, v] of Object.entries(a.boost)) scores[k] = (scores[k] ?? 0) + v;
-            if (a.region) region = a.region;
-            if (a.ready) ready = a.ready;
-        }
-        const ranked = tracks.map((t) => ({ t, s: scores[t.id] ?? 0 })).sort((a, b) => b.s - a.s);
-        const top = ranked[0];
-        const runnerUp = ranked[1] ?? ranked[0];
-        const match = Math.min(99, Math.max(81, 80 + top.s * 3 + ready * 2));
-        const unis = (region === 'all' ? universities : universities.filter((u) => u.region === region))
-            .slice()
-            .sort((a, b) => a.rank - b.rank)
-            .slice(0, 3);
-        this.result = { track: top.t, runnerUp: runnerUp.t, match, unis };
-        this.done = true;
-        this.shownMatch = 0;
-        setTimeout(() => animateNumber(match, 1500, (v) => (this.shownMatch = v), 3), 300);
+    next() {
+        if (!this.canNext) return;
+        if (this.step < 2) this.step += 1;
+        else this.done = true;
     },
     reset() {
-        this.answers = [];
-        this.step = 0;
-        this.done = false;
-        this.result = null;
+        Object.assign(this, { step: 0, degree: '', field: '', region: 'all', done: false });
     },
-    get ringOffset() {
-        return this.ringCircumference * (1 - this.shownMatch / 100);
+    get results() {
+        if (!this.done) return [];
+        return this.data.tracks
+            .map((track) => {
+                let score = 0;
+                if (track.degrees.includes(this.degree)) score += 40;
+
+                const majors = track.majors.filter(
+                    (m) => m.degree === this.degree && (this.field === 'all' || m.field === this.field),
+                );
+                if (majors.length) score += 30 + Math.min(majors.length * 3, 20);
+
+                const links = track.links.filter((l) => l.degree === this.degree);
+                const totalUnis = new Set(links.map((l) => l.uni)).size;
+                if (totalUnis) score += Math.min(totalUnis, 10);
+
+                const withUnis = majors
+                    .map((m) => ({ name: m.name, unis: links.filter((l) => l.major === m.id).length }))
+                    .filter((m) => m.unis > 0);
+
+                return { track, score: Math.min(score, 100), majors: withUnis, totalUnis };
+            })
+            .filter((r) => r.score > 0)
+            .sort((a, b) => b.score - a.score);
     },
 }));
 
-/* ---------------- الجامعات ---------------- */
-Alpine.data('universitiesFilter', (items) => ({
-    region: 'all',
-    query: '',
-    items,
-    shows(id) {
-        const u = this.items[id];
-        const q = this.query.trim();
-        const okRegion = this.region === 'all' || u.region === this.region;
-        const okQuery =
-            !q ||
-            u.nameAr.includes(q) ||
-            u.nameEn.toLowerCase().includes(q.toLowerCase()) ||
-            u.country.includes(q) ||
-            u.fields.some((f) => f.includes(q));
-        return okRegion && okQuery;
+/* ---------------- مستكشف المسار: درجة ← تخصص ← جامعات ---------------- */
+Alpine.data('trackExplorer', (data) => ({
+    data,
+    degree: '',
+    major: '',
+    search: '',
+    init() {
+        this.$watch('degree', () => {
+            this.major = '';
+            this.search = '';
+        });
+        this.$watch('major', () => (this.search = ''));
     },
-    get count() {
-        return Object.keys(this.items).filter((id) => this.shows(id)).length;
+    get degreeObj() {
+        return this.data.degrees.find((d) => d.id === this.degree) ?? null;
+    },
+    get majorObj() {
+        return this.degreeObj?.majors.find((m) => m.id === this.major) ?? null;
+    },
+    /** التخصصات مجمّعة بالمجال المعرفي لقائمة الاختيار */
+    get fieldGroups() {
+        const groups = {};
+        for (const m of this.degreeObj?.majors ?? []) (groups[m.field] ??= []).push(m);
+        return Object.entries(groups).map(([name, majors]) => ({ name, majors }));
+    },
+    get constraints() {
+        return this.major ? (this.data.constraints[this.major] ?? []) : [];
+    },
+    /** قيد degree_restriction: الدرجات المسموحة لهذا التخصص فقط */
+    get allowedDegrees() {
+        const c = this.constraints.find((x) => x.allowedIds.length);
+        return c ? c.allowedIds : null;
+    },
+    get universities() {
+        const q = this.search.trim();
+        return (this.majorObj?.universities ?? []).filter(
+            (u) => !q || u.nameAr.includes(q) || u.nameEn.toLowerCase().includes(q.toLowerCase()) || u.country.includes(q),
+        );
+    },
+}));
+
+/* ---------------- صفحة واعد: تصفية البرامج ---------------- */
+Alpine.data('waedPrograms', (programs) => ({
+    programs, // id => { sector, text }
+    sector: 'الكل',
+    search: '',
+    showPast: true,
+    shows(id) {
+        const p = this.programs[id];
+        const q = this.search.trim();
+        return (this.sector === 'الكل' || p.sector === this.sector) && (!q || p.text.includes(q));
+    },
+    count(ids) {
+        return ids.filter((id) => this.shows(id)).length;
     },
 }));
 
@@ -389,7 +379,13 @@ Alpine.data('searchOverlay', (searchUrl, quickLinks, icons) => ({
     go(r) {
         if (!r) return;
         this.open = false;
-        setTimeout(() => document.querySelector(r.href)?.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+        if (!r.href.startsWith('#')) {
+            window.location.href = r.href;
+            return;
+        }
+        const target = document.querySelector(r.href);
+        if (target) setTimeout(() => target.scrollIntoView({ behavior: 'smooth', block: 'start' }), 60);
+        else window.location.href = `/${r.href}`;
     },
 }));
 
@@ -463,6 +459,22 @@ Alpine.data('dropzone', () => ({
         this.$refs.form.requestSubmit();
     },
 }));
+
+/** معاينة الصفحات القانونية: نفس قواعد LegalPage::renderedContent، والنص مُهرَّب أولًا */
+const escapeHtml = (t) => t.replace(/[&<>"']/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c]);
+window.renderLegal = (content) =>
+    content
+        .trim()
+        .split(/\n\s*\n/)
+        .filter(Boolean)
+        .map((p) => {
+            const html = escapeHtml(p.trim())
+                .replace(/\n/g, '<br>')
+                .replace(/\*\*(.+?)\*\*/g, '<strong class="text-ink">$1</strong>')
+                .replace(/\*(.+?)\*/g, '<em class="text-slate-500">$1</em>');
+            return `<p>${html}</p>`;
+        })
+        .join('');
 
 Alpine.data('copyText', (text) => ({
     copied: false,

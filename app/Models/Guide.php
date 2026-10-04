@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * الأدلة الاسترشادية: ملف PDF أو رابط، بإصدار وتاريخ سريان.
@@ -11,11 +12,13 @@ class Guide extends Model
 {
     protected $table = 'guides';
 
-    public const TYPES = ['pdf', 'link'];
+    public const TYPES = ['pdf', 'link', 'document'];
+
+    public const STATUSES = ['active', 'archived', 'draft'];
 
     protected $fillable = [
         'path_id', 'title_ar', 'title_en', 'guide_type', 'url', 'file_id', 'version',
-        'publication_date', 'effective_date', 'is_current', 'status', 'source_id',
+        'publication_date', 'effective_date', 'is_current', 'status', 'source_id', 'notes',
     ];
 
     protected function casts(): array
@@ -28,19 +31,19 @@ class Guide extends Model
     }
 
     /** المسار الذي ينتمي إليه هذا السجل — `path_id` هو `tracks.id`. */
-    public function track(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function track(): BelongsTo
     {
         return $this->belongsTo(Track::class, 'path_id');
     }
 
     /** مصدر البيانات الموثّق لهذا السجل. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }
 
     /** الملف المرفوع، حين يكون الدليل من نوع PDF. */
-    public function file(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function file(): BelongsTo
     {
         return $this->belongsTo(ManagedFile::class, 'file_id');
     }

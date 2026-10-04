@@ -61,6 +61,8 @@ class NewsController extends Controller
             'published_on' => ['nullable', 'date'],
             'author' => ['nullable', 'string', 'max:255'],
             'read_minutes' => ['nullable', 'integer', 'min:1', 'max:30'],
+            // مسار داخلي (/images/...) أو رابط من مركز الملفات
+            'image' => ['nullable', 'string', 'max:500', 'regex:/^(\/|https?:\/\/)/i'],
         ]);
 
         return [
@@ -69,6 +71,7 @@ class NewsController extends Controller
             'published_on' => $data['published_on'] ?? now()->toDateString(),
             'author' => ($data['author'] ?? '') ?: 'الإدارة العامة للابتعاث',
             'read_minutes' => $data['read_minutes'] ?? 3,
+            'image' => $data['image'] ?? '',
         ];
     }
 }

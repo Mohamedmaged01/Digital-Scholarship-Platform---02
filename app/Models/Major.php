@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * التخصصات، كل تخصص تحت مجال معرفي.
@@ -27,7 +28,7 @@ class Major extends Model
     }
 
     /** المجال المعرفي الذي ينتمي إليه التخصص. */
-    public function field(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function field(): BelongsTo
     {
         return $this->belongsTo(Field::class, 'field_id');
     }

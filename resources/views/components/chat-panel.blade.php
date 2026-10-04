@@ -1,7 +1,6 @@
 {{-- لوحة محادثة المساعد الذكي — تُستخدم في قسم المساعد وفي النافذة العائمة --}}
 @php
     $greeting = 'أهلًا بك في مساعِد الابتعاث الذكي. اسألني عن الشروط، المسارات الستة، المعدلات، المستندات، المكافآت، أو أي تفصيلة في رحلتك — وسأجيبك فورًا وفق نظام الابتعاث.';
-    $contactIcons = ['phone' => 'phone', 'mail' => 'mail', 'chat' => 'message-circle'];
 @endphp
 
 <div
@@ -47,13 +46,13 @@
                                 <x-lucide-life-buoy class="size-3.5" />
                                 قنوات التواصل مع الإدارة
                             </div>
-                            @foreach (config('kasp.contact_methods') as $c)
-                                <a href="{{ $c['href'] }}" class="group/c flex items-center justify-between gap-3 rounded-lg bg-white px-3 py-2.5 transition-all hover:bg-forest-800 hover:text-white">
+                            @foreach ($contactMethods as $c)
+                                <a href="{{ $c->href ?: '#' }}" class="group/c flex items-center justify-between gap-3 rounded-lg bg-white px-3 py-2.5 transition-all hover:bg-forest-800 hover:text-white">
                                     <span class="flex items-center gap-2.5">
-                                        @svg('lucide-'.$contactIcons[$c['icon']], 'size-4 text-forest-700 group-hover/c:text-gold-300')
-                                        <span class="text-xs font-bold">{{ $c['label'] }}</span>
+                                        @svg('lucide-'.$c->lucideIcon(), 'size-4 text-forest-700 group-hover/c:text-gold-300')
+                                        <span class="text-xs font-bold">{{ $c->label }}</span>
                                     </span>
-                                    <span class="font-plex text-xs font-semibold text-slate-500 group-hover/c:text-white/80" dir="ltr">{{ $c['value'] }}</span>
+                                    <span class="font-plex text-xs font-semibold text-slate-500 group-hover/c:text-white/80" dir="ltr">{{ $c->value }}</span>
                                 </a>
                             @endforeach
                         </div>

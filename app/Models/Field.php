@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 /**
  * المجالات المعرفية.
@@ -30,7 +31,7 @@ class Field extends Model
     }
 
     /** التخصصات تحت هذا المجال. */
-    public function majors(): \Illuminate\Database\Eloquent\Relations\HasMany
+    public function majors(): HasMany
     {
         return $this->hasMany(Major::class, 'field_id');
     }

@@ -1,0 +1,1970 @@
+{
+  "fields": [
+    {
+      "id": "f-eng",
+      "name_ar": "الهندسة والتقنية",
+      "name_en": "Engineering & Technology"
+    },
+    {
+      "id": "f-med",
+      "name_ar": "الطب والعلوم الصحية",
+      "name_en": "Medicine & Health Sciences"
+    },
+    {
+      "id": "f-sci",
+      "name_ar": "العلوم الطبيعية والبحثية",
+      "name_en": "Natural Sciences"
+    },
+    {
+      "id": "f-bus",
+      "name_ar": "الإدارة والاقتصاد",
+      "name_en": "Business & Economics"
+    },
+    {
+      "id": "f-law",
+      "name_ar": "القانون والسياسات العامة",
+      "name_en": "Law & Public Policy"
+    },
+    {
+      "id": "f-art",
+      "name_ar": "الفنون والثقافة والإعلام",
+      "name_en": "Arts, Culture & Media"
+    },
+    {
+      "id": "f-env",
+      "name_ar": "البيئة والطاقة والاستدامة",
+      "name_en": "Environment & Energy"
+    },
+    {
+      "id": "f-log",
+      "name_ar": "سلاسل الإمداد واللوجستيات",
+      "name_en": "Supply Chain & Logistics"
+    },
+    {
+      "id": "f-ind",
+      "name_ar": "الصناعات المتقدمة والفضاء",
+      "name_en": "Advanced Industries & Space"
+    },
+    {
+      "id": "f-hum",
+      "name_ar": "العلوم الإنسانية والاجتماعية",
+      "name_en": "Humanities & Social Sciences"
+    },
+    {
+      "id": "f-tour",
+      "name_ar": "السياحة والرياضة والضيافة",
+      "name_en": "Tourism, Sports & Hospitality"
+    }
+  ],
+  "majors": [
+    {
+      "id": "m-ai",
+      "name_ar": "الذكاء الاصطناعي",
+      "name_en": "Artificial Intelligence",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-cs",
+      "name_ar": "الأمن السيبراني",
+      "name_en": "Cybersecurity",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-se",
+      "name_ar": "هندسة البرمجيات",
+      "name_en": "Software Engineering",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-ee",
+      "name_ar": "الهندسة الكهربائية",
+      "name_en": "Electrical Engineering",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-me",
+      "name_ar": "الهندسة الميكانيكية",
+      "name_en": "Mechanical Engineering",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-ce",
+      "name_ar": "الهندسة المدنية",
+      "name_en": "Civil Engineering",
+      "field_id": "f-eng"
+    },
+    {
+      "id": "m-doc",
+      "name_ar": "الطب البشري",
+      "name_en": "Medicine",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-surg",
+      "name_ar": "جراحة الأورام الدقيقة",
+      "name_en": "Oncology Surgery",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-emr",
+      "name_ar": "طب الطوارئ والكوارث",
+      "name_en": "Emergency Medicine",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-gen",
+      "name_ar": "علم الجينوم الطبي",
+      "name_en": "Medical Genomics",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-nurs",
+      "name_ar": "التمريض المتقدم",
+      "name_en": "Advanced Nursing",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-pharm",
+      "name_ar": "الصيدلة الإكلينيكية",
+      "name_en": "Clinical Pharmacy",
+      "field_id": "f-med"
+    },
+    {
+      "id": "m-mba",
+      "name_ar": "إدارة الأعمال",
+      "name_en": "Business Administration",
+      "field_id": "f-bus"
+    },
+    {
+      "id": "m-econ",
+      "name_ar": "الاقتصاد",
+      "name_en": "Economics",
+      "field_id": "f-bus"
+    },
+    {
+      "id": "m-fin",
+      "name_ar": "المالية والاستثمار",
+      "name_en": "Finance & Investment",
+      "field_id": "f-bus"
+    },
+    {
+      "id": "m-law",
+      "name_ar": "القانون الدولي",
+      "name_en": "International Law",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-policy",
+      "name_ar": "السياسات العامة",
+      "name_en": "Public Policy",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-phys",
+      "name_ar": "الفيزياء",
+      "name_en": "Physics",
+      "field_id": "f-sci"
+    },
+    {
+      "id": "m-chem",
+      "name_ar": "الكيمياء",
+      "name_en": "Chemistry",
+      "field_id": "f-sci"
+    },
+    {
+      "id": "m-math",
+      "name_ar": "الرياضيات",
+      "name_en": "Mathematics",
+      "field_id": "f-sci"
+    },
+    {
+      "id": "m-bio",
+      "name_ar": "التقنية الحيوية",
+      "name_en": "Biotechnology",
+      "field_id": "f-sci"
+    },
+    {
+      "id": "m-film",
+      "name_ar": "الإنتاج السينمائي",
+      "name_en": "Film Production",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-arch",
+      "name_ar": "التصميم الحضري والعمارة",
+      "name_en": "Urban Design & Architecture",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-cook",
+      "name_ar": "فنون الطهي والضيافة",
+      "name_en": "Culinary Arts & Hospitality",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-renew",
+      "name_ar": "الطاقة المتجددة",
+      "name_en": "Renewable Energy",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-envsc",
+      "name_ar": "علوم البيئة",
+      "name_en": "Environmental Sciences",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-hydro",
+      "name_ar": "الهيدروجين الأخضر",
+      "name_en": "Green Hydrogen",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-scm",
+      "name_ar": "إدارة سلاسل الإمداد",
+      "name_en": "Supply Chain Management",
+      "field_id": "f-log"
+    },
+    {
+      "id": "m-space",
+      "name_ar": "علوم وهندسة الفضاء",
+      "name_en": "Space Sciences & Engineering",
+      "field_id": "f-ind"
+    },
+    {
+      "id": "m-semi",
+      "name_ar": "أشباه الموصلات والرقائق",
+      "name_en": "Semiconductors & Chips",
+      "field_id": "f-ind"
+    },
+    {
+      "id": "m-robot",
+      "name_ar": "الروبوتات والأنظمة الذاتية",
+      "name_en": "Robotics",
+      "field_id": "f-ind"
+    },
+    {
+      "id": "m-t-crim",
+      "name_ar": "العدالة الجنائية",
+      "name_en": "Criminal Justice",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-t-digadv",
+      "name_ar": "الإعلانات الرقمية",
+      "name_en": "Digital Advertising",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-t-law",
+      "name_ar": "القانون",
+      "name_en": "Law",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-t-natsec",
+      "name_ar": "الأمن الوطني",
+      "name_en": "National Security",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-t-polisci",
+      "name_ar": "العلوم السياسية والعلاقات الدولية",
+      "name_en": "Political Science & IR",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-t-games",
+      "name_ar": "الألعاب الرقمية",
+      "name_en": "Digital Games",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-t-phil",
+      "name_ar": "الفلسفة",
+      "name_en": "Philosophy",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-envmgt",
+      "name_ar": "العلوم البيئية وإدارتها",
+      "name_en": "Environmental Sciences & Management",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-t-pubadmin",
+      "name_ar": "الإدارة والسياسة العامة",
+      "name_en": "Public Policy & Admin",
+      "field_id": "f-law"
+    },
+    {
+      "id": "m-t-fish",
+      "name_ar": "الثروة السمكية",
+      "name_en": "Fisheries",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-t-sports",
+      "name_ar": "الرياضة وإدارتها",
+      "name_en": "Sports Management",
+      "field_id": "f-tour"
+    },
+    {
+      "id": "m-t-forest",
+      "name_ar": "الغابات والمراعي",
+      "name_en": "Forestry & Pastures",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-t-socialw",
+      "name_ar": "الخدمة الاجتماعية",
+      "name_en": "Social Work",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-geo",
+      "name_ar": "الجغرافيا",
+      "name_en": "Geography",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-socio",
+      "name_ar": "علم الاجتماع",
+      "name_en": "Sociology",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-hist",
+      "name_ar": "التاريخ",
+      "name_en": "History",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-tourism",
+      "name_ar": "السياحة وإدارة الفندقة",
+      "name_en": "Tourism & Hotel Management",
+      "field_id": "f-tour"
+    },
+    {
+      "id": "m-t-hosp",
+      "name_ar": "إدارة الضيافة",
+      "name_en": "Hospitality Management",
+      "field_id": "f-tour"
+    },
+    {
+      "id": "m-t-hr",
+      "name_ar": "الموارد البشرية",
+      "name_en": "Human Resources",
+      "field_id": "f-bus"
+    },
+    {
+      "id": "m-t-socsci",
+      "name_ar": "الإدارة والعلوم الاجتماعية",
+      "name_en": "Admin & Social Sciences",
+      "field_id": "f-hum"
+    },
+    {
+      "id": "m-t-marine",
+      "name_ar": "علوم البحار",
+      "name_en": "Marine Sciences",
+      "field_id": "f-env"
+    },
+    {
+      "id": "m-t-media",
+      "name_ar": "الإعلام والاتصال",
+      "name_en": "Media & Communication",
+      "field_id": "f-art"
+    },
+    {
+      "id": "m-t-anthro",
+      "name_ar": "الأنثروبولوجي",
+      "name_en": "Anthropology",
+      "field_id": "f-hum"
+    }
+  ],
+  "degrees": [
+    {
+      "id": "bachelor",
+      "name_ar": "بكالوريوس",
+      "name_en": "Bachelor"
+    },
+    {
+      "id": "master",
+      "name_ar": "ماجستير",
+      "name_en": "Master"
+    },
+    {
+      "id": "phd",
+      "name_ar": "دكتوراه",
+      "name_en": "PhD"
+    }
+  ],
+  "pathDegrees": [
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master"
+    }
+  ],
+  "pathMajors": [
+    {
+      "path_id": "rowad",
+      "major_id": "m-ai",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-ai",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-cs",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-cs",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-se",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-mba",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-law",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-policy",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-doc",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "rowad",
+      "major_id": "m-phys",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-scm",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-scm",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-cs",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-renew",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-renew",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-ee",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-me",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-ce",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "emdad",
+      "major_id": "m-nurs",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-bio",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-bio",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-phys",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-chem",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-ai",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-envsc",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "research",
+      "major_id": "m-renew",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-mba",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-mba",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-econ",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-crim",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-digadv",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-law",
+      "degree_id": "professional_doctorate"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-natsec",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-polisci",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-games",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-phil",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-envmgt",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-pubadmin",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-fish",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-sports",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-forest",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-socialw",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-geo",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-socio",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-hist",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-tourism",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-hosp",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-hr",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-socsci",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-marine",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-media",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "tamayoz",
+      "major_id": "m-t-anthro",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "sahhi",
+      "major_id": "m-surg",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "sahhi",
+      "major_id": "m-emr",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "sahhi",
+      "major_id": "m-gen",
+      "degree_id": "phd"
+    },
+    {
+      "path_id": "sahhi",
+      "major_id": "m-doc",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "sahhi",
+      "major_id": "m-pharm",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-space",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-space",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-hydro",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-semi",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-semi",
+      "degree_id": "master"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-robot",
+      "degree_id": "bachelor"
+    },
+    {
+      "path_id": "waed",
+      "major_id": "m-ai",
+      "degree_id": "master"
+    }
+  ],
+  "pmi": [
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-ai",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-ai",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-ai",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-ai",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-ai",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-ai",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-cs",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-cs",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-cs",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-cs",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-se",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-se",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-law",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-law",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-policy",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "master",
+      "major_id": "m-policy",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-doc",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "bachelor",
+      "major_id": "m-doc",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "phd",
+      "major_id": "m-phys",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "rowad",
+      "degree_id": "phd",
+      "major_id": "m-phys",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-scm",
+      "institution_id": "nus"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-scm",
+      "institution_id": "delft"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "master",
+      "major_id": "m-scm",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "master",
+      "major_id": "m-scm",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-cs",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-cs",
+      "institution_id": "tsinghua"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-renew",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-renew",
+      "institution_id": "delft"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "master",
+      "major_id": "m-renew",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-ee",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-ee",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-me",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-me",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-ce",
+      "institution_id": "delft"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-ce",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-nurs",
+      "institution_id": "sydney"
+    },
+    {
+      "path_id": "emdad",
+      "degree_id": "bachelor",
+      "major_id": "m-nurs",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "master",
+      "major_id": "m-bio",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "master",
+      "major_id": "m-bio",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-bio",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-phys",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-phys",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-phys",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-chem",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-chem",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-ai",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-ai",
+      "institution_id": "tsinghua"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "master",
+      "major_id": "m-envsc",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "master",
+      "major_id": "m-envsc",
+      "institution_id": "delft"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-renew",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "research",
+      "degree_id": "phd",
+      "major_id": "m-renew",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-crim",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-crim",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-crim",
+      "institution_id": "michigan-state"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-crim",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-crim",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "penn"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-mba",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-mba",
+      "institution_id": "penn"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-mba",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-digadv",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-digadv",
+      "institution_id": "nyu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-digadv",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-digadv",
+      "institution_id": "usc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "yale"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "professional_doctorate",
+      "major_id": "m-t-law",
+      "institution_id": "georgetown"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-natsec",
+      "institution_id": "georgetown"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-natsec",
+      "institution_id": "kings"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-natsec",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-natsec",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-natsec",
+      "institution_id": "anu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "georgetown"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-polisci",
+      "institution_id": "yale"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-t-games",
+      "institution_id": "nyu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-t-games",
+      "institution_id": "usc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-t-games",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "bachelor",
+      "major_id": "m-t-games",
+      "institution_id": "waseda"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "chicago"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-econ",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-phil",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-phil",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-phil",
+      "institution_id": "edinburgh"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-phil",
+      "institution_id": "nyu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-phil",
+      "institution_id": "sorbonne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-envmgt",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-envmgt",
+      "institution_id": "ubc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-envmgt",
+      "institution_id": "queensland"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-envmgt",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-envmgt",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-pubadmin",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-pubadmin",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-pubadmin",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-pubadmin",
+      "institution_id": "chicago"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-pubadmin",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-fish",
+      "institution_id": "ubc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-fish",
+      "institution_id": "queensland"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-fish",
+      "institution_id": "sydney"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-fish",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-sports",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-sports",
+      "institution_id": "loughborough"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-sports",
+      "institution_id": "michigan"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-sports",
+      "institution_id": "sydney"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-forest",
+      "institution_id": "ubc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-forest",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-forest",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socialw",
+      "institution_id": "michigan"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socialw",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socialw",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socialw",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-geo",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-geo",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-geo",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-geo",
+      "institution_id": "edinburgh"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socio",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socio",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socio",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socio",
+      "institution_id": "chicago"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socio",
+      "institution_id": "michigan"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hist",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hist",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hist",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hist",
+      "institution_id": "yale"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hist",
+      "institution_id": "sorbonne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-tourism",
+      "institution_id": "cornell"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-tourism",
+      "institution_id": "lausanne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-tourism",
+      "institution_id": "queensland"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-tourism",
+      "institution_id": "sorbonne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hosp",
+      "institution_id": "cornell"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hosp",
+      "institution_id": "lausanne"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hosp",
+      "institution_id": "nus"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hr",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hr",
+      "institution_id": "michigan"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hr",
+      "institution_id": "cornell"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-hr",
+      "institution_id": "nus"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socsci",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socsci",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socsci",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-socsci",
+      "institution_id": "anu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-marine",
+      "institution_id": "queensland"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-marine",
+      "institution_id": "ubc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-marine",
+      "institution_id": "sydney"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-marine",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-media",
+      "institution_id": "columbia"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-media",
+      "institution_id": "lse"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-media",
+      "institution_id": "nyu"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-media",
+      "institution_id": "usc"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-media",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-anthro",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-anthro",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-anthro",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-anthro",
+      "institution_id": "michigan"
+    },
+    {
+      "path_id": "tamayoz",
+      "degree_id": "master",
+      "major_id": "m-t-anthro",
+      "institution_id": "anu"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd",
+      "major_id": "m-surg",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd",
+      "major_id": "m-surg",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd",
+      "major_id": "m-surg",
+      "institution_id": "harvard"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-emr",
+      "institution_id": "melbourne"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-emr",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd",
+      "major_id": "m-gen",
+      "institution_id": "cambridge"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "phd",
+      "major_id": "m-gen",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-doc",
+      "institution_id": "oxford"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-doc",
+      "institution_id": "imperial"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-pharm",
+      "institution_id": "ucl"
+    },
+    {
+      "path_id": "sahhi",
+      "degree_id": "master",
+      "major_id": "m-pharm",
+      "institution_id": "toronto"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-space",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-space",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-space",
+      "institution_id": "caltech"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-space",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-hydro",
+      "institution_id": "eth"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-hydro",
+      "institution_id": "delft"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-semi",
+      "institution_id": "kaist"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-semi",
+      "institution_id": "tsinghua"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-semi",
+      "institution_id": "kaist"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-semi",
+      "institution_id": "mit"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-robot",
+      "institution_id": "kaist"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "bachelor",
+      "major_id": "m-robot",
+      "institution_id": "tokyo"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-ai",
+      "institution_id": "stanford"
+    },
+    {
+      "path_id": "waed",
+      "degree_id": "master",
+      "major_id": "m-ai",
+      "institution_id": "tsinghua"
+    }
+  ]
+}

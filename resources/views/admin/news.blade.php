@@ -64,6 +64,12 @@
                 <x-admin.error name="body" />
             </div>
 
+            <div>
+                <label for="image" class="dash-label">صورة الخبر <span class="font-medium text-slate-400">(مسار داخلي أو رابط من مركز الملفات)</span></label>
+                <input id="image" name="image" dir="ltr" value="{{ old('image', $e?->image) }}" placeholder="/images/vision-riyadh.jpg" class="dash-input text-left">
+                <x-admin.error name="image" />
+            </div>
+
             <label class="flex cursor-pointer items-center gap-3 rounded-xl border border-gold-500/40 bg-gold-500/[0.06] px-4 py-3">
                 <input type="checkbox" name="pinned" value="1" @checked(old('pinned', $e?->pinned)) class="size-4 accent-[#b08c2f]">
                 <span class="flex items-center gap-1.5 text-[13px] font-bold text-gold-700">

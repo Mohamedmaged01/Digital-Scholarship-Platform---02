@@ -1,7 +1,6 @@
 [
   {
     "id": "mit",
-    "rank": 1,
     "nameEn": "MIT",
     "nameAr": "معهد ماساتشوستس للتقنية",
     "city": "كامبريدج",
@@ -12,11 +11,11 @@
       "حاسب",
       "ذكاء اصطناعي"
     ],
-    "acceptance": "٪4"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "imperial",
-    "rank": 2,
     "nameEn": "Imperial College London",
     "nameAr": "إمبريال كوليدج لندن",
     "city": "لندن",
@@ -27,11 +26,11 @@
       "هندسة",
       "طاقة"
     ],
-    "acceptance": "٪14"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "oxford",
-    "rank": 3,
     "nameEn": "University of Oxford",
     "nameAr": "جامعة أكسفورد",
     "city": "أكسفورد",
@@ -42,11 +41,11 @@
       "طب",
       "قانون"
     ],
-    "acceptance": "٪17"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "harvard",
-    "rank": 4,
     "nameEn": "Harvard University",
     "nameAr": "جامعة هارفارد",
     "city": "كامبريدج",
@@ -57,11 +56,11 @@
       "إدارة أعمال",
       "قانون"
     ],
-    "acceptance": "٪4"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "cambridge",
-    "rank": 5,
     "nameEn": "University of Cambridge",
     "nameAr": "جامعة كامبريدج",
     "city": "كامبريدج",
@@ -72,11 +71,11 @@
       "هندسة",
       "طب"
     ],
-    "acceptance": "٪21"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "stanford",
-    "rank": 6,
     "nameEn": "Stanford University",
     "nameAr": "جامعة ستانفورد",
     "city": "ستانفورد",
@@ -87,11 +86,11 @@
       "ريادة أعمال",
       "ذكاء اصطناعي"
     ],
-    "acceptance": "٪4"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "eth",
-    "rank": 7,
     "nameEn": "ETH Zürich",
     "nameAr": "المعهد الفدرالي السويسري للتقنية",
     "city": "زيورخ",
@@ -102,11 +101,11 @@
       "هندسة",
       "روبوتات"
     ],
-    "acceptance": "٪27"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "nus",
-    "rank": 8,
     "nameEn": "National Univ. of Singapore",
     "nameAr": "جامعة سنغافورة الوطنية",
     "city": "سنغافورة",
@@ -117,11 +116,11 @@
       "تقنية حيوية",
       "اقتصاد"
     ],
-    "acceptance": "٪5"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "ucl",
-    "rank": 9,
     "nameEn": "UCL",
     "nameAr": "يونيفرسيتي كوليدج لندن",
     "city": "لندن",
@@ -132,11 +131,11 @@
       "أعصاب",
       "تعليم"
     ],
-    "acceptance": "٪30"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "caltech",
-    "rank": 10,
     "nameEn": "Caltech",
     "nameAr": "معهد كاليفورنيا للتقنية",
     "city": "باسادينا",
@@ -147,11 +146,11 @@
       "فيزياء",
       "كيمياء"
     ],
-    "acceptance": "٪6"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "tokyo",
-    "rank": 32,
     "nameEn": "University of Tokyo",
     "nameAr": "جامعة طوكيو",
     "city": "طوكيو",
@@ -162,11 +161,11 @@
       "هندسة",
       "طاقة هيدروجين"
     ],
-    "acceptance": "٪34"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "melbourne",
-    "rank": 13,
     "nameEn": "University of Melbourne",
     "nameAr": "جامعة ملبورن",
     "city": "ملبورن",
@@ -177,11 +176,11 @@
       "قانون",
       "علوم بيئة"
     ],
-    "acceptance": "٪40"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "tsinghua",
-    "rank": 20,
     "nameEn": "Tsinghua University",
     "nameAr": "جامعة تسينغهوا",
     "city": "بكين",
@@ -192,11 +191,11 @@
       "حاسب",
       "اقتصاد"
     ],
-    "acceptance": "٪2"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "sorbonne",
-    "rank": 63,
     "nameEn": "Sorbonne Université",
     "nameAr": "جامعة السوربون",
     "city": "باريس",
@@ -207,11 +206,11 @@
       "رياضيات",
       "فنون"
     ],
-    "acceptance": "٪32"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "kaist",
-    "rank": 53,
     "nameEn": "KAIST",
     "nameAr": "المعهد الكوري المتقدم للعلوم والتقنية",
     "city": "دايجون",
@@ -222,11 +221,11 @@
       "روبوتات",
       "مواد"
     ],
-    "acceptance": "٪20"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "toronto",
-    "rank": 21,
     "nameEn": "University of Toronto",
     "nameAr": "جامعة تورنتو",
     "city": "تورونتو",
@@ -237,11 +236,11 @@
       "تعلم آلي",
       "صحة عامة"
     ],
-    "acceptance": "٪43"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "delft",
-    "rank": 49,
     "nameEn": "TU Delft",
     "nameAr": "جامعة دلفت للتقنية",
     "city": "دلفت",
@@ -252,11 +251,11 @@
       "مياه",
       "طيران"
     ],
-    "acceptance": "٪42"
+    "website": "",
+    "status": "needs_verification"
   },
   {
     "id": "sydney",
-    "rank": 18,
     "nameEn": "University of Sydney",
     "nameAr": "جامعة سيدني",
     "city": "سيدني",
@@ -267,6 +266,291 @@
       "حقوق",
       "زراعة ذكية"
     ],
-    "acceptance": "٪30"
+    "website": "",
+    "status": "needs_verification"
+  },
+  {
+    "id": "lse",
+    "nameEn": "London School of Economics",
+    "nameAr": "كلية لندن للاقتصاد والعلوم السياسية",
+    "city": "لندن",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "اقتصاد",
+      "سياسات عامة",
+      "قانون"
+    ],
+    "website": "https://www.lse.ac.uk",
+    "status": "verified"
+  },
+  {
+    "id": "michigan-state",
+    "nameEn": "Michigan State University",
+    "nameAr": "جامعة ولاية ميشيغان",
+    "city": "إيست لانسنغ",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "عدالة جنائية",
+      "تعليم",
+      "زراعة"
+    ],
+    "website": "https://msu.edu",
+    "status": "verified"
+  },
+  {
+    "id": "penn",
+    "nameEn": "University of Pennsylvania",
+    "nameAr": "جامعة بنسلفانيا",
+    "city": "فيلادلفيا",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "إدارة أعمال",
+      "قانون",
+      "تعليم"
+    ],
+    "website": "https://www.upenn.edu",
+    "status": "verified"
+  },
+  {
+    "id": "columbia",
+    "nameEn": "Columbia University",
+    "nameAr": "جامعة كولومبيا",
+    "city": "نيويورك",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "صحافة",
+      "قانون",
+      "إدارة عامة"
+    ],
+    "website": "https://www.columbia.edu",
+    "status": "verified"
+  },
+  {
+    "id": "chicago",
+    "nameEn": "University of Chicago",
+    "nameAr": "جامعة شيكاغو",
+    "city": "شيكاغو",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "اقتصاد",
+      "سياسات عامة",
+      "فلسفة"
+    ],
+    "website": "https://www.uchicago.edu",
+    "status": "verified"
+  },
+  {
+    "id": "yale",
+    "nameEn": "Yale University",
+    "nameAr": "جامعة ييل",
+    "city": "نيو هيفن",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "قانون",
+      "تاريخ",
+      "علوم سياسية"
+    ],
+    "website": "https://www.yale.edu",
+    "status": "verified"
+  },
+  {
+    "id": "georgetown",
+    "nameEn": "Georgetown University",
+    "nameAr": "جامعة جورجتاون",
+    "city": "واشنطن",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "علاقات دولية",
+      "قانون",
+      "أمن وطني"
+    ],
+    "website": "https://www.georgetown.edu",
+    "status": "verified"
+  },
+  {
+    "id": "kings",
+    "nameEn": "King's College London",
+    "nameAr": "كينغز كوليدج لندن",
+    "city": "لندن",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "قانون",
+      "علوم سياسية",
+      "حرب وأمن"
+    ],
+    "website": "https://www.kcl.ac.uk",
+    "status": "verified"
+  },
+  {
+    "id": "edinburgh",
+    "nameEn": "University of Edinburgh",
+    "nameAr": "جامعة إدنبرة",
+    "city": "إدنبرة",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "فلسفة",
+      "تاريخ",
+      "علوم بيئة"
+    ],
+    "website": "https://www.ed.ac.uk",
+    "status": "verified"
+  },
+  {
+    "id": "cornell",
+    "nameEn": "Cornell University",
+    "nameAr": "جامعة كورنيل",
+    "city": "إيثاكا",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "إدارة فندقة",
+      "زراعة",
+      "هندسة"
+    ],
+    "website": "https://www.cornell.edu",
+    "status": "verified"
+  },
+  {
+    "id": "lausanne",
+    "nameEn": "EHL Hospitality Business School",
+    "nameAr": "كلية لوزان لإدارة الفنادق",
+    "city": "لوزان",
+    "country": "سويسرا",
+    "region": "europe",
+    "fields": [
+      "إدارة ضيافة",
+      "سياحة"
+    ],
+    "website": "https://www.ehl.edu",
+    "status": "verified"
+  },
+  {
+    "id": "ubc",
+    "nameEn": "University of British Columbia",
+    "nameAr": "جامعة بريتش كولومبيا",
+    "city": "فانكوفر",
+    "country": "كندا",
+    "region": "na",
+    "fields": [
+      "غابات",
+      "بيئة",
+      "علوم بحار"
+    ],
+    "website": "https://www.ubc.ca",
+    "status": "verified"
+  },
+  {
+    "id": "queensland",
+    "nameEn": "University of Queensland",
+    "nameAr": "جامعة كوينزلاند",
+    "city": "بريزبن",
+    "country": "أستراليا",
+    "region": "oceania",
+    "fields": [
+      "علوم بحار",
+      "بيئة",
+      "رياضة"
+    ],
+    "website": "https://www.uq.edu.au",
+    "status": "verified"
+  },
+  {
+    "id": "michigan",
+    "nameEn": "University of Michigan",
+    "nameAr": "جامعة ميشيغان",
+    "city": "آن آربر",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "إدارة عامة",
+      "علوم اجتماعية",
+      "رياضة"
+    ],
+    "website": "https://umich.edu",
+    "status": "verified"
+  },
+  {
+    "id": "nyu",
+    "nameEn": "New York University",
+    "nameAr": "جامعة نيويورك",
+    "city": "نيويورك",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "إعلام",
+      "ألعاب رقمية",
+      "فنون"
+    ],
+    "website": "https://www.nyu.edu",
+    "status": "verified"
+  },
+  {
+    "id": "usc",
+    "nameEn": "University of Southern California",
+    "nameAr": "جامعة جنوب كاليفورنيا",
+    "city": "لوس أنجلوس",
+    "country": "الولايات المتحدة",
+    "region": "na",
+    "fields": [
+      "إعلام",
+      "ألعاب رقمية",
+      "سينما"
+    ],
+    "website": "https://www.usc.edu",
+    "status": "verified"
+  },
+  {
+    "id": "loughborough",
+    "nameEn": "Loughborough University",
+    "nameAr": "جامعة لوبورو",
+    "city": "لوبورو",
+    "country": "المملكة المتحدة",
+    "region": "europe",
+    "fields": [
+      "رياضة",
+      "إعلام",
+      "هندسة"
+    ],
+    "website": "https://www.lboro.ac.uk",
+    "status": "verified"
+  },
+  {
+    "id": "anu",
+    "nameEn": "Australian National University",
+    "nameAr": "الجامعة الوطنية الأسترالية",
+    "city": "كانبرا",
+    "country": "أستراليا",
+    "region": "oceania",
+    "fields": [
+      "علوم سياسية",
+      "فلسفة",
+      "تاريخ"
+    ],
+    "website": "https://www.anu.edu.au",
+    "status": "verified"
+  },
+  {
+    "id": "waseda",
+    "nameEn": "Waseda University",
+    "nameAr": "جامعة واسيدا",
+    "city": "طوكيو",
+    "country": "اليابان",
+    "region": "asia",
+    "fields": [
+      "علوم سياسية",
+      "إعلام",
+      "ألعاب رقمية"
+    ],
+    "website": "https://www.waseda.jp",
+    "status": "verified"
   }
 ]

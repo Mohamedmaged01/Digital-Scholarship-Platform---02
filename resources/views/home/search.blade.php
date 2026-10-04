@@ -1,6 +1,6 @@
 @php
     $groupIcons = collect([
-        'sections' => 'layout-grid', 'tracks' => 'graduation-cap', 'universities' => 'university',
+        'sections' => 'layout-grid', 'tracks' => 'graduation-cap', 'waed' => 'satellite', 'majors' => 'book-open', 'universities' => 'university',
         'news' => 'newspaper', 'journey' => 'route', 'faq' => 'circle-help', 'kb' => 'bot',
     ])->map(fn ($icon) => svg('lucide-'.$icon, 'size-4.5')->toHtml());
 @endphp

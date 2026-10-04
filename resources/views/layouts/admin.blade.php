@@ -17,10 +17,8 @@
     <div x-show="nav" x-cloak x-transition.opacity @click="nav = false" class="fixed inset-0 z-30 bg-forest-950/60 lg:hidden"></div>
     <aside class="pattern-star-dark fixed inset-y-0 start-0 z-40 flex w-72 shrink-0 translate-x-full flex-col bg-forest-950 transition-transform duration-400 ease-out-expo lg:sticky lg:top-0 lg:h-screen lg:translate-x-0"
            :class="nav ? 'translate-x-0!' : ''">
-        <div class="flex items-center gap-3.5 border-b border-white/10 px-6 py-6">
-            <span class="grid size-11 shrink-0 place-items-center rounded-2xl bg-gold-500 text-forest-950">
-                <x-star-emblem class="size-6" />
-            </span>
+        <div class="flex items-center gap-3 border-b border-white/10 px-6 py-6">
+            <x-brand-logo emblem light class="h-11 shrink-0" />
             <div class="leading-tight">
                 <div class="text-sm font-bold text-white">لوحة التحكم</div>
                 <div class="mt-0.5 text-[10px] font-medium text-slate-400">إدارة المنصة بالكامل</div>

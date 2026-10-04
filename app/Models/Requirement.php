@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * الشروط والمتطلبات بنموذج مرن: عامة أو لمسار أو لبرنامج أو لتخصص.
@@ -34,7 +35,7 @@ class Requirement extends Model
     }
 
     /** مصدر البيانات الموثّق لهذا السجل. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }

@@ -12,6 +12,12 @@ class DatabaseSeeder extends Seeder
     {
         DefaultContent::resetTracks();
         DefaultContent::resetUniversities();
+        DefaultContent::resetRelations();
+        DefaultContent::resetConstraints();
+        DefaultContent::resetWaedPrograms();
+        DefaultContent::resetGuides();
+        DefaultContent::resetPages();
+        DefaultContent::resetContactMethods();
         DefaultContent::resetStations();
         DefaultContent::resetNews();
         DefaultContent::resetCoreKnowledge();

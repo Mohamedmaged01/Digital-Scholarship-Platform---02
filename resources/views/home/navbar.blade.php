@@ -10,14 +10,10 @@
             :class="scrolled ? 'bg-cream/85 shadow-[0_8px_40px_-16px_rgba(10,27,20,0.25)] backdrop-blur-xl' : 'bg-transparent'">
         <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 md:px-8">
             {{-- Brand --}}
-            <a href="#home" class="group flex items-center gap-3.5">
-                <span class="grid size-11 place-items-center rounded-2xl bg-forest-800 text-gold-400 shadow-lg shadow-forest-800/20 transition-transform duration-500 group-hover:rotate-45">
-                    <x-star-emblem class="size-6" />
-                </span>
-                <span class="leading-tight">
-                    <span class="block text-[15px] font-bold text-ink">برنامج خادم الحرمين الشريفين</span>
-                    <span class="block text-[11px] font-medium text-slate-500">البوابة التعريفية والإرشادية للابتعاث</span>
-                </span>
+            <a href="#home" class="flex items-center gap-3" aria-label="الرئيسية — برنامج خادم الحرمين الشريفين للابتعاث">
+                <x-brand-logo class="h-12 md:h-14" fetchpriority="high" />
+                <span class="hidden h-8 w-px bg-forest-800/15 2xl:block"></span>
+                <span class="hidden text-[11px] font-semibold leading-tight text-slate-500 2xl:block">البوابة التعريفية<br>والإرشادية</span>
             </a>
 
             {{-- Desktop links --}}
@@ -70,10 +66,7 @@
     <div x-show="menu" x-cloak x-transition.opacity.duration.350ms @keydown.escape.window="menu = false"
          class="pattern-star-dark fixed inset-0 z-[60] flex flex-col bg-forest-950 lg:hidden" role="dialog" aria-modal="true" aria-label="القائمة">
         <div class="flex h-20 items-center justify-between px-5">
-            <span class="flex items-center gap-3">
-                <x-star-emblem class="size-7 text-gold-400" />
-                <span class="text-sm font-bold text-white">برنامج خادم الحرمين الشريفين</span>
-            </span>
+            <x-brand-logo light class="h-10" />
             <button type="button" @click="menu = false" aria-label="إغلاق القائمة" class="grid size-11 place-items-center rounded-xl border border-white/15 text-white">
                 <x-lucide-x class="size-5" />
             </button>

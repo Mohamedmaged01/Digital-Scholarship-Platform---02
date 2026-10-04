@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class University extends Model
@@ -17,7 +18,7 @@ class University extends Model
      * العمودان باقيان في القاعدة حفاظًا على البيانات القديمة فقط.
      */
     protected $fillable = [
-        'name_en', 'name_ar', 'city', 'country', 'region', 'fields',
+        'slug', 'name_en', 'name_ar', 'city', 'country', 'region', 'fields',
         'country_id', 'website', 'institution_status', 'source_id', 'last_verified_at',
     ];
 
@@ -36,13 +37,13 @@ class University extends Model
     }
 
     /** الدولة من الجدول المرجعي، حين تكون مُسندة. */
-    public function countryRef(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function countryRef(): BelongsTo
     {
         return $this->belongsTo(Country::class, 'country_id');
     }
 
     /** مصدر البيانات الموثّق لهذه المؤسسة. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }

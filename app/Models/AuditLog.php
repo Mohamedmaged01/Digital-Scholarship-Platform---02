@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * سجل التدقيق: من غيّر ماذا ومتى.
@@ -27,7 +28,7 @@ class AuditLog extends Model
     }
 
     /** المستخدم الذي نفّذ الإجراء. */
-    public function admin(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function admin(): BelongsTo
     {
         return $this->belongsTo(User::class, 'admin_id');
     }

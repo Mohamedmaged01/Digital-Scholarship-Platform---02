@@ -10,7 +10,7 @@ class News extends Model
     public const CATEGORIES = ['announcement', 'admissions', 'meetings', 'partnerships'];
 
     protected $fillable = [
-        'title', 'excerpt', 'body', 'category', 'pinned', 'published_on', 'author', 'read_minutes',
+        'title', 'excerpt', 'body', 'category', 'pinned', 'published_on', 'author', 'read_minutes', 'image',
     ];
 
     protected function casts(): array
@@ -41,6 +41,7 @@ class News extends Model
             'date' => $this->published_on->format('Y-m-d'),
             'author' => $this->author,
             'readMinutes' => $this->read_minutes,
+            'image' => $this->image ? asset(ltrim($this->image, '/')) : null,
         ];
     }
 }

@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 /**
  * ربط التخصص بالمؤسسة ضمن مسار — العلاقة الأدق في النموذج.
@@ -31,19 +32,19 @@ class PathMajorInstitution extends Model
     }
 
     /** المسار الذي ينتمي إليه هذا السجل — `path_id` هو `tracks.id`. */
-    public function track(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function track(): BelongsTo
     {
         return $this->belongsTo(Track::class, 'path_id');
     }
 
     /** المؤسسة التعليمية. */
-    public function institution(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function institution(): BelongsTo
     {
         return $this->belongsTo(University::class, 'institution_id');
     }
 
     /** مصدر البيانات الموثّق لهذا السجل. */
-    public function source(): \Illuminate\Database\Eloquent\Relations\BelongsTo
+    public function source(): BelongsTo
     {
         return $this->belongsTo(DataSource::class, 'source_id');
     }

@@ -8,7 +8,8 @@
     "pinned": true,
     "date": "2026-09-01",
     "author": "الإدارة العامة للابتعاث",
-    "readMinutes": 4
+    "readMinutes": 4,
+    "image": "/images/vision-riyadh.jpg"
   },
   {
     "id": "news-unis-2026",
@@ -19,7 +20,8 @@
     "pinned": true,
     "date": "2026-08-25",
     "author": "لجنة المواءمة الأكاديمية",
-    "readMinutes": 3
+    "readMinutes": 3,
+    "image": "/images/campus.jpg"
   },
   {
     "id": "news-attach-2026",
@@ -30,7 +32,8 @@
     "pinned": false,
     "date": "2026-08-18",
     "author": "إدارة شؤون الملحقيات",
-    "readMinutes": 3
+    "readMinutes": 3,
+    "image": "/images/hero-students-group.jpg"
   },
   {
     "id": "news-partner-2026",
@@ -41,6 +44,7 @@
     "pinned": false,
     "date": "2026-08-05",
     "author": "الإدارة العامة للشراكات الاستراتيجية",
-    "readMinutes": 5
+    "readMinutes": 5,
+    "image": "/images/tracks/emdad.jpg"
   }
 ]

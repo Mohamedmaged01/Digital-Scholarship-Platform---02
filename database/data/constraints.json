@@ -1,0 +1,130 @@
+[
+  {
+    "id": "c-tam-law-degree",
+    "pathId": "tamayoz",
+    "majorId": "m-t-law",
+    "constraintType": "degree_restriction",
+    "severity": "required",
+    "titleAr": "متاح للدكتوراه المهنية فقط",
+    "titleEn": "Professional Doctorate Only",
+    "descriptionAr": "وفق الدليل الاسترشادي لمسار التميز 2026-2027، يُقبل تخصص القانون في هذا المسار لدرجة الدكتوراه المهنية (J.D.) فقط، ولا يُقبل للبكالوريوس أو الماجستير التقليدي.",
+    "allowedDegrees": [
+      "professional_doctorate"
+    ],
+    "excludedDegrees": [
+      "bachelor",
+      "master",
+      "phd"
+    ],
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-law-admission",
+    "pathId": "tamayoz",
+    "majorId": "m-t-law",
+    "constraintType": "admission_type",
+    "severity": "required",
+    "titleAr": "يُشترط القبول النهائي غير المشروط",
+    "titleEn": "Unconditional Admission Required",
+    "descriptionAr": "لا يُقبل القبول المشروط (Conditional) لتخصص القانون؛ يجب أن يكون القبول الجامعي نهائياً وغير مشروط.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-natsec-prereq",
+    "pathId": "tamayoz",
+    "majorId": "m-t-natsec",
+    "constraintType": "prerequisite_degree",
+    "severity": "required",
+    "titleAr": "يُشترط الحصول على درجة البكالوريوس مسبقاً",
+    "titleEn": "Bachelor's Degree Required",
+    "descriptionAr": "لا يُقبل التقديم على الماجستير في الأمن الوطني إلا لمن يحمل درجة البكالوريوس في تخصص ذي صلة (علوم سياسية، علاقات دولية، أو ما يعادلها).",
+    "allowedDegrees": [
+      "master"
+    ],
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-crim-mode",
+    "pathId": "tamayoz",
+    "majorId": "m-t-crim",
+    "constraintType": "admission_type",
+    "severity": "required",
+    "titleAr": "الدراسة بالانتظام الكلي (Full-Time)",
+    "titleEn": "Full-Time Study Only",
+    "descriptionAr": "يُشترط أن تكون الدراسة بالانتظام الكلي؛ لا يُقبل تخصص العدالة الجنائية في برامج الدراسة الجزئية أو عن بُعد.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-games-degree",
+    "pathId": "tamayoz",
+    "majorId": "m-t-games",
+    "constraintType": "degree_restriction",
+    "severity": "required",
+    "titleAr": "متاح للبكالوريوس فقط",
+    "titleEn": "Bachelor's Degree Only",
+    "descriptionAr": "تخصص الألعاب الرقمية في مسار التميز مخصص لمرحلة البكالوريوس فقط وفق الدليل الاسترشادي المعتمد.",
+    "allowedDegrees": [
+      "bachelor"
+    ],
+    "excludedDegrees": [
+      "master",
+      "phd"
+    ],
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-fish-note",
+    "pathId": "tamayoz",
+    "majorId": "m-t-fish",
+    "constraintType": "note",
+    "severity": "note",
+    "titleAr": "يُفضّل أن يكون التخصص الجامعي في العلوم الزراعية أو البيولوجيا البحرية",
+    "titleEn": "Preferably Agricultural or Marine Biology Background",
+    "descriptionAr": "على الرغم من عدم الاشتراط الصريح، يُوصى بأن يكون المتقدم حاملاً لدرجة في العلوم الزراعية أو البيولوجيا أو ما يعادلها لضمان القبول في البرنامج.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-forest-note",
+    "pathId": "tamayoz",
+    "majorId": "m-t-forest",
+    "constraintType": "note",
+    "severity": "note",
+    "titleAr": "يُفضّل التخصص في العلوم البيئية أو الزراعية",
+    "titleEn": "Environmental or Agricultural Background Preferred",
+    "descriptionAr": "يُنصح المتقدمون بأن يكون تخصصهم الجامعي في العلوم البيئية أو الزراعة أو الغابات أو ما يعادلها.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-pubadmin-note",
+    "pathId": "tamayoz",
+    "majorId": "m-t-pubadmin",
+    "constraintType": "note",
+    "severity": "note",
+    "titleAr": "يُشترط الالتحاق بمدارس السياسات العامة المتخصصة",
+    "titleEn": "Must Enroll in Dedicated Public Policy Schools",
+    "descriptionAr": "يجب أن يكون البرنامج في كلية أو مدرسة متخصصة في السياسات العامة والحوكمة، وليس قسماً فرعياً ضمن كلية تجارية أو قانونية.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-tourism-mode",
+    "pathId": "tamayoz",
+    "majorId": "m-t-tourism",
+    "constraintType": "note",
+    "severity": "preferred",
+    "titleAr": "يُفضّل البرامج ذات المكوّن التطبيقي والتدريب الميداني",
+    "titleEn": "Practical & Field Training Component Preferred",
+    "descriptionAr": "يُوصى بأن يتضمن البرنامج مكوّناً تطبيقياً (Internship) أو تدريباً ميدانياً في منشآت ضيافة دولية معتمدة.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  },
+  {
+    "id": "c-tam-media-mode",
+    "pathId": "tamayoz",
+    "majorId": "m-t-media",
+    "constraintType": "admission_type",
+    "severity": "required",
+    "titleAr": "الدراسة بالانتظام الكلي (Full-Time)",
+    "titleEn": "Full-Time Study Only",
+    "descriptionAr": "يُشترط أن تكون الدراسة في تخصص الإعلام والاتصال بالانتظام الكلي ومن برامج الحضور الفعلي.",
+    "sourceRef": "الدليل الاسترشادي — مسار التميز 2026-2027"
+  }
+]

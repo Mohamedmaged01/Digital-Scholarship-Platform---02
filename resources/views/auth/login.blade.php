@@ -25,9 +25,7 @@
 
     <div class="animate-enter relative my-16 w-full max-w-md">
         <div class="text-center">
-            <span class="mx-auto grid size-16 place-items-center rounded-3xl bg-gold-500 text-forest-950 shadow-[0_20px_50px_-12px_rgba(201,163,56,0.6)]">
-                <x-star-emblem class="size-9" />
-            </span>
+            <x-brand-logo light class="mx-auto h-16" />
             <h1 class="mt-6 text-2xl font-bold text-white md:text-3xl">الدخول إلى لوحة التحكم</h1>
             <p class="mt-2.5 text-sm leading-relaxed text-slate-400">
                 منصّة إدارة برنامج خادم الحرمين الشريفين للابتعاث — الدخول مقيد
