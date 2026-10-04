@@ -49,7 +49,6 @@ class DefaultContent
                     'icon' => self::icon($t['icon']),
                     'color' => $t['color'],
                     'degrees' => $t['degrees'],
-                    'gpa' => $t['gpa'],
                     'ranking' => $t['ranking'],
                     'fields' => $t['fields'],
                     'extra_fields' => $t['extraFields'],
@@ -67,14 +66,12 @@ class DefaultContent
             University::query()->delete();
             foreach (self::load('universities') as $u) {
                 University::create([
-                    'rank' => $u['rank'],
                     'name_en' => $u['nameEn'],
                     'name_ar' => $u['nameAr'],
                     'city' => $u['city'],
                     'country' => $u['country'],
                     'region' => $u['region'],
                     'fields' => $u['fields'],
-                    'acceptance' => $u['acceptance'],
                 ]);
             }
         });

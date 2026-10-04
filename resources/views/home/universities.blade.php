@@ -9,7 +9,7 @@
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
         <div class="grid grid-cols-1 items-end gap-10 lg:grid-cols-2">
             <x-section-heading eyebrow="الجامعات الموصى بها"
-                               desc="أكثر من 200 جامعة معتمدة ضمن أفضل التصنيفات العالمية. تصفّح عيّنة منها، وابحث باسم الجامعة أو الدولة أو التخصص.">
+                               desc="عيّنة تعريفية من المؤسسات التعليمية. ابحث باسم المؤسسة أو الدولة أو التخصص. الارتباط بمسار محدد يُراجع من المصدر المعتمد.">
                 شراكات مع
                 <span class="text-shimmer-gold"> نخبة جامعات العالم</span>
             </x-section-heading>
@@ -54,7 +54,9 @@
                          x-transition:enter="transition duration-400 ease-out-expo" x-transition:enter-start="scale-95 translate-y-5 opacity-0" x-transition:enter-end="scale-100 translate-y-0 opacity-100"
                          class="group relative overflow-hidden rounded-3xl border border-forest-800/10 bg-white p-6 transition-all duration-500 hover:-translate-y-1.5 hover:border-gold-500/50 hover:shadow-[0_28px_56px_-26px_rgba(8,39,29,0.3)]">
                     <div class="flex items-center gap-3">
-                        <span dir="ltr" class="grid size-11 place-items-center rounded-2xl bg-forest-50 font-plex text-sm font-bold text-forest-800 transition-colors duration-500 group-hover:bg-forest-800 group-hover:text-gold-300">#{{ $u->rank }}</span>
+                        <span class="grid size-11 place-items-center rounded-2xl bg-forest-50 text-forest-800 transition-colors duration-500 group-hover:bg-forest-800 group-hover:text-gold-300">
+                            <x-lucide-building-2 class="size-5" />
+                        </span>
                         <div class="leading-tight">
                             <h3 dir="ltr" class="text-right font-plex text-[15px] font-bold text-ink">{{ $u->name_en }}</h3>
                             <p class="mt-0.5 text-[13px] font-semibold text-slate-500">{{ $u->name_ar }}</p>
@@ -72,12 +74,25 @@
                         @endforeach
                     </div>
 
-                    <div class="mt-5 flex items-center justify-between border-t border-dashed border-forest-800/10 pt-4">
-                        <span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500">
-                            <x-lucide-percent class="size-3.5 text-gold-600" />
-                            معدل القبول {{ $u->acceptance }}
-                        </span>
-                        <span class="text-xs font-bold text-forest-600 opacity-0 transition-all duration-300 group-hover:opacity-100">ضمن الجامعات المعتمدة</span>
+                    <div class="mt-5 flex items-center justify-between gap-3 border-t border-dashed border-forest-800/10 pt-4">
+                        @if ($u->isVerified())
+                            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-forest-600">
+                                <x-lucide-badge-check class="size-3.5 text-gold-600" />
+                                مُتحقق من المصدر
+                            </span>
+                        @else
+                            <span class="inline-flex items-center gap-1.5 text-xs font-bold text-slate-400">
+                                <x-lucide-clock class="size-3.5" />
+                                بيانات قيد التحقق
+                            </span>
+                        @endif
+                        @if ($u->website)
+                            <a href="{{ $u->website }}" target="_blank" rel="noopener noreferrer"
+                               class="inline-flex items-center gap-1 text-xs font-bold text-forest-600 hover:text-gold-600">
+                                الموقع الإلكتروني
+                                <x-lucide-external-link class="size-3" />
+                            </a>
+                        @endif
                     </div>
                 </article>
             @endforeach

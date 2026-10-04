@@ -162,7 +162,7 @@ class AdminTest extends TestCase
 
         $this->post('/admin/universities', ['name_en' => 'KAUST', 'name_ar' => 'جامعة الملك عبدالله', 'region' => 'asia', 'fields' => 'طاقة، مياه'])->assertRedirect();
         $uni = University::where('name_en', 'KAUST')->firstOrFail();
-        $this->assertSame(999, $uni->rank);
+        $this->assertSame('needs_verification', $uni->institution_status);
         $this->assertSame(['طاقة', 'مياه'], $uni->fields);
 
         $this->post('/admin/tracks', [
@@ -173,6 +173,7 @@ class AdminTest extends TestCase
         $this->assertSame(['bachelor', 'phd'], $track->degrees);
         $this->assertSame(['ميزة أولى', 'ميزة ثانية'], $track->perks);
         $this->assertSame('07', $track->code);
+        $this->assertSame('not_started', $track->application_status);
 
         $station = Station::first();
         $this->put("/admin/stations/{$station->id}", ['title' => 'محطة معدلة', 'description' => 'وصف جديد', 'points' => 'أ، ب'])->assertRedirect();

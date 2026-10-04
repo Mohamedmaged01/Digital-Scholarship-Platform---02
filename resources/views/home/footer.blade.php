@@ -35,7 +35,7 @@
                         </span>
                         <span class="leading-tight">
                             <span class="block text-base font-bold text-white">برنامج خادم الحرمين الشريفين</span>
-                            <span class="block text-xs font-medium text-slate-400">المنصّة الموحّدة للابتعاث الخارجي</span>
+                            <span class="block text-xs font-medium text-slate-400">البوابة التعريفية والإرشادية للابتعاث</span>
                         </span>
                     </div>
                     <p class="mt-6 max-w-sm text-sm leading-loose text-slate-400">
@@ -97,7 +97,16 @@
                 </div>
             </div>
 
-            <div class="mt-14 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 md:flex-row">
+            {{-- إخلاء مسؤولية المحتوى (§F): المنصة تعريفية، والمصدر المعتمد هو المرجع. --}}
+            <div class="mt-14 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4">
+                <p class="text-xs leading-loose text-slate-400">
+                    المعلومات الواردة في هذه المنصة تعريفية وإرشادية، ويجب الرجوع إلى المصدر
+                    المعتمد المحدّث للتحقق من الشروط والضوابط قبل اتخاذ أي إجراء. لا تمثل
+                    المنصة جهة قبول أو قرار نهائي.
+                </p>
+            </div>
+
+            <div class="mt-6 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-7 md:flex-row">
                 <p class="text-xs text-slate-500">© 1447هـ — 2026م برنامج خادم الحرمين الشريفين للابتعاث الخارجي. جميع الحقوق محفوظة.</p>
                 <div class="flex items-center gap-6 text-xs text-slate-500">
                     <a href="#home" class="transition-colors hover:text-gold-300">سياسة الخصوصية</a>

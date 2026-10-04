@@ -4,11 +4,17 @@
     <div class="absolute -end-24 bottom-0 h-[24rem] w-[24rem] rounded-full bg-gold-500/10 blur-[130px]" aria-hidden="true"></div>
 
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
-        <x-section-heading dark center eyebrow="الفرز بالذكاء الاصطناعي"
-                           desc="محرّك مطابقة مدرّب على بيانات آلاف المبتعثين ومتطلبات الجامعات العالمية. أجب بصدق، ودَع الخوارزمية ترسم لك الخطة.">
+        <x-section-heading dark center eyebrow="محرك التوجيه الاسترشادي"
+                           desc="يطابق المحرّك إجاباتك مع المسارات والتخصصات المعتمدة ليقترح الأقرب إليك. النتيجة اقتراح يستند إلى ما أدخلته، لا قرار أهلية.">
             أربعة أسئلة تفصلك عن
             <span class="text-shimmer-gold"> مسارك الأمثل</span>
         </x-section-heading>
+
+        {{-- تنبيه استرشادي ثابت فوق المحرك (§G). --}}
+        <p class="reveal mx-auto mt-6 max-w-3xl rounded-2xl border border-gold-500/25 bg-gold-500/10 px-5 py-3 text-center text-xs font-semibold leading-relaxed text-gold-100">
+            النتائج استرشادية ولا تمثل قبولًا أو أهلية نهائية. يجب الرجوع إلى الشروط والضوابط
+            والمصادر الرسمية المعتمدة لكل مسار قبل التقديم.
+        </p>
 
         <div class="reveal relative mx-auto mt-14 max-w-4xl overflow-hidden rounded-[2rem] border border-white/10 bg-white/[0.05] shadow-[0_40px_90px_-30px_rgba(0,0,0,0.6)] backdrop-blur-xl">
             {{-- progress --}}
@@ -86,8 +92,8 @@
                             <h3 class="mt-4 text-3xl font-bold text-white md:text-4xl" x-text="result.track.name"></h3>
                             <p class="mt-2 text-sm font-semibold text-forest-300" x-text="`${result.track.badge} — وأقرب بديل لك: ${result.runnerUp.name}`"></p>
                             <div class="mt-4 flex flex-wrap gap-2">
-                                <span dir="ltr" class="rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1.5 font-plex text-xs font-bold text-white/80"
-                                      x-text="`GPA ≥ ${result.track.gpa.replace('من 5.0', '/ 5.0')}`"></span>
+                                <span class="rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1.5 text-xs font-bold text-white/80"
+                                      x-text="result.track.applicationStatusLabel"></span>
                                 <span class="rounded-full border border-white/15 bg-white/[0.06] px-3.5 py-1.5 text-xs font-bold text-white/80" x-text="result.track.ranking"></span>
                             </div>
                             <ul class="mt-5 grid gap-2">

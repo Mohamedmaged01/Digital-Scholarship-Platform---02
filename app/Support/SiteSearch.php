@@ -69,11 +69,11 @@ class SiteSearch
                 $l['label'].' '.(self::SECTION_KEYWORDS[$l['href']] ?? ''));
         }
         foreach (Track::orderBy('sort')->get() as $t) {
-            $add("track-{$t->id}", 'tracks', 'مسارات الابتعاث', $t->name, "{$t->badge} • معدل {$t->gpa}", '#tracks',
+            $add("track-{$t->id}", 'tracks', 'مسارات الابتعاث', $t->name, "{$t->badge} • {$t->applicationStatusLabel()}", '#tracks',
                 "{$t->name} مسار {$t->en_subtitle} {$t->badge} {$t->ranking} ".implode(' ', $t->fields));
         }
-        foreach (University::orderBy('rank')->get() as $u) {
-            $add("uni-{$u->id}", 'universities', 'الجامعات العالمية', $u->name_ar, "{$u->city}، {$u->country} • تصنيف #{$u->rank}", '#universities',
+        foreach (University::orderBy('name_ar')->get() as $u) {
+            $add("uni-{$u->id}", 'universities', 'المؤسسات التعليمية', $u->name_ar, "{$u->city}، {$u->country}", '#universities',
                 "{$u->name_ar} {$u->name_en} {$u->city} {$u->country} ".implode(' ', $u->fields).' جامعة');
         }
         foreach (News::ordered()->get() as $n) {

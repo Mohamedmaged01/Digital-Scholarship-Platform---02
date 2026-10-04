@@ -16,7 +16,7 @@
                 </span>
                 <span class="leading-tight">
                     <span class="block text-[15px] font-bold text-ink">برنامج خادم الحرمين الشريفين</span>
-                    <span class="block text-[11px] font-medium text-slate-500">المنصّة الموحّدة للابتعاث الخارجي</span>
+                    <span class="block text-[11px] font-medium text-slate-500">البوابة التعريفية والإرشادية للابتعاث</span>
                 </span>
             </a>
 

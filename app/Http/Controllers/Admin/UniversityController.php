@@ -19,7 +19,7 @@ class UniversityController extends Controller
         $region = (string) $request->query('region', 'all');
 
         return view('admin.universities', [
-            'items' => University::orderBy('rank')->get()
+            'items' => University::orderBy('name_ar')->get()
                 ->filter(fn (University $u) => ($region === 'all' || $u->region === $region)
                     && Lists::matches($q, "{$u->name_en} {$u->name_ar} {$u->city} {$u->country} ".implode(' ', $u->fields))),
             'editing' => $request->filled('edit') ? University::find($request->query('edit')) : null,
@@ -61,21 +61,22 @@ class UniversityController extends Controller
         $data = $request->validate([
             'name_en' => ['required', 'string', 'min:2', 'max:255'],
             'name_ar' => ['required', 'string', 'min:2', 'max:255'],
-            'rank' => ['nullable', 'integer', 'min:1', 'max:5000'],
             'region' => ['required', Rule::in(University::REGIONS)],
             'city' => ['nullable', 'string', 'max:255'],
             'country' => ['nullable', 'string', 'max:255'],
             'fields' => ['nullable', 'string', 'max:1000'],
-            'acceptance' => ['nullable', 'string', 'max:20'],
+            'website' => ['nullable', 'url', 'max:500'],
+            'institution_status' => ['nullable', Rule::in(University::STATUSES)],
         ]);
 
         return [
             ...$data,
-            'rank' => $data['rank'] ?? 999,
             'city' => $data['city'] ?? '',
             'country' => $data['country'] ?? '',
             'fields' => Lists::split($data['fields'] ?? ''),
-            'acceptance' => ($data['acceptance'] ?? '') ?: '—',
+            'website' => $data['website'] ?? '',
+            // §J: افتراضيًا كل مؤسسة بحاجة إلى تحقّق حتى يُثبت العكس من مصدر رسمي.
+            'institution_status' => $data['institution_status'] ?? 'needs_verification',
         ];
     }
 }

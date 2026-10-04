@@ -79,14 +79,17 @@
                             <div class="rounded-2xl bg-sand px-4 py-3">
                                 <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-500">
                                     <x-lucide-gauge class="size-3.5 text-gold-600" />
-                                    أدنى معدل مطلوب
+                                    حالة وفترة التقديم
                                 </div>
-                                <div class="mt-1.5 font-plex text-sm font-bold text-forest-800" dir="ltr">{{ $t->gpa }}</div>
+                                <div class="mt-1.5 text-sm font-bold {{ $t->application_status === 'open' ? 'text-emerald-600' : 'text-slate-500' }}">{{ $t->applicationStatusLabel() }}</div>
+                                @if ($t->application_start && $t->application_end)
+                                    <div class="mt-1 font-plex text-[10px] font-bold text-slate-400" dir="ltr">{{ $t->application_start->format('Y-m-d') }} — {{ $t->application_end->format('Y-m-d') }}</div>
+                                @endif
                             </div>
                             <div class="rounded-2xl bg-sand px-4 py-3">
                                 <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-500">
                                     <x-lucide-globe class="size-3.5 text-gold-600" />
-                                    نطاق التصنيف العالمي
+                                    نطاق التصنيف
                                 </div>
                                 <div class="mt-1.5 text-sm font-bold text-forest-800">{{ $t->ranking }}</div>
                             </div>

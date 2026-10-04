@@ -12,17 +12,28 @@ $site = json_decode(file_get_contents(database_path('data/site.json')), true);
 
 return [
 
-    'stats' => $site['stats'],
     'marquee' => $site['marqueeUnis'],
     'faqs' => $site['faqs'],
     'nav' => $site['navLinks'],
     'contact_methods' => $site['contactMethods'],
     'suggested_questions' => $site['suggestedQuestions'],
 
+    /* الدرجات الست المعتمدة (§I) — تطابق جدول academic_degrees. */
     'degrees' => [
         'bachelor' => 'بكالوريوس',
         'master' => 'ماجستير',
         'phd' => 'دكتوراه',
+        'fellowship' => 'زمالة',
+        'diploma' => 'دبلوم',
+        'professional_doctorate' => 'دكتوراه مهنية',
+    ],
+
+    /* حالة التقديم على المسار — حلّت محل "أدنى معدل مطلوب" (§F). */
+    'application_statuses' => [
+        'open' => 'متاح للتقديم',
+        'not_started' => 'لم يبدأ التقديم',
+        'closed' => 'انتهت فترة التقديم',
+        'unavailable' => 'غير متاح حاليًا',
     ],
 
     'regions' => [

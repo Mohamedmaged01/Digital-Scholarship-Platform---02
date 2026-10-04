@@ -1,6 +1,12 @@
 @php
     $destinations = ['أكسفورد', 'هارفارد', 'إم آي تي', 'سنغافورة', 'طوكيو', 'ستانفورد'];
-    $trust = [['v' => '98%', 'l' => 'معدّل رضا المبتعثين'], ['v' => '72h', 'l' => 'متوسط زمن الفرز الذكي'], ['v' => '01', 'l' => 'تصنيف عربي في مخرجات البحث']];
+    // §F: "98% معدّل رضا" و"72h متوسط الفرز" لا مصدر لهما. البديل أرقام
+    // هيكلية يتحقق منها النظام نفسه عند كل طلب.
+    $trust = [
+        ['v' => str_pad((string) $structural['tracks'], 2, '0', STR_PAD_LEFT), 'l' => 'مسارات ابتعاث'],
+        ['v' => str_pad((string) $structural['stations'], 2, '0', STR_PAD_LEFT), 'l' => 'محطات في خارطة الطريق'],
+        ['v' => str_pad((string) $structural['degrees'], 2, '0', STR_PAD_LEFT), 'l' => 'درجات علمية معتمدة'],
+    ];
 @endphp
 
 <section id="home" class="relative overflow-hidden bg-cream pt-28 md:pt-36">
@@ -86,7 +92,7 @@
                                 <span class="grid size-6 place-items-center rounded-full border-2 border-white/70 bg-gradient-to-br from-gold-400 to-forest-700 text-[10px] font-bold text-white">{{ $ch }}</span>
                             @endforeach
                         </span>
-                        <span class="text-[11px] font-bold text-white">طلابنا في 57 دولة</span>
+                        <span class="text-[11px] font-bold text-white">مبتعثون حول العالم</span>
                     </div>
 
                     <div class="absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-md">

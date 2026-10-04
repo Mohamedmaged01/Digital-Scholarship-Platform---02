@@ -29,9 +29,12 @@
                     <x-admin.error name="name_ar" />
                 </div>
                 <div>
-                    <label for="rank" class="dash-label">التصنيف العالمي</label>
-                    <input id="rank" name="rank" dir="ltr" type="number" min="1" value="{{ old('rank', $e?->rank) }}" class="dash-input" placeholder="1">
-                    <x-admin.error name="rank" />
+                    <label for="institution_status" class="dash-label">حالة التحقق</label>
+                    <select id="institution_status" name="institution_status" class="dash-input appearance-none" required>
+                        <option value="needs_verification" @selected(old('institution_status', $e?->institution_status ?? 'needs_verification') === 'needs_verification')>بحاجة إلى تحقق</option>
+                        <option value="verified" @selected(old('institution_status', $e?->institution_status) === 'verified')>مُتحقق من مصدر رسمي</option>
+                    </select>
+                    <x-admin.error name="institution_status" />
                 </div>
                 <div>
                     <label for="region" class="dash-label">المنطقة</label>
@@ -55,8 +58,9 @@
                     <input id="fields" name="fields" value="{{ old('fields', $e ? implode('، ', $e->fields) : '') }}" class="dash-input" placeholder="هندسة، حاسب، ذكاء اصطناعي">
                 </div>
                 <div class="col-span-2">
-                    <label for="acceptance" class="dash-label">معدل القبول</label>
-                    <input id="acceptance" name="acceptance" value="{{ old('acceptance', $e?->acceptance) }}" class="dash-input" placeholder="٪4">
+                    <label for="website" class="dash-label">الموقع الإلكتروني</label>
+                    <input id="website" name="website" dir="ltr" type="url" value="{{ old('website', $e?->website) }}" class="dash-input" placeholder="https://example.edu">
+                    <x-admin.error name="website" />
                 </div>
             </div>
             <x-admin.form-actions :editing="(bool) $e" create-label="إضافة الجامعة" :cancel="route('admin.universities.index')" />
@@ -93,7 +97,13 @@
                 'border-gold-500 ring-4 ring-gold-500/20' => $e?->id === $u->id,
                 'border-forest-800/12' => $e?->id !== $u->id,
             ])>
-                <span dir="ltr" class="grid size-10 shrink-0 place-items-center rounded-xl bg-forest-50 font-plex text-xs font-bold text-forest-800">#{{ $u->rank }}</span>
+                <span class="grid size-10 shrink-0 place-items-center rounded-xl bg-forest-50 text-forest-800" title="{{ $u->isVerified() ? 'مُتحقق من مصدر رسمي' : 'بحاجة إلى تحقق' }}">
+                    @if ($u->isVerified())
+                        <x-lucide-badge-check class="size-4.5" />
+                    @else
+                        <x-lucide-clock class="size-4.5 text-slate-400" />
+                    @endif
+                </span>
                 <div class="min-w-0 flex-1">
                     <p class="text-sm font-bold text-ink"><span dir="ltr" class="font-plex">{{ $u->name_en }}</span> — {{ $u->name_ar }}</p>
                     <p class="mt-0.5 flex items-center gap-1.5 text-[12px] text-slate-400">

@@ -12,7 +12,7 @@
             </p>
         </div>
         <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
-            @foreach (config('kasp.stats') as $i => $s)
+            @foreach ($stats as $i => $s)
                 <div class="reveal relative" style="--delay: {{ $i * 0.08 }}s" x-data="countUp({{ $s['value'] }})" x-intersect.once.margin.-120px="start()">
                     <div class="group relative overflow-hidden rounded-3xl border border-white/10 bg-white/[0.04] p-7 backdrop-blur-sm transition-all duration-500 hover:border-gold-500/40 hover:bg-white/[0.07]">
                         <div class="absolute -end-6 -top-6 size-24 rounded-full bg-gold-500/10 blur-2xl transition-all duration-500 group-hover:bg-gold-500/20"></div>

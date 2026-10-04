@@ -49,9 +49,27 @@
                     <textarea id="description" name="description" rows="3" class="dash-input resize-y leading-relaxed" required>{{ old('description', $e?->description) }}</textarea>
                     <x-admin.error name="description" />
                 </div>
+{{-- §12-13: لا يُدار معدل عام ثابت للمسار. الشروط تُدخل سجلًّا سجلًّا في جدول الشروط. --}}
                 <div>
-                    <label for="gpa" class="dash-label">أدنى معدل</label>
-                    <input id="gpa" name="gpa" value="{{ old('gpa', $e?->gpa) }}" class="dash-input" placeholder="4.5 من 5.0">
+                    <label for="application_status" class="dash-label">حالة التقديم</label>
+                    <select id="application_status" name="application_status" class="dash-input appearance-none" required>
+                        @foreach (config('kasp.application_statuses') as $key => $label)
+                            <option value="{{ $key }}" @selected(old('application_status', $e?->application_status ?? 'not_started') === $key)>{{ $label }}</option>
+                        @endforeach
+                    </select>
+                    <x-admin.error name="application_status" />
+                </div>
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <label for="application_start" class="dash-label">بداية التقديم</label>
+                        <input id="application_start" name="application_start" type="date" dir="ltr" value="{{ old('application_start', $e?->application_start?->format('Y-m-d')) }}" class="dash-input">
+                        <x-admin.error name="application_start" />
+                    </div>
+                    <div>
+                        <label for="application_end" class="dash-label">نهاية التقديم</label>
+                        <input id="application_end" name="application_end" type="date" dir="ltr" value="{{ old('application_end', $e?->application_end?->format('Y-m-d')) }}" class="dash-input">
+                        <x-admin.error name="application_end" />
+                    </div>
                 </div>
                 <div>
                     <label for="ranking" class="dash-label">نطاق التصنيف</label>

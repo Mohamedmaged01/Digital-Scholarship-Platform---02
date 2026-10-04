@@ -42,7 +42,7 @@ class SearchController extends Controller
                 $hit('admin.kb.index', route('admin.kb.index', $params), $k->question, $k->is_custom ? 'مضافة من الإدارة' : 'أساسية');
             }
         }
-        foreach (University::orderBy('rank')->get() as $u) {
+        foreach (University::orderBy('name_ar')->get() as $u) {
             if (Lists::matches($q, "{$u->name_ar} {$u->name_en} {$u->country} {$u->city} ".implode(' ', $u->fields))) {
                 $hit('admin.universities.index', route('admin.universities.index', ['edit' => $u->id]), $u->name_ar, $u->name_en);
             }
