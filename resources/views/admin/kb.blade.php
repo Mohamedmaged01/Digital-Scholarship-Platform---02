@@ -1,5 +1,5 @@
 @extends('layouts.admin')
-@section('page-title', 'قاعدة المعرفة')
+@section('page-title', 'بنك المعلومات')
 
 @php $e = $editing; @endphp
 

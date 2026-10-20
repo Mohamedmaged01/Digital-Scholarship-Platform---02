@@ -3,7 +3,7 @@
 
 @php
     $e = $editing;
-    $icons = ['phone' => 'هاتف', 'mail' => 'بريد إلكتروني', 'chat' => 'محادثة / واتساب', 'map-pin' => 'عنوان'];
+    $icons = ['phone' => 'هاتف', 'mail' => 'بريد إلكتروني', 'chat' => 'محادثة / واتساب', 'map-pin' => 'عنوان', 'globe' => 'موقع إلكتروني'];
 @endphp
 
 @section('admin')
@@ -24,12 +24,12 @@
             </div>
             <div>
                 <label for="value" class="dash-label">القيمة المعروضة</label>
-                <input id="value" name="value" dir="ltr" value="{{ old('value', $e?->value) }}" class="dash-input text-left" placeholder="920001122" required>
+                <input id="value" name="value" dir="ltr" value="{{ old('value', $e?->value) }}" class="dash-input text-left" placeholder="19996" required>
                 <x-admin.error name="value" />
             </div>
             <div>
                 <label for="href" class="dash-label">رابط الاتصال</label>
-                <input id="href" name="href" dir="ltr" value="{{ old('href', $e?->href) }}" class="dash-input text-left" placeholder="tel:920001122 أو mailto:…">
+                <input id="href" name="href" dir="ltr" value="{{ old('href', $e?->href) }}" class="dash-input text-left" placeholder="tel:19996 أو mailto:… أو https://…">
                 <x-admin.error name="href" />
             </div>
             <div class="grid grid-cols-2 gap-3">

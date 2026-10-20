@@ -1,6 +1,6 @@
 <div x-data="{ open: false }" @open-chat.window="open = true" @keydown.escape.window="open = false">
     {{-- FAB --}}
-    <button type="button" @click="open = !open" :aria-label="open ? 'إغلاق المساعد الذكي' : 'فتح المساعد الذكي'" :aria-expanded="open"
+    <button type="button" @click="open = !open" :aria-label="open ? @js(__('إغلاق المساعد الذكي')) : @js(__('فتح المساعد الذكي'))" :aria-expanded="open"
             class="animate-enter fixed bottom-5 left-5 z-[60] grid size-14 place-items-center rounded-full shadow-2xl transition-colors duration-300"
             style="--delay: 1.6s"
             :class="open ? 'bg-forest-950 text-gold-300' : 'bg-forest-800 text-gold-300 hover:bg-forest-700'">

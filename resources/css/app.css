@@ -205,3 +205,12 @@ body {
     transform: none;
   }
 }
+
+/* الواجهة الإنجليزية (LTR): أيقونات الاتجاه تنعكس */
+html[dir="ltr"] .rtl-flip {
+    transform: scaleX(-1);
+}
+
+html[lang="en"] body {
+    font-family: "IBM Plex Sans", "IBM Plex Sans Arabic", ui-sans-serif, system-ui, sans-serif;
+}

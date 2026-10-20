@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class ContactMethod extends Model
 {
-    public const ICONS = ['phone', 'mail', 'chat', 'map-pin'];
+    public const ICONS = ['phone', 'mail', 'chat', 'map-pin', 'globe'];
 
     protected $fillable = ['label', 'value', 'href', 'icon', 'sort'];
 

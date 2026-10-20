@@ -1,24 +1,28 @@
 {
   "faqs": [
     {
-      "q": "ما الفرق بين المسارات الستة للبرنامج؟",
-      "a": "صُممت المسارات لتناسب تطلعات مختلفة: الروّاد لأفضل 30 جامعة عالميًا، إمداد لتخصصات سوق العمل الحرجة، البحث والتطوير للدراسات البحثية، التميز للتخصصات النوعية، الصحي للزمالات الطبية، وواعد للصناعات المستقبلية. الشروط والتخصصات تختلف بين كل مسار."
+      "q": "ما الفرق بين مسارات الابتعاث؟",
+      "a": "مسار الرواد للابتعاث إلى أفضل 30 مؤسسة تعليمية في جميع التخصصات لمرحلتي البكالوريوس والماجستير. مسار إمداد للابتعاث إلى أفضل 200 مؤسسة تعليمية في تخصصات محددة ذات احتياج عالٍ في سوق العمل لمرحلتي البكالوريوس والماجستير. مسار البحث والتطوير لدرجة الدكتوراه في أفضل 200 مؤسسة تعليمية. مسار واعد ابتعاث مبتدئ بالتوظيف عبر برامج تطلقها الجهات والشركات المشاركة. ويُعرض مسار التميز والمسار الصحي برابط المسار ودليله."
     },
     {
-      "q": "هل يشمل الابتعاث المكافأة الشهرية وتغطية الرسوم؟",
-      "a": "نعم، يغطي البرنامج كامل الرسوم الدراسية للجامعة، إضافة إلى مكافأة شهرية تتناسب مع بلد الدراسة، وتأمينًا طبيًا شاملاً للمبتعث ومرافقيه، وتذاكر سفر سنوية. يُرجع إلى الشروط والضوابط المعتمدة لكل مسار."
+      "q": "على أي منصة يتم تقديم طلب الابتعاث؟",
+      "a": "يُقدَّم الطلب على مسارات الرواد وإمداد والبحث والتطوير من خلال منصة قبول، وعلى المسار الصحي إلكترونياً عبر منصة القبول الموحد، أما برامج مسار واعد فتُعلن في سفير 2."
     },
     {
-      "q": "كيف يعمل محرّك التوجيه الذكي؟",
-      "a": "يحلل النظام ملفك الأكاديمي وميولك المعرفية ووجهتك المفضلة، ثم يطابقها مع متطلبات المسارات والتخصصات والجامعات المعتمدة ليقترح المسار الأنسب. النتائج استرشادية ويجب الرجوع إلى الشروط والضوابط المعتمدة."
+      "q": "كم عدد القبولات التي يمكنني تقديمها؟",
+      "a": "يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى، ويتم اختيار طلب واحد وفق نتائج المفاضلة ووفق المقاعد المتاحة على المسارات، وفي حال لم يكن هناك مفاضلة يتم اختيار طلب واحد حسب المقاعد المتاحة، ويتم مراعاة رغبة الطالب إن أمكن."
     },
     {
-      "q": "هل يمكنني تغيير التخصص أو الجامعة بعد القبول؟",
-      "a": "يُسمح بتغيير التخصص ضمن نفس المجال المعرفي خلال السنة الأولى بموافقة المشرف الأكاديمي. يُرجع إلى الضوابط والسياسات المعتمدة لكل مسار."
+      "q": "هل يمكن تعديل الطلب بعد تقديمه؟",
+      "a": "لا يمكن التعديل على الطلب بعد تقديمه، ويمكن للمتقدم حذف الرغبة وإعادة تقديم الطلب مرة أخرى وفقاً للفترة المحددة للتقديم."
     },
     {
-      "q": "ما التزاماتي بعد التخرج من البرنامج؟",
-      "a": "تختلف الالتزامات حسب المسار. يُرجع إلى الشروط والسياسات المعتمدة في دليل المسار المعني للتعرف على التزامات ما بعد التخرج."
+      "q": "ما الفرق بين القبول الجامعي والترشيح في برنامج الابتعاث؟",
+      "a": "القبول الجامعي يصدر من المؤسسة التعليمية، وهو شرط للتقديم على الابتعاث. أما الترشيح فيصدر في برنامج الابتعاث بعد دراسة الطلب وفق الشروط العامة والخاصة وسياسات المفاضلة، ثم يستكمل المرشح إجراءاته عبر منصة سفير."
+    },
+    {
+      "q": "هل يجوز التقديم إذا كنت موظفاً أو على رأس بعثة؟",
+      "a": "يجوز التقديم والابتعاث إذا كان المتقدم موظفاً في القطاع الحكومي أو الخاص، مع الالتزام بالأنظمة ذات العلاقة بجهة عمله، ويتحمل المتقدم المسؤولية الكاملة في ذلك. ولا يجوز ابتعاث من هو على رأس بعثة حالياً وبعثته مستمرة، ولكن يسمح له بالتقديم."
     }
   ],
   "navLinks": [
@@ -32,7 +36,7 @@
     },
     {
       "href": "#matcher",
-      "label": "المطابقة الذكية"
+      "label": "محرك التوجيه"
     },
     {
       "href": "#news",
@@ -40,7 +44,7 @@
     },
     {
       "href": "#journey",
-      "label": "خارطة الطريق"
+      "label": "رحلة المستفيد"
     },
     {
       "href": "#assistant",
@@ -67,30 +71,49 @@
   "contactMethods": [
     {
       "id": "phone",
-      "label": "الرقم الموحّد",
-      "value": "920001122",
-      "href": "tel:920001122",
+      "label": "مركز الاتصال الموحد",
+      "value": "19996",
+      "href": "tel:19996",
       "icon": "phone"
     },
     {
-      "id": "mail",
-      "label": "البريد الإلكتروني",
-      "value": "care@kasp.gov.sa",
-      "href": "mailto:care@kasp.gov.sa",
-      "icon": "mail"
-    },
-    {
-      "id": "wa",
-      "label": "واتساب الدعم",
-      "value": "+966 55 000 1122",
-      "href": "https://wa.me/966550001122",
-      "icon": "chat"
+      "id": "safeer",
+      "label": "الدعم الفني — منصة سفير",
+      "value": "safeer2.moe.gov.sa",
+      "href": "https://safeer2.moe.gov.sa/Portal/support",
+      "icon": "globe"
     }
   ],
   "suggestedQuestions": [
-    "ما شروط التقديم؟",
-    "أي مسار يناسبني؟",
-    "ما أدنى معدل مطلوب؟",
-    "هل يمكن اصطحاب عائلتي؟"
+    "ما شروط التقديم على الابتعاث؟",
+    "كيف أقدم على مسار الرواد؟",
+    "كم قبولاً يمكنني تقديمه؟",
+    "ما هو مسار واعد؟"
+  ],
+  "faqsEn": [
+    {
+      "q": "What is the difference between the scholarship tracks?",
+      "a": "The Rowad Track covers the top 30 institutions in all majors for bachelor's and master's degrees. The Emdad Track covers the top 200 institutions in specified high-demand majors for bachelor's and master's degrees. The Research & Development Track is for the PhD at the top 200 institutions. The Waed Track offers employment-first scholarships through programs launched by participating entities and companies. The Tamayoz and Health tracks are shown with their track page and guideline links."
+    },
+    {
+      "q": "On which platform is the scholarship application submitted?",
+      "a": "Applications for the Rowad, Emdad and Research & Development tracks are submitted through the Qubool platform; the Health Track online via the Unified Admission platform; and Waed programs are announced on Safeer 2."
+    },
+    {
+      "q": "How many admissions can I submit?",
+      "a": "Applicants may submit a maximum of three admissions. One application is selected based on differentiation results and available seats; where no differentiation applies, one application is selected according to available seats, taking the student's preference into account where possible."
+    },
+    {
+      "q": "Can I edit my application after submitting it?",
+      "a": "Applications cannot be edited after submission. You may delete the preference and resubmit within the application period."
+    },
+    {
+      "q": "What is the difference between university admission and nomination in the scholarship program?",
+      "a": "University admission is issued by the educational institution and is a condition for applying. Nomination is issued by the scholarship program after reviewing the application against the general and special conditions and differentiation policies; the nominee then completes procedures on the Safeer platform."
+    },
+    {
+      "q": "Can I apply if I am employed or currently on a scholarship?",
+      "a": "Employed applicants in the public or private sector may apply, subject to their employer's regulations and bearing full responsibility. A current scholarship holder whose scholarship is ongoing may not be granted another scholarship, but may apply."
+    }
   ]
 }

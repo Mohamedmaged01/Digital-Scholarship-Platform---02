@@ -5,6 +5,16 @@
     $e = $editing;
     $degrees = config('kasp.degrees');
     $selectedDegrees = old('degrees', $e?->degrees ?? ['bachelor']);
+    $selectedFields = old('match_fields', $e?->match_fields ?? []);
+    $content = \App\Support\TrackContent::class;
+    $textareas = [
+        'details' => ['بطاقة المسار', 'سطر لكل بند بصيغة «البند: المحتوى»', $content::formatDetails($e?->details), 4],
+        'policies' => ['سياسات التقديم', '«- بند» لكل بند، و«## عنوان» لبدء قسم، ومسافتان قبل «-» للبند الفرعي', $content::formatSections($e?->policies), 4],
+        'general_conditions' => ['الشروط العامة', 'الصيغة نفسها', $content::formatSections($e?->general_conditions), 6],
+        'additional_conditions' => ['شروط إضافية (حسب العام الأكاديمي)', 'الصيغة نفسها', $content::formatSections($e?->additional_conditions), 4],
+        'special_conditions' => ['الشروط الخاصة بالمسار', 'الصيغة نفسها — الأقسام الكثيرة تُعرض مطويّة', $content::formatSections($e?->special_conditions), 6],
+        'faqs' => ['الأسئلة الشائعة', '«س: السؤال» ثم «ج: الإجابة»، وسطر فارغ بين كل سؤال', $content::formatFaqs($e?->faqs), 6],
+    ];
 @endphp
 
 @section('admin')
@@ -26,7 +36,7 @@
                 </div>
                 <div>
                     <label for="badge" class="dash-label">الشارة التصنيفية</label>
-                    <input id="badge" name="badge" value="{{ old('badge', $e?->badge) }}" class="dash-input" placeholder="أفضل 30 جامعة عالميًا">
+                    <input id="badge" name="badge" value="{{ old('badge', $e?->badge) }}" class="dash-input" placeholder="أفضل 30 مؤسسة تعليمية حول العالم">
                 </div>
                 <div>
                     <label for="code" class="dash-label">الرمز</label>
@@ -79,9 +89,42 @@
                     <label for="fields" class="dash-label">التخصصات <span class="font-medium text-slate-400">(تفصل بينها فاصلة)</span></label>
                     <input id="fields" name="fields" value="{{ old('fields', $e ? implode('، ', $e->fields) : '') }}" class="dash-input">
                 </div>
+                <div>
+                    <label for="tier" class="dash-label">طريقة العرض</label>
+                    <select id="tier" name="tier" class="dash-input appearance-none">
+                        @foreach (config('kasp.track_tiers') as $key => $label)
+                            <option value="{{ $key }}" @selected(old('tier', $e?->tier ?? 'main') === $key)>{{ $label }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div>
+                    <label for="institutions_count" class="dash-label">عدد المؤسسات المحدد</label>
+                    <input id="institutions_count" name="institutions_count" dir="ltr" type="number" min="1" value="{{ old('institutions_count', $e?->institutions_count) }}" class="dash-input" placeholder="30">
+                    <x-admin.error name="institutions_count" />
+                </div>
                 <div class="col-span-2">
-                    <label for="extra_fields" class="dash-label">تخصصات إضافية (+)</label>
-                    <input id="extra_fields" name="extra_fields" dir="ltr" type="number" min="0" value="{{ old('extra_fields', $e?->extra_fields ?? 0) }}" class="dash-input">
+                    <label for="majors_scope" class="dash-label">نطاق التخصصات</label>
+                    <select id="majors_scope" name="majors_scope" class="dash-input appearance-none">
+                        @foreach (config('kasp.majors_scopes') as $key => $label)
+                            <option value="{{ $key }}" @selected(old('majors_scope', $e?->majors_scope ?? 'listed') === $key)>{{ $label }}</option>
+                        @endforeach
+                    </select>
+                </div>
+                <div class="col-span-2">
+                    <span class="dash-label">مجالات المطابقة <span class="font-medium text-slate-400">(لمحرك التوجيه — اختياري)</span></span>
+                    <div class="flex flex-wrap gap-1.5">
+                        @foreach (\App\Models\Field::orderBy('sort')->get() as $field)
+                            <label class="cursor-pointer">
+                                <input type="checkbox" name="match_fields[]" value="{{ $field->id }}" class="peer sr-only" @checked(in_array($field->id, $selectedFields, true))>
+                                <span class="block rounded-full border border-forest-800/15 px-3 py-1.5 text-[11px] font-bold text-slate-500 transition-all peer-checked:border-forest-800 peer-checked:bg-forest-800 peer-checked:text-gold-300 peer-focus-visible:ring-2 peer-focus-visible:ring-gold-500">{{ $field->name_ar }}</span>
+                            </label>
+                        @endforeach
+                    </div>
+                </div>
+                <div class="col-span-2">
+                    <label for="external_url" class="dash-label">رابط المسار الرسمي</label>
+                    <input id="external_url" name="external_url" dir="ltr" value="{{ old('external_url', $e?->external_url) }}" class="dash-input" placeholder="https://www.moe.gov.sa/...">
+                    <x-admin.error name="external_url" />
                 </div>
                 <div class="col-span-2">
                     <label for="perks" class="dash-label">مزايا المسار <span class="font-medium text-slate-400">(سطر لكل ميزة)</span></label>
@@ -103,6 +146,16 @@
                     </div>
                     <x-admin.error name="degrees" />
                 </div>
+                <div class="col-span-2 border-t border-dashed border-forest-800/15 pt-3">
+                    <p class="text-xs font-bold text-forest-800">محتوى الدليل الاسترشادي</p>
+                </div>
+                @foreach ($textareas as $name => [$label, $hint, $value, $rows])
+                    <div class="col-span-2">
+                        <label for="{{ $name }}" class="dash-label">{{ $label }} <span class="font-medium text-slate-400">({{ $hint }})</span></label>
+                        <textarea id="{{ $name }}" name="{{ $name }}" rows="{{ $rows }}" class="dash-input resize-y text-[13px] leading-relaxed">{{ old($name, $value) }}</textarea>
+                        <x-admin.error :name="$name" />
+                    </div>
+                @endforeach
             </div>
             <x-admin.form-actions :editing="(bool) $e" create-label="إضافة المسار" :cancel="route('admin.tracks.index')" />
         </fieldset>

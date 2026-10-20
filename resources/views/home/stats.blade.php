@@ -3,12 +3,11 @@
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
         <div class="flex flex-wrap items-end justify-between gap-6">
             <h2 class="reveal max-w-md text-3xl font-bold leading-snug text-white md:text-4xl">
-                أرقامٌ تصنع جيلًا
-                <span class="text-shimmer-gold"> ينافس العالم</span>
+                {{ __('مسارات الابتعاث') }}
+                <span class="text-shimmer-gold"> {{ __('بالأرقام') }}</span>
             </h2>
             <p class="reveal max-w-sm text-sm leading-relaxed text-slate-400" style="--delay: .1s">
-                منذ انطلاق البرنامج عام 1426هـ، تحوّل الابتعاث إلى أكبر استثمار
-                وطني في رأس المال البشري على مستوى المنطقة.
+                {{ __('الأعداد المحددة في الدليل الاسترشادي لكل مسار للعام الأكاديمي 2026–2027.') }}
             </p>
         </div>
         <div class="mt-12 grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">

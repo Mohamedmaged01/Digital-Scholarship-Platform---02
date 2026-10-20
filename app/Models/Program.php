@@ -68,7 +68,7 @@ class Program extends Model
 
     public function statusLabel(): string
     {
-        return config("kasp.waed_statuses.{$this->application_status}.label", $this->application_status);
+        return __(config("kasp.waed_statuses.{$this->application_status}.label", $this->application_status));
     }
 
     public function statusClass(): string

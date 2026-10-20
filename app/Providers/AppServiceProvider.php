@@ -37,7 +37,7 @@ class AppServiceProvider extends ServiceProvider
         View::composer(['components.chat-panel', 'partials.site-footer'], function ($view) {
             $view->with('contactMethods', once(fn () => ContactMethod::orderBy('sort')->get()));
             $view->with('legalPages', once(fn () => LegalPage::orderBy('sort')->get(['slug', 'title_ar'])));
-            $view->with('footerTracks', once(fn () => Track::orderBy('sort')->get(['id', 'slug', 'name', 'badge'])));
+            $view->with('footerTracks', once(fn () => Track::orderBy('sort')->get(['id', 'slug', 'name', 'badge', 'content_en'])));
         });
 
         // عدّادات الشريط الجانبي في لوحة التحكم

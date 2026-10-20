@@ -2,15 +2,12 @@
 
 namespace App\Support;
 
-use App\Models\AcademicDegree;
-use App\Models\DataSource;
 use App\Models\Field;
 use App\Models\Major;
 use App\Models\MajorConstraint;
 use App\Models\PathDegree;
 use App\Models\PathMajor;
 use App\Models\PathMajorInstitution;
-use App\Models\Station;
 use App\Models\Statistic;
 use App\Models\Track;
 use Illuminate\Support\Collection;
@@ -30,20 +27,25 @@ class Showcase
     public static function statistics(string $location): array
     {
         $managed = Statistic::where('location', $location)->orderBy('sort')->get();
+        $en = app()->getLocale() === 'en';
         if ($managed->isNotEmpty()) {
             return $managed->map(fn (Statistic $s) => [
-                'value' => $s->value, 'suffix' => $s->suffix, 'label' => $s->label_ar, 'note' => $s->note_ar,
+                'value' => $s->value,
+                'suffix' => $s->suffix,
+                'label' => $en && $s->label_en ? $s->label_en : $s->label_ar,
+                'note' => $en && $s->note_en ? $s->note_en : $s->note_ar,
             ])->all();
         }
 
+        // ملاحظة 39: لا أرقام ثابتة في الكود — العدد المحدد لكل مسار من بياناته (institutions_count)
         $structural = [
-            ['value' => Track::count(), 'suffix' => '', 'label' => 'مسارات ابتعاث', 'note' => 'لكل مسار شروطه وتخصصاته'],
-            ['value' => Station::count(), 'suffix' => '', 'label' => 'محطات في خارطة الطريق', 'note' => 'من التقديم إلى ما بعد التخرج'],
-            ['value' => AcademicDegree::where('status', 'active')->count(), 'suffix' => '', 'label' => 'درجات علمية معتمدة', 'note' => 'من الدبلوم إلى الدكتوراه المهنية'],
-            ['value' => DataSource::where('status', 'active')->count(), 'suffix' => '', 'label' => 'مصادر بيانات معتمدة', 'note' => 'كل معلومة تُنسب إلى مصدرها'],
+            ['value' => Track::count(), 'suffix' => '', 'label' => __('مسارات ابتعاث'), 'note' => __('لكل مسار شروطه وضوابطه الخاصة')],
+            ...Track::whereNotNull('institutions_count')->orderBy('sort')->get()->map(fn (Track $t) => [
+                'value' => $t->institutions_count, 'suffix' => '', 'label' => __('مؤسسة تعليمية — :track', ['track' => $t->tr('name')]), 'note' => __('حسب قائمة البرنامج في المسار'),
+            ])->all(),
         ];
 
-        return $location === 'hero' ? array_slice($structural, 0, 3) : $structural;
+        return array_slice($structural, 0, $location === 'hero' ? 3 : 4);
     }
 
     /**
@@ -52,8 +54,9 @@ class Showcase
      */
     public static function explorer(Track $track): array
     {
-        $degreeNames = config('kasp.degrees');
-        $fields = Field::pluck('name_ar', 'id');
+        $degreeNames = array_map(fn ($n) => __($n), config('kasp.degrees'));
+        $en = app()->getLocale() === 'en';
+        $fields = Field::all()->mapWithKeys(fn ($f) => [$f->id => $en && $f->name_en ? $f->name_en : $f->name_ar]);
         $majors = Major::all()->keyBy('id');
 
         $pathMajors = PathMajor::where('path_id', $track->id)->get();
@@ -63,7 +66,7 @@ class Showcase
         $degrees = PathDegree::where('path_id', $track->id)->pluck('degree_id')
             ->sortBy(fn ($d) => array_search($d, array_keys($degreeNames)))
             ->values()
-            ->map(function (string $degree) use ($degreeNames, $pathMajors, $majors, $fields, $links) {
+            ->map(function (string $degree) use ($degreeNames, $pathMajors, $majors, $fields, $links, $en) {
                 return [
                     'id' => $degree,
                     'name' => $degreeNames[$degree] ?? $degree,
@@ -74,13 +77,13 @@ class Showcase
                         ->values()
                         ->map(fn (Major $m) => [
                             'id' => $m->id,
-                            'name' => $m->name_ar,
-                            'field' => $fields[$m->field_id] ?? 'أخرى',
+                            'name' => $en && $m->name_en ? $m->name_en : $m->name_ar,
+                            'field' => $fields[$m->field_id] ?? __('أخرى'),
                             'universities' => $links->where('degree_id', $degree)->where('major_id', $m->id)
                                 ->pluck('institution')->filter()->sortBy('name_ar')->values()
                                 ->map(fn ($u) => [
                                     'id' => $u->id,
-                                    'nameAr' => $u->name_ar,
+                                    'nameAr' => $en ? $u->name_en : $u->name_ar,
                                     'nameEn' => $u->name_en,
                                     'city' => $u->city,
                                     'country' => $u->country,
@@ -95,9 +98,9 @@ class Showcase
             'degrees' => $degrees,
             'constraints' => $constraints->map(fn (Collection $items) => $items->map(fn (MajorConstraint $c) => [
                 'id' => $c->id,
-                'title' => $c->title_ar,
+                'title' => $en && $c->title_en ? $c->title_en : $c->title_ar,
                 'description' => $c->description_ar,
-                'type' => config("kasp.constraint_types.{$c->constraint_type}", $c->constraint_type),
+                'type' => __(config("kasp.constraint_types.{$c->constraint_type}", $c->constraint_type)),
                 'class' => config("kasp.constraint_severities.{$c->severity}.class", ''),
                 'source' => $c->source_ref,
                 'allowed' => array_map(fn ($d) => $degreeNames[$d] ?? $d, $c->allowed_degrees ?? []),
@@ -111,12 +114,13 @@ class Showcase
     }
 
     /**
-     * بيانات محرّك التوجيه: الدرجات والمجالات، ولكل مسار (عدا واعد الذي يعمل
-     * بنظام البرامج) درجاته وتخصصاته وروابط الجامعات.
+     * بيانات محرّك التوجيه (ملاحظة 31): المطابقة مبنية على ضوابط كل مسار مباشرة —
+     * الدرجات المرتبطة به، ونطاق تخصصاته، والتخصصات المربوطة فعليًا، وشروطه الخاصة.
      */
     public static function matcher(Collection $tracks): array
     {
-        $degreeNames = config('kasp.degrees');
+        $degreeNames = array_map(fn ($n) => __($n), config('kasp.degrees'));
+        $en = app()->getLocale() === 'en';
         $majors = Major::all()->keyBy('id');
         $pathDegrees = PathDegree::all()->groupBy('path_id');
         $pathMajors = PathMajor::all()->groupBy('path_id');
@@ -128,25 +132,46 @@ class Showcase
             'degrees' => collect($degreeNames)->only($usedDegrees)
                 ->map(fn ($name, $id) => ['id' => $id, 'name' => $name, 'nameEn' => ucwords(str_replace('_', ' ', $id))])
                 ->values()->all(),
-            'fields' => Field::orderBy('sort')->get(['id', 'name_ar'])->map(fn ($f) => ['id' => $f->id, 'name' => $f->name_ar])->all(),
-            'tracks' => $tracks->reject(fn (Track $t) => $t->slug === 'waed')->map(fn (Track $t) => [
-                'id' => $t->slug,
-                'code' => $t->code,
-                'name' => $t->name,
-                'badge' => $t->badge,
-                'url' => route('tracks.show', $t),
-                'degrees' => ($pathDegrees[$t->id] ?? collect())->pluck('degree_id')->values()->all(),
-                'degreeNames' => ($pathDegrees[$t->id] ?? collect())->pluck('degree_id')->map(fn ($d) => $degreeNames[$d] ?? $d)->values()->all(),
-                'majors' => ($pathMajors[$t->id] ?? collect())->map(fn ($pm) => [
-                    'id' => $pm->major_id,
-                    'degree' => $pm->degree_id,
-                    'name' => $majors->get($pm->major_id)?->name_ar,
-                    'field' => $majors->get($pm->major_id)?->field_id,
-                ])->filter(fn ($m) => $m['name'])->values()->all(),
-                'links' => ($links[$t->id] ?? collect())->map(fn ($l) => [
-                    'degree' => $l->degree_id, 'major' => $l->major_id, 'uni' => $l->institution_id,
-                ])->values()->all(),
-            ])->values()->all(),
+            'fields' => Field::orderBy('sort')->get(['id', 'name_ar', 'name_en'])->map(fn ($f) => ['id' => $f->id, 'name' => $en && $f->name_en ? $f->name_en : $f->name_ar])->all(),
+            'tracks' => $tracks->map(function (Track $t) use ($pathDegrees, $pathMajors, $links, $majors, $degreeNames, $en) {
+                $trackLinks = $links[$t->id] ?? collect();
+                $degrees = ($pathDegrees[$t->id] ?? collect())->pluck('degree_id')->values();
+
+                return [
+                    'id' => $t->slug,
+                    'code' => $t->code,
+                    'name' => $t->tr('name'),
+                    'url' => $t->url(),
+                    'status' => $t->application_status,
+                    'statusLabel' => $t->applicationStatusLabel(),
+                    'degrees' => $degrees->all(),
+                    'degreeNames' => $degrees->map(fn ($d) => $degreeNames[$d] ?? $d)->all(),
+                    'scope' => $t->majors_scope,
+                    'scopeLabel' => $t->majorsLabel(),
+                    'matchFields' => $t->match_fields ?? [],
+                    'institutions' => $t->institutionsLabel(),
+                    'rules' => array_slice(self::flattenItems($t->tr('special_conditions')), 0, 2),
+                    'majors' => ($pathMajors[$t->id] ?? collect())->map(fn ($pm) => [
+                        'degree' => $pm->degree_id,
+                        'name' => $en ? ($majors->get($pm->major_id)?->name_en ?: $majors->get($pm->major_id)?->name_ar) : $majors->get($pm->major_id)?->name_ar,
+                        'field' => $majors->get($pm->major_id)?->field_id,
+                        'unis' => $trackLinks->where('degree_id', $pm->degree_id)->where('major_id', $pm->major_id)->count(),
+                    ])->filter(fn ($m) => $m['name'])->values()->all(),
+                ];
+            })->values()->all(),
         ];
+    }
+
+    /** بنود الأقسام نصوصًا مسطّحة (البنود الفرعية تُلحق بنص البند). */
+    public static function flattenItems(?array $sections): array
+    {
+        $out = [];
+        foreach ($sections ?? [] as $s) {
+            foreach ($s['items'] ?? [] as $item) {
+                $out[] = is_array($item) ? trim($item['text'].' '.implode(' ', $item['sub'] ?? [])) : $item;
+            }
+        }
+
+        return $out;
     }
 }

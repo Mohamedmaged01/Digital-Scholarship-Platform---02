@@ -3,18 +3,18 @@
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div class="lg:col-span-5">
                 <div class="lg:sticky lg:top-32">
-                    <x-section-heading eyebrow="الأسئلة الشائعة"
-                                       desc="جمعنا أكثر الأسئلة تكرارًا من آلاف المتقدمين. لم تجد سؤالك؟ فريق الدعم متاح على مدار الساعة عبر قنوات المنصة.">
-                        كل ما يدور في ذهنك،
-                        <span class="text-shimmer-gold"> بإجابة واحدة</span>
+                    <x-section-heading eyebrow="{{ __('الأسئلة الشائعة') }}"
+                                       desc="{{ __('إجابات الأسئلة الأكثر تكرارًا وفق سياسات التقديم والشروط المعتمدة. ولأسئلة كل مسار، راجع صفحة المسار.') }}">
+                        {{ __('كل ما يدور في ذهنك،') }}
+                        <span class="text-shimmer-gold"> {{ __('بإجابة واحدة') }}</span>
                     </x-section-heading>
                     <div class="reveal mt-8 inline-flex items-center gap-3 rounded-2xl border border-forest-800/10 bg-white px-5 py-4" style="--delay: .25s">
                         <span class="grid size-11 place-items-center rounded-xl bg-forest-700 text-gold-300">
                             <x-lucide-message-circle-question class="size-5" />
                         </span>
                         <span class="leading-tight">
-                            <span class="block text-sm font-bold text-ink">الدعم الموحّد 920001122</span>
-                            <span class="block text-xs text-slate-500">متاح 24/7 بثلاث لغات</span>
+                            <span class="block text-sm font-bold text-ink">{{ __('مركز الاتصال الموحد') }} <a href="tel:19996" class="font-plex hover:text-forest-600" dir="ltr">19996</a></span>
+                            <span class="block text-xs text-slate-500">{{ __('للاستفسار عن برنامج الابتعاث') }}</span>
                         </span>
                     </div>
                 </div>
@@ -22,7 +22,7 @@
 
             <div class="lg:col-span-7">
                 <div class="space-y-4">
-                    @foreach (config('kasp.faqs') as $i => $f)
+                    @foreach (app()->getLocale() === 'en' && config('kasp.faqs_en') ? config('kasp.faqs_en') : config('kasp.faqs') as $i => $f)
                         <div class="reveal" style="--delay: {{ $i * 0.06 }}s">
                             <button type="button" @click="open = open === {{ $i }} ? -1 : {{ $i }}" :aria-expanded="open === {{ $i }}"
                                     class="w-full rounded-3xl border p-6 text-start transition-all duration-500 md:p-7"

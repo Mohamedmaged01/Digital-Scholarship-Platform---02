@@ -22,8 +22,8 @@ class SiteSearch
     private const SECTION_KEYWORDS = [
         '#home' => 'رئيسية بداية هيرو واجهة',
         '#tracks' => 'مسار مسارات رواد امداد تميز بحث تطوير صحي واعد استراتيجية ابتعاث',
-        '#matcher' => 'ذكاء اصطناعي مطابقة توصية توافق اسئلة اختبار توجيه',
-        '#news' => 'اخبار اعلانات اعلام مستجدات شراكات ملتقيات قبول',
+        '#matcher' => 'مطابقة توصية توافق اسئلة توجيه ضوابط',
+        '#news' => 'اخبار اعلانات اعلام مستجدات',
         '#journey' => 'خارطه طريق محطات رحله خطوات تقديم مستندات ترشيح',
         '#assistant' => 'مساعد ذكي دردشه اسئله اجابات محاوره تواصل لوحه',
         '#faq' => 'اسئله شائعه اجابات استفسارات',
@@ -67,19 +67,19 @@ class SiteSearch
             $candidates[] = compact('id', 'groupId', 'group', 'title', 'sub', 'href') + ['_text' => $text];
         };
 
-        foreach (config('kasp.nav') as $l) {
-            $add("sec-{$l['href']}", 'sections', 'أقسام المنصة', $l['label'], "الانتقال إلى قسم {$l['label']}", $l['href'],
+        foreach (SiteNav::links() as $l) {
+            $add("sec-{$l['href']}", 'sections', __('أقسام المنصة'), $l['label'], __('الانتقال إلى قسم :section', ['section' => $l['label']]), $l['href'],
                 $l['label'].' '.(self::SECTION_KEYWORDS[$l['href']] ?? ''));
         }
         $tracks = Track::orderBy('sort')->get()->keyBy('id');
-        $trackUrl = fn (Track $t) => $t->slug === 'waed' ? route('waed.index') : route('tracks.show', $t);
+        $trackUrl = fn (Track $t) => $t->url();
 
         foreach ($tracks as $t) {
-            $add("track-{$t->id}", 'tracks', 'مسارات الابتعاث', $t->name, "{$t->badge} • {$t->applicationStatusLabel()}", $trackUrl($t),
+            $add("track-{$t->id}", 'tracks', __('مسارات الابتعاث'), $t->tr('name'), "{$t->tr('badge')} • {$t->applicationStatusLabel()}", $trackUrl($t),
                 "{$t->name} مسار {$t->en_subtitle} {$t->badge} {$t->ranking} ".implode(' ', $t->fields));
         }
         foreach (Program::waed()->orderBy('sort')->get() as $p) {
-            $add("waed-{$p->id}", 'waed', 'برامج واعد', $p->name_ar, "{$p->company_ar} • {$p->statusLabel()}", route('waed.show', $p),
+            $add("waed-{$p->id}", 'waed', __('برامج واعد'), $p->name_ar, "{$p->company_ar} • {$p->statusLabel()}", route('waed.show', $p),
                 "{$p->name_ar} {$p->name_en} {$p->company_ar} {$p->major_name} {$p->sector} برنامج واعد");
         }
 
@@ -91,30 +91,34 @@ class SiteSearch
                 continue;
             }
             $names = $paths->map(fn ($id) => $tracks[$id]?->name)->filter()->implode('، ');
-            $add("major-{$m->id}", 'majors', 'التخصصات', $m->name_ar, "متاح في: {$names}", $trackUrl($tracks[$paths->first()]),
+            $add("major-{$m->id}", 'majors', __('التخصصات'), $m->name_ar, "متاح في: {$names}", $trackUrl($tracks[$paths->first()]),
                 "{$m->name_ar} {$m->name_en} تخصص");
         }
 
         $uniTracks = PathMajorInstitution::select('institution_id', 'path_id')->get()->groupBy('institution_id');
         foreach (University::orderBy('name_ar')->get() as $u) {
             $firstPath = ($uniTracks[$u->id] ?? collect())->pluck('path_id')->first();
-            $add("uni-{$u->id}", 'universities', 'المؤسسات التعليمية', $u->name_ar, "{$u->city}، {$u->country}",
-                $firstPath && isset($tracks[$firstPath]) ? $trackUrl($tracks[$firstPath]) : '#tracks',
+            // المؤسسة غير المرتبطة بمسار لا تظهر (لا تُعرض جامعات خارج الدليل الاسترشادي)
+            if (! $firstPath || ! isset($tracks[$firstPath])) {
+                continue;
+            }
+            $add("uni-{$u->id}", 'universities', __('المؤسسات التعليمية'), $u->name_ar, "{$u->city}، {$u->country}",
+                $trackUrl($tracks[$firstPath]),
                 "{$u->name_ar} {$u->name_en} {$u->city} {$u->country} ".implode(' ', $u->fields).' جامعة');
         }
         foreach (News::ordered()->get() as $n) {
-            $add("news-{$n->id}", 'news', 'الأخبار والإعلانات', $n->title, "{$n->author} • {$n->published_on->format('Y-m-d')}", '#news',
+            $add("news-{$n->id}", 'news', __('الأخبار والإعلانات'), $n->title, "{$n->author} • {$n->published_on->format('Y-m-d')}", '#news',
                 "{$n->title} {$n->excerpt} {$n->author} خبر اعلان");
         }
         foreach (Station::orderBy('sort')->get() as $s) {
-            $add("station-{$s->id}", 'journey', 'خارطة الطريق', "المحطة {$s->code}: {$s->title}", implode(' • ', $s->points), '#journey',
+            $add("station-{$s->id}", 'journey', __('خارطة الطريق'), "المحطة {$s->code}: {$s->title}", implode(' • ', $s->points), '#journey',
                 "{$s->title} {$s->description} ".implode(' ', $s->points).' محطة خطوة');
         }
         foreach (config('kasp.faqs') as $i => $f) {
-            $add("faq-{$i}", 'faq', 'الأسئلة الشائعة', $f['q'], self::excerpt($f['a']), '#faq', "{$f['q']} {$f['a']}");
+            $add("faq-{$i}", 'faq', __('الأسئلة الشائعة'), $f['q'], self::excerpt($f['a']), '#faq', "{$f['q']} {$f['a']}");
         }
         foreach (KbEntry::all() as $k) {
-            $add("kb-{$k->id}", 'kb', 'أسئلة المساعد الذكي', $k->question, self::excerpt($k->answer), '#assistant',
+            $add("kb-{$k->id}", 'kb', __('أسئلة المساعد الذكي'), $k->question, self::excerpt($k->answer), '#assistant',
                 "{$k->question} ".implode(' ', $k->keywords).' سؤال مساعد');
         }
 
@@ -150,15 +154,15 @@ class SiteSearch
     public static function quickLinks(): array
     {
         $news = News::ordered()->take(2)->get()->map(fn (News $n) => [
-            'id' => "quick-{$n->id}", 'groupId' => 'news', 'group' => 'أحدث الأخبار',
+            'id' => "quick-{$n->id}", 'groupId' => 'news', 'group' => __('أحدث الأخبار'),
             'title' => $n->title, 'sub' => $n->published_on->format('Y-m-d'), 'href' => '#news',
         ])->all();
 
         return [
-            ['id' => 'q1', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'مسارات الابتعاث الستة', 'sub' => 'استكشف المسار الأنسب', 'href' => '#tracks'],
-            ['id' => 'q2', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'محرك التوجيه الاسترشادي', 'sub' => 'ثلاثة أسئلة فقط', 'href' => '#matcher'],
-            ['id' => 'q3', 'groupId' => 'waed', 'group' => 'روابط سريعة', 'title' => 'برامج مسار واعد', 'sub' => 'برامج برعاية القطاعات الوطنية', 'href' => route('waed.index')],
-            ['id' => 'q4', 'groupId' => 'sections', 'group' => 'روابط سريعة', 'title' => 'خارطة الطريق الأكاديمية', 'sub' => 'ثماني محطات واضحة', 'href' => '#journey'],
+            ['id' => 'q1', 'groupId' => 'sections', 'group' => __('روابط سريعة'), 'title' => __('مسارات الابتعاث'), 'sub' => __('الشروط والضوابط لكل مسار'), 'href' => '#tracks'],
+            ['id' => 'q2', 'groupId' => 'sections', 'group' => __('روابط سريعة'), 'title' => __('محرك التوجيه'), 'sub' => __('سؤالان فقط'), 'href' => '#matcher'],
+            ['id' => 'q3', 'groupId' => 'waed', 'group' => __('روابط سريعة'), 'title' => __('برامج مسار واعد'), 'sub' => __('ابتعاث مبتدئ بالتوظيف'), 'href' => route('waed.index')],
+            ['id' => 'q4', 'groupId' => 'sections', 'group' => __('روابط سريعة'), 'title' => __('رحلة المستفيد'), 'sub' => __('من القبول الجامعي حتى مباشرة الدراسة'), 'href' => '#journey'],
             ...$news,
         ];
     }

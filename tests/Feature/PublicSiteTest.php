@@ -18,9 +18,34 @@ class PublicSiteTest extends TestCase
         $this->get('/')
             ->assertOk()
             ->assertSee('مسار الروّاد')
-            ->assertSee('جامعة أكسفورد')
-            ->assertSee('فتح باب التقديم لبرنامج خادم الحرمين الشريفين')
-            ->assertSee('استكشف');
+            ->assertSee('التقديم متاح حاليًا على')
+            ->assertSee('مسارات أخرى — رابط المسار والدليل الاسترشادي')
+            ->assertSee('مركز الاتصال الموحد')
+            ->assertSee('استكشف')
+            // ملاحظات الوكالة: لا عبارات تسويقية ولا أخبار تجريبية ولا نسب مطابقة وهمية
+            ->assertDontSee('المقاعد محدودة')
+            ->assertDontSee('الجامعات الشريكة')
+            ->assertDontSee('98.2%')
+            ->assertDontSee('id="news"', false);
+    }
+
+    public function test_site_switches_between_arabic_and_english(): void
+    {
+        $this->get('/')->assertSee('dir="rtl"', false)->assertSee('English');
+
+        $this->get('/lang/en')->assertRedirect();
+        $this->get('/')
+            ->assertSee('dir="ltr"', false)
+            ->assertSee('lang="en"', false)
+            ->assertSee('Rowad Track')
+            ->assertSee('Scholarship tracks')
+            ->assertSee('العربية');
+        $this->get('/tracks/rowad')->assertOk()->assertSee('Application policies')->assertSee('All majors available');
+        $this->get('/tracks/sahhi')->assertOk()->assertSee('shown in Arabic');
+
+        $this->get('/lang/ar');
+        $this->get('/')->assertSee('dir="rtl"', false)->assertSee('مسار الروّاد');
+        $this->get('/lang/fr')->assertNotFound();
     }
 
     public function test_assistant_answers_known_questions(): void
@@ -51,7 +76,7 @@ class PublicSiteTest extends TestCase
         $this->getJson('/search?q='.urlencode('أكسفورد'))
             ->assertOk()
             ->assertJsonPath('results.0.groupId', 'universities')
-            ->assertJsonPath('results.0.href', route('tracks.show', 'rowad'));
+            ->assertJsonPath('results.0.href', route('tracks.show', 'tamayoz'));
 
         $this->getJson('/search?q=a')->assertOk()->assertJsonCount(0, 'results');
     }

@@ -21,6 +21,16 @@ class AdminTest extends TestCase
 
     protected bool $seed = true;
 
+    /** لا أخبار افتراضية بعد حذف الأخبار التجريبية — خبر واحد لاختبارات اللوحة */
+    protected function setUp(): void
+    {
+        parent::setUp();
+        News::create([
+            'title' => 'إعلان منشور للاختبار', 'excerpt' => 'موجز', 'body' => 'نص الإعلان', 'category' => 'announcement',
+            'pinned' => false, 'published_on' => now()->toDateString(), 'author' => 'الإدارة', 'read_minutes' => 2,
+        ]);
+    }
+
     private function admin(): User
     {
         return User::where('email', 'admin@kasp.gov.sa')->firstOrFail();

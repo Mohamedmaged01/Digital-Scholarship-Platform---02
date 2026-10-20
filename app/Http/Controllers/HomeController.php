@@ -13,7 +13,7 @@ class HomeController extends Controller
 {
     public function __invoke(): View
     {
-        $tracks = Track::orderBy('sort')->get();
+        $tracks = Track::with('guides.file')->orderBy('sort')->get();
 
         return view('home', [
             'tracks' => $tracks,

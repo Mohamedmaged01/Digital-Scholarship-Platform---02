@@ -15,6 +15,7 @@ use App\Models\University;
 use App\Models\User;
 use App\Support\DefaultContent;
 use App\Support\Showcase;
+use App\Support\TrackContent;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
@@ -35,8 +36,10 @@ class V3FeaturesTest extends TestCase
     {
         $this->assertSame(37, University::count());
         $this->assertSame(54, Major::count());
-        $this->assertSame(64, PathMajor::count());
-        $this->assertSame(197, PathMajorInstitution::count());
+        // ملاحظات 32-34: تبقى روابط مسار التميز فقط — المسارات الأخرى تنتظر قوائم الدليل
+        $this->assertSame(26, PathMajor::count());
+        $this->assertSame(119, PathMajorInstitution::count());
+        $this->assertSame(['tamayoz'], PathMajor::with('track')->get()->pluck('track.slug')->unique()->values()->all());
         $this->assertSame(7, Program::waed()->count());
         $this->assertSame(6, Guide::count());
         $this->assertSame(['privacy', 'terms'], LegalPage::orderBy('sort')->pluck('slug')->all());
@@ -66,8 +69,63 @@ class V3FeaturesTest extends TestCase
         $this->get('/tracks/tamayoz')
             ->assertOk()
             ->assertSee('مسار التميز')
-            ->assertSee('الجامعات والتخصصات المتاحة لهذا المسار')
-            ->assertSee('الدليل الاسترشادي — مسار التميز 2026–2027');
+            ->assertSee('المؤسسات التعليمية والتخصصات المحددة للمسار')
+            ->assertSee('الدليل الاسترشادي — مسار التميز 2026–2027')
+            ->assertSee('صفحة المسار على موقع وزارة التعليم');
+    }
+
+    /* ---------------- محتوى الدليل الاسترشادي (ملاحظات الوكالة) ---------------- */
+
+    public function test_track_pages_show_guideline_content_and_unified_status(): void
+    {
+        $rowad = Track::where('slug', 'rowad')->firstOrFail();
+        $this->assertSame(['bachelor', 'master'], $rowad->degrees);
+        $this->assertSame('open', $rowad->application_status);
+        $this->assertSame(['phd'], Track::where('slug', 'research')->value('degrees'));
+        $this->assertSame(['closed'], Track::whereIn('slug', ['emdad', 'research', 'tamayoz', 'sahhi'])->distinct()->pluck('application_status')->all());
+
+        $this->get('/tracks/rowad')
+            ->assertOk()
+            ->assertSee('جميع التخصصات متاحة')
+            ->assertSee('أفضل 30 مؤسسة تعليمية حسب قائمة البرنامج')
+            ->assertSee('سياسات التقديم')
+            ->assertSee('شروط إضافية (2026–2027)')
+            ->assertSee('يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى')
+            ->assertSee('على أي منصة يتم تقديم طلب الابتعاث لمسار الرواد؟')
+            ->assertDontSee('تاريخ النشر');
+
+        $this->get('/tracks/sahhi')
+            ->assertOk()
+            ->assertSee('بكالوريوس – ماجستير – زمالة – تخصص دقيق')
+            ->assertSee('الطب البشري — الشروط الخاصة للابتعاث إلى مرحلة الزمالة')
+            ->assertSee('غير منشورة في المنصة حاليًا');
+
+        $this->get('/waed')
+            ->assertOk()
+            ->assertSee('التقديم متاح طوال العام حسب البرامج والإطلاقات المعلن عنها في سفير 2')
+            ->assertSee('هل الابتعاث في مسار واعد مرتبط بالتوظيف؟');
+    }
+
+    public function test_track_content_round_trips_through_admin_text_format(): void
+    {
+        $sections = [['title' => 'قسم', 'items' => ['بند أول', ['text' => 'بند بفروع', 'sub' => ['فرع أ', 'فرع ب']]]]];
+        $this->assertSame($sections, TrackContent::parseSections(TrackContent::formatSections($sections)));
+
+        $faqs = [['q' => 'سؤال؟', 'a' => 'إجابة']];
+        $this->assertSame($faqs, TrackContent::parseFaqs(TrackContent::formatFaqs($faqs)));
+
+        $this->actingAs(User::where('email', 'admin@kasp.gov.sa')->firstOrFail());
+        $emdad = Track::where('slug', 'emdad')->firstOrFail();
+        $this->put("/admin/tracks/{$emdad->id}", [
+            'name' => $emdad->name, 'description' => $emdad->description, 'icon' => $emdad->icon,
+            'degrees' => $emdad->degrees, 'tier' => 'main', 'majors_scope' => 'specified',
+            'faqs' => "س: سؤال جديد؟\nج: إجابة جديدة",
+            'special_conditions' => "## الشروط الخاصة\n- شرط أول\n  - تفصيل",
+        ])->assertRedirect();
+
+        $emdad->refresh();
+        $this->assertSame([['q' => 'سؤال جديد؟', 'a' => 'إجابة جديدة']], $emdad->faqs);
+        $this->assertSame([['title' => 'الشروط الخاصة', 'items' => [['text' => 'شرط أول', 'sub' => ['تفصيل']]]]], $emdad->special_conditions);
     }
 
     public function test_waed_track_redirects_to_programs_page(): void
@@ -172,7 +230,8 @@ class V3FeaturesTest extends TestCase
 
         $this->post('/admin/statistics', ['label_ar' => 'رقم موثّق للاختبار', 'value' => 42, 'location' => 'general', 'source_id' => 'src-moe'])
             ->assertRedirect();
-        $this->assertSame(1, Statistic::count());
+        // 4 أرقام افتراضية (قابلة للتعديل من اللوحة) + الرقم الجديد
+        $this->assertSame(5, Statistic::count());
         $this->get('/')->assertSee('رقم موثّق للاختبار');
     }
 
@@ -183,7 +242,7 @@ class V3FeaturesTest extends TestCase
             ->assertSessionHasErrors('href');
 
         $this->post('/admin/contact', ['label' => 'هاتف الطوارئ', 'value' => '911', 'href' => 'tel:911', 'icon' => 'phone'])->assertRedirect();
-        $this->assertSame(4, ContactMethod::count());
+        $this->assertSame(3, ContactMethod::count());
         $this->get('/')->assertSee('tel:911', false);
     }
 

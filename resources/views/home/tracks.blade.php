@@ -1,23 +1,26 @@
 @php
     $degrees = config('kasp.degrees');
-    $tabs = ['all' => 'كافة المراحل'] + array_intersect_key($degrees, array_flip(['bachelor', 'master', 'phd']));
+    $tabs = ['all' => __('كافة المراحل')] + array_map(fn ($n) => __($n), array_intersect_key($degrees, array_flip(['diploma', 'bachelor', 'master', 'phd'])));
+    // ملاحظة «خامسًا»: التميز والصحي يُعرضان برابط المسار والدليل فقط، خارج المسارات الأساسية
+    $mainTracks = $tracks->filter->isMain()->values();
+    $linkedTracks = $tracks->reject->isMain()->values();
 @endphp
 
 <section id="tracks" class="relative overflow-hidden bg-cream py-24 md:py-32"
-         x-data="tracksFilter(@js($tracks->mapWithKeys(fn ($t) => [$t->id => $t->degrees])))">
+         x-data="tracksFilter(@js($mainTracks->mapWithKeys(fn ($t) => [$t->id => $t->degrees])))">
     <x-star-emblem class="animate-spin-slower absolute -end-12 top-20 size-64 text-forest-700/[0.06]" stroke-width="0.6" />
     <x-star-emblem class="animate-spin-slower absolute -start-10 bottom-24 size-44 text-gold-500/[0.08]" stroke-width="0.6" />
 
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
-        <x-section-heading eyebrow="برنامج تنمية القدرات البشرية"
-                           desc="ستة مسارات نوعية منبثقة من برنامج تنمية القدرات البشرية لتحقيق الريادة الوطنية والتنافسية العالمية. اضغط على أي مسار لاستعراض الجامعات والتخصصات المتاحة له.">
-            مسارات الابتعاث الاستراتيجية —
-            <span class="text-shimmer-gold"> اختر المسار المتوافق مع طموحك</span>
+        <x-section-heading eyebrow="{{ __('برنامج تنمية القدرات البشرية') }}"
+                           desc="{{ __('مسارات برنامج خادم الحرمين الشريفين للابتعاث. اضغط على أي مسار لاستعراض شروطه وضوابطه والمؤسسات التعليمية والتخصصات المحددة له.') }}">
+            {{ __('مسارات الابتعاث —') }}
+            <span class="text-shimmer-gold"> {{ __('تعرّف على شروط كل مسار') }}</span>
         </x-section-heading>
 
         {{-- degree filter --}}
         <div class="reveal mt-12 flex flex-wrap items-center justify-between gap-4" style="--delay: .1s">
-            <div class="flex flex-wrap gap-2" role="group" aria-label="تصفية حسب المرحلة">
+            <div class="flex flex-wrap gap-2" role="group" aria-label="{{ __('تصفية حسب المرحلة') }}">
                 @foreach ($tabs as $key => $label)
                     <button type="button" @click="degree = '{{ $key }}'" :aria-pressed="degree === '{{ $key }}'"
                             class="rounded-full border px-6 py-2.5 text-sm font-bold transition-all duration-300"
@@ -28,14 +31,14 @@
             </div>
             <div class="flex items-center gap-2 text-sm font-semibold text-slate-500">
                 <x-lucide-graduation-cap class="size-4.5 text-forest-600" />
-                <span dir="ltr" class="rounded-md bg-forest-800 px-2 py-0.5 font-plex text-xs font-bold text-gold-300" x-text="count">{{ $tracks->count() }}</span>
-                <span x-text="count === 1 ? 'مسار متاح' : 'مسارات متاحة'">مسارات متاحة</span>
+                <span dir="ltr" class="rounded-md bg-forest-800 px-2 py-0.5 font-plex text-xs font-bold text-gold-300" x-text="count">{{ $mainTracks->count() }}</span>
+                <span x-text="count === 1 ? @js(__('مسار متاح')) : @js(__('مسارات متاحة'))">{{ __('مسارات متاحة') }}</span>
             </div>
         </div>
 
         {{-- cards --}}
-        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 xl:grid-cols-3">
-            @foreach ($tracks as $t)
+        <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2">
+            @foreach ($mainTracks as $t)
                 @php $featured = $t->isFeatured(); @endphp
                 <article x-show="shows({{ $t->id }})"
                          x-transition:enter="transition duration-450 ease-out-expo" x-transition:enter-start="scale-95 translate-y-6 opacity-0" x-transition:enter-end="scale-100 translate-y-0 opacity-100"
@@ -45,13 +48,13 @@
                              'border-forest-800/10 hover:border-gold-500/50' => ! $featured,
                          ])>
                     <div class="relative h-48 overflow-hidden">
-                        <img src="{{ asset(ltrim($t->image, '/')) }}" alt="{{ $t->name }}" loading="lazy"
+                        <img src="{{ asset(ltrim($t->image, '/')) }}" alt="{{ $t->tr('name') }}" loading="lazy"
                              class="h-full w-full object-cover transition-transform duration-[1.2s] ease-out group-hover:scale-110">
                         <div class="absolute inset-0 bg-gradient-to-t from-forest-950/85 via-forest-950/25 to-transparent"></div>
 
                         <span class="absolute start-4 top-4 inline-flex items-center gap-1.5 rounded-full border border-gold-400/50 bg-forest-950/60 px-3.5 py-1.5 text-[11px] font-bold text-gold-300 backdrop-blur-md">
                             <x-lucide-trophy class="size-3.5" />
-                            {{ $t->badge }}
+                            {{ $t->tr('badge') }}
                         </span>
 
                         <span dir="ltr" class="text-outline absolute bottom-3 end-5 select-none font-plex text-6xl font-bold leading-none transition-transform duration-500 group-hover:scale-110"
@@ -59,7 +62,7 @@
 
                         <div class="absolute bottom-4 start-4 flex flex-wrap gap-1.5">
                             @foreach ($t->degrees as $d)
-                                <span class="rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold text-white backdrop-blur-md">{{ $degrees[$d] ?? $d }}</span>
+                                <span class="rounded-full bg-white/12 px-2.5 py-1 text-[10px] font-bold text-white backdrop-blur-md">{{ __($degrees[$d] ?? $d) }}</span>
                             @endforeach
                         </div>
                     </div>
@@ -71,57 +74,91 @@
                     </div>
 
                     <div class="flex flex-1 flex-col px-6 pb-6 pt-2">
-                        <h3 class="text-2xl font-bold text-ink">{{ $t->name }}</h3>
+                        <h3 class="text-2xl font-bold text-ink">{{ $t->tr('name') }}</h3>
                         <p dir="ltr" class="mt-1.5 text-right font-plex text-[11px] font-semibold tracking-[0.14em] text-gold-600">{{ $t->en_subtitle }}</p>
-                        <p class="mt-4 text-sm leading-relaxed text-slate-600">{{ $t->description }}</p>
+                        <p class="mt-4 text-sm leading-relaxed text-slate-600">{{ $t->tr('description') }}</p>
 
                         <div class="mt-5 grid grid-cols-2 gap-2.5">
                             <div class="rounded-2xl bg-sand px-4 py-3">
                                 <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-500">
                                     <x-lucide-gauge class="size-3.5 text-gold-600" />
-                                    حالة وفترة التقديم
+                                    {{ __('حالة وفترة التقديم') }}
                                 </div>
-                                <div class="mt-1.5 text-sm font-bold {{ $t->application_status === 'open' ? 'text-emerald-600' : 'text-slate-500' }}">{{ $t->applicationStatusLabel() }}</div>
+                                <div @class(['mt-1.5 text-sm font-bold', 'text-emerald-600' => $t->application_status === 'open', 'text-gold-700' => $t->application_status === 'per_program', 'text-slate-500' => ! in_array($t->application_status, ['open', 'per_program'], true)])>{{ $t->applicationStatusLabel() }}</div>
                                 @if ($t->application_start && $t->application_end)
                                     <div class="mt-1 font-plex text-[10px] font-bold text-slate-400" dir="ltr">{{ $t->application_start->format('Y-m-d') }} — {{ $t->application_end->format('Y-m-d') }}</div>
                                 @endif
                             </div>
                             <div class="rounded-2xl bg-sand px-4 py-3">
                                 <div class="flex items-center gap-1.5 text-[11px] font-bold text-slate-500">
-                                    <x-lucide-globe class="size-3.5 text-gold-600" />
-                                    نطاق التصنيف
+                                    <x-lucide-university class="size-3.5 text-gold-600" />
+                                    {{ __('المؤسسات التعليمية') }}
                                 </div>
-                                <div class="mt-1.5 text-sm font-bold text-forest-800">{{ $t->ranking }}</div>
+                                <div class="mt-1.5 text-sm font-bold text-forest-800">{{ $t->institutions_count ? __('أفضل :count مؤسسة تعليمية', ['count' => $t->institutions_count]) : $t->tr('ranking') }}</div>
                             </div>
                         </div>
 
                         <div class="mt-5 flex flex-wrap gap-2">
-                            @foreach ($t->fields as $f)
+                            @foreach ($t->tr('fields') as $f)
                                 <span class="rounded-full bg-forest-50 px-3 py-1.5 text-[11px] font-bold text-forest-700">{{ $f }}</span>
                             @endforeach
-                            @if ($t->extra_fields > 0)
-                                <span class="rounded-full border border-dashed border-gold-500/60 bg-gold-500/5 px-3 py-1.5 text-[11px] font-bold text-gold-700">+{{ $t->extra_fields }} أخرى</span>
-                            @endif
                         </div>
 
                         {{-- رابط ممتد: البطاقة كلها قابلة للنقر --}}
-                        <a href="{{ $t->slug === 'waed' ? route('waed.index') : route('tracks.show', $t) }}" @class([
+                        <a href="{{ $t->url() }}" @class([
                             'group/cta mt-6 after:absolute after:inset-0 inline-flex items-center justify-center gap-2 rounded-full border py-3.5 text-sm font-bold transition-all duration-300',
                             'border-gold-500/70 bg-gold-500/10 text-forest-900 hover:bg-gold-500 hover:text-forest-950 hover:shadow-[0_14px_36px_-12px_rgba(201,163,56,0.7)]' => $featured,
                             'border-forest-800/20 text-forest-800 hover:bg-forest-800 hover:text-gold-300 hover:shadow-[0_14px_36px_-14px_rgba(8,39,29,0.6)]' => ! $featured,
                         ])>
                             @if ($t->slug === 'waed')
                                 <x-lucide-satellite class="size-4" />
-                                استعراض برامج واعد
+                                {{ __('استعراض برامج واعد') }}
                             @else
-                                <x-lucide-university class="size-4" />
-                                عرض الجامعات والتخصصات المتاحة
+                                <x-lucide-scale class="size-4" />
+                                {{ __('الشروط والضوابط والمؤسسات التعليمية') }}
                             @endif
-                            <x-lucide-arrow-up-left class="size-4 transition-transform duration-300 group-hover/cta:-translate-x-1 group-hover/cta:-translate-y-1" />
+                            <x-lucide-arrow-up-left class="rtl-flip size-4 transition-transform duration-300 group-hover/cta:-translate-x-1 group-hover/cta:-translate-y-1" />
                         </a>
                     </div>
                 </article>
             @endforeach
         </div>
+
+        @if ($linkedTracks->isNotEmpty())
+            <div class="reveal mt-14">
+                <h3 class="flex items-center gap-2.5 text-lg font-bold text-ink">
+                    <x-lucide-external-link class="size-5 text-gold-600" />
+                    {{ __('مسارات أخرى — رابط المسار والدليل الاسترشادي') }}
+                </h3>
+                <div class="mt-5 grid grid-cols-1 gap-4 md:grid-cols-2">
+                    @foreach ($linkedTracks as $t)
+                        @php $guide = $t->guides->firstWhere(fn ($g) => $g->is_current && $g->status === 'active'); @endphp
+                        <div class="flex flex-col gap-4 rounded-3xl border border-forest-800/10 bg-white p-5 sm:flex-row sm:items-center">
+                            <span class="grid size-12 shrink-0 place-items-center rounded-2xl bg-forest-800 text-gold-400">
+                                @svg('lucide-'.$t->icon, 'size-5.5')
+                            </span>
+                            <div class="min-w-0 flex-1">
+                                <div class="flex flex-wrap items-center gap-2">
+                                    <h4 class="text-base font-bold text-ink">{{ $t->tr('name') }}</h4>
+                                    <span class="rounded-full bg-sand px-2.5 py-0.5 text-[10px] font-bold text-slate-500">{{ $t->applicationStatusLabel() }}</span>
+                                </div>
+                                <p class="mt-1 text-[12px] leading-relaxed text-slate-500">{{ $t->tr('badge') }}</p>
+                            </div>
+                            <div class="flex shrink-0 flex-wrap gap-2">
+                                <a href="{{ $t->url() }}" class="inline-flex items-center gap-1.5 rounded-full bg-forest-800 px-4 py-2 text-xs font-bold text-gold-300 transition-all hover:bg-forest-700">
+                                    <x-lucide-arrow-up-left class="rtl-flip size-3.5" /> {{ __('رابط المسار') }}
+                                </a>
+                                @if ($guide)
+                                    <a href="{{ $guide->file ? $guide->file->url() : $guide->url }}" target="_blank" rel="noopener noreferrer"
+                                       class="inline-flex items-center gap-1.5 rounded-full border border-forest-800/20 px-4 py-2 text-xs font-bold text-forest-800 transition-all hover:border-forest-800">
+                                        <x-lucide-file-text class="size-3.5" /> {{ __('الدليل الاسترشادي') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        @endif
     </div>
 </section>

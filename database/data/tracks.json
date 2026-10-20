@@ -1,124 +1,1146 @@
 [
   {
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية.",
+          "أن يكون المتقدم حسن السيرة والسلوك.",
+          "أن يكون لدى المتقدم قبول من إحدى المؤسسات التعليمية المحددة وفق الشروط الخاصة بكل مسار.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار.",
+          "أن يكون نمط الدراسة حسب المحدد في كل مسار.",
+          "أن تنطبق على البرنامج المقبول فيه الضوابط المقرّة لكل مسار.",
+          "أن تكون الدراسة بالانتظام الكلي والإقامة في بلد الابتعاث.",
+          "اجتياز سياسات ومعايير المفاضلة ومنع التكدس بوزارة التعليم.",
+          "ألا يتجاوز عمر المتقدم لمرحلة البكالوريوس 30 عاماً، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم قد سبق له الحصول على بعثة على نفس الدرجة العلمية المتقدم لها ولم يكمل الدرجة العلمية المطلوبة، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم حاصلاً على نفس الدرجة العلمية التي يتقدم لها، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          {
+            "text": "يجوز التقديم والابتعاث في الحالات الآتية:",
+            "sub": [
+              "إذا كان المتقدم موظفاً سواء في القطاع الحكومي أو الخاص، مع الالتزام بالأنظمة ذات العلاقة بجهة عمله، ويتحمل المتقدم المسؤولية الكاملة في ذلك دون أي مسؤولية أو تحقق من الوزارة.",
+              "إذا لم يكن المتقدم معادلاً لشهادة المؤهل السابق الحاصل عليه.",
+              "إذا حصل المتقدم على قبول لدراسة تخصص إضافي أساسي أو فرعي سواء كانت الدراسة في مؤسسة تعليمية واحدة أو أكثر، على ألا تتجاوز مدة تمديد الدراسة ثلاثة فصول دراسية أو ما يعادلها."
+            ]
+          },
+          "لا يجوز ابتعاث من هو على رأس بعثة حالياً وبعثته مستمرة، ولكن يسمح له بالتقديم."
+        ]
+      }
+    ],
+    "additionalConditions": [
+      {
+        "title": "شروط إضافية تُطبَّق ابتداءً من العام الأكاديمي (2026-2027)",
+        "items": [
+          {
+            "text": "الدراسة في السنة التحضيرية — للمتقدمين لدراسة درجة البكالوريوس:",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 90%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 5.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة البكالوريوس (تُطبق على المتقدمين الحاصلين على قبول مشروط باللغة فقط، ولا تُطبق على الحاصلين على قبول مباشر بالتخصص المطلوب):",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 85%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة الماجستير:",
+            "sub": [
+              "ألا يقل معدل المتقدم لدرجة الماجستير في البكالوريوس عن (2.75 من 4) أو (3.75 من 5) أو (80 من 100).",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في دولة ألمانيا:",
+            "sub": [
+              "الحصول على (A2) في اختبار الكفاءة اللغوية للغة الألمانية."
+            ]
+          }
+        ]
+      }
+    ],
+    "specialConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون القبول من أفضل 30 مؤسسة تعليمية حسب قائمة البرنامج في هذا المسار.",
+          "أن يكون القبول نهائياً غير مشروط وأن يكون صادراً من مكتب القبول والتسجيل في الجامعة المعتمدة في قائمة البرنامج، إلا إذا كانت الدولة غير ناطقة باللغة الإنجليزية فيمكن أن يكون القبول مشروطاً بدراسة لغة الدولة ويتاح الابتعاث لدراسة اللغة."
+        ]
+      }
+    ],
+    "policies": [
+      {
+        "title": "",
+        "items": [
+          "استيفاء الشروط العامة للتقديم والابتعاث.",
+          "استيفاء الشروط الخاصة حسب المسار.",
+          "يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى، ويتم اختيار طلب واحد وفق نتائج المفاضلة ووفق المقاعد المتاحة على المسارات، وفي حال لم يكن هناك مفاضلة يتم اختيار طلب واحد حسب المقاعد المتاحة على المسارات، ويتم مراعاة رغبة الطالب إن أمكن.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار."
+        ]
+      }
+    ],
+    "differentiationCriteria": [],
+    "faqs": [
+      {
+        "q": "ما هو المقصود بمسار الرواد؟",
+        "a": "هو مسار يهدف لابتعاث الطلاب لأفضل 30 مؤسسة تعليمية في العالم، مما يسهم في رفع كفاءة رأس المال البشري وتحقيق التنمية المستدامة تحقيقاً لمتطلبات وطموحات رؤية المملكة 2030."
+      },
+      {
+        "q": "كيف يمكن التقديم على المسار؟",
+        "a": "الحصول على قبول مباشر غير مشروط من إحدى الجامعات في قائمة البرنامج المحددة في المسار، وفي حال كانت الدولة ناطقة بغير اللغة الإنجليزية يكون القبول الجامعي مشروطاً باللغة، مع مراعاة الشروط العامة والخاصة بالمسار."
+      },
+      {
+        "q": "تقدمت بأكثر من طلب على المسار نفسه، فهل سيتم التعامل مع جميع الطلبات المقدمة، أم سيتم اعتماد طلب واحد فقط؟",
+        "a": "يمكن تقديم أكثر من طلب على نفس المسار، وسيتم قبول طلب واحد للمتقدم وفق نتائج المفاضلة."
+      },
+      {
+        "q": "هل يتيح مسار الرواد التقديم على جميع التخصصات، أم يقتصر التقديم على تخصصات محددة؟",
+        "a": "يتيح المسار الدراسة في جميع التخصصات وفق الدرجات العلمية المحددة في المسار."
+      },
+      {
+        "q": "على أي منصة يتم تقديم طلب الابتعاث لمسار الرواد؟",
+        "a": "يمكنكم تقديم الطلب على مسار الرواد من خلال منصة قبول."
+      }
+    ],
+    "details": [
+      {
+        "label": "المراحل الدراسية",
+        "value": "بكالوريوس – ماجستير"
+      },
+      {
+        "label": "التخصصات",
+        "value": "جميع التخصصات متاحة وفق الدرجات العلمية المحددة في المسار"
+      },
+      {
+        "label": "المؤسسات التعليمية",
+        "value": "أفضل 30 مؤسسة تعليمية حسب قائمة البرنامج"
+      },
+      {
+        "label": "منصة التقديم",
+        "value": "منصة قبول"
+      }
+    ],
+    "externalUrl": "",
+    "matchFields": null,
+    "institutionsCount": 30,
+    "extraFields": 0,
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null,
     "id": "rowad",
     "code": "01",
     "name": "مسار الروّاد",
-    "enSubtitle": "Top 30 Global Universities",
-    "badge": "أفضل 30 مؤسسة تعليمية عالمياً",
-    "desc": "يهدف مسار الرواد لابتعاث الطلاب إلى أفضل 30 مؤسسة تعليمية حول العالم، في جميع التخصصات لمراحل البكالوريوس، الماجستير، والدكتوراه، لتمكين كفاءات سعودية قادرة على المنافسة عالمياً.",
+    "enSubtitle": "Top 30 Global Institutions",
+    "badge": "أفضل 30 مؤسسة تعليمية حول العالم",
+    "desc": "مسار يهدف لابتعاث الطلاب لأفضل 30 مؤسسة تعليمية في العالم، مما يسهم في رفع كفاءة رأس المال البشري وتحقيق التنمية المستدامة تحقيقاً لمتطلبات وطموحات رؤية المملكة 2030.",
     "icon": "rocket",
     "color": "#c9a338",
     "degrees": [
       "bachelor",
-      "master",
-      "phd"
+      "master"
     ],
-    "ranking": "أفضل 30 مؤسسة تعليمية عالمياً",
+    "ranking": "أفضل 30 مؤسسة تعليمية حسب قائمة البرنامج",
     "fields": [
-      "كافة التخصصات متاحة"
+      "جميع التخصصات متاحة"
     ],
-    "extraFields": 0,
     "perks": [
-      "متاح لجميع التخصصات بدون استثناء",
-      "التركيز على القوة الأكاديمية والمكانة العالمية للمؤسسة",
-      "يهدف لتخريج قيادات وطنية قادرة على صناعة المستقبل"
+      "جميع التخصصات متاحة وفق الدرجات العلمية المحددة في المسار",
+      "القبول من أفضل 30 مؤسسة تعليمية حسب قائمة البرنامج",
+      "يُقدَّم طلب الابتعاث عبر منصة قبول"
     ],
     "image": "/images/tracks/rowad.jpg",
-    "applicationStatus": "not_started",
+    "applicationStatus": "open",
+    "tier": "main",
+    "majorsScope": "all",
+    "contentEn": {
+      "name": "Rowad Track",
+      "badge": "Top 30 educational institutions worldwide",
+      "description": "A track that sends students to the world's top 30 educational institutions, raising the quality of human capital and achieving sustainable development in line with the aspirations of Saudi Vision 2030.",
+      "ranking": "Top 30 educational institutions per the program list",
+      "fields": [
+        "All majors available"
+      ],
+      "perks": [
+        "All majors available within the degrees specified for the track",
+        "Admission from the top 30 institutions per the program list",
+        "Scholarship applications are submitted via the Qubool platform"
+      ],
+      "policies": [
+        {
+          "title": "",
+          "items": [
+            "Meeting the general application and scholarship conditions.",
+            "Meeting the special conditions of the track.",
+            "Applicants may submit a maximum of three admissions. One application is selected based on the differentiation results and the seats available in the tracks; where no differentiation applies, one application is selected according to the available seats, taking the student's preference into account where possible.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track."
+          ]
+        }
+      ],
+      "general_conditions": [
+        {
+          "title": "",
+          "items": [
+            "The applicant must be a Saudi national.",
+            "The applicant must be of good conduct and behavior.",
+            "The applicant must hold an admission from one of the educational institutions specified under the special conditions of each track.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track.",
+            "The mode of study must match what is specified for each track.",
+            "The admitted program must satisfy the rules approved for each track.",
+            "Study must be full-time with residence in the scholarship country.",
+            "Passing the Ministry of Education's differentiation and anti-concentration policies and criteria.",
+            "Bachelor's applicants must not be older than 30, except applicants to the Rowad Track.",
+            "The applicant must not have previously received a scholarship for the same degree without completing it, except applicants to the Rowad Track.",
+            "The applicant must not already hold the degree applied for, except applicants to the Rowad Track.",
+            {
+              "text": "Applying and being granted a scholarship is permitted in the following cases:",
+              "sub": [
+                "If the applicant is employed in the public or private sector, subject to the regulations of their employer; the applicant bears full responsibility without any responsibility or verification by the Ministry.",
+                "If the applicant's previous qualification has not been equivalized.",
+                "If the applicant is admitted to study an additional major or minor, at one or more institutions, provided the study extension does not exceed three semesters or equivalent."
+              ]
+            },
+            "A current scholarship holder whose scholarship is ongoing may not be granted another scholarship, but may apply."
+          ]
+        }
+      ],
+      "additional_conditions": [
+        {
+          "title": "Additional conditions applied from the 2026–2027 academic year",
+          "items": [
+            {
+              "text": "Preparatory year — for bachelor's applicants:",
+              "sub": [
+                "A cumulative high-school GPA of at least 90%.",
+                "An IELTS score of at least 5.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — bachelor's degree (applies only to applicants with a language-conditional admission, not to those with direct admission to the major):",
+              "sub": [
+                "A cumulative high-school GPA of at least 85%.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — master's degree:",
+              "sub": [
+                "A bachelor's GPA of at least 2.75/4, 3.75/5 or 80/100.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in Germany:",
+              "sub": [
+                "Level A2 in a German language proficiency test."
+              ]
+            }
+          ]
+        }
+      ],
+      "special_conditions": [
+        {
+          "title": "",
+          "items": [
+            "Admission must be from the top 30 educational institutions per the program list for this track.",
+            "The admission must be final and unconditional, issued by the admissions and registration office of an approved university on the program list — unless the country is non-English-speaking, in which case the admission may be conditional on studying the country's language, and the scholarship covers the language study."
+          ]
+        }
+      ],
+      "details": [
+        {
+          "label": "Degrees",
+          "value": "Bachelor's – Master's"
+        },
+        {
+          "label": "Majors",
+          "value": "All majors available within the degrees specified for the track"
+        },
+        {
+          "label": "Educational institutions",
+          "value": "Top 30 educational institutions per the program list"
+        },
+        {
+          "label": "Application platform",
+          "value": "Qubool platform"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the Rowad Track?",
+          "a": "A track that sends students to the world's top 30 educational institutions, raising the quality of human capital and achieving sustainable development in line with Saudi Vision 2030."
+        },
+        {
+          "q": "How do I apply to the track?",
+          "a": "Obtain a direct, unconditional admission from one of the universities on the program list specified for the track. If the country is non-English-speaking, the university admission may be conditional on language, subject to the general and special conditions of the track."
+        },
+        {
+          "q": "I submitted more than one application to the same track — will all of them be processed, or only one?",
+          "a": "You may submit more than one application to the same track; one application will be accepted based on the differentiation results."
+        },
+        {
+          "q": "Does the Rowad Track cover all majors, or only specific ones?",
+          "a": "The track allows study in all majors within the degrees specified for the track."
+        },
+        {
+          "q": "On which platform is the Rowad Track application submitted?",
+          "a": "Applications for the Rowad Track are submitted through the Qubool platform."
+        }
+      ]
+    }
+  },
+  {
     "applicationStart": null,
     "applicationEnd": null,
     "overviewAr": "",
-    "generalConditions": [],
-    "specialConditions": [],
-    "policies": [],
+    "generalConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية.",
+          "أن يكون المتقدم حسن السيرة والسلوك.",
+          "أن يكون لدى المتقدم قبول من إحدى المؤسسات التعليمية المحددة وفق الشروط الخاصة بكل مسار.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار.",
+          "أن يكون نمط الدراسة حسب المحدد في كل مسار.",
+          "أن تنطبق على البرنامج المقبول فيه الضوابط المقرّة لكل مسار.",
+          "أن تكون الدراسة بالانتظام الكلي والإقامة في بلد الابتعاث.",
+          "اجتياز سياسات ومعايير المفاضلة ومنع التكدس بوزارة التعليم.",
+          "ألا يتجاوز عمر المتقدم لمرحلة البكالوريوس 30 عاماً، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم قد سبق له الحصول على بعثة على نفس الدرجة العلمية المتقدم لها ولم يكمل الدرجة العلمية المطلوبة، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم حاصلاً على نفس الدرجة العلمية التي يتقدم لها، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          {
+            "text": "يجوز التقديم والابتعاث في الحالات الآتية:",
+            "sub": [
+              "إذا كان المتقدم موظفاً سواء في القطاع الحكومي أو الخاص، مع الالتزام بالأنظمة ذات العلاقة بجهة عمله، ويتحمل المتقدم المسؤولية الكاملة في ذلك دون أي مسؤولية أو تحقق من الوزارة.",
+              "إذا لم يكن المتقدم معادلاً لشهادة المؤهل السابق الحاصل عليه.",
+              "إذا حصل المتقدم على قبول لدراسة تخصص إضافي أساسي أو فرعي سواء كانت الدراسة في مؤسسة تعليمية واحدة أو أكثر، على ألا تتجاوز مدة تمديد الدراسة ثلاثة فصول دراسية أو ما يعادلها."
+            ]
+          },
+          "لا يجوز ابتعاث من هو على رأس بعثة حالياً وبعثته مستمرة، ولكن يسمح له بالتقديم."
+        ]
+      }
+    ],
+    "additionalConditions": [
+      {
+        "title": "شروط إضافية تُطبَّق ابتداءً من العام الأكاديمي (2026-2027)",
+        "items": [
+          {
+            "text": "الدراسة في السنة التحضيرية — للمتقدمين لدراسة درجة البكالوريوس:",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 90%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 5.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة البكالوريوس (تُطبق على المتقدمين الحاصلين على قبول مشروط باللغة فقط، ولا تُطبق على الحاصلين على قبول مباشر بالتخصص المطلوب):",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 85%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة الماجستير:",
+            "sub": [
+              "ألا يقل معدل المتقدم لدرجة الماجستير في البكالوريوس عن (2.75 من 4) أو (3.75 من 5) أو (80 من 100).",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في دولة ألمانيا:",
+            "sub": [
+              "الحصول على (A2) في اختبار الكفاءة اللغوية للغة الألمانية."
+            ]
+          }
+        ]
+      }
+    ],
+    "specialConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون القبول في أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج في هذا المسار.",
+          "أن يكون القبول نهائياً غير مشروط وأن يكون صادراً من مكتب القبول والتسجيل في الجامعة المعتمدة في قائمة البرنامج، إلا إذا كانت الدولة غير ناطقة باللغة الإنجليزية فيمكن أن يكون القبول مشروطاً بدراسة لغة الدولة ويتاح الابتعاث لدراسة اللغة."
+        ]
+      }
+    ],
+    "policies": [
+      {
+        "title": "",
+        "items": [
+          "استيفاء الشروط العامة للتقديم والابتعاث.",
+          "استيفاء الشروط الخاصة حسب المسار.",
+          "يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى، ويتم اختيار طلب واحد وفق نتائج المفاضلة ووفق المقاعد المتاحة على المسارات، وفي حال لم يكن هناك مفاضلة يتم اختيار طلب واحد حسب المقاعد المتاحة على المسارات، ويتم مراعاة رغبة الطالب إن أمكن.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار."
+        ]
+      }
+    ],
     "differentiationCriteria": [],
+    "faqs": [
+      {
+        "q": "ما هو المقصود بمسار إمداد؟",
+        "a": "هو مسار يهدف إلى ابتعاث الطلاب في أفضل 200 جامعة ومعهد حول العالم في مجالات محددة ذات احتياج عالٍ في سوق العمل، وذلك للراغبين بإكمال مرحلة البكالوريوس أو الماجستير."
+      },
+      {
+        "q": "كيف يمكن التقديم على مسار إمداد؟",
+        "a": "الحصول على قبول مباشر غير مشروط من إحدى الجامعات في قائمة البرنامج المحددة في المسار، وفي حال كانت الدولة ناطقة بغير اللغة الإنجليزية يكون القبول الجامعي مشروطاً باللغة، مع مراعاة الشروط العامة والخاصة بالمسار."
+      },
+      {
+        "q": "على أي منصة يتم تقديم طلب الابتعاث لمسار إمداد؟",
+        "a": "يمكنكم تقديم الطلب على مسار إمداد من خلال منصة قبول."
+      },
+      {
+        "q": "هل يمكن تعديل الطلب بعد تقديمه؟",
+        "a": "لا يمكن التعديل على الطلب بعد تقديمه، ويمكن للمتقدم حذف الرغبة وإعادة تقديم الطلب مرة أخرى وفقاً للفترة المحددة للتقديم."
+      },
+      {
+        "q": "هل يشترط أن يكون التخصص في القبول مطابقاً للتخصصات الموضحة في الموقع؟",
+        "a": "لا يشترط تطابق مسمى التخصص المطلوب مع المسميات الموضحة في الموقع، وفي حال التقديم على الطلب تتم دراسة التخصص والقبول من قبل المختصين الأكاديميين وفقاً للضوابط والمعايير المعتمدة."
+      }
+    ],
+    "details": [
+      {
+        "label": "المراحل الدراسية",
+        "value": "بكالوريوس – ماجستير"
+      },
+      {
+        "label": "التخصصات",
+        "value": "تخصصات محددة ذات احتياج عالٍ في سوق العمل لسنة التقديم وفق الدليل الاسترشادي"
+      },
+      {
+        "label": "المؤسسات التعليمية",
+        "value": "أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج"
+      },
+      {
+        "label": "منصة التقديم",
+        "value": "منصة قبول"
+      }
+    ],
+    "externalUrl": "",
+    "matchFields": null,
+    "institutionsCount": 200,
+    "extraFields": 0,
     "contentStatus": "published",
     "version": "2026-2027",
-    "lastVerifiedAt": null
-  },
-  {
+    "lastVerifiedAt": null,
     "id": "emdad",
     "code": "02",
     "name": "مسار إمداد",
     "enSubtitle": "Meeting Labor Market Needs",
-    "badge": "أفضل 200 جامعة (تخصصات محددة)",
-    "desc": "يستهدف سد الفجوة في سوق العمل بتخصصات محددة وواعدة، من خلال الابتعاث لأفضل 200 جامعة عالمياً لدرجتي البكالوريوس والماجستير.",
+    "badge": "أفضل 200 مؤسسة تعليمية — تخصصات محددة",
+    "desc": "مسار يهدف إلى ابتعاث الطلاب في أفضل 200 جامعة ومعهد حول العالم في مجالات محددة ذات احتياج عالٍ في سوق العمل، وذلك للراغبين بإكمال مرحلة البكالوريوس أو الماجستير.",
     "icon": "boxes",
     "color": "#177252",
     "degrees": [
       "bachelor",
       "master"
     ],
-    "ranking": "أفضل 200 جامعة عالمياً (وفق التخصص)",
+    "ranking": "أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج",
     "fields": [
-      "الأمن السيبراني",
-      "سلاسل الإمداد",
-      "السياحة"
+      "تخصصات محددة ذات احتياج عالٍ في سوق العمل"
     ],
-    "extraFields": 18,
     "perks": [
-      "تخصصات مصممة لاحتياج سوق العمل المباشر",
-      "الارتقاء بالمهارات المتخصصة والمستقبلية",
-      "برامج مخصصة للبكالوريوس والماجستير"
+      "تخصصات محددة ذات احتياج عالٍ في سوق العمل",
+      "القبول في أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج",
+      "يُقدَّم طلب الابتعاث عبر منصة قبول"
     ],
     "image": "/images/tracks/emdad.jpg",
-    "applicationStatus": "not_started",
+    "applicationStatus": "closed",
+    "tier": "main",
+    "majorsScope": "specified",
+    "contentEn": {
+      "name": "Emdad Track",
+      "badge": "Top 200 institutions — specified majors",
+      "description": "A track that sends students to the world's top 200 universities and institutes in specified fields with high labor-market demand, for those pursuing a bachelor's or master's degree.",
+      "ranking": "Top 200 educational institutions per the program list",
+      "fields": [
+        "Specified majors with high labor-market demand"
+      ],
+      "perks": [
+        "Specified majors with high labor-market demand",
+        "Admission to the top 200 institutions per the program list",
+        "Scholarship applications are submitted via the Qubool platform"
+      ],
+      "policies": [
+        {
+          "title": "",
+          "items": [
+            "Meeting the general application and scholarship conditions.",
+            "Meeting the special conditions of the track.",
+            "Applicants may submit a maximum of three admissions. One application is selected based on the differentiation results and the seats available in the tracks; where no differentiation applies, one application is selected according to the available seats, taking the student's preference into account where possible.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track."
+          ]
+        }
+      ],
+      "general_conditions": [
+        {
+          "title": "",
+          "items": [
+            "The applicant must be a Saudi national.",
+            "The applicant must be of good conduct and behavior.",
+            "The applicant must hold an admission from one of the educational institutions specified under the special conditions of each track.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track.",
+            "The mode of study must match what is specified for each track.",
+            "The admitted program must satisfy the rules approved for each track.",
+            "Study must be full-time with residence in the scholarship country.",
+            "Passing the Ministry of Education's differentiation and anti-concentration policies and criteria.",
+            "Bachelor's applicants must not be older than 30, except applicants to the Rowad Track.",
+            "The applicant must not have previously received a scholarship for the same degree without completing it, except applicants to the Rowad Track.",
+            "The applicant must not already hold the degree applied for, except applicants to the Rowad Track.",
+            {
+              "text": "Applying and being granted a scholarship is permitted in the following cases:",
+              "sub": [
+                "If the applicant is employed in the public or private sector, subject to the regulations of their employer; the applicant bears full responsibility without any responsibility or verification by the Ministry.",
+                "If the applicant's previous qualification has not been equivalized.",
+                "If the applicant is admitted to study an additional major or minor, at one or more institutions, provided the study extension does not exceed three semesters or equivalent."
+              ]
+            },
+            "A current scholarship holder whose scholarship is ongoing may not be granted another scholarship, but may apply."
+          ]
+        }
+      ],
+      "additional_conditions": [
+        {
+          "title": "Additional conditions applied from the 2026–2027 academic year",
+          "items": [
+            {
+              "text": "Preparatory year — for bachelor's applicants:",
+              "sub": [
+                "A cumulative high-school GPA of at least 90%.",
+                "An IELTS score of at least 5.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — bachelor's degree (applies only to applicants with a language-conditional admission, not to those with direct admission to the major):",
+              "sub": [
+                "A cumulative high-school GPA of at least 85%.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — master's degree:",
+              "sub": [
+                "A bachelor's GPA of at least 2.75/4, 3.75/5 or 80/100.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in Germany:",
+              "sub": [
+                "Level A2 in a German language proficiency test."
+              ]
+            }
+          ]
+        }
+      ],
+      "special_conditions": [
+        {
+          "title": "",
+          "items": [
+            "Admission must be to the top 200 educational institutions per the program list for this track.",
+            "The admission must be final and unconditional, issued by the admissions and registration office of an approved university on the program list — unless the country is non-English-speaking, in which case the admission may be conditional on studying the country's language, and the scholarship covers the language study."
+          ]
+        }
+      ],
+      "details": [
+        {
+          "label": "Degrees",
+          "value": "Bachelor's – Master's"
+        },
+        {
+          "label": "Majors",
+          "value": "Specified majors with high labor-market demand for the application year, per the guideline"
+        },
+        {
+          "label": "Educational institutions",
+          "value": "Top 200 educational institutions per the program list"
+        },
+        {
+          "label": "Application platform",
+          "value": "Qubool platform"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the Emdad Track?",
+          "a": "A track that sends students to the world's top 200 universities and institutes in specified fields with high labor-market demand, for those pursuing a bachelor's or master's degree."
+        },
+        {
+          "q": "How do I apply to the Emdad Track?",
+          "a": "Obtain a direct, unconditional admission from one of the universities on the program list specified for the track. If the country is non-English-speaking, the university admission may be conditional on language, subject to the general and special conditions of the track."
+        },
+        {
+          "q": "On which platform is the Emdad Track application submitted?",
+          "a": "Applications for the Emdad Track are submitted through the Qubool platform."
+        },
+        {
+          "q": "Can I edit my application after submitting it?",
+          "a": "Applications cannot be edited after submission. You may delete the preference and resubmit within the application period."
+        },
+        {
+          "q": "Must the major on my admission match the majors listed on the site?",
+          "a": "The major's title does not have to match the titles listed on the site. Upon application, the major and admission are reviewed by academic specialists according to the approved rules and criteria."
+        }
+      ]
+    }
+  },
+  {
     "applicationStart": null,
     "applicationEnd": null,
     "overviewAr": "",
-    "generalConditions": [],
-    "specialConditions": [],
-    "policies": [],
+    "generalConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية.",
+          "أن يكون المتقدم حسن السيرة والسلوك.",
+          "أن يكون لدى المتقدم قبول من إحدى المؤسسات التعليمية المحددة وفق الشروط الخاصة بكل مسار.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار.",
+          "أن يكون نمط الدراسة حسب المحدد في كل مسار.",
+          "أن تنطبق على البرنامج المقبول فيه الضوابط المقرّة لكل مسار.",
+          "أن تكون الدراسة بالانتظام الكلي والإقامة في بلد الابتعاث.",
+          "اجتياز سياسات ومعايير المفاضلة ومنع التكدس بوزارة التعليم.",
+          "ألا يتجاوز عمر المتقدم لمرحلة البكالوريوس 30 عاماً، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم قد سبق له الحصول على بعثة على نفس الدرجة العلمية المتقدم لها ولم يكمل الدرجة العلمية المطلوبة، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم حاصلاً على نفس الدرجة العلمية التي يتقدم لها، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          {
+            "text": "يجوز التقديم والابتعاث في الحالات الآتية:",
+            "sub": [
+              "إذا كان المتقدم موظفاً سواء في القطاع الحكومي أو الخاص، مع الالتزام بالأنظمة ذات العلاقة بجهة عمله، ويتحمل المتقدم المسؤولية الكاملة في ذلك دون أي مسؤولية أو تحقق من الوزارة.",
+              "إذا لم يكن المتقدم معادلاً لشهادة المؤهل السابق الحاصل عليه.",
+              "إذا حصل المتقدم على قبول لدراسة تخصص إضافي أساسي أو فرعي سواء كانت الدراسة في مؤسسة تعليمية واحدة أو أكثر، على ألا تتجاوز مدة تمديد الدراسة ثلاثة فصول دراسية أو ما يعادلها."
+            ]
+          },
+          "لا يجوز ابتعاث من هو على رأس بعثة حالياً وبعثته مستمرة، ولكن يسمح له بالتقديم."
+        ]
+      }
+    ],
+    "additionalConditions": [
+      {
+        "title": "شروط إضافية تُطبَّق ابتداءً من العام الأكاديمي (2026-2027)",
+        "items": [
+          {
+            "text": "الدراسة في السنة التحضيرية — للمتقدمين لدراسة درجة البكالوريوس:",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 90%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 5.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة البكالوريوس (تُطبق على المتقدمين الحاصلين على قبول مشروط باللغة فقط، ولا تُطبق على الحاصلين على قبول مباشر بالتخصص المطلوب):",
+            "sub": [
+              "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 85%.",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في الصين — درجة الماجستير:",
+            "sub": [
+              "ألا يقل معدل المتقدم لدرجة الماجستير في البكالوريوس عن (2.75 من 4) أو (3.75 من 5) أو (80 من 100).",
+              "ألا تقل درجة اختبار اللغة (آيلتس) عن 4.5 أو ما يعادلها."
+            ]
+          },
+          {
+            "text": "للمتقدمين للدراسة في دولة ألمانيا:",
+            "sub": [
+              "الحصول على (A2) في اختبار الكفاءة اللغوية للغة الألمانية."
+            ]
+          }
+        ]
+      }
+    ],
+    "specialConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون القبول لدرجة الدكتوراه من أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج في هذا المسار.",
+          "أن يكون القبول نهائياً غير مشروط وأن يكون صادراً من مكتب القبول والتسجيل في الجامعة المعتمدة في قائمة البرنامج، إلا إذا كانت الدولة غير ناطقة باللغة الإنجليزية فيمكن أن يكون القبول مشروطاً بدراسة لغة الدولة ويتاح الابتعاث لدراسة اللغة."
+        ]
+      }
+    ],
+    "policies": [
+      {
+        "title": "",
+        "items": [
+          "استيفاء الشروط العامة للتقديم والابتعاث.",
+          "استيفاء الشروط الخاصة حسب المسار.",
+          "يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى، ويتم اختيار طلب واحد وفق نتائج المفاضلة ووفق المقاعد المتاحة على المسارات، وفي حال لم يكن هناك مفاضلة يتم اختيار طلب واحد حسب المقاعد المتاحة على المسارات، ويتم مراعاة رغبة الطالب إن أمكن.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار."
+        ]
+      }
+    ],
     "differentiationCriteria": [],
+    "faqs": [
+      {
+        "q": "كيف يمكن التقديم على مسار البحث والتطوير؟",
+        "a": "الحصول على قبول مباشر غير مشروط من إحدى الجامعات في قائمة البرنامج المحددة في المسار، وفي حال كانت الدولة ناطقة بغير اللغة الإنجليزية يكون القبول الجامعي مشروطاً باللغة، مع مراعاة الشروط العامة والخاصة بالمسار."
+      },
+      {
+        "q": "تقدمت بأكثر من طلب على المسار نفسه، فهل سيتم التعامل مع جميع الطلبات المقدمة، أم سيتم اعتماد طلب واحد فقط؟",
+        "a": "يمكن تقديم أكثر من طلب على نفس المسار، وسيتم قبول طلب واحد للمتقدم وفق نتائج المفاضلة."
+      },
+      {
+        "q": "على أي منصة يتم تقديم طلب الابتعاث لمسار البحث والتطوير؟",
+        "a": "يمكنكم تقديم الطلب على مسار البحث والتطوير من خلال منصة قبول."
+      },
+      {
+        "q": "هل يشترط أن يكون التخصص في القبول مطابقاً للتخصصات الموضحة في الموقع؟",
+        "a": "لا يشترط تطابق مسمى التخصص المطلوب مع المسميات الموضحة في الموقع، وفي حال التقديم على الطلب تتم دراسة التخصص والقبول من قبل المختصين الأكاديميين وفقاً للضوابط والمعايير المعتمدة."
+      },
+      {
+        "q": "هل يمكن تعديل الطلب بعد تقديمه؟",
+        "a": "لا يمكن التعديل على الطلب بعد تقديمه، ويمكن للمتقدم حذف الرغبة وإعادة تقديم الطلب مرة أخرى وفقاً للفترة المحددة للتقديم."
+      }
+    ],
+    "details": [
+      {
+        "label": "المرحلة الدراسية",
+        "value": "دكتوراه"
+      },
+      {
+        "label": "التخصصات",
+        "value": "التخصصات المحددة لسنة التقديم وفق الدليل الاسترشادي"
+      },
+      {
+        "label": "المؤسسات التعليمية",
+        "value": "أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج"
+      },
+      {
+        "label": "منصة التقديم",
+        "value": "منصة قبول"
+      }
+    ],
+    "externalUrl": "",
+    "matchFields": null,
+    "institutionsCount": 200,
+    "extraFields": 0,
     "contentStatus": "published",
     "version": "2026-2027",
-    "lastVerifiedAt": null
-  },
-  {
+    "lastVerifiedAt": null,
     "id": "research",
     "code": "03",
     "name": "مسار البحث والتطوير",
-    "enSubtitle": "National Research & Innovation Priorities",
-    "badge": "أولويات البحث والابتكار",
-    "desc": "مخصص لطلبة الدراسات العليا (ماجستير ودكتوراه) للابتعاث في مجالات بحثية دقيقة وأولويات وطنية، في أفضل 200 مؤسسة تعليمية عالمياً لتعزيز منظومة الابتكار.",
+    "enSubtitle": "Research & Development",
+    "badge": "أفضل 200 مؤسسة تعليمية — الدكتوراه",
+    "desc": "مسار مخصص لابتعاث الطلاب لدرجة الدكتوراه في أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج في هذا المسار.",
     "icon": "flask",
     "color": "#2f8a68",
     "degrees": [
-      "master",
       "phd"
     ],
-    "ranking": "أفضل 200 جامعة ومعهد بحثي عالمياً",
+    "ranking": "أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج",
     "fields": [
-      "علوم الفضاء",
-      "التقنية الحيوية",
-      "الطاقة المتجددة"
+      "مجالات البحث والتطوير المحددة في المسار"
     ],
-    "extraFields": 12,
     "perks": [
-      "مخصص لطلبة الدراسات العليا فقط",
-      "يركز على مجالات الأولويات الوطنية للبحث والتطوير",
-      "تأهيل علماء وباحثين لقيادة منظومة الابتكار"
+      "مخصص لدرجة الدكتوراه",
+      "القبول من أفضل 200 مؤسسة تعليمية حسب قائمة البرنامج",
+      "يُقدَّم طلب الابتعاث عبر منصة قبول"
     ],
     "image": "/images/tracks/research.jpg",
-    "applicationStatus": "not_started",
+    "applicationStatus": "closed",
+    "tier": "main",
+    "majorsScope": "specified",
+    "contentEn": {
+      "name": "Research & Development Track",
+      "badge": "Top 200 institutions — PhD",
+      "description": "A track dedicated to doctoral scholarships at the top 200 educational institutions per the program list for this track.",
+      "ranking": "Top 200 educational institutions per the program list",
+      "fields": [
+        "Research & development fields specified in the track"
+      ],
+      "perks": [
+        "Dedicated to the doctoral degree",
+        "Admission from the top 200 institutions per the program list",
+        "Scholarship applications are submitted via the Qubool platform"
+      ],
+      "policies": [
+        {
+          "title": "",
+          "items": [
+            "Meeting the general application and scholarship conditions.",
+            "Meeting the special conditions of the track.",
+            "Applicants may submit a maximum of three admissions. One application is selected based on the differentiation results and the seats available in the tracks; where no differentiation applies, one application is selected according to the available seats, taking the student's preference into account where possible.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track."
+          ]
+        }
+      ],
+      "general_conditions": [
+        {
+          "title": "",
+          "items": [
+            "The applicant must be a Saudi national.",
+            "The applicant must be of good conduct and behavior.",
+            "The applicant must hold an admission from one of the educational institutions specified under the special conditions of each track.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track.",
+            "The mode of study must match what is specified for each track.",
+            "The admitted program must satisfy the rules approved for each track.",
+            "Study must be full-time with residence in the scholarship country.",
+            "Passing the Ministry of Education's differentiation and anti-concentration policies and criteria.",
+            "Bachelor's applicants must not be older than 30, except applicants to the Rowad Track.",
+            "The applicant must not have previously received a scholarship for the same degree without completing it, except applicants to the Rowad Track.",
+            "The applicant must not already hold the degree applied for, except applicants to the Rowad Track.",
+            {
+              "text": "Applying and being granted a scholarship is permitted in the following cases:",
+              "sub": [
+                "If the applicant is employed in the public or private sector, subject to the regulations of their employer; the applicant bears full responsibility without any responsibility or verification by the Ministry.",
+                "If the applicant's previous qualification has not been equivalized.",
+                "If the applicant is admitted to study an additional major or minor, at one or more institutions, provided the study extension does not exceed three semesters or equivalent."
+              ]
+            },
+            "A current scholarship holder whose scholarship is ongoing may not be granted another scholarship, but may apply."
+          ]
+        }
+      ],
+      "additional_conditions": [
+        {
+          "title": "Additional conditions applied from the 2026–2027 academic year",
+          "items": [
+            {
+              "text": "Preparatory year — for bachelor's applicants:",
+              "sub": [
+                "A cumulative high-school GPA of at least 90%.",
+                "An IELTS score of at least 5.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — bachelor's degree (applies only to applicants with a language-conditional admission, not to those with direct admission to the major):",
+              "sub": [
+                "A cumulative high-school GPA of at least 85%.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in China — master's degree:",
+              "sub": [
+                "A bachelor's GPA of at least 2.75/4, 3.75/5 or 80/100.",
+                "An IELTS score of at least 4.5 or equivalent."
+              ]
+            },
+            {
+              "text": "Studying in Germany:",
+              "sub": [
+                "Level A2 in a German language proficiency test."
+              ]
+            }
+          ]
+        }
+      ],
+      "special_conditions": [
+        {
+          "title": "",
+          "items": [
+            "Doctoral admission must be from the top 200 educational institutions per the program list for this track.",
+            "The admission must be final and unconditional, issued by the admissions and registration office of an approved university on the program list — unless the country is non-English-speaking, in which case the admission may be conditional on studying the country's language, and the scholarship covers the language study."
+          ]
+        }
+      ],
+      "details": [
+        {
+          "label": "Degree",
+          "value": "PhD"
+        },
+        {
+          "label": "Majors",
+          "value": "Majors specified for the application year, per the guideline"
+        },
+        {
+          "label": "Educational institutions",
+          "value": "Top 200 educational institutions per the program list"
+        },
+        {
+          "label": "Application platform",
+          "value": "Qubool platform"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "How do I apply to the Research & Development Track?",
+          "a": "Obtain a direct, unconditional admission from one of the universities on the program list specified for the track. If the country is non-English-speaking, the university admission may be conditional on language, subject to the general and special conditions of the track."
+        },
+        {
+          "q": "I submitted more than one application to the same track — will all of them be processed, or only one?",
+          "a": "You may submit more than one application to the same track; one application will be accepted based on the differentiation results."
+        },
+        {
+          "q": "On which platform is the Research & Development Track application submitted?",
+          "a": "Applications for the Research & Development Track are submitted through the Qubool platform."
+        },
+        {
+          "q": "Must the major on my admission match the majors listed on the site?",
+          "a": "The major's title does not have to match the titles listed on the site. Upon application, the major and admission are reviewed by academic specialists according to the approved rules and criteria."
+        },
+        {
+          "q": "Can I edit my application after submitting it?",
+          "a": "Applications cannot be edited after submission. You may delete the preference and resubmit within the application period."
+        }
+      ]
+    }
+  },
+  {
+    "applicationStart": null,
+    "applicationEnd": null,
+    "overviewAr": "",
+    "generalConditions": [
+      {
+        "title": "",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية.",
+          "أن يكون المتقدم حسن السيرة والسلوك.",
+          "أن يكون لدى المتقدم قبول من إحدى المؤسسات التعليمية المحددة وفق الشروط الخاصة بكل مسار.",
+          "أن يكون التخصص المراد دراسته ضمن التخصصات المحددة لسنة التقديم على الابتعاث وفق الشروط الخاصة بكل مسار.",
+          "أن يكون نمط الدراسة حسب المحدد في كل مسار.",
+          "أن تنطبق على البرنامج المقبول فيه الضوابط المقرّة لكل مسار.",
+          "أن تكون الدراسة بالانتظام الكلي والإقامة في بلد الابتعاث.",
+          "اجتياز سياسات ومعايير المفاضلة ومنع التكدس بوزارة التعليم.",
+          "ألا يتجاوز عمر المتقدم لمرحلة البكالوريوس 30 عاماً، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم قد سبق له الحصول على بعثة على نفس الدرجة العلمية المتقدم لها ولم يكمل الدرجة العلمية المطلوبة، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          "ألا يكون المتقدم حاصلاً على نفس الدرجة العلمية التي يتقدم لها، ويستثنى من ذلك المتقدمون في مسار الرواد.",
+          {
+            "text": "يجوز التقديم والابتعاث في الحالات الآتية:",
+            "sub": [
+              "إذا كان المتقدم موظفاً سواء في القطاع الحكومي أو الخاص، مع الالتزام بالأنظمة ذات العلاقة بجهة عمله، ويتحمل المتقدم المسؤولية الكاملة في ذلك دون أي مسؤولية أو تحقق من الوزارة.",
+              "إذا لم يكن المتقدم معادلاً لشهادة المؤهل السابق الحاصل عليه.",
+              "إذا حصل المتقدم على قبول لدراسة تخصص إضافي أساسي أو فرعي سواء كانت الدراسة في مؤسسة تعليمية واحدة أو أكثر، على ألا تتجاوز مدة تمديد الدراسة ثلاثة فصول دراسية أو ما يعادلها."
+            ]
+          },
+          "لا يجوز ابتعاث من هو على رأس بعثة حالياً وبعثته مستمرة، ولكن يسمح له بالتقديم."
+        ]
+      }
+    ],
+    "additionalConditions": [],
+    "specialConditions": [
+      {
+        "title": "",
+        "items": [
+          "هناك شروط خاصة لكل برنامج يُطلق حسب ما يُعلن في الموقع التعريفي."
+        ]
+      }
+    ],
+    "policies": [],
+    "differentiationCriteria": [],
+    "faqs": [
+      {
+        "q": "ما هو مسار واعد؟",
+        "a": "مسار واعد أحد مسارات برنامج خادم الحرمين الشريفين للابتعاث الخارجي، ويهدف إلى دراسة وتدريب وإعادة تأهيل الطلبة وتعزيز قدراتهم في القطاعات والمجالات الواعدة، وفق متطلبات المشاريع والمبادرات الكبرى."
+      },
+      {
+        "q": "ما الهدف من مسار واعد؟",
+        "a": "يهدف مسار واعد إلى ابتعاث الطلبة في القطاعات والمجالات الواعدة، بما يسهم في تلبية الاحتياجات الوطنية للمشاريع والمبادرات الكبرى، ويركز على المجالات التقنية الواعدة التي تخدم هذه المشاريع."
+      },
+      {
+        "q": "ما الدرجات العلمية المتاحة في مسار واعد؟",
+        "a": "يشمل مسار واعد: التدريب، والدبلوم، والبكالوريوس، والماجستير."
+      },
+      {
+        "q": "هل يركز مسار واعد على تخصصات محددة؟",
+        "a": "نعم، يركز مسار واعد على تخصصات محددة مرتبطة بالقطاعات والمجالات الواعدة واحتياجات المشاريع والمبادرات الكبرى."
+      },
+      {
+        "q": "هل الابتعاث في مسار واعد مرتبط بالتوظيف؟",
+        "a": "نعم، يركز مسار واعد على الابتعاث المبتدئ بالتوظيف، حيث يرتبط الابتعاث بالفرص الوظيفية المقدمة من الجهات والشركات المشاركة في المسار."
+      }
+    ],
+    "details": [
+      {
+        "label": "نبذة عن المسار",
+        "value": "كل برنامج في مسار واعد مستقل بجهته الراعية ومؤسسته التعليمية وشروطه ومتطلباته وفترة تقديمه. اضغط على أي برنامج لاستعراض شروطه الكاملة."
+      },
+      {
+        "label": "الفئة المستهدفة",
+        "value": "حسب شروط الشركة: خريج الثانوية أو خريج البكالوريوس أو الماجستير"
+      },
+      {
+        "label": "المراحل الدراسية",
+        "value": "بكالوريوس – ماجستير – دبلوم – تدريب"
+      },
+      {
+        "label": "الدول والمؤسسات التعليمية",
+        "value": "دول الابتعاث المحددة في برنامج خادم الحرمين الشريفين للابتعاث (المرحلة الرابعة)"
+      },
+      {
+        "label": "الشروط الخاصة",
+        "value": "الشروط الخاصة بالشركة"
+      },
+      {
+        "label": "مواعيد التقديم وحالته",
+        "value": "التقديم متاح طوال العام حسب البرامج والإطلاقات المعلن عنها في سفير 2"
+      },
+      {
+        "label": "خطوات التقديم ورحلة المستفيد",
+        "value": "الاطلاع على شروط الشركة، وبعد استيفاء الشروط يتم التقديم، ثم يُقيَّم الطلب من قبل وزارة التعليم، ثم من قبل الشركة. يُختار المرشحون ويُحالون إلى مرحلة الإجراءات الإدارية، وبعد تجاوزها يُبرم العقد الوظيفي، ويُوفَّر القبول الأكاديمي من قبل الطالب أو الشركة حسب المتفق عليه. يُرفع القبول الأكاديمي على النظام، وبالتالي يُقبل الترشيح ويصدر قرار الابتعاث."
+      },
+      {
+        "label": "المزايا المقدمة للمبتعث",
+        "value": "ابتعاث مبتدئ بالتوظيف – مكافأة شهرية، وبعض الشركات تتكفل بالسكن لمبتعثيها"
+      }
+    ],
+    "externalUrl": "",
+    "matchFields": null,
+    "institutionsCount": null,
+    "extraFields": 0,
+    "contentStatus": "published",
+    "version": "2026-2027",
+    "lastVerifiedAt": null,
+    "id": "waed",
+    "code": "04",
+    "name": "مسار واعد",
+    "enSubtitle": "Employment-Linked Scholarship Programs",
+    "badge": "ابتعاث مبتدئ بالتوظيف",
+    "desc": "أحد مسارات برنامج خادم الحرمين الشريفين للابتعاث الخارجي، ويهدف إلى دراسة وتدريب وإعادة تأهيل الطلبة وتعزيز قدراتهم في القطاعات والمجالات الواعدة، وفق متطلبات المشاريع والمبادرات الكبرى.",
+    "icon": "satellite",
+    "color": "#96742a",
+    "degrees": [
+      "diploma",
+      "bachelor",
+      "master"
+    ],
+    "ranking": "دول الابتعاث المحددة في برنامج خادم الحرمين الشريفين للابتعاث (المرحلة الرابعة)",
+    "fields": [
+      "حسب البرنامج والجهة الراعية"
+    ],
+    "perks": [
+      "ابتعاث مبتدئ بالتوظيف",
+      "مكافأة شهرية، وبعض الشركات تتكفل بالسكن لمبتعثيها",
+      "لكل برنامج شروطه الخاصة حسب الجهة الراعية"
+    ],
+    "image": "/images/tracks/waed.jpg",
+    "applicationStatus": "per_program",
+    "tier": "main",
+    "majorsScope": "specified",
+    "contentEn": {
+      "name": "Waed Track",
+      "badge": "Employment-first scholarships",
+      "description": "One of the tracks of the King Salman Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives.",
+      "ranking": "Scholarship countries specified in the program (fourth phase)",
+      "fields": [
+        "Per program and sponsoring entity"
+      ],
+      "perks": [
+        "Employment-first scholarship",
+        "Monthly stipend; some companies provide housing for their scholars",
+        "Each program has its own conditions set by the sponsoring entity"
+      ],
+      "general_conditions": [
+        {
+          "title": "",
+          "items": [
+            "The applicant must be a Saudi national.",
+            "The applicant must be of good conduct and behavior.",
+            "The applicant must hold an admission from one of the educational institutions specified under the special conditions of each track.",
+            "The intended major must be among the majors specified for the application year, in accordance with the special conditions of each track.",
+            "The mode of study must match what is specified for each track.",
+            "The admitted program must satisfy the rules approved for each track.",
+            "Study must be full-time with residence in the scholarship country.",
+            "Passing the Ministry of Education's differentiation and anti-concentration policies and criteria.",
+            "Bachelor's applicants must not be older than 30, except applicants to the Rowad Track.",
+            "The applicant must not have previously received a scholarship for the same degree without completing it, except applicants to the Rowad Track.",
+            "The applicant must not already hold the degree applied for, except applicants to the Rowad Track.",
+            {
+              "text": "Applying and being granted a scholarship is permitted in the following cases:",
+              "sub": [
+                "If the applicant is employed in the public or private sector, subject to the regulations of their employer; the applicant bears full responsibility without any responsibility or verification by the Ministry.",
+                "If the applicant's previous qualification has not been equivalized.",
+                "If the applicant is admitted to study an additional major or minor, at one or more institutions, provided the study extension does not exceed three semesters or equivalent."
+              ]
+            },
+            "A current scholarship holder whose scholarship is ongoing may not be granted another scholarship, but may apply."
+          ]
+        }
+      ],
+      "special_conditions": [
+        {
+          "title": "",
+          "items": [
+            "Each program launched has its own special conditions, as announced on the informational site."
+          ]
+        }
+      ],
+      "details": [
+        {
+          "label": "About the track",
+          "value": "Each Waed program is independent, with its own sponsoring entity, educational institution, conditions, requirements and application period. Select any program to view its full conditions."
+        },
+        {
+          "label": "Target group",
+          "value": "Per the company's conditions: high-school, bachelor's or master's graduates"
+        },
+        {
+          "label": "Degrees",
+          "value": "Bachelor's – Master's – Diploma – Training"
+        },
+        {
+          "label": "Countries and institutions",
+          "value": "Scholarship countries specified in the King Salman Scholarship Program (fourth phase)"
+        },
+        {
+          "label": "Special conditions",
+          "value": "The company's special conditions"
+        },
+        {
+          "label": "Application dates and status",
+          "value": "Applications are open year-round according to the programs and launches announced on Safeer 2"
+        },
+        {
+          "label": "Application steps and beneficiary journey",
+          "value": "Review the company's conditions; once met, apply. The application is evaluated by the Ministry of Education and then by the company. Selected candidates proceed to administrative procedures, after which the employment contract is signed and the academic admission is secured by the student or the company as agreed. The admission is uploaded to the system, the nomination is accepted and the scholarship decision is issued."
+        },
+        {
+          "label": "Scholar benefits",
+          "value": "Employment-first scholarship – monthly stipend; some companies provide housing for their scholars"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "What is the Waed Track?",
+          "a": "One of the tracks of the King Salman Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives."
+        },
+        {
+          "q": "What is the goal of the Waed Track?",
+          "a": "To send students to study in promising sectors and fields, meeting national needs of major projects and initiatives, with a focus on promising technical fields that serve these projects."
+        },
+        {
+          "q": "Which degrees are available in the Waed Track?",
+          "a": "Training, diploma, bachelor's and master's."
+        },
+        {
+          "q": "Does the Waed Track focus on specific majors?",
+          "a": "Yes — it focuses on specific majors linked to promising sectors and the needs of major projects and initiatives."
+        },
+        {
+          "q": "Is the Waed scholarship linked to employment?",
+          "a": "Yes — the track focuses on employment-first scholarships, linked to job opportunities offered by the participating entities and companies."
+        }
+      ]
+    }
+  },
+  {
     "applicationStart": null,
     "applicationEnd": null,
     "overviewAr": "",
     "generalConditions": [],
+    "additionalConditions": [],
     "specialConditions": [],
     "policies": [],
     "differentiationCriteria": [],
+    "faqs": [],
+    "details": [],
+    "externalUrl": "https://www.moe.gov.sa/ar/education/Pages/Scholarship.aspx",
+    "matchFields": null,
+    "institutionsCount": null,
+    "extraFields": 0,
     "contentStatus": "published",
     "version": "2026-2027",
-    "lastVerifiedAt": null
-  },
-  {
+    "lastVerifiedAt": null,
     "id": "tamayoz",
-    "code": "04",
+    "code": "05",
     "name": "مسار التميز",
-    "enSubtitle": "Specialized Disciplines & Elite Institutions",
-    "badge": "مؤسسات وتخصصات نوعية",
-    "desc": "يربط كل تخصص نوعي (كالقانون، الألعاب الرقمية، الفلسفة) بمؤسسات أكاديمية محددة ومتميزة عالمياً، لتأهيل كوادر تدعم مشاريع الرؤية.",
+    "enSubtitle": "Specialized Disciplines & Institutions",
+    "badge": "مؤسسات تعليمية محددة لكل تخصص",
+    "desc": "أحد مسارات برنامج خادم الحرمين الشريفين للابتعاث الخارجي، ويهدف إلى رفع التأهيل العلمي للطلاب والطالبات عبر ابتعاثهم إلى مؤسسات تعليمية عالمية متميزة في تخصصات نوعية محددة، لكل تخصص قائمة مؤسسات تعليمية خاصة به.",
     "icon": "award",
     "color": "#b08c2f",
     "degrees": [
@@ -127,105 +1149,371 @@
       "phd",
       "professional_doctorate"
     ],
-    "ranking": "قائمة جامعات مخصصة لكل تخصص",
+    "ranking": "قائمة مؤسسات تعليمية محددة لكل تخصص",
     "fields": [
-      "العدالة الجنائية",
+      "القانون",
       "إدارة الأعمال",
-      "القانون"
+      "العدالة الجنائية",
+      "الألعاب الرقمية"
     ],
-    "extraFields": 22,
     "perks": [
-      "قوائم جامعات محددة مسبقاً لكل تخصص على حدة",
-      "يشمل تخصصات غير تقليدية ونوعية تخدم الرؤية",
-      "متطلبات وقيود دقيقة (كالـ J.D. لتخصص القانون)"
+      "قائمة مؤسسات تعليمية محددة لكل تخصص",
+      "تخصصات نوعية محددة في المسار",
+      "التفاصيل الرسمية على صفحة المسار في موقع وزارة التعليم"
     ],
     "image": "/images/tracks/tamayoz.jpg",
-    "applicationStatus": "not_started",
+    "applicationStatus": "closed",
+    "tier": "linked",
+    "majorsScope": "listed",
+    "contentEn": {
+      "name": "Tamayoz Track",
+      "badge": "Specified institutions for each major",
+      "description": "One of the tracks of the King Salman Scholarship Program abroad, aimed at raising the academic qualification of students by sending them to distinguished global institutions in specified specialized majors, each with its own institution list.",
+      "ranking": "A specified institution list for each major",
+      "fields": [
+        "Law",
+        "Business Administration",
+        "Criminal Justice",
+        "Digital Games"
+      ],
+      "perks": [
+        "A specified institution list for each major",
+        "Specialized majors specified in the track",
+        "Official details on the track page of the Ministry of Education website"
+      ]
+    }
+  },
+  {
     "applicationStart": null,
     "applicationEnd": null,
     "overviewAr": "",
     "generalConditions": [],
-    "specialConditions": [],
+    "additionalConditions": [],
+    "specialConditions": [
+      {
+        "title": "التمريض — الشروط العامة للابتعاث في المسار الصحي",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية، ولائقاً طبياً.",
+          "القبول المباشر غير المشروط بلغة أو دورة.",
+          "ألا يكون المتقدم حاصلاً على مؤهل المرحلة التي سيتقدم عليها من داخل المملكة أو خارجها.",
+          "ألا يكون المتقدم قد صدر له قرار ابتعاث على المرحلة نفسها، أو حصل على منحة داخلية.",
+          "ألا يكون القبول بالبرنامج مخصصاً للطلبة الأجانب.",
+          "أن تكون الشهادة معادلة من جهة الاختصاص إذا كانت صادرة من مؤسسة خارج المملكة.",
+          "الانتظام الكلي، والتفرغ للدراسة، والإقامة في بلد الابتعاث."
+        ]
+      },
+      {
+        "title": "التمريض — الشروط الخاصة للابتعاث إلى مرحلة البكالوريوس",
+        "items": [
+          "الحصول على شهادة إتمام الثانوية العامة أو ما يعادلها قبل 5 سنوات.",
+          "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 85%.",
+          "الحصول على 70% في اختباري القدرات والتحصيلي أو عن طريق أنظمة الاختبارات المحوسبة (CBT).",
+          "الحصول على قبول من جامعة موصى بها من ضمن دول الابتعاث المحددة.",
+          "ألا تكون الدراسة في البرنامج مشروطة بالحصول على معدلات محددة لاحقاً للاستمرار بالدراسة في التخصص.",
+          "أن تكون دراسة البكالوريوس في برامج تشمل التدريب السريري ومعتمدة لممارسة المهنة في بلد الابتعاث."
+        ]
+      },
+      {
+        "title": "التمريض — الشروط الخاصة للابتعاث إلى مرحلة الماجستير",
+        "items": [
+          "ألا يقل معدل المتقدم في البكالوريوس عن (2.75 من 4) أو (3.75 من 5) أو (80 من 100).",
+          "الحصول على (5.5) في (IELTS) أو (46) في اختبار (TOEFL IBT).",
+          "ألا يكون قد مضى على حصول المتقدم على شهادة البكالوريوس أكثر من خمس سنوات.",
+          "أن تكون دراسة الماجستير في البرامج الإكلينيكية فقط."
+        ]
+      },
+      {
+        "title": "التمريض — الدول",
+        "items": [
+          "أمريكا - كندا - بريطانيا - أيرلندا - نيوزيلندا - أستراليا - فرنسا."
+        ]
+      },
+      {
+        "title": "العلوم الطبية التطبيقية — التخصصات",
+        "items": [
+          "طب القدم.",
+          "الأطراف الصناعية والأجهزة التعويضية.",
+          "العلاج التنفسي.",
+          "العلاج الوظيفي.",
+          "التروية القلبية.",
+          "تقنية قلب."
+        ]
+      },
+      {
+        "title": "العلوم الطبية التطبيقية — الدول",
+        "items": [
+          "أمريكا - كندا - بريطانيا - أيرلندا - نيوزيلندا - أستراليا - فرنسا - ألمانيا."
+        ]
+      },
+      {
+        "title": "العلوم الطبية التطبيقية — الشروط العامة للابتعاث",
+        "items": [
+          "أن يكون المتقدم سعودي الجنسية، ولائقاً طبياً.",
+          "القبول المباشر غير المشروط بلغة أو دورة.",
+          "ألا يكون المتقدم حاصلاً على مؤهل المرحلة التي سيتقدم عليها من داخل المملكة أو خارجها.",
+          "ألا يكون القبول بالبرنامج مخصصاً للطلبة الأجانب.",
+          "ألا يكون المتقدم قد صدر له قرار ابتعاث على المرحلة نفسها، أو حصل على منحة داخلية.",
+          "أن تكون الشهادة العلمية معادلة من جهة الاختصاص إذا كانت صادرة من مؤسسة خارج المملكة.",
+          "الانتظام الكلي، والتفرغ للدراسة، والإقامة في بلد الابتعاث."
+        ]
+      },
+      {
+        "title": "العلوم الطبية التطبيقية — الشروط الخاصة للابتعاث إلى مرحلة البكالوريوس",
+        "items": [
+          "الحصول على شهادة إتمام الثانوية العامة أو ما يعادلها.",
+          "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 90%.",
+          "الحصول على 80% في اختباري القدرات والتحصيلي أو عن طريق أنظمة الاختبارات المحوسبة (CBT).",
+          "الحصول على (5.5) في (IELTS)، أو (46) في اختبار (TOEFL IBT).",
+          "اجتياز الاختبارات والمقابلات التي تطلبها الجامعة من المتقدم.",
+          "أن تكون دراسة البكالوريوس في برامج تشمل التدريب السريري ومعتمدة لممارسة المهنة في بلد الابتعاث.",
+          "الحصول على قبول من جامعة موصى بها ضمن دول الابتعاث المحددة والتخصصات النوعية المحددة."
+        ]
+      },
+      {
+        "title": "العلوم الطبية التطبيقية — الشروط الخاصة للابتعاث إلى مرحلة الماجستير",
+        "items": [
+          "ألا يقل معدل المتقدم في البكالوريوس عن (2.75 من 4) أو (3.75 من 5) أو (80 من 100).",
+          "الحصول على (5.5) في (IELTS) أو (46) في اختبار (TOEFL IBT).",
+          "ألا يكون قد مضى على حصول المتقدم على شهادة البكالوريوس أكثر من خمس سنوات.",
+          "أن تكون دراسة الماجستير في البرامج الإكلينيكية فقط."
+        ]
+      },
+      {
+        "title": "الطب البشري — دول مرحلة البكالوريوس",
+        "items": [
+          "أمريكا - كندا - بريطانيا - أيرلندا - نيوزيلندا - أستراليا."
+        ]
+      },
+      {
+        "title": "الطب البشري — دول مرحلة الزمالة والتخصص الدقيق",
+        "items": [
+          {
+            "text": "شهادات المجموعة الأولى في الطب البشري حسب القواعد التنفيذية للائحة العامة للتصنيف والتسجيل المهني:",
+            "sub": [
+              "أستراليا – أيرلندا – فرنسا – كندا – بريطانيا – أمريكا."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "الطب البشري — الشروط الخاصة للابتعاث إلى مرحلة البكالوريوس",
+        "items": [
+          "الحصول على شهادة إتمام الثانوية العامة أو ما يعادلها.",
+          "ألا يقل المعدل التراكمي العام في الثانوية العامة عن 95%.",
+          "الحصول على 85% في اختباري القدرات والتحصيلي أو عن طريق أنظمة الاختبارات المحوسبة (CBT).",
+          "الحصول على (5.5) في (IELTS)، أو (46) في اختبار (TOEFL IBT)."
+        ]
+      },
+      {
+        "title": "بكالوريوس الطب لمن سبق أن درس البكالوريوس في التخصصات العلمية في أمريكا وكندا",
+        "items": [
+          "ألا يكون قد مضى على حصول شهادة البكالوريوس أكثر من خمسة أعوام."
+        ]
+      },
+      {
+        "title": "الطب البشري — الشروط الخاصة للابتعاث إلى مرحلة الزمالة",
+        "items": [
+          "إنهاء مرحلة البكالوريوس في الطب البشري، والحصول على وثيقة التخرج الرسمية في البكالوريوس، والسجل الأكاديمي.",
+          "الحصول على تقدير (جيد) فأعلى في بكالوريوس الطب والجراحة.",
+          "اجتياز اختبار التصنيف والتسجيل المهني للهيئة السعودية للتخصصات الصحية.",
+          "الحصول على درجة لا تقل عن (6) في اختبار (IELTS)، أو ما يعادلها في (TOEFL)، أو ما يعادلها (B2) للدول الأوروبية، ودرجة الفرنسي (C2)، والألماني (B2).",
+          "أن يكون القبول مباشراً في أحد البرامج المعتمدة من جهات الاعتماد المعترف بها، ومصادقاً من الملحقية الثقافية في بلد الابتعاث، أو اجتياز اختبار (USMLE1)، والحصول على قبول في (Observership)، أو زمالة بحثية لا تزيد مدتها عن ستة أشهر.",
+          "مصادقة القبول من الملحقية الثقافية في بلد الابتعاث."
+        ]
+      },
+      {
+        "title": "الطب البشري — الشروط الخاصة للابتعاث إلى مرحلة التخصص الدقيق",
+        "items": [
+          "الحصول على شهادة الاختصاص من الهيئة السعودية للتخصصات الصحية، أو ما يعادلها وإرفاق ما يفيد ذلك من الهيئة.",
+          "أن يكون التخصص المقبول فيه مطابقاً لتخصصه السابق أو امتداداً له بموجب إفادة من الهيئة السعودية للتخصصات الصحية.",
+          "اجتياز اختبار التصنيف والتسجيل المهني للهيئة السعودية للتخصصات الصحية.",
+          "أن يكون القبول مباشراً في أحد البرامج المعتمدة من جهات الاعتماد المعترف بها، ومصادقاً من الملحقية الثقافية في بلد الابتعاث، أو اجتياز اختبار (USMLE1)، والحصول على قبول في (Observership)، أو زمالة بحثية لا تزيد مدتها عن ستة أشهر.",
+          "مصادقة القبول من الملحقية الثقافية في بلد الابتعاث."
+        ]
+      },
+      {
+        "title": "الأطباء الراغبون في الانضمام لبرامج التدريب الطبي في المستشفيات الكندية",
+        "items": [
+          "يسمح للأطباء الراغبين بالتدريب الطبي في دولة كندا بالتقديم على مسار التخصصات الصحية بناءً على المعايير والشروط المحددة للمسار باستثناء القبول المباشر.",
+          "بعد تقدم الطبيب وفق شروط ومسوغات المسار الصحي يمكن تزويده بالضمان المالي المبدئي لأغراض القبول وتقديم الضمان للملحقية لمساعدته في الحصول على قبول.",
+          "بعد حصول الطبيب على قبول يتم التصديق عليه من قبل الملحقية، وعلى الطبيب تزويد الوزارة بصورة منه عن طريق خدمة «استفسار» المتاحة له عبر حسابه في سفير."
+        ]
+      },
+      {
+        "title": "الصيدلة — دول مرحلة الزمالة والتخصص الدقيق",
+        "items": [
+          "أمريكا – كندا."
+        ]
+      },
+      {
+        "title": "طب الأسنان — دول مرحلة الزمالة والتخصص الدقيق",
+        "items": [
+          {
+            "text": "شهادات المجموعة الأولى في طب الأسنان حسب القواعد التنفيذية للائحة العامة للتصنيف والتسجيل المهني:",
+            "sub": [
+              "أستراليا – أيرلندا – كندا – بريطانيا – أمريكا – السويد."
+            ]
+          }
+        ]
+      },
+      {
+        "title": "طب الأسنان — الشروط الخاصة للابتعاث إلى مرحلة الزمالة",
+        "items": [
+          "إنهاء مرحلة البكالوريوس، والحصول على وثيقة التخرج الرسمية في البكالوريوس، والسجل الأكاديمي.",
+          "الحصول على تقدير (جيد) فأعلى في بكالوريوس الطب والجراحة.",
+          "الحصول على درجة لا تقل عن (6) في اختبار (IELTS)، أو ما يعادلها في (TOEFL)، أو ما يعادلها (B2) للدول الأوروبية، ودرجة الفرنسي (C2)، والألماني (B2).",
+          "أن يكون القبول مباشراً في أحد البرامج المعتمدة من جهات الاعتماد المعترف بها، ومصادقاً من الملحقية الثقافية في بلد الابتعاث.",
+          "اجتياز اختبار التصنيف والتسجيل المهني للهيئة السعودية للتخصصات الصحية."
+        ]
+      },
+      {
+        "title": "طب الأسنان — الشروط الخاصة للابتعاث إلى مرحلة التخصص الدقيق",
+        "items": [
+          "الحصول على شهادة الاختصاص من الهيئة السعودية للتخصصات الصحية، أو ما يعادلها وإرفاق ما يفيد ذلك من الهيئة السعودية للتخصصات الصحية.",
+          "أن يكون التخصص المقبول فيه مطابقاً لتخصصه السابق أو امتداداً له بموجب إفادة من الهيئة السعودية للتخصصات الصحية.",
+          "اجتياز اختبار التصنيف والتسجيل المهني للهيئة السعودية للتخصصات الصحية."
+        ]
+      }
+    ],
     "policies": [],
     "differentiationCriteria": [],
+    "faqs": [
+      {
+        "q": "ما هو وقت وطريقة التقديم على التخصصات الصحية؟",
+        "a": "التقديم على المسار الصحي إلكتروني عبر منصة القبول الموحد، كما أن وقت التقديم والإغلاق يتم الإعلان عنه بشكل سنوي."
+      },
+      {
+        "q": "هل هناك تخصصات ذات أولوية في القبول؟",
+        "a": "نعم، هناك تخصصات ذات أولوية منها طب الطوارئ، والعناية المركزة والتخدير، والطب، والعلاج النفسي، وتمريض العناية المركزة، وجراحة الأطفال، والأنف والأذن والحنجرة، والرأس والعنق، وجراحة التجميل، والعظام، وطب الأسرة، والأمراض الجلدية، وجراحة العيون."
+      },
+      {
+        "q": "نسبة الثانوية العامة أقل من المطلوب، فهل يمكنني التسجيل بمسار التخصصات الصحية؟",
+        "a": "لا يمكن، فلا بد من انطباق النسبة المطلوبة."
+      },
+      {
+        "q": "أرغب بالتدريب الطبي في المستشفيات الكندية، ولكن لا أستطيع الحصول على قبول إلا بوجود خطاب ترشيح لتقديمه للملحقية؟",
+        "a": "يسمح للأطباء الراغبين بالتدريب الطبي في دولة كندا بالتقديم على مسار التخصصات الصحية بناءً على المعايير والشروط المحددة للمسار باستثناء القبول المباشر، وبعد تقدم الطبيب وانطباق الشروط والمسوغات يمكن تزويده بالضمان المالي المبدئي لأغراض القبول، ومن ثم تقديم الضمان للملحقية لمساعدته في الحصول على قبول، وبعد الحصول على قبول يتم التصديق عليه من قبل الملحقية، وعلى الطبيب تزويد الوزارة بصورة من القبول المصدّق عن طريق خدمة «استفسار» المتاحة له عبر حسابه في سفير وذلك لاستكمال إجراءاته."
+      },
+      {
+        "q": "هل يمكن التعديل على الطلب بعد إرساله؟",
+        "a": "لا يمكن التعديل على الطلب المقدم بعد إرساله، ويمكنكم حذف الرغبة والتقديم مرة أخرى في حال كان التقديم متاحاً."
+      }
+    ],
+    "details": [
+      {
+        "label": "نبذة عن المسار",
+        "value": "يهدف المسار إلى تأهيل الكوادر الوطنية في التخصصات الصحية من خلال ابتعاثهم وتدريبهم في أفضل المؤسسات التعليمية."
+      },
+      {
+        "label": "المراحل الدراسية",
+        "value": "بكالوريوس – ماجستير – زمالة – تخصص دقيق"
+      },
+      {
+        "label": "مواعيد التقديم",
+        "value": "يتم الإعلان عنها في بداية كل عام (التقديم الآن مغلق)"
+      },
+      {
+        "label": "طريقة التقديم",
+        "value": "إلكترونياً عبر منصة القبول الموحد"
+      }
+    ],
+    "externalUrl": "https://www.moe.gov.sa/ar/education/Pages/Scholarship.aspx",
+    "matchFields": [
+      "f-med"
+    ],
+    "institutionsCount": null,
+    "extraFields": 0,
     "contentStatus": "published",
     "version": "2026-2027",
-    "lastVerifiedAt": null
-  },
-  {
+    "lastVerifiedAt": null,
     "id": "sahhi",
-    "code": "05",
+    "code": "06",
     "name": "المسار الصحي",
-    "enSubtitle": "Medical Residencies & Fellowships",
-    "badge": "زمالات وبرامج إقامة صحية",
-    "desc": "ابتعاث الكوادر والممارسين الصحيين في تخصصات صحية دقيقة ونادرة، وبرامج الإقامة والزمالة الطبية في أرقى المستشفيات والجامعات.",
+    "enSubtitle": "Health Specialties",
+    "badge": "التخصصات الصحية",
+    "desc": "يهدف المسار إلى تأهيل الكوادر الوطنية في التخصصات الصحية من خلال ابتعاثهم وتدريبهم في أفضل المؤسسات التعليمية.",
     "icon": "stethoscope",
     "color": "#12593f",
     "degrees": [
+      "bachelor",
       "master",
-      "phd"
+      "fellowship",
+      "subspecialty"
     ],
-    "ranking": "أرقى المستشفيات والمراكز الطبية العالمية",
+    "ranking": "المؤسسات التعليمية في دول الابتعاث المحددة لكل تخصص",
     "fields": [
-      "برامج الإقامة",
-      "الزمالات الدقيقة",
-      "الطب والصيدلة"
+      "التمريض",
+      "العلوم الطبية التطبيقية",
+      "الطب البشري",
+      "طب الأسنان",
+      "الصيدلة"
     ],
-    "extraFields": 8,
     "perks": [
-      "يستهدف الممارسين الصحيين والكوادر الطبية",
-      "يشمل الزمالات الدقيقة والإقامات الطبية",
-      "شراكات مع أرقى المراكز والمستشفيات عالمياً"
+      "التمريض والعلوم الطبية التطبيقية: بكالوريوس وماجستير",
+      "الطب البشري: بكالوريوس وزمالة وتخصص دقيق",
+      "طب الأسنان والصيدلة: زمالة وتخصص دقيق"
     ],
     "image": "/images/tracks/sahhi.jpg",
-    "applicationStatus": "not_started",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "overviewAr": "",
-    "generalConditions": [],
-    "specialConditions": [],
-    "policies": [],
-    "differentiationCriteria": [],
-    "contentStatus": "published",
-    "version": "2026-2027",
-    "lastVerifiedAt": null
-  },
-  {
-    "id": "waed",
-    "code": "06",
-    "name": "مسار واعد",
-    "enSubtitle": "Custom Sector-Sponsored Programs",
-    "badge": "برامج مخصصة برعاية القطاعات",
-    "desc": "يعمل بنظام «البرامج» المستقلة، حيث يُصمم كل برنامج (مثل قدرات الفضاء أو السياحة) بالشراكة مع قطاع وطني لتلبية احتياج مباشر بشروط وفترات خاصة.",
-    "icon": "satellite",
-    "color": "#96742a",
-    "degrees": [
-      "bachelor",
-      "master"
-    ],
-    "ranking": "حسب البرنامج (تُحدد الجامعات في كل برنامج)",
-    "fields": [
-      "صناعة الفضاء",
-      "القدرات السياحية",
-      "برامج الشركاء"
-    ],
-    "extraFields": 5,
-    "perks": [
-      "كل برنامج مستقل بشروطه وأحكامه وفترات تقديمه",
-      "ارتباط مباشر برعاية وشراكات مع جهات وطنية",
-      "مخرجات مصممة خصيصاً لسد احتياج قطاعي مباشر"
-    ],
-    "image": "/images/tracks/waed.jpg",
-    "applicationStatus": "not_started",
-    "applicationStart": null,
-    "applicationEnd": null,
-    "overviewAr": "",
-    "generalConditions": [],
-    "specialConditions": [],
-    "policies": [],
-    "differentiationCriteria": [],
-    "contentStatus": "published",
-    "version": "2026-2027",
-    "lastVerifiedAt": null
+    "applicationStatus": "closed",
+    "tier": "linked",
+    "majorsScope": "specified",
+    "contentEn": {
+      "name": "Health Track",
+      "badge": "Health specialties",
+      "description": "The track aims to qualify national talent in health specialties by sending them to study and train at the best educational institutions.",
+      "ranking": "Institutions in the scholarship countries specified for each specialty",
+      "fields": [
+        "Nursing",
+        "Applied Medical Sciences",
+        "Medicine",
+        "Dentistry",
+        "Pharmacy"
+      ],
+      "perks": [
+        "Nursing & applied medical sciences: bachelor's and master's",
+        "Medicine: bachelor's, fellowship and subspecialty",
+        "Dentistry & pharmacy: fellowship and subspecialty"
+      ],
+      "details": [
+        {
+          "label": "About the track",
+          "value": "The track aims to qualify national talent in health specialties by sending them to study and train at the best educational institutions."
+        },
+        {
+          "label": "Degrees",
+          "value": "Bachelor's – Master's – Fellowship – Subspecialty"
+        },
+        {
+          "label": "Application dates",
+          "value": "Announced at the start of each year (applications are currently closed)"
+        },
+        {
+          "label": "How to apply",
+          "value": "Online via the Unified Admission platform"
+        }
+      ],
+      "faqs": [
+        {
+          "q": "When and how do I apply for health specialties?",
+          "a": "Applications for the Health Track are submitted online via the Unified Admission platform; opening and closing dates are announced annually."
+        },
+        {
+          "q": "Are there priority specialties for admission?",
+          "a": "Yes, including emergency medicine, intensive care and anesthesia, medicine, psychiatric therapy, critical-care nursing, pediatric surgery, ENT, head and neck, plastic surgery, orthopedics, family medicine, dermatology and ophthalmic surgery."
+        },
+        {
+          "q": "My high-school percentage is below the requirement — can I still apply to the health track?",
+          "a": "No — the required percentage must be met."
+        },
+        {
+          "q": "I want medical training in Canadian hospitals, but I can only obtain an admission with a nomination letter for the attaché. What can I do?",
+          "a": "Physicians wishing to train in Canada may apply to the health track per its criteria, except for direct admission. Once the conditions are met, an initial financial guarantee can be issued for admission purposes and submitted to the attaché to help obtain an admission. After the admission is certified by the attaché, the physician must provide the Ministry with a copy via the \"Inquiry\" service in their Safeer account to complete the procedures."
+        },
+        {
+          "q": "Can I edit my application after submitting it?",
+          "a": "Applications cannot be edited after submission; you may delete the preference and apply again if applications are open."
+        }
+      ]
+    }
   }
 ]

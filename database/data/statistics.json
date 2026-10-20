@@ -1,0 +1,38 @@
+[
+  {
+    "labelAr": "مسارات ابتعاث",
+    "labelEn": "Scholarship tracks",
+    "value": 6,
+    "noteAr": "لكل مسار شروطه وضوابطه الخاصة",
+    "noteEn": "Each track has its own conditions and rules",
+    "location": "general",
+    "sourceId": "src-guide"
+  },
+  {
+    "labelAr": "مؤسسة تعليمية — مسار الروّاد",
+    "labelEn": "Institutions — Rowad Track",
+    "value": 30,
+    "noteAr": "حسب قائمة البرنامج في المسار",
+    "noteEn": "Per the track's program list",
+    "location": "general",
+    "sourceId": "src-guide"
+  },
+  {
+    "labelAr": "مؤسسة تعليمية — مسار إمداد",
+    "labelEn": "Institutions — Emdad Track",
+    "value": 200,
+    "noteAr": "حسب قائمة البرنامج في المسار",
+    "noteEn": "Per the track's program list",
+    "location": "general",
+    "sourceId": "src-guide"
+  },
+  {
+    "labelAr": "مؤسسة تعليمية — مسار البحث والتطوير",
+    "labelEn": "Institutions — Research & Development Track",
+    "value": 200,
+    "noteAr": "حسب قائمة البرنامج في المسار",
+    "noteEn": "Per the track's program list",
+    "location": "general",
+    "sourceId": "src-guide"
+  }
+]

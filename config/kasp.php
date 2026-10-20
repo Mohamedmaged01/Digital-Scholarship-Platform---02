@@ -13,27 +13,37 @@ $site = json_decode(file_get_contents(database_path('data/site.json')), true);
 return [
 
     'faqs' => $site['faqs'],
+    'faqs_en' => $site['faqsEn'] ?? [],
     'nav' => $site['navLinks'],
     // القيم الافتراضية فقط — تُدار من لوحة التحكم (جدول contact_methods)
     'contact_methods' => $site['contactMethods'],
     'suggested_questions' => $site['suggestedQuestions'],
 
-    /* الدرجات الست المعتمدة (§I) — تطابق جدول academic_degrees. */
+    /* الدرجات المعتمدة (§I) — تطابق جدول academic_degrees. */
     'degrees' => [
         'bachelor' => 'بكالوريوس',
         'master' => 'ماجستير',
         'phd' => 'دكتوراه',
         'fellowship' => 'زمالة',
+        'subspecialty' => 'تخصص دقيق',
         'diploma' => 'دبلوم',
         'professional_doctorate' => 'دكتوراه مهنية',
     ],
 
     /* حالة التقديم على المسار — حلّت محل "أدنى معدل مطلوب" (§F). */
     'application_statuses' => [
-        'open' => 'متاح للتقديم',
+        'open' => 'التقديم متاح',
         'not_started' => 'لم يبدأ التقديم',
-        'closed' => 'انتهت فترة التقديم',
+        'closed' => 'التقديم مغلق',
         'unavailable' => 'غير متاح حاليًا',
+        'per_program' => 'حسب البرامج المعلنة',
+    ],
+
+    'track_tiers' => ['main' => 'مسار أساسي', 'linked' => 'رابط المسار والدليل فقط'],
+    'majors_scopes' => [
+        'all' => 'جميع التخصصات متاحة',
+        'listed' => 'التخصصات المربوطة في إدارة العلاقات',
+        'specified' => 'تخصصات محددة وفق الدليل (دون قائمة منشورة)',
     ],
 
     'regions' => [
@@ -90,7 +100,7 @@ return [
     'guide_types' => ['pdf' => 'ملف PDF', 'link' => 'رابط إلكتروني', 'document' => 'وثيقة'],
     'guide_statuses' => ['active' => 'نشط', 'archived' => 'مؤرشف', 'draft' => 'مسودة'],
 
-    'contact_icons' => ['phone' => 'phone', 'mail' => 'mail', 'chat' => 'message-circle', 'map-pin' => 'map-pin'],
+    'contact_icons' => ['phone' => 'phone', 'mail' => 'mail', 'chat' => 'message-circle', 'map-pin' => 'map-pin', 'globe' => 'globe'],
     'statistic_locations' => ['general' => 'شريط الإحصاءات', 'hero' => 'الواجهة الرئيسية'],
 
     'news_categories' => json_decode(file_get_contents(database_path('data/news_categories.json')), true),
@@ -120,7 +130,7 @@ return [
     'admin_sections' => [
         'admin.dashboard' => ['label' => 'نظرة عامة', 'icon' => 'layout-dashboard'],
         'admin.news.index' => ['label' => 'الأخبار والإعلانات', 'icon' => 'newspaper', 'count' => 'news'],
-        'admin.kb.index' => ['label' => 'قاعدة المعرفة', 'icon' => 'book-open-text', 'count' => 'kb'],
+        'admin.kb.index' => ['label' => 'بنك المعلومات', 'icon' => 'book-open-text', 'count' => 'kb'],
         'admin.pending.index' => ['label' => 'أسئلة بلا إجابة', 'icon' => 'inbox', 'count' => 'pending'],
         'admin.universities.index' => ['label' => 'الجامعات', 'icon' => 'globe', 'count' => 'universities'],
         'admin.tracks.index' => ['label' => 'المسارات الدراسية', 'icon' => 'graduation-cap', 'count' => 'tracks'],

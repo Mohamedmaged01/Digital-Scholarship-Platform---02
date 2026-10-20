@@ -20,6 +20,7 @@ class DatabaseSeeder extends Seeder
         DefaultContent::resetContactMethods();
         DefaultContent::resetStations();
         DefaultContent::resetNews();
+        DefaultContent::resetStatistics();
         DefaultContent::resetCoreKnowledge();
 
         // حسابات تجريبية — غيّر كلمات المرور قبل النشر

@@ -18,6 +18,14 @@ Route::get('/waed', [WaedController::class, 'index'])->name('waed.index');
 Route::get('/waed/{program:slug}', [WaedController::class, 'show'])->name('waed.show');
 Route::get('/pages/{page}', [LegalPageController::class, 'show'])->name('pages.show');
 
+// تبديل لغة الواجهة (العربية / الإنجليزية)
+Route::get('/lang/{locale}', function (string $locale) {
+    abort_unless(in_array($locale, \App\Http\Middleware\SetLocale::LOCALES, true), 404);
+    session(['locale' => $locale]);
+
+    return redirect()->back(fallback: route('home'));
+})->name('locale');
+
 Route::middleware('throttle:40,1')->group(function () {
     Route::post('/assistant/ask', AssistantController::class)->name('assistant.ask');
     Route::get('/search', SearchController::class)->name('search');

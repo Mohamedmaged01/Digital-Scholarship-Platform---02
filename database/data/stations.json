@@ -1,106 +1,136 @@
 [
   {
     "n": "01",
-    "title": "استكشف",
-    "desc": "استكشف مسارات الابتعاث الستة والجامعات والتخصصات العالمية ذات الأولوية الوطنية.",
-    "detail": "اطّلع على قائمة أفضل الجامعات المعتمدة بحسب كل مسار واعرف التخصصات الحرجة والمستهدفة.",
+    "title": "استكشف المسارات",
     "icon": "compass",
-    "duration": "متاحة دائمًا",
+    "duration": "",
+    "desc": "تعرّف على مسارات الابتعاث، وشروطها العامة والخاصة، والمؤسسات التعليمية والتخصصات المحددة لكل مسار وفق الدليل الاسترشادي.",
+    "detail": "راجع سياسات التقديم والشروط العامة والخاصة بالمسار قبل البدء في إجراءات القبول الجامعي.",
     "points": [
-      "المسارات الستة",
-      "قوائم الجامعات المعتمدة",
-      "التخصصات المستهدفة"
-    ]
+      "الشروط العامة",
+      "الشروط الخاصة بكل مسار",
+      "الدليل الاسترشادي"
+    ],
+    "contentEn": {
+      "title": "Explore the tracks",
+      "description": "Learn about the scholarship tracks, their general and special conditions, and the institutions and majors specified for each track per the guideline.",
+      "detail": "Review the application policies and the track's general and special conditions before starting university admission.",
+      "points": [
+        "General conditions",
+        "Track-specific conditions",
+        "Guideline"
+      ]
+    }
   },
   {
     "n": "02",
-    "title": "اختر المسار",
-    "desc": "حدّد المسار الاستراتيجي الأنسب لتخصصك وطموحك المهني من بين المسارات الستة المعتمدة.",
-    "detail": "استخدم محرّك المطابقة بالذكاء الاصطناعي لمقارنة ملفك الأكاديمي بمتطلبات المسارات والحصول على توصية فورية.",
-    "icon": "waypoints",
-    "duration": "10 دقائق بالمطابقة الذكية",
+    "title": "اختر المؤسسة والتخصص",
+    "icon": "university",
+    "duration": "",
+    "desc": "اختر المؤسسة التعليمية والتخصص من القوائم المحددة للمسار، واحصل على القبول الجامعي من المؤسسة التعليمية.",
+    "detail": "القبول الجامعي يصدر من المؤسسة التعليمية، وهو مستقل عن الترشيح في برنامج الابتعاث. يشترط أن يكون القبول نهائياً غير مشروط وصادراً من مكتب القبول والتسجيل، إلا إذا كانت الدولة غير ناطقة باللغة الإنجليزية فيمكن أن يكون مشروطاً بدراسة لغة الدولة.",
     "points": [
-      "مطابقة ذكية فورية",
-      "مقارنة المسارات",
-      "توصية شخصية"
-    ]
+      "المؤسسات التعليمية المحددة للمسار",
+      "القبول الجامعي",
+      "التخصصات المحددة لسنة التقديم"
+    ],
+    "contentEn": {
+      "title": "Choose institution & major",
+      "description": "Choose the institution and major from the lists specified for the track, and obtain the university admission from the institution.",
+      "detail": "University admission is issued by the institution and is separate from nomination in the scholarship program. It must be final and unconditional from the admissions office, unless the country is non-English-speaking, in which case it may be conditional on language study.",
+      "points": [
+        "Institutions specified for the track",
+        "University admission",
+        "Majors specified for the application year"
+      ]
+    }
   },
   {
     "n": "03",
-    "title": "تحقق من الشروط",
-    "desc": "راجع شروط الالتحاق الخاصة بمسارك: اختبارات اللغة، ومتطلبات الجامعة المستهدفة.",
-    "detail": "تأكد من استيفائك الشروط العامة والخاصة لمسارك قبل بدء التقديم.",
-    "icon": "shield",
-    "duration": "قبل التقديم مباشرة",
+    "title": "قدّم طلب الابتعاث",
+    "icon": "file-pen-line",
+    "duration": "",
+    "desc": "قدّم طلب الابتعاث خلال فترة التقديم المعلنة، وبناءً على المؤسسة التعليمية والتخصص اللذين اخترتهما يُسكَّن طلبك على المسار المطلوب.",
+    "detail": "يجوز للمتقدم تقديم ثلاث قبولات كحد أقصى، ويتم اختيار طلب واحد وفق نتائج المفاضلة والمقاعد المتاحة على المسارات.",
     "points": [
-      "الشروط العامة",
-      "اختبار اللغة المعتمد",
-      "متطلبات الجامعة"
-    ]
+      "منصة قبول",
+      "ثلاث قبولات كحد أقصى",
+      "التسكين على المسار"
+    ],
+    "contentEn": {
+      "title": "Submit the application",
+      "description": "Submit your scholarship application during the announced period. Based on the institution and major you chose, your application is placed on the matching track.",
+      "detail": "Applicants may submit up to three admissions; one application is selected based on differentiation results and available seats.",
+      "points": [
+        "Qubool platform",
+        "Up to three admissions",
+        "Placement on the track"
+      ]
+    }
   },
   {
     "n": "04",
-    "title": "قدّم طلبك",
-    "desc": "أنشئ ملفك الموحّد في المنصة وعبّئ بياناتك الأكاديمية مرة واحدة لتُستخدم في جميع طلباتك.",
-    "detail": "يُحفظ طلبك تلقائيًا في كل خطوة، ويمكنك استكماله لاحقًا في أي وقت قبل إغلاق بوابة التقديم.",
-    "icon": "pen",
-    "duration": "يوم واحد",
+    "title": "المفاضلة والترشيح",
+    "icon": "stamp",
+    "duration": "",
+    "desc": "يُدرس الطلب وفق الشروط العامة والخاصة وسياسات ومعايير المفاضلة ومنع التكدس، ثم يصدر الترشيح في برنامج الابتعاث.",
+    "detail": "الترشيح في برنامج الابتعاث قرار مستقل عن القبول الجامعي، ويُقبل طلب واحد للمتقدم وفق نتائج المفاضلة.",
     "points": [
-      "ملف رقمي موحّد",
-      "حفظ تلقائي",
-      "إرسال إلكتروني كامل"
-    ]
+      "سياسات المفاضلة",
+      "الترشيح في برنامج الابتعاث"
+    ],
+    "contentEn": {
+      "title": "Differentiation & nomination",
+      "description": "The application is reviewed against the general and special conditions and the differentiation and anti-concentration policies; then the nomination is issued in the scholarship program.",
+      "detail": "Nomination in the scholarship program is a separate decision from university admission; one application per applicant is accepted based on differentiation results.",
+      "points": [
+        "Differentiation policies",
+        "Nomination in the scholarship program"
+      ]
+    }
   },
   {
     "n": "05",
-    "title": "ارفع المستندات",
-    "desc": "ارفع مستنداتك موثّقة: السجل الأكاديمي، جواز السفر، شهادة اللغة، وخطابات التوصية.",
-    "detail": "يفحص النظام سلامة المستندات آليًا وينبّهك فورًا إلى أي ملف ناقص أو غير واضح لتصحيحه دون تأخير.",
-    "icon": "upload",
-    "duration": "2 – 3 أيام",
+    "title": "استكمال الإجراءات عبر سفير",
+    "icon": "monitor-check",
+    "duration": "",
+    "desc": "بعد الترشيح ينتقل المستفيد إلى منصة سفير لاستكمال إجراءات ما بعد الترشيح وصولاً إلى قرار الابتعاث.",
+    "detail": "تشمل إجراءات ما بعد الترشيح خدمات مثل الضمان المالي وخطاب السفارة وخدمات المرافقين وقرار الابتعاث، ويوضّح الدليل الإجرائي لخدمات ما بعد الترشيح ترتيبها التفصيلي.",
     "points": [
-      "السجل الأكاديمي",
-      "جواز سفر ساري المفعول",
-      "خطابات التوصية"
-    ]
+      "منصة سفير",
+      "خدمات ما بعد الترشيح",
+      "قرار الابتعاث"
+    ],
+    "contentEn": {
+      "title": "Complete procedures on Safeer",
+      "description": "After nomination, the beneficiary moves to the Safeer platform to complete post-nomination procedures up to the scholarship decision.",
+      "detail": "Post-nomination procedures include services such as the financial guarantee, embassy letter, dependants' services and the scholarship decision; their detailed order is set out in the procedural guide for post-nomination services.",
+      "points": [
+        "Safeer platform",
+        "Post-nomination services",
+        "Scholarship decision"
+      ]
+    }
   },
   {
     "n": "06",
-    "title": "متابعة الطلب",
-    "desc": "تابع حالة طلبك لحظة بلحظة من المراجعة الأولية حتى المقابلة عبر لوحة التحكم الشخصية في المنصة.",
-    "detail": "تصلك إشعارات فورية عبر الرسائل النصية والبريد الإلكتروني عند كل تحديث في حالة الطلب أو استكمال مستند.",
-    "icon": "radar",
-    "duration": "2 – 6 أسابيع",
-    "points": [
-      "لوحة متابعة حيّة",
-      "إشعارات لحظية",
-      "جدولة المقابلات"
-    ]
-  },
-  {
-    "n": "07",
-    "title": "الترشيح والاعتماد",
-    "desc": "تبدأ مرحلة الترشيح النهائي واعتماد مقعدك الدراسي ومخصصاتك المالية من اللجنة المختصة.",
-    "detail": "تصلك رسالة القبول المبدئي مع تفاصيل المسار والجامعة، وتُرفع أوراقك فورًا إلى جهة القبول الجامعي.",
-    "icon": "stamp",
-    "duration": "1 – 2 أسبوع",
-    "points": [
-      "قرار الترشيح",
-      "اعتماد المقعد الدراسي",
-      "خطاب القبول المبدئي"
-    ]
-  },
-  {
-    "n": "08",
-    "title": "بدء الرحلة",
-    "desc": "أكمل برنامج التهيئة الثقافية واستلم تأشيرتك وتذكرة سفرك، وابدأ رحلتك نحو التميز والريادة.",
-    "detail": "يرافقك مشرف أكاديمي من الملحقية الثقافية من يوم وصولك وحتى التخرج، مع دعم كامل على مدار الساعة.",
+    "title": "مباشرة الدراسة",
     "icon": "plane",
-    "duration": "قبل السفر بـ 4 أسابيع",
+    "duration": "",
+    "desc": "بعد صدور قرار الابتعاث يباشر المبتعث دراسته في بلد الابتعاث بالانتظام الكلي والإقامة فيه.",
+    "detail": "للاستفسارات: مركز الاتصال الموحد 19996.",
     "points": [
-      "برنامج التهيئة الثقافية",
-      "التأشيرة والسكن",
-      "دعم الملحقية الثقافية"
-    ]
+      "الانتظام الكلي",
+      "الإقامة في بلد الابتعاث"
+    ],
+    "contentEn": {
+      "title": "Start studying",
+      "description": "After the scholarship decision is issued, the scholar starts full-time study and resides in the scholarship country.",
+      "detail": "Inquiries: Unified Call Center 19996.",
+      "points": [
+        "Full-time study",
+        "Residence in the scholarship country"
+      ]
+    }
   }
 ]

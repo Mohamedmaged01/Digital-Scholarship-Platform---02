@@ -9,6 +9,10 @@ import intersect from '@alpinejs/intersect';
 
 const csrf = () => document.querySelector('meta[name="csrf-token"]')?.content ?? '';
 
+/** ترجمة نصوص الواجهة المولّدة في JS (القاموس يُحقن من القالب حسب اللغة) */
+const t = (key, vars = {}) =>
+    Object.entries(vars).reduce((s, [k, v]) => s.replaceAll(`:${k}`, v), window.KASP_I18N?.[key] ?? key);
+
 async function http(url, { method = 'GET', body } = {}) {
     const res = await fetch(url, {
         method,
@@ -122,57 +126,65 @@ Alpine.data('tracksFilter', (degreesById) => ({
     },
 }));
 
-/* ---------------- محرّك التوجيه الاسترشادي ---------------- */
-/*  يطابق (الدرجة، المجال) مع روابط: مسار ← درجة ← تخصص ← جامعة.
-    واعد مستبعد مسبقًا لأنه يعمل بنظام البرامج. */
+/* ---------------- محرّك التوجيه ---------------- */
+/*  مطابقة مبنية على ضوابط كل مسار: يجب أن يشمل المسار الدرجة المختارة، ثم يُطابق
+    المجال مع نطاق تخصصاته — جميع التخصصات (الرواد)، أو التخصصات المربوطة فعليًا
+    (التميز)، أو مجالات محددة (الصحي)، أو تخصصات محددة وفق الدليل لم تُنشر قائمتها. */
 Alpine.data('matcher', (data) => ({
     data,
     step: 0,
     degree: '',
     field: '',
-    region: 'all',
     done: false,
     get fields() {
-        return [{ id: 'all', name: 'جميع المجالات' }, ...this.data.fields];
+        return [{ id: 'all', name: t('لم أحدد بعد — اعرض كل المسارات') }, ...this.data.fields];
+    },
+    get degreeName() {
+        return this.data.degrees.find((d) => d.id === this.degree)?.name ?? '';
+    },
+    get fieldName() {
+        return this.fields.find((f) => f.id === this.field)?.name ?? '';
     },
     get canNext() {
-        return (this.step === 0 && this.degree) || (this.step === 1 && this.field) || this.step === 2;
+        return (this.step === 0 && this.degree) || (this.step === 1 && this.field);
     },
     get progress() {
-        return this.done ? 100 : (this.step / 3) * 100;
+        return this.done ? 100 : (this.step / 2) * 100;
     },
     next() {
         if (!this.canNext) return;
-        if (this.step < 2) this.step += 1;
+        if (this.step < 1) this.step += 1;
         else this.done = true;
     },
     reset() {
-        Object.assign(this, { step: 0, degree: '', field: '', region: 'all', done: false });
+        Object.assign(this, { step: 0, degree: '', field: '', done: false });
     },
     get results() {
         if (!this.done) return [];
+        const anyField = this.field === 'all';
+        // ترتيب العرض: تطابق صريح للتخصص/المجال، ثم «جميع التخصصات»، ثم «تخصصات محددة وفق الدليل»
+        const rank = { listed: 0, field: 0, all: 1, specified: 2 };
+
         return this.data.tracks
+            .filter((track) => track.degrees.includes(this.degree))
             .map((track) => {
-                let score = 0;
-                if (track.degrees.includes(this.degree)) score += 40;
-
-                const majors = track.majors.filter(
-                    (m) => m.degree === this.degree && (this.field === 'all' || m.field === this.field),
-                );
-                if (majors.length) score += 30 + Math.min(majors.length * 3, 20);
-
-                const links = track.links.filter((l) => l.degree === this.degree);
-                const totalUnis = new Set(links.map((l) => l.uni)).size;
-                if (totalUnis) score += Math.min(totalUnis, 10);
-
-                const withUnis = majors
-                    .map((m) => ({ name: m.name, unis: links.filter((l) => l.major === m.id).length }))
-                    .filter((m) => m.unis > 0);
-
-                return { track, score: Math.min(score, 100), majors: withUnis, totalUnis };
+                const listed = track.majors.filter((m) => m.degree === this.degree);
+                if (listed.length) {
+                    const majors = listed.filter((m) => anyField || m.field === this.field);
+                    if (!majors.length) return null;
+                    return { track, kind: 'listed', majors, majorsNote: t(':count تخصص محدد في هذا المجال', { count: majors.length }) };
+                }
+                if (track.scope === 'all') {
+                    return { track, kind: 'all', majors: [], majorsNote: track.scopeLabel };
+                }
+                if (track.matchFields.length) {
+                    if (!anyField && !track.matchFields.includes(this.field)) return null;
+                    return { track, kind: 'field', majors: [], majorsNote: t('تخصصات محددة في هذا المجال — راجع الشروط الخاصة') };
+                }
+                return { track, kind: 'specified', majors: [], majorsNote: t(':scope — تحقق من الدليل الاسترشادي', { scope: track.scopeLabel }) };
             })
-            .filter((r) => r.score > 0)
-            .sort((a, b) => b.score - a.score);
+            .filter(Boolean)
+            .sort((a, b) => rank[a.kind] - rank[b.kind]);
     },
 }));
 
@@ -301,7 +313,7 @@ Alpine.data('chatPanel', (askUrl, greeting, suggestions) => ({
             this.messages.push({
                 id: ++msgSeq,
                 role: 'bot',
-                text: 'تعذّر الوصول إلى المساعد حاليًا. يمكنك التواصل مع الإدارة مباشرة عبر القنوات التالية:',
+                text: t('تعذّر الوصول إلى المساعد حاليًا. يمكنك التواصل مع الإدارة مباشرة عبر القنوات التالية:'),
                 suggestions: [],
                 contact: true,
             });

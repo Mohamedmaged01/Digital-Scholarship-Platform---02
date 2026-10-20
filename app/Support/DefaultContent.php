@@ -15,6 +15,7 @@ use App\Models\PathMajor;
 use App\Models\PathMajorInstitution;
 use App\Models\Program;
 use App\Models\Station;
+use App\Models\Statistic;
 use App\Models\Track;
 use App\Models\University;
 use Illuminate\Support\Facades\DB;
@@ -88,6 +89,15 @@ class DefaultContent
                     'special_conditions' => $t['specialConditions'] ?? [],
                     'policies' => $t['policies'] ?? [],
                     'differentiation_criteria' => $t['differentiationCriteria'] ?? [],
+                    'additional_conditions' => $t['additionalConditions'] ?? [],
+                    'faqs' => $t['faqs'] ?? [],
+                    'details' => $t['details'] ?? [],
+                    'tier' => $t['tier'] ?? 'main',
+                    'majors_scope' => $t['majorsScope'] ?? 'listed',
+                    'match_fields' => $t['matchFields'] ?? null,
+                    'institutions_count' => $t['institutionsCount'] ?? null,
+                    'external_url' => $t['externalUrl'] ?? '',
+                    'content_en' => $t['contentEn'] ?? null,
                     'content_status' => $t['contentStatus'] ?? 'published',
                     'version' => $t['version'] ?? '2026-2027',
                 ]);
@@ -252,8 +262,8 @@ class DefaultContent
                     'guide_type' => $g['guideType'] === 'url' ? 'link' : $g['guideType'],
                     'url' => $g['url'],
                     'version' => $g['version'],
-                    'publication_date' => $g['publicationDate'] ?: null,
-                    'effective_date' => $g['effectiveDate'] ?: null,
+                    'publication_date' => ($g['publicationDate'] ?? null) ?: null,
+                    'effective_date' => ($g['effectiveDate'] ?? null) ?: null,
                     'is_current' => $g['isCurrent'],
                     'status' => $g['status'],
                     'source_id' => $g['sourceId'] ?: null,
@@ -299,6 +309,31 @@ class DefaultContent
                     'icon' => self::icon($s['icon']),
                     'duration' => $s['duration'],
                     'points' => $s['points'],
+                    'content_en' => $s['contentEn'] ?? null,
+                    'sort' => $i + 1,
+                ]);
+            }
+        });
+    }
+
+    /**
+     * أرقام شريط الإحصاءات والواجهة — قابلة للتعديل من «الإحصاءات والأرقام» في اللوحة.
+     * الأعداد مأخوذة من الدليل الاسترشادي لكل مسار.
+     */
+    public static function resetStatistics(): void
+    {
+        DB::transaction(function () {
+            Statistic::query()->delete();
+            foreach (self::load('statistics') as $i => $s) {
+                Statistic::create([
+                    'label_ar' => $s['labelAr'],
+                    'label_en' => $s['labelEn'],
+                    'value' => $s['value'],
+                    'suffix' => $s['suffix'] ?? '',
+                    'note_ar' => $s['noteAr'] ?? '',
+                    'note_en' => $s['noteEn'] ?? '',
+                    'location' => $s['location'],
+                    'source_id' => $s['sourceId'],
                     'sort' => $i + 1,
                 ]);
             }
