@@ -19,6 +19,9 @@ return [
     'contact_methods' => $site['contactMethods'],
     'suggested_questions' => $site['suggestedQuestions'],
 
+    // الموقع التعريفي الرسمي للبرنامج (وزارة التعليم) — وجهة زر «ابدأ التقديم»
+    'apply_url' => 'https://sites.moe.gov.sa/scholarship-program/',
+
     /* الدرجات المعتمدة (§I) — تطابق جدول academic_degrees. */
     'degrees' => [
         'bachelor' => 'بكالوريوس',

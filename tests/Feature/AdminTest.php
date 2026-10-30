@@ -85,7 +85,8 @@ class AdminTest extends TestCase
     {
         $this->actingAs($this->admin());
         foreach (['/admin', '/admin/news', '/admin/kb', '/admin/pending', '/admin/universities', '/admin/tracks', '/admin/stations', '/admin/files', '/admin/users'] as $url) {
-            $this->get($url)->assertOk();
+            // مؤشر الاتصال بقاعدة البيانات لا يظهر في اللوحة
+            $this->get($url)->assertOk()->assertDontSee('قاعدة البيانات متصلة');
         }
         $this->get('/admin/news?edit='.News::first()->id)->assertOk()->assertSee('تعديل الخبر');
         $this->get('/admin/stations?edit='.Station::first()->id)->assertOk()->assertSee('حفظ المحطة');

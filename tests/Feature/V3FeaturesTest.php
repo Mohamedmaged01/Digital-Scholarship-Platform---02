@@ -235,6 +235,24 @@ class V3FeaturesTest extends TestCase
         $this->get('/')->assertSee('رقم موثّق للاختبار');
     }
 
+    public function test_editing_a_statistic_keeps_english_text_and_reports_errors(): void
+    {
+        $this->actingAs($this->admin());
+        $stat = Statistic::where('location', 'general')->orderBy('sort')->firstOrFail();
+
+        $this->put("/admin/statistics/{$stat->id}", [
+            'label_ar' => 'مسارات ابتعاث', 'label_en' => 'Scholarship tracks', 'value' => 7,
+            'note_ar' => 'ملاحظة', 'note_en' => 'A note', 'location' => 'general', 'source_id' => 'src-guide', 'sort' => 1,
+        ])->assertRedirect('/admin/statistics');
+        $this->assertSame([7, 'A note'], [$stat->fresh()->value, $stat->fresh()->note_en]);
+
+        // خطأ التحقق يظهر في ملخص أعلى الصفحة بدل أن يفشل الحفظ بصمت
+        $this->from("/admin/statistics?edit={$stat->id}")
+            ->put("/admin/statistics/{$stat->id}", ['label_ar' => 'رقم', 'value' => 3, 'location' => 'nowhere', 'source_id' => 'src-guide'])
+            ->assertRedirect();
+        $this->followingRedirects()->get("/admin/statistics?edit={$stat->id}")->assertSee('لم تُحفظ التعديلات');
+    }
+
     public function test_contact_methods_reject_unsafe_links_and_render_in_footer(): void
     {
         $this->actingAs($this->admin());
@@ -270,5 +288,27 @@ class V3FeaturesTest extends TestCase
             $this->get($url)->assertOk();
         }
         $this->get('/admin/waed?edit='.Program::first()->id)->assertOk()->assertSee('تعديل البرنامج');
+    }
+
+    public function test_official_links_migration_updates_old_defaults_only(): void
+    {
+        // قاعدة بيانات سابقة على الخادم: الروابط القديمة، ورابط عدّله المحرّر يدويًا
+        $old = 'https://www.moe.gov.sa/ar/pages/scholarship.aspx';
+        $rowad = Track::where('slug', 'rowad')->firstOrFail();
+        $emdad = Track::where('slug', 'emdad')->firstOrFail();
+        Guide::query()->update(['url' => $old, 'notes' => '']);
+        Guide::where('path_id', $emdad->id)->update(['url' => 'https://example.org/edited.pdf']);
+        Track::query()->update(['external_url' => '']);
+        Track::where('slug', 'waed')->update(['external_url' => 'https://example.org/waed']);
+
+        (require database_path('migrations/2026_10_30_000100_official_guideline_links.php'))->up();
+
+        $guide = Guide::where('path_id', $rowad->id)->firstOrFail();
+        $this->assertStringContainsString('object.moe.gov.sa', $guide->url);
+        $this->assertStringContainsString('الدليل الاسترشادي', $guide->notes);
+        $this->assertSame('https://example.org/edited.pdf', Guide::where('path_id', $emdad->id)->value('url'));
+        $this->assertSame($old, Guide::where('path_id', Track::where('slug', 'tamayoz')->value('id'))->value('url'));
+        $this->assertSame('https://sites.moe.gov.sa/scholarship-program/paths/path-arruaad/', $rowad->fresh()->external_url);
+        $this->assertSame('https://example.org/waed', Track::where('slug', 'waed')->value('external_url'));
     }
 }

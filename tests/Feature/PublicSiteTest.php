@@ -26,7 +26,12 @@ class PublicSiteTest extends TestCase
             ->assertDontSee('المقاعد محدودة')
             ->assertDontSee('الجامعات الشريكة')
             ->assertDontSee('98.2%')
-            ->assertDontSee('id="news"', false);
+            ->assertDontSee('id="news"', false)
+            // زر «ابدأ التقديم» يفتح الموقع التعريفي الرسمي، وصورة الواجهة هي شعار البرنامج
+            ->assertSee('href="https://sites.moe.gov.sa/scholarship-program/"', false)
+            ->assertSee('images/hero-kasp-banner.jpg', false)
+            ->assertSee('حدد مسارك')
+            ->assertDontSee('hero-students-group.jpg', false);
     }
 
     public function test_site_switches_between_arabic_and_english(): void

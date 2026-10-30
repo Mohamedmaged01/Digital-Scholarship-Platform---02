@@ -8,7 +8,6 @@
     $sections = collect(config('kasp.admin_sections'))->filter(fn ($s) => empty($s['admin_only']) || $user->can('manage-users'));
     $current = collect($sections)->keys()->first(fn ($route) => request()->routeIs(str_replace('.index', '.*', $route))) ?? 'admin.dashboard';
     $currentSection = $sections[$current];
-    $sqlDriver = config('database.default');
 @endphp
 
 @section('content')
@@ -22,16 +21,6 @@
             <div class="leading-tight">
                 <div class="text-sm font-bold text-white">لوحة التحكم</div>
                 <div class="mt-0.5 text-[10px] font-medium text-slate-400">إدارة المنصة بالكامل</div>
-            </div>
-        </div>
-
-        <div class="px-5 pt-5">
-            <div class="flex items-center gap-2.5 rounded-2xl border border-emerald-400/30 bg-emerald-500/10 px-4 py-3 text-[11px] font-bold text-emerald-300">
-                <span class="relative flex size-2">
-                    <span class="absolute inline-flex size-full animate-ping rounded-full bg-emerald-400 opacity-60"></span>
-                    <span class="relative inline-flex size-2 rounded-full bg-emerald-400"></span>
-                </span>
-                <span>قاعدة البيانات متصلة — <span dir="ltr" class="font-plex">{{ ['pgsql' => 'PostgreSQL', 'mysql' => 'MySQL', 'mariadb' => 'MariaDB', 'sqlite' => 'SQLite'][$sqlDriver] ?? $sqlDriver }}</span></span>
             </div>
         </div>
 
@@ -142,6 +131,18 @@
                      class="mb-6 flex items-center gap-2.5 rounded-2xl border border-emerald-300 bg-emerald-50 px-5 py-3.5 text-sm font-bold text-emerald-700">
                     <x-lucide-circle-check class="size-5 shrink-0" />
                     {{ session('status') }}
+                </div>
+            @endif
+
+            {{-- أي خطأ تحقق يمنع الحفظ يظهر هنا، حتى للحقول التي لا تعرض خطأها بجانبها --}}
+            @if ($errors->any())
+                <div role="alert" class="mb-6 rounded-2xl border border-red-300 bg-red-50 px-5 py-4 text-sm text-red-700">
+                    <p class="flex items-center gap-2 font-bold"><x-lucide-circle-alert class="size-5 shrink-0" /> لم تُحفظ التعديلات — يرجى مراجعة ما يلي:</p>
+                    <ul class="mt-2 list-disc space-y-1 ps-9 text-[13px]">
+                        @foreach ($errors->all() as $message)
+                            <li>{{ $message }}</li>
+                        @endforeach
+                    </ul>
                 </div>
             @endif
 

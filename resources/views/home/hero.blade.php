@@ -2,7 +2,6 @@
     $destinations = $tracks->filter->isMain()->map->tr('name')->values()->all();
     // ملاحظات 10 و38: حالة التقديم موحّدة من بيانات المسارات
     $openTracks = $tracks->where('application_status', 'open')->values();
-    $rowad = $tracks->firstWhere('slug', 'rowad');
 @endphp
 
 <section id="home" class="relative overflow-hidden bg-cream pt-28 md:pt-36">
@@ -29,15 +28,13 @@
                 @endif
             </div>
 
-            <h1 class="animate-enter mt-7 text-[2.65rem] font-bold leading-[1.14] tracking-tight text-ink md:text-6xl md:leading-[1.12]" style="--delay: .1s">
-                {{ __('مستقبلُك يبدأ من') }}
-                <br>
-                {{ __('أعرق') }} <span class="text-shimmer-gold">{{ __('جامعات العالم') }}</span>
+            <h1 class="animate-enter mt-7 text-balance text-[2.1rem] font-bold leading-[1.25] tracking-tight text-ink md:text-[2.5rem] xl:rtl:text-[2.3rem] xl:rtl:whitespace-nowrap" style="--delay: .1s">
+                {{ __('مستقبلُك يبدأ من') }} {{ __('أعرق') }} <span class="text-shimmer-gold">{{ __('جامعات العالم') }}</span>
             </h1>
 
             <p class="animate-enter mt-6 max-w-xl text-lg leading-relaxed text-slate-600" style="--delay: .2s">
-                {{ __('بوابة تعريفية وإرشادية تجمع معلومات مسارات برنامج خادم الحرمين الشريفين للابتعاث: الشروط العامة والخاصة، والمؤسسات التعليمية المحددة لكل مسار، ورحلة المستفيد من القبول الجامعي حتى مباشرة الدراسة — دعمًا لمستهدفات') }}
-                <span class="font-bold text-forest-700">{{ __('رؤية السعودية 2030') }}</span>.
+                {{-- النص كما ورد في الموقع التعريفي الرسمي للبرنامج (sites.moe.gov.sa/scholarship-program) --}}
+                {{ __('الموقع التعريفي لبرنامج خادم الحرمين الشريفين للابتعاث، الذي يُعرّف باستراتيجية البرنامج وأهدافه ومساراته الأربعة، ويوضح الموقع شروط البرنامج العامة والخاصة، والتخصصات، والجامعات المعتمدة، كما يبيّن كيفية التقديم على البرنامج، والشرائح المستفيدة منه.') }}
             </p>
 
             {{-- destination rotator --}}
@@ -72,21 +69,21 @@
                 <x-star-emblem class="animate-spin-slower absolute -top-12 end-4 size-40 text-forest-700/15 md:size-56" stroke-width="0.8" />
                 <x-star-emblem class="animate-spin-slower absolute -bottom-10 start-2 size-24 text-gold-500/25" stroke-width="0.8" />
 
-                <div class="relative overflow-hidden rounded-[2.5rem] border-[5px] border-forest-800 shadow-[0_40px_80px_-30px_rgba(8,39,29,0.5)]">
-                    <img src="{{ asset('images/hero-students-group.jpg') }}" alt="{{ __('مجموعة من الطلاب السعوديين المبتعثين في أحد الحرم الجامعية العالمية') }}"
-                         class="aspect-[4/3] w-full object-cover transition-transform duration-700 hover:scale-105" fetchpriority="high">
-                    <div class="absolute inset-0 bg-gradient-to-t from-forest-950/55 via-transparent to-transparent"></div>
+                {{-- شعار البرنامج مع برنامج تنمية القدرات البشرية ورؤية 2030 — بنسبة الإطار نفسها (4:3) --}}
+                <div class="relative overflow-hidden rounded-[2.5rem] border-[5px] border-forest-800 bg-white shadow-[0_40px_80px_-30px_rgba(8,39,29,0.5)]">
+                    <img src="{{ asset('images/hero-kasp-banner.jpg') }}" alt="{{ __('شعار برنامج خادم الحرمين الشريفين للابتعاث مع برنامج تنمية القدرات البشرية ورؤية السعودية 2030') }}"
+                         class="aspect-[4/3] w-full object-cover" width="1600" height="1200" fetchpriority="high">
 
-                    <div class="absolute inset-x-5 bottom-5 flex items-center justify-between rounded-2xl border border-white/15 bg-white/10 px-4 py-3 backdrop-blur-md">
+                    <a href="#tracks" class="absolute inset-x-5 bottom-5 hidden items-center justify-between rounded-2xl bg-forest-900/95 sm:flex px-4 py-3 shadow-lg shadow-forest-900/20 transition-colors hover:bg-forest-800">
                         <div class="flex items-center gap-2.5">
                             <x-lucide-badge-check class="size-5 text-gold-300" />
                             <div class="leading-tight">
-                                <div class="text-xs font-bold text-white">{{ $rowad?->tr('name') }}</div>
-                                <div class="text-[11px] text-white/70">{{ $rowad?->tr('badge') }}</div>
+                                <div class="text-xs font-bold text-white">{{ __('حدد مسارك') }}</div>
+                                <div class="text-[11px] text-white/70">{{ __('أفضل مؤسسات تعليمية حول العالم') }}</div>
                             </div>
                         </div>
                         <span class="font-plex text-[10px] tracking-widest text-gold-300" dir="ltr">KASP '26</span>
-                    </div>
+                    </a>
                 </div>
 
                 {{-- floating chip: AI --}}
@@ -103,7 +100,7 @@
                 </a>
 
                 {{-- floating chip: vision --}}
-                <div class="animate-float-y-soft absolute -bottom-8 end-4 rounded-2xl bg-forest-800 p-4 pe-6 text-white shadow-2xl shadow-forest-900/40 md:-end-4">
+                <div class="animate-float-y-soft absolute -bottom-8 end-4 hidden rounded-2xl bg-forest-800 p-4 pe-6 text-white shadow-2xl shadow-forest-900/40 sm:block md:-end-4">
                     <div class="flex items-center gap-3">
                         <x-star-emblem class="size-8 text-gold-400" />
                         <div class="leading-tight">

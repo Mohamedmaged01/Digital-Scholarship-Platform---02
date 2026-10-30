@@ -11,7 +11,7 @@
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
         <div class="grid grid-cols-1 items-center gap-14 lg:grid-cols-12">
             <div class="lg:col-span-5">
-                <x-section-heading eyebrow="{{ __('المساعد الذكي') }}">
+                <x-section-heading compact eyebrow="{{ __('المساعد الذكي') }}">
                     {{ __('المساعد الذكي —') }}
                     <span class="text-shimmer-gold"> {{ __('اسأل عن الابتعاث') }}</span>
                 </x-section-heading>

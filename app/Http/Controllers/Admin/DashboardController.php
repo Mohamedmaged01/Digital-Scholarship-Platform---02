@@ -18,7 +18,6 @@ class DashboardController extends Controller
                 ->map(fn ($meta, $key) => ['label' => $meta['tab'], 'count' => (int) ($categoryCounts[$key] ?? 0)]),
             'latestNews' => News::ordered()->take(3)->get(),
             'pending' => UnansweredQuestion::orderByDesc('asked_count')->orderByDesc('last_asked_at')->take(3)->get(),
-            'dbDriver' => config('database.default'),
         ]);
     }
 }

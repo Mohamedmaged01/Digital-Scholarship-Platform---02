@@ -9,7 +9,7 @@
 @section('admin')
 <div class="grid gap-8 lg:grid-cols-[380px_1fr]">
     <form method="POST" action="{{ $e ? route('admin.contact.update', $e) : route('admin.contact.store') }}"
-          class="h-fit rounded-3xl border border-forest-800/12 bg-white p-5 shadow-sm lg:sticky lg:top-24">
+          class="h-fit rounded-3xl border border-forest-800/12 bg-white p-5 shadow-sm lg:sticky lg:top-24" novalidate>
         @csrf
         @if ($e) @method('PUT') @endif
         <fieldset @disabled(auth()->user()->cannot('edit-content')) class="space-y-3.5">

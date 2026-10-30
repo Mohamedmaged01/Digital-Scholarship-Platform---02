@@ -9,7 +9,7 @@
 @section('admin')
 <div class="grid gap-8 lg:grid-cols-[380px_1fr]">
     <form method="POST" action="{{ $e ? route('admin.statistics.update', $e) : route('admin.statistics.store') }}"
-          class="h-fit rounded-3xl border border-forest-800/12 bg-white p-5 shadow-sm lg:sticky lg:top-24">
+          class="h-fit rounded-3xl border border-forest-800/12 bg-white p-5 shadow-sm lg:sticky lg:top-24" novalidate>
         @csrf
         @if ($e) @method('PUT') @endif
         <fieldset @disabled(auth()->user()->cannot('edit-content')) class="space-y-3.5">
@@ -26,6 +26,7 @@
                 <div class="col-span-2">
                     <label for="label_en" class="dash-label">العنوان الإنجليزي</label>
                     <input id="label_en" name="label_en" dir="ltr" value="{{ old('label_en', $e?->label_en) }}" class="dash-input text-left">
+                    <x-admin.error name="label_en" />
                 </div>
                 <div>
                     <label for="value" class="dash-label">القيمة الرقمية</label>
@@ -39,6 +40,12 @@
                 <div class="col-span-2">
                     <label for="note_ar" class="dash-label">الملاحظة</label>
                     <input id="note_ar" name="note_ar" value="{{ old('note_ar', $e?->note_ar) }}" class="dash-input">
+                    <x-admin.error name="note_ar" />
+                </div>
+                <div class="col-span-2">
+                    <label for="note_en" class="dash-label">الملاحظة الإنجليزية</label>
+                    <input id="note_en" name="note_en" dir="ltr" value="{{ old('note_en', $e?->note_en) }}" class="dash-input text-left">
+                    <x-admin.error name="note_en" />
                 </div>
                 <div>
                     <label for="location" class="dash-label">الموقع في المنصة</label>

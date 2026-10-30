@@ -2,11 +2,11 @@
     <div class="absolute -top-32 start-1/3 h-96 w-96 rounded-full bg-forest-600/25 blur-[120px]" aria-hidden="true"></div>
     <div class="relative mx-auto max-w-7xl px-5 md:px-8">
         <div class="flex flex-wrap items-end justify-between gap-6">
-            <h2 class="reveal max-w-md text-3xl font-bold leading-snug text-white md:text-4xl">
+            <h2 class="reveal text-3xl font-bold leading-snug text-white md:text-4xl">
                 {{ __('مسارات الابتعاث') }}
                 <span class="text-shimmer-gold"> {{ __('بالأرقام') }}</span>
             </h2>
-            <p class="reveal max-w-sm text-sm leading-relaxed text-slate-400" style="--delay: .1s">
+            <p class="reveal text-sm leading-relaxed text-slate-400 lg:whitespace-nowrap" style="--delay: .1s">
                 {{ __('الأعداد المحددة في الدليل الاسترشادي لكل مسار للعام الأكاديمي 2026–2027.') }}
             </p>
         </div>

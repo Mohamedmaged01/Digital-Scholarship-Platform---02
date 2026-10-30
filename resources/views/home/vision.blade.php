@@ -20,11 +20,9 @@
                 <span dir="ltr" class="font-plex text-sm font-bold tracking-[0.25em] text-gold-300">SAUDI VISION 2030</span>
             </div>
 
-            <h2 class="reveal mt-8 text-4xl font-bold leading-[1.25] text-white md:text-6xl md:leading-[1.2]" style="--delay: .1s">
-                {{ __('«ثروتُنا الأولى') }}
-                <br>
-                {{ __('ليست النفط…»') }}
-                <span class="mt-2 block text-2xl font-semibold text-gold-300 md:text-3xl">{{ __('بل عقولُ أبنائها وبناتها') }}</span>
+            <h2 class="reveal mt-8 text-4xl font-bold leading-[1.25] text-white md:text-5xl md:leading-[1.2] lg:rtl:whitespace-nowrap" style="--delay: .1s">
+                {{ __('«ثروتُنا الأولى') }} {{ __('ليست النفط…»') }}
+                <span class="mt-3 block text-2xl font-semibold text-gold-300 md:text-3xl">{{ __('بل عقولُ أبنائها وبناتها') }}</span>
             </h2>
 
             <p class="reveal mt-7 max-w-xl text-lg leading-relaxed text-slate-200 xl:max-w-none xl:whitespace-nowrap" style="--delay: .2s">

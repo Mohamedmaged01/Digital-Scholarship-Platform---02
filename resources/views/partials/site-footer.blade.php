@@ -65,7 +65,6 @@
                                 <a href="{{ $t->url() }}" class="group flex items-center gap-2 text-sm text-slate-400 transition-colors hover:text-gold-300">
                                     <span class="h-1 w-4 rounded-full bg-white/15 transition-all duration-300 group-hover:w-6 group-hover:bg-gold-400"></span>
                                     {{ $t->tr('name') }}
-                                    <span class="text-xs text-white/30">— {{ $t->tr('badge') }}</span>
                                 </a>
                             </li>
                         @endforeach

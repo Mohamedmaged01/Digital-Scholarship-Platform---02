@@ -19,7 +19,7 @@
     "تحويل تلقائي للإدارة": "Automatic escalation",
     "حين لا توجد إجابة واضحة، يسجَّل سؤالك وتظهر لك قنوات التواصل مباشرة.": "When there is no clear answer, your question is logged and the contact channels are shown.",
     "المساعد الذكي —": "Smart Assistant —",
-    "اسأل عن الابتعاث": "ask about scholarships",
+    "اسأل عن الابتعاث": "ask us",
     "اسأل المساعد عن سياسات التقديم والشروط العامة والخاصة بكل مسار، ولمعرفة المسارات التي تنطبق ضوابطها على اختياراتك استخدم محرك التوجيه.": "Ask the assistant about application policies and each track's general and special conditions. To find the tracks whose rules match your choices, use the track finder.",
     "اكتشف المسار الأنسب لك": "Find the right track for you",
     "جرّب أن تسأل: «كيف أقدم على مسار الرواد؟» أو «كم قبولًا يمكنني تقديمه؟»": "Try asking: “How do I apply to the Rowad Track?” or “How many admissions can I submit?”",
@@ -27,7 +27,7 @@
     "فتح المساعد الذكي": "Open the assistant",
     "الأسئلة الشائعة": "FAQ",
     "إجابات الأسئلة الأكثر تكرارًا وفق سياسات التقديم والشروط المعتمدة. ولأسئلة كل مسار، راجع صفحة المسار.": "Answers to the most common questions, based on the application policies and approved conditions. For track-specific questions, see the track's page.",
-    "كل ما يدور في ذهنك،": "Everything on your mind,",
+    "كل ما يدور في ذهنك،": "Your questions,",
     "بإجابة واحدة": "answered",
     "مركز الاتصال الموحد": "Unified Call Center",
     "للاستفسار عن برنامج الابتعاث": "For scholarship program inquiries",
@@ -349,5 +349,10 @@
     ":count تخصص محدد في هذا المجال": ":count majors specified in this field",
     "تخصصات محددة في هذا المجال — راجع الشروط الخاصة": "Specified majors in this field — see special conditions",
     ":scope — تحقق من الدليل الاسترشادي": ":scope — check the guideline",
-    "تعذّر الوصول إلى المساعد حاليًا. يمكنك التواصل مع الإدارة مباشرة عبر القنوات التالية:": "The assistant is unavailable right now. You can contact us directly through these channels:"
+    "تعذّر الوصول إلى المساعد حاليًا. يمكنك التواصل مع الإدارة مباشرة عبر القنوات التالية:": "The assistant is unavailable right now. You can contact us directly through these channels:",
+    "الموقع التعريفي لبرنامج خادم الحرمين الشريفين للابتعاث، الذي يُعرّف باستراتيجية البرنامج وأهدافه ومساراته الأربعة، ويوضح الموقع شروط البرنامج العامة والخاصة، والتخصصات، والجامعات المعتمدة، كما يبيّن كيفية التقديم على البرنامج، والشرائح المستفيدة منه.": "The informational site of the King Salman Scholarship Program, introducing the program's strategy, goals and four tracks. It explains the program's general and special conditions, majors and approved universities, how to apply, and who can benefit.",
+    "شعار برنامج خادم الحرمين الشريفين للابتعاث مع برنامج تنمية القدرات البشرية ورؤية السعودية 2030": "King Salman Scholarship Program logo with the Human Capability Development Program and Saudi Vision 2030 logos",
+    "حدد مسارك": "Choose your track",
+    "أفضل مؤسسات تعليمية حول العالم": "The world's top educational institutions",
+    "الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026-2027 (مسارات الرواد والبحث والتطوير وإمداد)": "Guideline for university lists by field, 2026–2027 (Rowad, Research & Development and Emdad tracks)"
 }

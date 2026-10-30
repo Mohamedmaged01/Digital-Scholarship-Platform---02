@@ -282,7 +282,7 @@
                                 </div>
                                 <h3 class="mt-2 text-[15px] font-bold text-white">{{ app()->getLocale() === 'en' && $g->title_en ? $g->title_en : $g->title_ar }}</h3>
                                 @if ($g->notes)
-                                    <p class="mt-2 flex items-start gap-1.5 text-[11px] text-amber-300"><x-lucide-info class="mt-0.5 size-3.5 shrink-0" />{{ $g->notes }}</p>
+                                    <p class="mt-2 flex items-start gap-1.5 text-[11px] text-amber-300"><x-lucide-info class="mt-0.5 size-3.5 shrink-0" />{{ __($g->notes) }}</p>
                                 @endif
                                 <x-last-updated :version="$g->version" compact dark class="mt-3 w-fit" />
                             </div>

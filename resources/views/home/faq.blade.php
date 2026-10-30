@@ -3,7 +3,7 @@
         <div class="grid grid-cols-1 gap-12 lg:grid-cols-12">
             <div class="lg:col-span-5">
                 <div class="lg:sticky lg:top-32">
-                    <x-section-heading eyebrow="{{ __('الأسئلة الشائعة') }}"
+                    <x-section-heading compact eyebrow="{{ __('الأسئلة الشائعة') }}"
                                        desc="{{ __('إجابات الأسئلة الأكثر تكرارًا وفق سياسات التقديم والشروط المعتمدة. ولأسئلة كل مسار، راجع صفحة المسار.') }}">
                         {{ __('كل ما يدور في ذهنك،') }}
                         <span class="text-shimmer-gold"> {{ __('بإجابة واحدة') }}</span>

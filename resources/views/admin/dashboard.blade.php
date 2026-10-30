@@ -78,14 +78,6 @@
                     </div>
                 @endforeach
             </div>
-
-            <div class="mt-6 flex items-center gap-2.5 rounded-2xl border border-emerald-300 bg-emerald-50 p-3.5">
-                <x-lucide-database class="size-5 text-emerald-600" />
-                <div class="text-xs leading-relaxed">
-                    <div class="font-bold text-slate-700">قاعدة البيانات متصلة <span dir="ltr" class="font-plex">({{ $dbDriver }})</span></div>
-                    <div class="text-slate-500">كل تعديل يُحفظ مباشرة ويظهر فورًا في الواجهة العامة.</div>
-                </div>
-            </div>
         </div>
 
         {{-- أحدث الأخبار --}}
