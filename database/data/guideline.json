@@ -1,0 +1,8615 @@
+{
+ "source": {
+  "titleAr": "الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026-2027",
+  "url": "https://object.moe.gov.sa/nasaq/cm/files/aldlyl-alastrshady-ltrtyb-qwaaem-aljamaeat-hsb-almjalat-2027-2026.pdf",
+  "version": "2026-2027"
+ },
+ "notes": {
+  "masters": {
+   "ar": "درجة الماجستير فقط",
+   "en": "Master's degree only"
+  },
+  "hearing": {
+   "ar": "للأشخاص ذوي الإعاقة (الإعاقة السمعية)",
+   "en": "For persons with hearing disabilities"
+  },
+  "digipen-art": {
+   "ar": "درجة البكالوريوس فقط للتخصص: ⁦Visual Storytelling & Art Direction⁩",
+   "en": "Bachelor's degree only for: Visual Storytelling & Art Direction"
+  },
+  "digipen-ict": {
+   "ar": "درجة البكالوريوس فقط للتخصصين: ⁦Immersive Computing & Experience Design⁩ و⁦Interactive Systems Design – UX Engineering⁩",
+   "en": "Bachelor's degree only for: Immersive Computing & Experience Design, Interactive Systems Design – UX Engineering"
+  }
+ },
+ "universities": [
+  {
+   "slug": "albert-ludwigs-universitaet-freiburg",
+   "nameEn": "Albert-Ludwigs-Universitaet Freiburg",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "alma-mater-studiorum-university-of-bologna",
+   "nameEn": "Alma Mater Studiorum - University of Bologna",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "amity-university",
+   "nameEn": "Amity University",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "arizona-state-university",
+   "nameEn": "Arizona State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "autonomous-university-of-barcelona",
+   "nameEn": "Autonomous University of Barcelona",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "babson-college",
+   "nameEn": "Babson College",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "bangor-university",
+   "nameEn": "Bangor University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "beihang-university",
+   "nameEn": "Beihang University (former BUAA)",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "beihang-university-former-buaa",
+   "nameEn": "Beihang University ) (former BUAA",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "beijing-institute-of-technology",
+   "nameEn": "Beijing Institute of Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "boston-university",
+   "nameEn": "Boston University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "bournemouth-university",
+   "nameEn": "Bournemouth University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "brown-university",
+   "nameEn": "Brown University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "ca-foscari-university-of-venice",
+   "nameEn": "Ca' Foscari University of Venice",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "caltech",
+   "nameEn": "California Institute of Technology (Caltech)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "cardiff-university",
+   "nameEn": "Cardiff University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "carnegie-mellon-university",
+   "nameEn": "Carnegie Mellon University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "case-western-reserve-university",
+   "nameEn": "Case Western Reserve University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "central-south-university",
+   "nameEn": "Central South University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "china-agricultural-university",
+   "nameEn": "China Agricultural University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "christian-albrechts-university-zu-kiel",
+   "nameEn": "Christian-Albrechts-University zu Kiel",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "city-university-of-hong-kong",
+   "nameEn": "City University of Hong Kong",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "colorado-school-of-mines",
+   "nameEn": "Colorado School of Mines",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "colorado-state-university",
+   "nameEn": "Colorado State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "columbia",
+   "nameEn": "Columbia University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "complutense-university-of-madrid",
+   "nameEn": "Complutense University of Madrid",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "cornell",
+   "nameEn": "Cornell University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "curtin-university",
+   "nameEn": "Curtin University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "dalhousie-university",
+   "nameEn": "Dalhousie University",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "deakin-university",
+   "nameEn": "Deakin University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "delft",
+   "nameEn": "Delft University of Technology",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "digipen-institute-of-technology",
+   "nameEn": "DigiPen Institute of Technology",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "duke-university",
+   "nameEn": "Duke University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "durham-university",
+   "nameEn": "Durham University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "epfl",
+   "nameEn": "EPFL",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "eth",
+   "nameEn": "ETH Zurich",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "eberhard-karls-universitat-tubingen",
+   "nameEn": "Eberhard Karls Universität Tübingen",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "eindhoven-university-of-technology",
+   "nameEn": "Eindhoven University of Technology",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "emory-university",
+   "nameEn": "Emory University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "erasmus-university-rotterdam",
+   "nameEn": "Erasmus University Rotterdam",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "florida-state-university",
+   "nameEn": "Florida State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "freie-universitaet-berlin",
+   "nameEn": "Freie Universitaet Berlin",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "fudan-university",
+   "nameEn": "Fudan University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "gallaudet-university",
+   "nameEn": "Gallaudet University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "george-washington-university",
+   "nameEn": "George Washington University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "georgetown",
+   "nameEn": "Georgetown University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "georgia-institute-of-technology",
+   "nameEn": "Georgia Institute of Technology",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "griffith-university",
+   "nameEn": "Griffith University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "hanyang-university",
+   "nameEn": "Hanyang University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "harbin-institute-of-technology",
+   "nameEn": "Harbin Institute of Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "harvard",
+   "nameEn": "Harvard University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "hokkaido-university",
+   "nameEn": "Hokkaido University",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "huazhong-agricultural-university",
+   "nameEn": "Huazhong Agricultural University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "huazhong-university-of-science-and-technology",
+   "nameEn": "Huazhong University of Science and Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "humboldt-universitat-zu-berlin",
+   "nameEn": "Humboldt-Universität zu Berlin",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "insead",
+   "nameEn": "INSEAD (France)",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "imperial",
+   "nameEn": "Imperial College London",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "indian-institute-of-science",
+   "nameEn": "Indian Institute of Science",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indian-institute-of-technology-bombay",
+   "nameEn": "Indian Institute of Technology Bombay (IITB)",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indian-institute-of-technology-delhi",
+   "nameEn": "Indian Institute of Technology Delhi (IITD)",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indian-institute-of-technology-kanpur",
+   "nameEn": "Indian Institute of Technology Kanpur (IITK)",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indian-institute-of-technology-kharagpur",
+   "nameEn": "Indian Institute of Technology Kharagpur (IIT-KGP)",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indian-institute-of-technology-madras",
+   "nameEn": "Indian Institute of Technology Madras (IITM)",
+   "country": "الهند",
+   "countryEn": "India",
+   "region": "asia"
+  },
+  {
+   "slug": "indiana-university-bloomington",
+   "nameEn": "Indiana University Bloomington",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "institut-polytechnique-de-paris",
+   "nameEn": "Institut Polytechnique de Paris",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "institute-of-science-tokyo",
+   "nameEn": "Institute of Science Tokyo",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "iowa-state-university",
+   "nameEn": "Iowa State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "james-cook-university",
+   "nameEn": "James Cook University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "jiangsu-university",
+   "nameEn": "Jiangsu University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "johns-hopkins-university",
+   "nameEn": "Johns Hopkins University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "justus-liebig-university-giessen",
+   "nameEn": "Justus-Liebig-University Giessen",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "kaist",
+   "nameEn": "KAIST - Korea Advanced Institute of Science & Technology",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "kit-karlsruhe-institute-of-technology",
+   "nameEn": "KIT, Karlsruhe Institute of Technology",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "kansas-state-university",
+   "nameEn": "Kansas State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "karlsruhe-institute-of-technology",
+   "nameEn": "Karlsruhe Institute of Technology (KIT)",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "kings",
+   "nameEn": "King's College London",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "korea-university",
+   "nameEn": "Korea University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "kyoto-university",
+   "nameEn": "Kyoto University",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "kyung-hee-university",
+   "nameEn": "Kyung Hee University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "l-institut-agro-agro-rennes-angers",
+   "nameEn": "L'Institut Agro (L'Institut Agro Dijon, L'Institut Agro Montpellier, L'Institut )Agro Rennes Angers",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "l-institut-agro",
+   "nameEn": "L'Institut Agro (L'Institut Agro Dijon, L'Institut Agro Montpellier, L'Institut Agro Rennes Angers)",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "la-trobe-university",
+   "nameEn": "La Trobe University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "lancaster-university",
+   "nameEn": "Lancaster University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "leiden-university",
+   "nameEn": "Leiden University",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "london-business-school",
+   "nameEn": "London Business School",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "ludwig-maximilians-universitat-munchen",
+   "nameEn": "Ludwig-Maximilians-Universität München",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "macau-university-of-science-and-technology",
+   "nameEn": "Macau University of Science and Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "macquarie-university",
+   "nameEn": "Macquarie University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "mit",
+   "nameEn": "Massachusetts Institute of Technology (MIT)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "mcgill-university",
+   "nameEn": "McGill University",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "mcmaster-university",
+   "nameEn": "McMaster University",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "michigan-state",
+   "nameEn": "Michigan State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "monash-university",
+   "nameEn": "Monash University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "murdoch-university",
+   "nameEn": "Murdoch University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "nagoya-university",
+   "nameEn": "Nagoya University",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "nanjing-agricultural-university",
+   "nameEn": "Nanjing Agricultural University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "nanjing-forestry-university",
+   "nameEn": "Nanjing Forestry University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "nanjing-university",
+   "nameEn": "Nanjing University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "nankai-university",
+   "nameEn": "Nankai University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "nanyang-technological-university-singapore",
+   "nameEn": "Nanyang Technological University, Singapore (NTU)",
+   "country": "سنغافورة",
+   "countryEn": "Singapore",
+   "region": "asia"
+  },
+  {
+   "slug": "nus",
+   "nameEn": "National University of Singapore (NUS)",
+   "country": "سنغافورة",
+   "countryEn": "Singapore",
+   "region": "asia"
+  },
+  {
+   "slug": "nyu",
+   "nameEn": "New York University (NYU)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "newcastle-university",
+   "nameEn": "Newcastle University",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "north-carolina-state-university",
+   "nameEn": "North Carolina State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "northeastern-university",
+   "nameEn": "Northeastern University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "northwest-agriculture-and-forestry-university",
+   "nameEn": "Northwest Agriculture and Forestry University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "northwestern-university",
+   "nameEn": "Northwestern University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "oregon-state-university",
+   "nameEn": "Oregon State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "osaka-university",
+   "nameEn": "Osaka University",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "peking-university",
+   "nameEn": "Peking University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "pennsylvania-state-university",
+   "nameEn": "Pennsylvania State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "pohang-university-of-science-and-technology",
+   "nameEn": "Pohang University of Science And Technology (POSTECH)",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "politecnico-di-milano",
+   "nameEn": "Politecnico di Milano",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "princeton-university",
+   "nameEn": "Princeton University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "purdue-university",
+   "nameEn": "Purdue University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "queen-mary-university-of-london",
+   "nameEn": "Queen Mary University of London",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "rmit-university",
+   "nameEn": "RMIT University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "rwth-aachen-university",
+   "nameEn": "RWTH Aachen University",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "radboud-university",
+   "nameEn": "Radboud University",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "renmin-university-of-china",
+   "nameEn": "Renmin (People s) University of China",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "rheinische-friedrich-wilhelms-universitat-bonn",
+   "nameEn": "Rheinische Friedrich-Wilhelms-Universität Bonn",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "rice-university",
+   "nameEn": "Rice University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "ruprecht-karls-universitat-heidelberg",
+   "nameEn": "Ruprecht-Karls-Universität Heidelberg",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "rutgers-universitynew-brunswick",
+   "nameEn": "Rutgers University–New Brunswick",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "soas-university-of-london",
+   "nameEn": "SOAS University of London",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "sapienza-university-of-rome",
+   "nameEn": "Sapienza University of Rome",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "sciences-po",
+   "nameEn": "Sciences Po",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "sejong-university",
+   "nameEn": "Sejong University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "seoul-national-university",
+   "nameEn": "Seoul National University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "shangdong-agricultural-university",
+   "nameEn": "Shangdong Agricultural University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "shanghai-jiao-tong-university",
+   "nameEn": "Shanghai Jiao Tong University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "sichuan-university",
+   "nameEn": "Sichuan University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "singapore-management-university",
+   "nameEn": "Singapore Management University",
+   "country": "سنغافورة",
+   "countryEn": "Singapore",
+   "region": "asia"
+  },
+  {
+   "slug": "sorbonne",
+   "nameEn": "Sorbonne University",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "south-china-agricultural-university",
+   "nameEn": "South China Agricultural University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "south-china-normal-university",
+   "nameEn": "South China Normal University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "south-china-university-of-technology",
+   "nameEn": "South China University of Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "southeast-university",
+   "nameEn": "Southeast University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "southern-university-of-science-and-technology",
+   "nameEn": "Southern University of Science and Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "stanford",
+   "nameEn": "Stanford University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "sun-yat-sen-university",
+   "nameEn": "Sun Yat-sen University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "sungkyunkwan-university-skku",
+   "nameEn": "Sungkyunkwan )University (SKKU",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "sungkyunkwan-university",
+   "nameEn": "Sungkyunkwan University (SKKU)",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "technical-university-of-munich",
+   "nameEn": "Technical University of Munich",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "technische-universitat-berlin",
+   "nameEn": "Technische Universität Berlin (TU Berlin)",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "technische-universitat-dresden",
+   "nameEn": "Technische Universität Dresden",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "temple-university",
+   "nameEn": "Temple University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "texas-a-m-university",
+   "nameEn": "Texas A&M University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "anu",
+   "nameEn": "The Australian National University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "the-chinese-university-of-hong-kong",
+   "nameEn": "The Chinese University of Hong Kong (CUHK)",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "the-hong-kong-polytechnic-university",
+   "nameEn": "The Hong Kong Polytechnic University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "the-hong-kong-university-of-science-and-technology",
+   "nameEn": "The Hong Kong University of Science and Technology",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "lse",
+   "nameEn": "The London School of Economics and Political Science (LSE)",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "the-ohio-state-university",
+   "nameEn": "The Ohio State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "the-university-of-adelaide",
+   "nameEn": "The University of Adelaide",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "edinburgh",
+   "nameEn": "The University of Edinburgh",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "the-university-of-exeter",
+   "nameEn": "The University of Exeter",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "the-university-of-georgia",
+   "nameEn": "The University of Georgia",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "the-university-of-hong-kong",
+   "nameEn": "The University of Hong Kong",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "the-university-of-manchester",
+   "nameEn": "The University of Manchester",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "melbourne",
+   "nameEn": "The University of Melbourne",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "the-university-of-new-south-wales",
+   "nameEn": "The University of New South Wales (UNSW Sydney)",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "queensland",
+   "nameEn": "The University of Queensland",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "the-university-of-sheffield",
+   "nameEn": "The University of Sheffield",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "sydney",
+   "nameEn": "The University of Sydney",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "tokyo",
+   "nameEn": "The University of Tokyo",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "the-university-of-warwick",
+   "nameEn": "The University of Warwick",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "the-university-of-western-australia",
+   "nameEn": "The University of Western Australia",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "tianjin-university",
+   "nameEn": "Tianjin University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "tilburg-university",
+   "nameEn": "Tilburg University",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "tohoku-university",
+   "nameEn": "Tohoku University",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "tokyo-institute-of-technology",
+   "nameEn": "Tokyo Institute of Technology (Tokyo Tech)",
+   "country": "اليابان",
+   "countryEn": "Japan",
+   "region": "asia"
+  },
+  {
+   "slug": "tongji-university",
+   "nameEn": "Tongji University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "tsinghua",
+   "nameEn": "Tsinghua University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "ucl",
+   "nameEn": "UCL (University College London)",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "unsw-sydney",
+   "nameEn": "UNSW Sydney",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "universidad-politecnica-de-madrid",
+   "nameEn": "Universidad Politecnica de Madrid",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-pompeu-fabra",
+   "nameEn": "Universitat Pompeu Fabra (Barcelona)",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-ramon-llull",
+   "nameEn": "Universitat Ramon Llull",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-de-barcelona",
+   "nameEn": "Universitat de Barcelona",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "university-college-london",
+   "nameEn": "University College London",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-alberta",
+   "nameEn": "University of Alberta",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-amsterdam",
+   "nameEn": "University of Amsterdam",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-arizona",
+   "nameEn": "University of Arizona",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-basel",
+   "nameEn": "University of Basel",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-bern",
+   "nameEn": "University of Bern",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-birmingham",
+   "nameEn": "University of Birmingham",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-bordeaux",
+   "nameEn": "University of Bordeaux",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-bristol",
+   "nameEn": "University of Bristol",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "ubc",
+   "nameEn": "University of British Columbia",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-calgary",
+   "nameEn": "University of Calgary",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-berkeley",
+   "nameEn": "University of California, Berkeley (UCB)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-davis",
+   "nameEn": "University of California, Davis",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-irvine",
+   "nameEn": "University of California, Irvine",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-los-angeles",
+   "nameEn": "University of California, Los Angeles (UCLA)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-riverside",
+   "nameEn": "University of California, Riverside",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-san-diego",
+   "nameEn": "University of California, San Diego (UCSD)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-california-santa-barbara",
+   "nameEn": "University of California, Santa Barbara (UCSB)",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "cambridge",
+   "nameEn": "University of Cambridge",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-central-florida",
+   "nameEn": "University of Central Florida",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "chicago",
+   "nameEn": "University of Chicago",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-chinese-academy-of-sciences",
+   "nameEn": "University of Chinese Academy of Sciences",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "university-of-cologne",
+   "nameEn": "University of Cologne",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-colorado-boulder",
+   "nameEn": "University of Colorado Boulder",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-delaware",
+   "nameEn": "University of Delaware",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-derby",
+   "nameEn": "University of Derby",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-electronic-science-and-technology-of-china",
+   "nameEn": "University of Electronic Science and Technology of China",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "university-of-essex",
+   "nameEn": "University of Essex",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-florence",
+   "nameEn": "University of Florence",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-florida",
+   "nameEn": "University of Florida",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-geneva",
+   "nameEn": "University of Geneva",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-glasgow",
+   "nameEn": "University of Glasgow",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-granada",
+   "nameEn": "University of Granada",
+   "country": "إسبانيا",
+   "countryEn": "Spain",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-greenwich",
+   "nameEn": "University of Greenwich",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-groningen",
+   "nameEn": "University of Groningen",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-guelph",
+   "nameEn": "University of Guelph",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-gottingen",
+   "nameEn": "University of Göttingen",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-hohenheim",
+   "nameEn": "University of Hohenheim",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-houston",
+   "nameEn": "University of Houston",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-illinois-at-urbana-champaign",
+   "nameEn": "University of Illinois at Urbana-Champaign",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-lausanne",
+   "nameEn": "University of Lausanne",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-leeds",
+   "nameEn": "University of Leeds",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-liverpool",
+   "nameEn": "University of Liverpool",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-macau",
+   "nameEn": "University of Macau",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "university-of-maryland-college-park",
+   "nameEn": "University of Maryland, College Park",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-massachusetts-amherst",
+   "nameEn": "University of Massachusetts Amherst",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "michigan",
+   "nameEn": "University of Michigan-Ann Arbor",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-milan",
+   "nameEn": "University of Milan",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-minnesota-twin-cities",
+   "nameEn": "University of Minnesota Twin Cities",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-missouri-columbia",
+   "nameEn": "University of Missouri Columbia",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-naples-federico-ii",
+   "nameEn": "University of Naples - Federico II",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-nebraska-lincoln",
+   "nameEn": "University of Nebraska - Lincoln",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-nevada-las-vegas",
+   "nameEn": "University of Nevada - Las Vegas",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-north-carolina-at-chapel-hill",
+   "nameEn": "University of North Carolina at Chapel Hill",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-notre-dame",
+   "nameEn": "University of Notre Dame",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-nottingham",
+   "nameEn": "University of Nottingham",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "oxford",
+   "nameEn": "University of Oxford",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "penn",
+   "nameEn": "University of Pennsylvania",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-pisa",
+   "nameEn": "University of Pisa",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-pittsburgh",
+   "nameEn": "University of Pittsburgh",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-reading",
+   "nameEn": "University of Reading",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-rochester",
+   "nameEn": "University of Rochester",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-saskatchewan",
+   "nameEn": "University of Saskatchewan",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-science-and-technology-beijing",
+   "nameEn": "University of Science and Technology Beijing",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "university-of-science-and-technology-of-china",
+   "nameEn": "University of Science and Technology of China",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "university-of-south-carolina",
+   "nameEn": "University of South Carolina",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-south-florida",
+   "nameEn": "University of South Florida",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-southampton",
+   "nameEn": "University of Southampton",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "usc",
+   "nameEn": "University of Southern California",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-st-andrews",
+   "nameEn": "University of St Andrews",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-st-gallen",
+   "nameEn": "University of St.Gallen (HSG)",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-strathclyde",
+   "nameEn": "University of Strathclyde",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-surrey",
+   "nameEn": "University of Surrey",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-sussex",
+   "nameEn": "University of Sussex",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-tasmania",
+   "nameEn": "University of Tasmania",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "university-of-texas-at-austin",
+   "nameEn": "University of Texas at Austin",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "toronto",
+   "nameEn": "University of Toronto",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-toulouse",
+   "nameEn": "University of Toulouse",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-tuebingen",
+   "nameEn": "University of Tuebingen",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-turin",
+   "nameEn": "University of Turin",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-virginia",
+   "nameEn": "University of Virginia",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-washington",
+   "nameEn": "University of Washington",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-waterloo",
+   "nameEn": "University of Waterloo",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-wisconsin-madison",
+   "nameEn": "University of Wisconsin-Madison",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "university-of-york",
+   "nameEn": "University of York",
+   "country": "المملكة المتحدة",
+   "countryEn": "United Kingdom",
+   "region": "europe"
+  },
+  {
+   "slug": "university-of-zurich",
+   "nameEn": "University of Zurich",
+   "country": "سويسرا",
+   "countryEn": "Switzerland",
+   "region": "europe"
+  },
+  {
+   "slug": "universita-cattolica-del-sacro-cuore",
+   "nameEn": "Università Cattolica del Sacro Cuore",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "universita-commerciale-luigi-bocconi",
+   "nameEn": "Università Commerciale Luigi Bocconi (Bocconi University)",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "universita-di-padova",
+   "nameEn": "Università di Padova",
+   "country": "إيطاليا",
+   "countryEn": "Italy",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-hamburg",
+   "nameEn": "Universität Hamburg",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-konstanz",
+   "nameEn": "Universität Konstanz",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "universitat-mannheim",
+   "nameEn": "Universität Mannheim",
+   "country": "ألمانيا",
+   "countryEn": "Germany",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-laval",
+   "nameEn": "Université Laval",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "universite-psl",
+   "nameEn": "Université PSL",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-paris-1-pantheon-sorbonne",
+   "nameEn": "Université Paris 1 Panthéon-Sorbonne",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-paris-cite",
+   "nameEn": "Université Paris Cité",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-paris-saclay",
+   "nameEn": "Université Paris-Saclay",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-de-montpellier",
+   "nameEn": "Université de Montpellier",
+   "country": "فرنسا",
+   "countryEn": "France",
+   "region": "europe"
+  },
+  {
+   "slug": "universite-de-montreal",
+   "nameEn": "Université de Montréal",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "utrecht-university",
+   "nameEn": "Utrecht University",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "vanderbilt-university",
+   "nameEn": "Vanderbilt University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "virginia-polytechnic-institute-and-state-university",
+   "nameEn": "Virginia Polytechnic Institute and State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "vrije-universiteit-amsterdam",
+   "nameEn": "Vrije Universiteit Amsterdam",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "wageningen-university-research",
+   "nameEn": "Wageningen University & Research",
+   "country": "هولندا",
+   "countryEn": "Netherlands",
+   "region": "europe"
+  },
+  {
+   "slug": "washington-state-university",
+   "nameEn": "Washington State University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "washington-university-in-st-louis",
+   "nameEn": "Washington University in St. Louis",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "western-sydney-university",
+   "nameEn": "Western Sydney University",
+   "country": "أستراليا",
+   "countryEn": "Australia",
+   "region": "oceania"
+  },
+  {
+   "slug": "western-university",
+   "nameEn": "Western University",
+   "country": "كندا",
+   "countryEn": "Canada",
+   "region": "na"
+  },
+  {
+   "slug": "wuhan-university",
+   "nameEn": "Wuhan University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "xi-an-jiaotong-university",
+   "nameEn": "Xi'an Jiaotong University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "xiamen-university",
+   "nameEn": "Xiamen University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "yale",
+   "nameEn": "Yale University",
+   "country": "الولايات المتحدة",
+   "countryEn": "United States",
+   "region": "na"
+  },
+  {
+   "slug": "yangzhou-university",
+   "nameEn": "Yangzhou University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "yonsei-university",
+   "nameEn": "Yonsei University",
+   "country": "كوريا الجنوبية",
+   "countryEn": "South Korea",
+   "region": "asia"
+  },
+  {
+   "slug": "zhejiang-university",
+   "nameEn": "Zhejiang University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  },
+  {
+   "slug": "zhengzhou-university",
+   "nameEn": "Zhengzhou University",
+   "country": "الصين",
+   "countryEn": "China",
+   "region": "asia"
+  }
+ ],
+ "tracks": {
+  "rowad": [
+   {
+    "key": "all",
+    "nameAr": "أفضل 30 مؤسسة تعليمية حول العالم",
+    "nameEn": "Top 30 institutions worldwide",
+    "majors": [],
+    "institutions": [
+     [
+      "harvard",
+      1
+     ],
+     [
+      "stanford",
+      2
+     ],
+     [
+      "mit",
+      3
+     ],
+     [
+      "cambridge",
+      4
+     ],
+     [
+      "university-of-california-berkeley",
+      5
+     ],
+     [
+      "oxford",
+      6
+     ],
+     [
+      "princeton-university",
+      7
+     ],
+     [
+      "columbia",
+      8
+     ],
+     [
+      "caltech",
+      9
+     ],
+     [
+      "chicago",
+      10
+     ],
+     [
+      "yale",
+      11
+     ],
+     [
+      "cornell",
+      12
+     ],
+     [
+      "ucl",
+      13
+     ],
+     [
+      "penn",
+      14
+     ],
+     [
+      "university-of-california-los-angeles",
+      15
+     ],
+     [
+      "university-of-washington",
+      16
+     ],
+     [
+      "tsinghua",
+      17
+     ],
+     [
+      "johns-hopkins-university",
+      18
+     ],
+     [
+      "eth",
+      19
+     ],
+     [
+      "peking-university",
+      20
+     ],
+     [
+      "toronto",
+      21
+     ],
+     [
+      "imperial",
+      22
+     ],
+     [
+      "nus",
+      23
+     ],
+     [
+      "michigan",
+      24
+     ],
+     [
+      "carnegie-mellon-university",
+      25
+     ],
+     [
+      "tokyo",
+      26
+     ],
+     [
+      "universite-paris-saclay",
+      27
+     ],
+     [
+      "university-of-california-san-diego",
+      28
+     ],
+     [
+      "zhejiang-university",
+      29
+     ],
+     [
+      "washington-university-in-st-louis",
+      30
+     ]
+    ]
+   }
+  ],
+  "research": [
+   {
+    "key": "nat",
+    "nameAr": "العلوم الطبيعية والرياضيات والإحصاء",
+    "nameEn": "Natural sciences, mathematics and statistics",
+    "majors": [
+     {
+      "ar": "الاحياء الدقيقة",
+      "en": "General biology"
+     },
+     {
+      "ar": "الاحياء العامة",
+      "en": "General biology"
+     },
+     {
+      "ar": "المفصليات والطفيليات",
+      "en": "Arthropods and parasites"
+     },
+     {
+      "ar": "علم الاحياء الجزيئية والخليوية",
+      "en": "Molecular and cell biology"
+     },
+     {
+      "ar": "علوم النبات",
+      "en": "Botany"
+     },
+     {
+      "ar": "علم الوراثة",
+      "en": "Genetics"
+     },
+     {
+      "ar": "علم المناعة",
+      "en": "Immunology"
+     },
+     {
+      "ar": "علم الفطريات",
+      "en": "Mycology"
+     },
+     {
+      "ar": "علم الحيوان",
+      "en": "Zoology"
+     },
+     {
+      "ar": "علم الطيور",
+      "en": "Ornithology"
+     },
+     {
+      "ar": "الكيمياء الحيوية",
+      "en": "Biochemistry"
+     },
+     {
+      "ar": "علم السموم",
+      "en": "Toxicology"
+     },
+     {
+      "ar": "علم الادوية",
+      "en": "Pharmacology"
+     },
+     {
+      "ar": "التقنية الحيوية",
+      "en": "Biotechnology"
+     },
+     {
+      "ar": "الفيروسات",
+      "en": "Virology"
+     },
+     {
+      "ar": "حماية البيئة",
+      "en": "Environment Protection"
+     },
+     {
+      "ar": "الكيماء",
+      "en": "Chemistry"
+     },
+     {
+      "ar": "الكيمياء الصناعية",
+      "en": "Industrial chemistry"
+     },
+     {
+      "ar": "الكيمياء العضوية",
+      "en": "Organic chemistry"
+     },
+     {
+      "ar": "الكيمياء التحليلية",
+      "en": "Analytical chemistry"
+     },
+     {
+      "ar": "الكيمياء الفيزيائية",
+      "en": "Physical chemistry"
+     },
+     {
+      "ar": "علوم وإدارة موارد المياه",
+      "en": "Science and management of water resources"
+     },
+     {
+      "ar": "كيمياء البوليمرات",
+      "en": "Polymer chemistry"
+     },
+     {
+      "ar": "الكيمياء غير العضوية",
+      "en": "Inorganic chemistry"
+     },
+     {
+      "ar": "نظم المعلومات الجغرافية",
+      "en": "Geographical information systems"
+     },
+     {
+      "ar": "الجيوفيزياء",
+      "en": "Geophysics"
+     },
+     {
+      "ar": "الجيولوجيا",
+      "en": "Geology"
+     },
+     {
+      "ar": "الجيوماتكس",
+      "en": "Geomatics"
+     },
+     {
+      "ar": "الارصاد",
+      "en": "Meteorology"
+     },
+     {
+      "ar": "الفيزياء",
+      "en": "Physics"
+     },
+     {
+      "ar": "الفيزياء النووية",
+      "en": "Nuclear physics"
+     },
+     {
+      "ar": "فيزياء الحالة المكثفة",
+      "en": "Condensed state physics"
+     },
+     {
+      "ar": "الفيزياء الكيميائية",
+      "en": "Chemical physics"
+     },
+     {
+      "ar": "فيزياء البصريات",
+      "en": "Optics physics"
+     },
+     {
+      "ar": "الفلك",
+      "en": "Astronomy"
+     },
+     {
+      "ar": "علم وتقنية النانو",
+      "en": "Nanoscience and technology"
+     },
+     {
+      "ar": "الفيزياء الطبية",
+      "en": "Medical physics"
+     },
+     {
+      "ar": "الاحصاء",
+      "en": "Statistics"
+     },
+     {
+      "ar": "الاحصاء الطبي",
+      "en": "Medical statistics"
+     },
+     {
+      "ar": "المعلوماتية الحيوية",
+      "en": "Bioinformatics"
+     },
+     {
+      "ar": "العلوم الإكتوارية",
+      "en": "Actuarial Science"
+     },
+     {
+      "ar": "الأساليب الكمية",
+      "en": "Quantitive Methods"
+     }
+    ],
+    "institutions": [
+     [
+      "harvard",
+      1
+     ],
+     [
+      "stanford",
+      2
+     ],
+     [
+      "oxford",
+      3
+     ],
+     [
+      "mit",
+      4
+     ],
+     [
+      "lse",
+      5
+     ],
+     [
+      "yale",
+      6
+     ],
+     [
+      "university-of-california-berkeley",
+      7
+     ],
+     [
+      "princeton-university",
+      8
+     ],
+     [
+      "chicago",
+      9
+     ],
+     [
+      "columbia",
+      10
+     ],
+     [
+      "cambridge",
+      11
+     ],
+     [
+      "penn",
+      12
+     ],
+     [
+      "nyu",
+      13
+     ],
+     [
+      "michigan",
+      14
+     ],
+     [
+      "university-of-california-los-angeles",
+      15
+     ],
+     [
+      "ucl",
+      16
+     ],
+     [
+      "toronto",
+      17
+     ],
+     [
+      "ubc",
+      18
+     ],
+     [
+      "cornell",
+      19
+     ],
+     [
+      "university-of-amsterdam",
+      20
+     ],
+     [
+      "northwestern-university",
+      21
+     ],
+     [
+      "nus",
+      22
+     ],
+     [
+      "duke-university",
+      23
+     ],
+     [
+      "university-of-texas-at-austin",
+      24
+     ],
+     [
+      "anu",
+      25
+     ],
+     [
+      "eth",
+      26
+     ],
+     [
+      "the-university-of-manchester",
+      27
+     ],
+     [
+      "university-of-wisconsin-madison",
+      28
+     ],
+     [
+      "tsinghua",
+      29
+     ],
+     [
+      "kings",
+      30
+     ],
+     [
+      "university-of-california-san-diego",
+      31
+     ],
+     [
+      "peking-university",
+      32
+     ],
+     [
+      "johns-hopkins-university",
+      33
+     ],
+     [
+      "the-university-of-warwick",
+      34
+     ],
+     [
+      "university-of-washington",
+      35
+     ],
+     [
+      "usc",
+      36
+     ],
+     [
+      "mcgill-university",
+      37
+     ],
+     [
+      "the-university-of-hong-kong",
+      38
+     ],
+     [
+      "edinburgh",
+      39
+     ],
+     [
+      "the-ohio-state-university",
+      40
+     ],
+     [
+      "melbourne",
+      41
+     ],
+     [
+      "sydney",
+      42
+     ],
+     [
+      "erasmus-university-rotterdam",
+      43
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      44
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      45
+     ],
+     [
+      "pennsylvania-state-university",
+      46
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      47
+     ],
+     [
+      "michigan-state",
+      48
+     ],
+     [
+      "monash-university",
+      49
+     ],
+     [
+      "university-of-zurich",
+      50
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      51
+     ],
+     [
+      "arizona-state-university",
+      52
+     ],
+     [
+      "boston-university",
+      53
+     ],
+     [
+      "georgetown",
+      54
+     ],
+     [
+      "queensland",
+      55
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      56
+     ],
+     [
+      "carnegie-mellon-university",
+      57
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      58
+     ],
+     [
+      "sciences-po",
+      59
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      60
+     ],
+     [
+      "university-of-leeds",
+      61
+     ],
+     [
+      "the-university-of-new-south-wales",
+      62
+     ],
+     [
+      "universitat-mannheim",
+      63
+     ],
+     [
+      "brown-university",
+      64
+     ],
+     [
+      "university-of-maryland-college-park",
+      65
+     ],
+     [
+      "indiana-university-bloomington",
+      66
+     ],
+     [
+      "university-of-groningen",
+      67
+     ],
+     [
+      "tokyo",
+      68
+     ],
+     [
+      "universite-de-montreal",
+      69
+     ],
+     [
+      "autonomous-university-of-barcelona",
+      70
+     ],
+     [
+      "the-university-of-sheffield",
+      71
+     ],
+     [
+      "texas-a-m-university",
+      72
+     ],
+     [
+      "freie-universitaet-berlin",
+      73
+     ],
+     [
+      "durham-university",
+      74
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      75
+     ],
+     [
+      "university-of-glasgow",
+      76
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      77
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      78
+     ],
+     [
+      "leiden-university",
+      79
+     ],
+     [
+      "zhejiang-university",
+      80
+     ],
+     [
+      "purdue-university",
+      81
+     ],
+     [
+      "university-of-california-davis",
+      82
+     ],
+     [
+      "george-washington-university",
+      83
+     ],
+     [
+      "city-university-of-hong-kong",
+      84
+     ],
+     [
+      "universitat-pompeu-fabra",
+      85
+     ],
+     [
+      "fudan-university",
+      86
+     ],
+     [
+      "university-of-bristol",
+      87
+     ],
+     [
+      "university-of-sussex",
+      88
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      89
+     ],
+     [
+      "university-of-birmingham",
+      90
+     ],
+     [
+      "university-of-nottingham",
+      91
+     ],
+     [
+      "seoul-national-university",
+      92
+     ],
+     [
+      "the-university-of-exeter",
+      93
+     ],
+     [
+      "university-of-florida",
+      94
+     ],
+     [
+      "universitat-de-barcelona",
+      95
+     ],
+     [
+      "universite-psl",
+      96
+     ],
+     [
+      "wageningen-university-research",
+      97
+     ],
+     [
+      "cardiff-university",
+      98
+     ],
+     [
+      "washington-university-in-st-louis",
+      99
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      100
+     ],
+     [
+      "university-of-southampton",
+      101
+     ],
+     [
+      "university-of-california-irvine",
+      102
+     ],
+     [
+      "university-of-alberta",
+      103
+     ],
+     [
+      "western-university",
+      104
+     ],
+     [
+      "university-of-california-santa-barbara",
+      105
+     ],
+     [
+      "nanjing-university",
+      106
+     ],
+     [
+      "newcastle-university",
+      107
+     ],
+     [
+      "vanderbilt-university",
+      108
+     ],
+     [
+      "university-of-lausanne",
+      109
+     ],
+     [
+      "queen-mary-university-of-london",
+      110
+     ],
+     [
+      "georgia-institute-of-technology",
+      111
+     ],
+     [
+      "university-of-geneva",
+      112
+     ],
+     [
+      "wuhan-university",
+      113
+     ],
+     [
+      "emory-university",
+      114
+     ],
+     [
+      "delft",
+      115
+     ],
+     [
+      "university-of-pittsburgh",
+      116
+     ],
+     [
+      "yonsei-university",
+      117
+     ],
+     [
+      "the-university-of-western-australia",
+      118
+     ],
+     [
+      "kyoto-university",
+      119
+     ],
+     [
+      "university-of-waterloo",
+      120
+     ],
+     [
+      "university-of-rochester",
+      121
+     ],
+     [
+      "university-of-colorado-boulder",
+      122
+     ],
+     [
+      "macquarie-university",
+      123
+     ],
+     [
+      "university-of-bern",
+      124
+     ],
+     [
+      "the-university-of-adelaide",
+      125
+     ],
+     [
+      "university-of-liverpool",
+      126
+     ],
+     [
+      "universite-paris-saclay",
+      127
+     ],
+     [
+      "radboud-university",
+      128
+     ],
+     [
+      "rice-university",
+      129
+     ],
+     [
+      "mcmaster-university",
+      130
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      131
+     ],
+     [
+      "university-of-calgary",
+      132
+     ],
+     [
+      "korea-university",
+      133
+     ],
+     [
+      "sapienza-university-of-rome",
+      134
+     ],
+     [
+      "technische-universitat-berlin",
+      135
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      136
+     ],
+     [
+      "university-of-gottingen",
+      137
+     ],
+     [
+      "kaist",
+      138
+     ],
+     [
+      "osaka-university",
+      139
+     ],
+     [
+      "tongji-university",
+      140
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      141
+     ],
+     [
+      "sorbonne",
+      142
+     ],
+     [
+      "technical-university-of-munich",
+      143
+     ],
+     [
+      "imperial",
+      144
+     ],
+     [
+      "universitat-hamburg",
+      145
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      146
+     ],
+     [
+      "caltech",
+      147
+     ],
+     [
+      "sungkyunkwan-university-skku",
+      148
+     ],
+     [
+      "tohoku-university",
+      149
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      150
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      151
+     ],
+     [
+      "nagoya-university",
+      152
+     ],
+     [
+      "tokyo-institute-of-technology",
+      153
+     ],
+     [
+      "kit-karlsruhe-institute-of-technology",
+      154
+     ],
+     [
+      "rwth-aachen-university",
+      155
+     ],
+     [
+      "harbin-institute-of-technology",
+      156
+     ],
+     [
+      "universite-paris-cite",
+      157
+     ],
+     [
+      "university-of-basel",
+      158
+     ],
+     [
+      "epfl",
+      159
+     ],
+     [
+      "eberhard-karls-universitat-tubingen",
+      160
+     ]
+    ]
+   },
+   {
+    "key": "ict",
+    "nameAr": "تقنية الاتصالات والمعلومات",
+    "nameEn": "Information and Communication Technologies (ICTs)",
+    "majors": [
+     {
+      "ar": "أمن المعلومات",
+      "en": "Information security"
+     },
+     {
+      "ar": "البرمجة وعلوم الحاسب",
+      "en": "Programming and computer science"
+     },
+     {
+      "ar": "هندسة البرمجيات",
+      "en": "Software engineering"
+     },
+     {
+      "ar": "تقنية المعلومات",
+      "en": "Information technology"
+     },
+     {
+      "ar": "نظم المعلومات",
+      "en": "Information systems"
+     },
+     {
+      "ar": "الذكاء الاصطناعي",
+      "en": "Artificial intelligence"
+     },
+     {
+      "ar": "علوم البيانات",
+      "en": "Data sciences"
+     },
+     {
+      "ar": "المعلوماتية الصحية",
+      "en": "Health informatics"
+     }
+    ],
+    "institutions": [
+     [
+      "mit",
+      1
+     ],
+     [
+      "stanford",
+      2
+     ],
+     [
+      "carnegie-mellon-university",
+      3
+     ],
+     [
+      "oxford",
+      4
+     ],
+     [
+      "university-of-california-berkeley",
+      5
+     ],
+     [
+      "harvard",
+      6
+     ],
+     [
+      "tsinghua",
+      7
+     ],
+     [
+      "eth",
+      8
+     ],
+     [
+      "nus",
+      9
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      10
+     ],
+     [
+      "princeton-university",
+      11
+     ],
+     [
+      "peking-university",
+      12
+     ],
+     [
+      "university-of-california-los-angeles",
+      13
+     ],
+     [
+      "toronto",
+      14
+     ],
+     [
+      "columbia",
+      15
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      16
+     ],
+     [
+      "imperial",
+      17
+     ],
+     [
+      "university-of-washington",
+      18
+     ],
+     [
+      "cambridge",
+      19
+     ],
+     [
+      "cornell",
+      20
+     ],
+     [
+      "nyu",
+      21
+     ],
+     [
+      "zhejiang-university",
+      22
+     ],
+     [
+      "georgia-institute-of-technology",
+      23
+     ],
+     [
+      "university-of-texas-at-austin",
+      24
+     ],
+     [
+      "edinburgh",
+      25
+     ],
+     [
+      "ucl",
+      26
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      27
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      28
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      29
+     ],
+     [
+      "technical-university-of-munich",
+      30
+     ],
+     [
+      "universite-de-montreal",
+      31
+     ],
+     [
+      "epfl",
+      32
+     ],
+     [
+      "university-of-waterloo",
+      33
+     ],
+     [
+      "ubc",
+      34
+     ],
+     [
+      "michigan",
+      35
+     ],
+     [
+      "sydney",
+      36
+     ],
+     [
+      "university-of-california-san-diego",
+      37
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      38
+     ],
+     [
+      "usc",
+      39
+     ],
+     [
+      "johns-hopkins-university",
+      40
+     ],
+     [
+      "university-of-maryland-college-park",
+      41
+     ],
+     [
+      "penn",
+      42
+     ],
+     [
+      "the-university-of-hong-kong",
+      43
+     ],
+     [
+      "monash-university",
+      44
+     ],
+     [
+      "city-university-of-hong-kong",
+      45
+     ],
+     [
+      "kaist",
+      46
+     ],
+     [
+      "melbourne",
+      47
+     ],
+     [
+      "tokyo",
+      48
+     ],
+     [
+      "anu",
+      49
+     ],
+     [
+      "fudan-university",
+      50
+     ],
+     [
+      "unsw-sydney",
+      51
+     ],
+     [
+      "the-university-of-manchester",
+      52
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      53
+     ],
+     [
+      "purdue-university",
+      54
+     ],
+     [
+      "delft",
+      55
+     ],
+     [
+      "universite-paris-saclay",
+      56
+     ],
+     [
+      "universite-psl",
+      57
+     ],
+     [
+      "nanjing-university",
+      58
+     ],
+     [
+      "harbin-institute-of-technology",
+      59
+     ],
+     [
+      "seoul-national-university",
+      60
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      61
+     ],
+     [
+      "politecnico-di-milano",
+      62
+     ],
+     [
+      "the-university-of-adelaide",
+      63
+     ],
+     [
+      "duke-university",
+      64
+     ],
+     [
+      "university-of-amsterdam",
+      65
+     ],
+     [
+      "wuhan-university",
+      66
+     ],
+     [
+      "kings",
+      67
+     ],
+     [
+      "mcgill-university",
+      68
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      69
+     ],
+     [
+      "university-of-alberta",
+      70
+     ],
+     [
+      "sorbonne",
+      71
+     ],
+     [
+      "university-of-wisconsin-madison",
+      72
+     ],
+     [
+      "yonsei-university",
+      73
+     ],
+     [
+      "technische-universitat-berlin",
+      74
+     ],
+     [
+      "yale",
+      75
+     ],
+     [
+      "michigan-state",
+      76
+     ],
+     [
+      "queen-mary-university-of-london",
+      77
+     ],
+     [
+      "brown-university",
+      78
+     ],
+     [
+      "chicago",
+      79
+     ],
+     [
+      "northwestern-university",
+      80
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      81
+     ],
+     [
+      "korea-university",
+      82
+     ],
+     [
+      "university-of-zurich",
+      83
+     ],
+     [
+      "queensland",
+      84
+     ],
+     [
+      "university-of-california-irvine",
+      85
+     ],
+     [
+      "pennsylvania-state-university",
+      86
+     ],
+     [
+      "the-university-of-warwick",
+      87
+     ],
+     [
+      "virginia-polytechnic-institute-and-state-university",
+      88
+     ],
+     [
+      "texas-a-m-university",
+      89
+     ],
+     [
+      "northeastern-university",
+      90
+     ],
+     [
+      "macquarie-university",
+      100
+     ],
+     [
+      "eindhoven-university-of-technology",
+      101
+     ],
+     [
+      "rwth-aachen-university",
+      102
+     ],
+     [
+      "caltech",
+      103
+     ],
+     [
+      "karlsruhe-institute-of-technology",
+      104
+     ],
+     [
+      "sapienza-university-of-rome",
+      105
+     ],
+     [
+      "university-of-bristol",
+      106
+     ],
+     [
+      "arizona-state-university",
+      107
+     ],
+     [
+      "boston-university",
+      108
+     ],
+     [
+      "the-ohio-state-university",
+      109
+     ],
+     [
+      "kyoto-university",
+      110
+     ],
+     [
+      "university-of-california-santa-barbara",
+      111
+     ],
+     [
+      "university-of-glasgow",
+      112
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      113
+     ],
+     [
+      "university-of-florida",
+      114
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      115
+     ],
+     [
+      "university-of-southampton",
+      116
+     ],
+     [
+      "university-of-california-davis",
+      117
+     ],
+     [
+      "university-of-birmingham",
+      118
+     ],
+     [
+      "tohoku-university",
+      119
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      120
+     ],
+     [
+      "cardiff-university",
+      121
+     ],
+     [
+      "university-of-pittsburgh",
+      122
+     ],
+     [
+      "university-of-nottingham",
+      123
+     ],
+     [
+      "tokyo-institute-of-technology",
+      124
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      125
+     ],
+     [
+      "newcastle-university",
+      126
+     ],
+     [
+      "university-of-liverpool",
+      127
+     ],
+     [
+      "university-of-leeds",
+      128
+     ],
+     [
+      "tongji-university",
+      129
+     ],
+     [
+      "western-university",
+      130
+     ],
+     [
+      "sungkyunkwan-university",
+      131
+     ],
+     [
+      "university-of-rochester",
+      132
+     ],
+     [
+      "the-university-of-western-australia",
+      133
+     ],
+     [
+      "universite-paris-cite",
+      134
+     ],
+     [
+      "washington-university-in-st-louis",
+      135
+     ],
+     [
+      "university-of-colorado-boulder",
+      136
+     ],
+     [
+      "southern-university-of-science-and-technology",
+      137
+     ],
+     [
+      "university-of-calgary",
+      138
+     ],
+     [
+      "university-of-bern",
+      139
+     ],
+     [
+      "vanderbilt-university",
+      140
+     ],
+     [
+      "the-university-of-exeter",
+      141
+     ],
+     [
+      "radboud-university",
+      142
+     ],
+     [
+      "mcmaster-university",
+      143
+     ],
+     [
+      "case-western-reserve-university",
+      144
+     ],
+     [
+      "universitat-hamburg",
+      145
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      146
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      147
+     ],
+     [
+      "osaka-university",
+      148
+     ],
+     [
+      "pohang-university-of-science-and-technology",
+      149
+     ],
+     [
+      "rice-university",
+      150
+     ],
+     [
+      "university-of-groningen",
+      151
+     ],
+     [
+      "eberhard-karls-universitat-tubingen",
+      152
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      153
+     ],
+     [
+      "the-university-of-sheffield",
+      154
+     ],
+     [
+      "university-of-geneva",
+      155
+     ],
+     [
+      "leiden-university",
+      156
+     ],
+     [
+      "nagoya-university",
+      157
+     ],
+     [
+      "university-of-gottingen",
+      158
+     ],
+     [
+      "university-of-basel",
+      159
+     ],
+     [
+      "emory-university",
+      160
+     ],
+     [
+      "wageningen-university-research",
+      161
+     ],
+     [
+      "lse",
+      162
+     ],
+     [
+      "universitat-de-barcelona",
+      163
+     ],
+     [
+      "university-of-lausanne",
+      164
+     ]
+    ]
+   },
+   {
+    "key": "eng",
+    "nameAr": "الهندسة والتصنيع والبناء",
+    "nameEn": "Engineering, manufacturing and construction",
+    "majors": [
+     {
+      "ar": "الهندسة الكيميائية",
+      "en": "Chemical engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الكيميائية",
+      "en": "Chemical engineering technology"
+     },
+     {
+      "ar": "هندسة المواد",
+      "en": "Materials engineering"
+     },
+     {
+      "ar": "تقنية هندسة مواد",
+      "en": "Materials engineering technology"
+     },
+     {
+      "ar": "الهندسة النووية",
+      "en": "Nuclear engineering"
+     },
+     {
+      "ar": "تقنية الهندسة النووية",
+      "en": "Nuclear engineering technology"
+     },
+     {
+      "ar": "الهندسة البيئية",
+      "en": "Environmental engineering"
+     },
+     {
+      "ar": "الهندسة الكهربائية",
+      "en": "Electrical engineering"
+     },
+     {
+      "ar": "هندسة الطاقة",
+      "en": "Energy engineering"
+     },
+     {
+      "ar": "تقنية هندسة الطاقة",
+      "en": "Energy engineering technology"
+     },
+     {
+      "ar": "تقنية الهندسة الكهربائية",
+      "en": "Electrical engineering technology"
+     },
+     {
+      "ar": "هندسة الالكترونيات",
+      "en": "Electronics engineering"
+     },
+     {
+      "ar": "تقنية هندسة التحكم والاتمتة",
+      "en": "Control and automation engineering technology"
+     },
+     {
+      "ar": "هندسة نظم التحكم والقياس",
+      "en": "Control & instrumentation systems engineering"
+     },
+     {
+      "ar": "تقنية هندسة الإلكترونيات والاتصالات",
+      "en": "Electronics and communication engineering technology"
+     },
+     {
+      "ar": "هندسة الحاسب الالي",
+      "en": "Computer engineering"
+     },
+     {
+      "ar": "تقنية هندسة الحاسب الالي",
+      "en": "Computer engineering technology"
+     },
+     {
+      "ar": "هندسة الشبكات",
+      "en": "Network engineering"
+     },
+     {
+      "ar": "تقنية هندسة الشبكات",
+      "en": "Network engineering technology"
+     },
+     {
+      "ar": "الهندسة الميكانيكية",
+      "en": "Mechanical engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الميكانيكية",
+      "en": "Mechanical engineering technology"
+     },
+     {
+      "ar": "الهندسة الطبية الحيوية",
+      "en": "Biomedical engineering"
+     },
+     {
+      "ar": "تقنية هندسة المركبات",
+      "en": "Vehicle engineering technology"
+     },
+     {
+      "ar": "هندسة الطيران",
+      "en": "Aviation engineering"
+     },
+     {
+      "ar": "تقنية هندسة الاجهزة الطبية",
+      "en": "Medical devices engineering technology"
+     },
+     {
+      "ar": "الهندسة الصناعية والنظم",
+      "en": "Industrial & systems engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الصناعية",
+      "en": "Industrial engineering technology"
+     },
+     {
+      "ar": "التغذية وعلوم الاطعمة",
+      "en": "Nutrition and food sciences"
+     },
+     {
+      "ar": "تقنية تصنيع البلاستيك",
+      "en": "Plastic Manufacturing Technology"
+     },
+     {
+      "ar": "تقنية صناعة المطاط",
+      "en": "Rubber Manufacturing Technology"
+     },
+     {
+      "ar": "هندسة التعدين",
+      "en": "Mining engineering"
+     },
+     {
+      "ar": "هنـدسـة النفط والغاز الطبيعي",
+      "en": "Oil and gas engineering"
+     },
+     {
+      "ar": "تقنية هندسة النفط والغاز الطبيعي",
+      "en": "Oil and gas engineering technology"
+     },
+     {
+      "ar": "التخطيط الحضري والاقليمي",
+      "en": "Urban and regional planning"
+     },
+     {
+      "ar": "الهندسة المدنية",
+      "en": "Civil engineering"
+     },
+     {
+      "ar": "تقنية الهندسة المدنية",
+      "en": "Civil engineering technology"
+     },
+     {
+      "ar": "هندسة الموارد المائية",
+      "en": "Water resources engineering"
+     }
+    ],
+    "institutions": [
+     [
+      "nus",
+      1
+     ],
+     [
+      "tsinghua",
+      2
+     ],
+     [
+      "mit",
+      3
+     ],
+     [
+      "eth",
+      4
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      5
+     ],
+     [
+      "stanford",
+      6
+     ],
+     [
+      "imperial",
+      7
+     ],
+     [
+      "university-of-california-berkeley",
+      8
+     ],
+     [
+      "delft",
+      9
+     ],
+     [
+      "peking-university",
+      10
+     ],
+     [
+      "oxford",
+      11
+     ],
+     [
+      "georgia-institute-of-technology",
+      12
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      13
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      14
+     ],
+     [
+      "technical-university-of-munich",
+      15
+     ],
+     [
+      "cambridge",
+      16
+     ],
+     [
+      "zhejiang-university",
+      17
+     ],
+     [
+      "michigan",
+      18
+     ],
+     [
+      "purdue-university",
+      19
+     ],
+     [
+      "ubc",
+      20
+     ],
+     [
+      "epfl",
+      21
+     ],
+     [
+      "unsw-sydney",
+      22
+     ],
+     [
+      "toronto",
+      23
+     ],
+     [
+      "university-of-california-los-angeles",
+      24
+     ],
+     [
+      "harvard",
+      25
+     ],
+     [
+      "university-of-texas-at-austin",
+      26
+     ],
+     [
+      "tokyo",
+      27
+     ],
+     [
+      "ucl",
+      28
+     ],
+     [
+      "harbin-institute-of-technology",
+      29
+     ],
+     [
+      "seoul-national-university",
+      30
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      31
+     ],
+     [
+      "the-university-of-manchester",
+      32
+     ],
+     [
+      "melbourne",
+      33
+     ],
+     [
+      "monash-university",
+      34
+     ],
+     [
+      "the-university-of-hong-kong",
+      35
+     ],
+     [
+      "carnegie-mellon-university",
+      36
+     ],
+     [
+      "university-of-waterloo",
+      37
+     ],
+     [
+      "texas-a-m-university",
+      38
+     ],
+     [
+      "queensland",
+      39
+     ],
+     [
+      "caltech",
+      40
+     ],
+     [
+      "kaist",
+      41
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      42
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      43
+     ],
+     [
+      "politecnico-di-milano",
+      44
+     ],
+     [
+      "universite-paris-saclay",
+      45
+     ],
+     [
+      "sydney",
+      46
+     ],
+     [
+      "columbia",
+      47
+     ],
+     [
+      "cornell",
+      48
+     ],
+     [
+      "mcgill-university",
+      49
+     ],
+     [
+      "princeton-university",
+      50
+     ],
+     [
+      "yonsei-university",
+      51
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      52
+     ],
+     [
+      "university-of-california-san-diego",
+      53
+     ],
+     [
+      "pennsylvania-state-university",
+      54
+     ],
+     [
+      "rwth-aachen-university",
+      55
+     ],
+     [
+      "university-of-washington",
+      56
+     ],
+     [
+      "university-of-alberta",
+      57
+     ],
+     [
+      "tianjin-university",
+      58
+     ],
+     [
+      "university-of-wisconsin-madison",
+      59
+     ],
+     [
+      "xi-an-jiaotong-university",
+      60
+     ],
+     [
+      "kit-karlsruhe-institute-of-technology",
+      61
+     ],
+     [
+      "university-of-maryland-college-park",
+      62
+     ],
+     [
+      "northwestern-university",
+      63
+     ],
+     [
+      "fudan-university",
+      64
+     ],
+     [
+      "edinburgh",
+      65
+     ],
+     [
+      "kyoto-university",
+      66
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      67
+     ],
+     [
+      "city-university-of-hong-kong",
+      68
+     ],
+     [
+      "virginia-polytechnic-institute-and-state-university",
+      69
+     ],
+     [
+      "university-of-leeds",
+      70
+     ],
+     [
+      "nanjing-university",
+      71
+     ],
+     [
+      "universite-psl",
+      72
+     ],
+     [
+      "korea-university",
+      73
+     ],
+     [
+      "tongji-university",
+      74
+     ],
+     [
+      "university-of-southampton",
+      75
+     ],
+     [
+      "beijing-institute-of-technology",
+      76
+     ],
+     [
+      "the-university-of-adelaide",
+      77
+     ],
+     [
+      "the-ohio-state-university",
+      78
+     ],
+     [
+      "the-university-of-sheffield",
+      79
+     ],
+     [
+      "wuhan-university",
+      80
+     ],
+     [
+      "eindhoven-university-of-technology",
+      81
+     ],
+     [
+      "pohang-university-of-science-and-technology",
+      82
+     ],
+     [
+      "university-of-nottingham",
+      83
+     ],
+     [
+      "tohoku-university",
+      84
+     ],
+     [
+      "rmit-university",
+      85
+     ],
+     [
+      "sungkyunkwan-university",
+      86
+     ],
+     [
+      "johns-hopkins-university",
+      87
+     ],
+     [
+      "technische-universitat-dresden",
+      88
+     ],
+     [
+      "anu",
+      89
+     ],
+     [
+      "university-of-birmingham",
+      90
+     ],
+     [
+      "yale",
+      91
+     ],
+     [
+      "arizona-state-university",
+      92
+     ],
+     [
+      "technische-universitat-berlin",
+      93
+     ],
+     [
+      "sapienza-university-of-rome",
+      94
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      95
+     ],
+     [
+      "university-of-california-davis",
+      96
+     ],
+     [
+      "usc",
+      97
+     ],
+     [
+      "university-of-bristol",
+      98
+     ],
+     [
+      "tokyo-institute-of-technology",
+      99
+     ],
+     [
+      "sorbonne",
+      100
+     ],
+     [
+      "university-of-california-irvine",
+      101
+     ],
+     [
+      "university-of-california-santa-barbara",
+      102
+     ],
+     [
+      "newcastle-university",
+      103
+     ],
+     [
+      "university-of-colorado-boulder",
+      104
+     ],
+     [
+      "nyu",
+      105
+     ],
+     [
+      "duke-university",
+      106
+     ],
+     [
+      "michigan-state",
+      107
+     ],
+     [
+      "the-university-of-warwick",
+      108
+     ],
+     [
+      "the-university-of-western-australia",
+      109
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      110
+     ],
+     [
+      "university-of-glasgow",
+      111
+     ],
+     [
+      "rice-university",
+      112
+     ],
+     [
+      "university-of-liverpool",
+      113
+     ],
+     [
+      "university-of-florida",
+      114
+     ],
+     [
+      "penn",
+      115
+     ],
+     [
+      "universite-de-montreal",
+      116
+     ],
+     [
+      "queen-mary-university-of-london",
+      117
+     ],
+     [
+      "osaka-university",
+      118
+     ],
+     [
+      "wageningen-university-research",
+      119
+     ],
+     [
+      "university-of-calgary",
+      120
+     ],
+     [
+      "western-university",
+      121
+     ],
+     [
+      "boston-university",
+      122
+     ],
+     [
+      "cardiff-university",
+      123
+     ],
+     [
+      "university-of-groningen",
+      124
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      125
+     ],
+     [
+      "mcmaster-university",
+      126
+     ],
+     [
+      "macquarie-university",
+      127
+     ],
+     [
+      "the-university-of-exeter",
+      128
+     ],
+     [
+      "universitat-de-barcelona",
+      129
+     ],
+     [
+      "brown-university",
+      130
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      131
+     ],
+     [
+      "university-of-pittsburgh",
+      132
+     ],
+     [
+      "case-western-reserve-university",
+      133
+     ],
+     [
+      "vanderbilt-university",
+      134
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      135
+     ],
+     [
+      "nagoya-university",
+      136
+     ],
+     [
+      "washington-university-in-st-louis",
+      137
+     ],
+     [
+      "university-of-rochester",
+      138
+     ],
+     [
+      "southern-university-of-science-and-technology",
+      139
+     ],
+     [
+      "kings",
+      140
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      141
+     ],
+     [
+      "chicago",
+      142
+     ],
+     [
+      "university-of-amsterdam",
+      143
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      144
+     ],
+     [
+      "leiden-university",
+      145
+     ],
+     [
+      "eberhard-karls-universitat-tubingen",
+      146
+     ],
+     [
+      "university-of-geneva",
+      147
+     ],
+     [
+      "university-of-gottingen",
+      148
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      149
+     ],
+     [
+      "universite-paris-cite",
+      150
+     ],
+     [
+      "emory-university",
+      151
+     ],
+     [
+      "university-of-basel",
+      152
+     ],
+     [
+      "radboud-university",
+      153
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      154
+     ],
+     [
+      "university-of-lausanne",
+      155
+     ],
+     [
+      "university-of-bern",
+      156
+     ],
+     [
+      "universitat-hamburg",
+      157
+     ],
+     [
+      "erasmus-university-rotterdam",
+      158
+     ],
+     [
+      "colorado-school-of-mines",
+      159
+     ]
+    ]
+   },
+   {
+    "key": "agr",
+    "nameAr": "الزراعة والحراجة ومصائد الأسماك والبيطرة",
+    "nameEn": "Agriculture, forestry, fisheries and veterinary",
+    "majors": [
+     {
+      "ar": "زراعة المناطق الجافة",
+      "en": "Arid land agriculture"
+     },
+     {
+      "ar": "إنتاج الحيوان وتربيته",
+      "en": "Animal production and raising"
+     },
+     {
+      "ar": "إنتاج النبات ووقايته",
+      "en": "Plant production and protection"
+     },
+     {
+      "ar": "هندسة الري والصرف",
+      "en": "Irrigation and drainage engineering"
+     },
+     {
+      "ar": "الاقتصاد الزراعي والتسويق الغذائي",
+      "en": "Agricultural economics and food marketing"
+     },
+     {
+      "ar": "البستنة والمحاصيل",
+      "en": "Horticulture and crops"
+     },
+     {
+      "ar": "الهندسة الزراعية",
+      "en": "Agricultural Engineering"
+     }
+    ],
+    "institutions": [
+     [
+      "wageningen-university-research",
+      1
+     ],
+     [
+      "university-of-california-davis",
+      2
+     ],
+     [
+      "cornell",
+      3
+     ],
+     [
+      "eth",
+      4
+     ],
+     [
+      "queensland",
+      5
+     ],
+     [
+      "university-of-gottingen",
+      6
+     ],
+     [
+      "university-of-wisconsin-madison",
+      7
+     ],
+     [
+      "melbourne",
+      8
+     ],
+     [
+      "ubc",
+      9
+     ],
+     [
+      "university-of-florida",
+      10
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      11
+     ],
+     [
+      "technical-university-of-munich",
+      12
+     ],
+     [
+      "purdue-university",
+      13
+     ],
+     [
+      "universite-paris-saclay",
+      14
+     ],
+     [
+      "michigan-state",
+      15
+     ],
+     [
+      "sydney",
+      16
+     ],
+     [
+      "texas-a-m-university",
+      17
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      18
+     ],
+     [
+      "university-of-guelph",
+      19
+     ],
+     [
+      "edinburgh",
+      20
+     ],
+     [
+      "university-of-california-berkeley",
+      21
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      22
+     ],
+     [
+      "the-ohio-state-university",
+      23
+     ],
+     [
+      "huazhong-agricultural-university",
+      24
+     ],
+     [
+      "university-of-alberta",
+      25
+     ],
+     [
+      "iowa-state-university",
+      26
+     ],
+     [
+      "seoul-national-university",
+      27
+     ],
+     [
+      "north-carolina-state-university",
+      28
+     ],
+     [
+      "pennsylvania-state-university",
+      29
+     ],
+     [
+      "the-university-of-adelaide",
+      30
+     ],
+     [
+      "university-of-nottingham",
+      31
+     ],
+     [
+      "the-university-of-georgia",
+      32
+     ],
+     [
+      "universita-di-padova",
+      33
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      34
+     ],
+     [
+      "university-of-tasmania",
+      35
+     ],
+     [
+      "colorado-state-university",
+      36
+     ],
+     [
+      "university-of-massachusetts-amherst",
+      37
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      38
+     ],
+     [
+      "mcgill-university",
+      39
+     ],
+     [
+      "university-of-hohenheim",
+      40
+     ],
+     [
+      "university-of-leeds",
+      41
+     ],
+     [
+      "l-institut-agro-agro-rennes-angers",
+      42
+     ],
+     [
+      "university-of-maryland-college-park",
+      43
+     ],
+     [
+      "university-of-naples-federico-ii",
+      44
+     ],
+     [
+      "michigan",
+      45
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      46
+     ],
+     [
+      "newcastle-university",
+      47
+     ],
+     [
+      "yale",
+      48
+     ],
+     [
+      "kyoto-university",
+      49
+     ],
+     [
+      "university-of-reading",
+      50
+     ],
+     [
+      "universitat-de-barcelona",
+      51
+     ],
+     [
+      "virginia-polytechnic-institute-and-state-university",
+      52
+     ],
+     [
+      "washington-state-university",
+      53
+     ],
+     [
+      "university-of-arizona",
+      54
+     ],
+     [
+      "kansas-state-university",
+      55
+     ],
+     [
+      "toronto",
+      56
+     ],
+     [
+      "anu",
+      57
+     ],
+     [
+      "university-of-nebraska-lincoln",
+      58
+     ],
+     [
+      "university-of-saskatchewan",
+      59
+     ],
+     [
+      "tokyo",
+      60
+     ],
+     [
+      "james-cook-university",
+      61
+     ],
+     [
+      "christian-albrechts-university-zu-kiel",
+      62
+     ],
+     [
+      "university-of-florence",
+      63
+     ],
+     [
+      "universite-laval",
+      64
+     ],
+     [
+      "university-of-milan",
+      65
+     ],
+     [
+      "university-of-turin",
+      66
+     ],
+     [
+      "duke-university",
+      67
+     ],
+     [
+      "university-of-california-riverside",
+      68
+     ],
+     [
+      "bangor-university",
+      69
+     ],
+     [
+      "justus-liebig-university-giessen",
+      70
+     ],
+     [
+      "murdoch-university",
+      71
+     ],
+     [
+      "universita-cattolica-del-sacro-cuore",
+      72
+     ],
+     [
+      "western-sydney-university",
+      73
+     ],
+     [
+      "la-trobe-university",
+      74
+     ],
+     [
+      "rutgers-universitynew-brunswick",
+      75
+     ],
+     [
+      "university-of-pisa",
+      76
+     ],
+     [
+      "university-of-missouri-columbia",
+      77
+     ],
+     [
+      "universidad-politecnica-de-madrid",
+      78
+     ],
+     [
+      "dalhousie-university",
+      79
+     ],
+     [
+      "south-china-university-of-technology",
+      80
+     ],
+     [
+      "university-of-bordeaux",
+      81
+     ],
+     [
+      "hokkaido-university",
+      82
+     ],
+     [
+      "macquarie-university",
+      83
+     ],
+     [
+      "university-of-calgary",
+      84
+     ],
+     [
+      "zhejiang-university",
+      85
+     ],
+     [
+      "the-university-of-western-australia",
+      86
+     ],
+     [
+      "peking-university",
+      87
+     ],
+     [
+      "harvard",
+      88
+     ],
+     [
+      "university-of-washington",
+      89
+     ],
+     [
+      "tohoku-university",
+      90
+     ],
+     [
+      "the-university-of-exeter",
+      91
+     ],
+     [
+      "university-of-bern",
+      92
+     ],
+     [
+      "the-university-of-hong-kong",
+      93
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      94
+     ],
+     [
+      "nagoya-university",
+      95
+     ],
+     [
+      "korea-university",
+      96
+     ],
+     [
+      "stanford",
+      97
+     ],
+     [
+      "university-of-california-santa-barbara",
+      98
+     ],
+     [
+      "columbia",
+      99
+     ],
+     [
+      "nus",
+      100
+     ],
+     [
+      "arizona-state-university",
+      101
+     ],
+     [
+      "university-of-bristol",
+      102
+     ],
+     [
+      "monash-university",
+      103
+     ],
+     [
+      "sapienza-university-of-rome",
+      104
+     ],
+     [
+      "princeton-university",
+      105
+     ],
+     [
+      "university-of-california-los-angeles",
+      106
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      107
+     ],
+     [
+      "usc",
+      108
+     ],
+     [
+      "university-of-glasgow",
+      109
+     ],
+     [
+      "wuhan-university",
+      110
+     ],
+     [
+      "nanjing-university",
+      111
+     ],
+     [
+      "the-university-of-new-south-wales",
+      112
+     ],
+     [
+      "delft",
+      113
+     ],
+     [
+      "universitat-hamburg",
+      114
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      115
+     ],
+     [
+      "nyu",
+      116
+     ],
+     [
+      "tsinghua",
+      117
+     ],
+     [
+      "sungkyunkwan-university",
+      118
+     ],
+     [
+      "university-of-rochester",
+      119
+     ],
+     [
+      "case-western-reserve-university",
+      120
+     ],
+     [
+      "city-university-of-hong-kong",
+      121
+     ],
+     [
+      "karlsruhe-institute-of-technology",
+      122
+     ],
+     [
+      "universite-psl",
+      123
+     ],
+     [
+      "sorbonne",
+      124
+     ],
+     [
+      "universite-paris-cite",
+      125
+     ],
+     [
+      "university-college-london",
+      126
+     ],
+     [
+      "cambridge",
+      127
+     ],
+     [
+      "university-of-colorado-boulder",
+      128
+     ],
+     [
+      "university-of-tuebingen",
+      129
+     ],
+     [
+      "tongji-university",
+      130
+     ],
+     [
+      "the-university-of-sheffield",
+      131
+     ],
+     [
+      "university-of-groningen",
+      132
+     ],
+     [
+      "universite-de-montreal",
+      133
+     ],
+     [
+      "oxford",
+      134
+     ],
+     [
+      "fudan-university",
+      135
+     ],
+     [
+      "imperial",
+      136
+     ],
+     [
+      "technische-universitat-berlin",
+      137
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      138
+     ],
+     [
+      "university-of-amsterdam",
+      139
+     ],
+     [
+      "university-of-basel",
+      140
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      141
+     ],
+     [
+      "penn",
+      142
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      143
+     ],
+     [
+      "university-of-southampton",
+      144
+     ],
+     [
+      "university-of-waterloo",
+      145
+     ]
+    ]
+   },
+   {
+    "key": "soc",
+    "nameAr": "العلوم الاجتماعية والصحافة والإعلام",
+    "nameEn": "Social sciences, journalism and information",
+    "majors": [
+     {
+      "ar": "علم الاقتصاد",
+      "en": "Macroeconomics"
+     },
+     {
+      "ar": "الاقتصاد السياسي العالمي",
+      "en": "International Political Economy"
+     },
+     {
+      "ar": "اقتصاد الأعمال",
+      "en": "Business Economics"
+     }
+    ],
+    "institutions": [
+     [
+      "harvard",
+      1
+     ],
+     [
+      "stanford",
+      2
+     ],
+     [
+      "oxford",
+      3
+     ],
+     [
+      "mit",
+      4
+     ],
+     [
+      "lse",
+      5
+     ],
+     [
+      "yale",
+      6
+     ],
+     [
+      "university-of-california-berkeley",
+      7
+     ],
+     [
+      "princeton-university",
+      8
+     ],
+     [
+      "chicago",
+      9
+     ],
+     [
+      "columbia",
+      10
+     ],
+     [
+      "cambridge",
+      11
+     ],
+     [
+      "penn",
+      12
+     ],
+     [
+      "nyu",
+      13
+     ],
+     [
+      "michigan",
+      14
+     ],
+     [
+      "university-of-california-los-angeles",
+      15
+     ],
+     [
+      "ucl",
+      16
+     ],
+     [
+      "toronto",
+      17
+     ],
+     [
+      "ubc",
+      18
+     ],
+     [
+      "cornell",
+      19
+     ],
+     [
+      "university-of-amsterdam",
+      20
+     ],
+     [
+      "northwestern-university",
+      21
+     ],
+     [
+      "nus",
+      22
+     ],
+     [
+      "duke-university",
+      23
+     ],
+     [
+      "university-of-texas-at-austin",
+      24
+     ],
+     [
+      "anu",
+      25
+     ],
+     [
+      "eth",
+      26
+     ],
+     [
+      "the-university-of-manchester",
+      27
+     ],
+     [
+      "university-of-wisconsin-madison",
+      28
+     ],
+     [
+      "tsinghua",
+      29
+     ],
+     [
+      "kings",
+      30
+     ],
+     [
+      "university-of-california-san-diego",
+      31
+     ],
+     [
+      "peking-university",
+      32
+     ],
+     [
+      "johns-hopkins-university",
+      33
+     ],
+     [
+      "the-university-of-warwick",
+      34
+     ],
+     [
+      "university-of-washington",
+      35
+     ],
+     [
+      "usc",
+      36
+     ],
+     [
+      "mcgill-university",
+      37
+     ],
+     [
+      "the-university-of-hong-kong",
+      38
+     ],
+     [
+      "edinburgh",
+      39
+     ],
+     [
+      "the-ohio-state-university",
+      40
+     ],
+     [
+      "melbourne",
+      41
+     ],
+     [
+      "sydney",
+      42
+     ],
+     [
+      "erasmus-university-rotterdam",
+      43
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      44
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      45
+     ],
+     [
+      "pennsylvania-state-university",
+      46
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      47
+     ],
+     [
+      "michigan-state",
+      48
+     ],
+     [
+      "monash-university",
+      49
+     ],
+     [
+      "university-of-zurich",
+      50
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      51
+     ],
+     [
+      "arizona-state-university",
+      52
+     ],
+     [
+      "boston-university",
+      53
+     ],
+     [
+      "georgetown",
+      54
+     ],
+     [
+      "queensland",
+      55
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      56
+     ],
+     [
+      "carnegie-mellon-university",
+      57
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      58
+     ],
+     [
+      "sciences-po",
+      59
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      60
+     ],
+     [
+      "university-of-leeds",
+      61
+     ],
+     [
+      "the-university-of-new-south-wales",
+      62
+     ],
+     [
+      "universitat-mannheim",
+      63
+     ],
+     [
+      "brown-university",
+      64
+     ],
+     [
+      "university-of-maryland-college-park",
+      65
+     ],
+     [
+      "indiana-university-bloomington",
+      66
+     ],
+     [
+      "university-of-groningen",
+      67
+     ],
+     [
+      "tokyo",
+      68
+     ],
+     [
+      "universite-de-montreal",
+      69
+     ],
+     [
+      "autonomous-university-of-barcelona",
+      70
+     ],
+     [
+      "the-university-of-sheffield",
+      71
+     ],
+     [
+      "texas-a-m-university",
+      72
+     ],
+     [
+      "freie-universitaet-berlin",
+      73
+     ],
+     [
+      "durham-university",
+      74
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      75
+     ],
+     [
+      "university-of-glasgow",
+      76
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      77
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      78
+     ],
+     [
+      "leiden-university",
+      79
+     ],
+     [
+      "zhejiang-university",
+      80
+     ],
+     [
+      "purdue-university",
+      81
+     ],
+     [
+      "university-of-california-davis",
+      82
+     ],
+     [
+      "george-washington-university",
+      83
+     ],
+     [
+      "city-university-of-hong-kong",
+      84
+     ],
+     [
+      "universitat-pompeu-fabra",
+      85
+     ],
+     [
+      "fudan-university",
+      86
+     ],
+     [
+      "university-of-bristol",
+      87
+     ],
+     [
+      "university-of-sussex",
+      88
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      89
+     ],
+     [
+      "university-of-birmingham",
+      90
+     ],
+     [
+      "university-of-nottingham",
+      91
+     ],
+     [
+      "seoul-national-university",
+      92
+     ],
+     [
+      "the-university-of-exeter",
+      93
+     ],
+     [
+      "university-of-florida",
+      94
+     ],
+     [
+      "universitat-de-barcelona",
+      95
+     ],
+     [
+      "universite-psl",
+      96
+     ],
+     [
+      "wageningen-university-research",
+      97
+     ],
+     [
+      "cardiff-university",
+      98
+     ],
+     [
+      "washington-university-in-st-louis",
+      99
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      100
+     ],
+     [
+      "university-of-southampton",
+      101
+     ],
+     [
+      "university-of-california-irvine",
+      102
+     ],
+     [
+      "university-of-alberta",
+      103
+     ],
+     [
+      "western-university",
+      104
+     ],
+     [
+      "university-of-california-santa-barbara",
+      105
+     ],
+     [
+      "nanjing-university",
+      106
+     ],
+     [
+      "newcastle-university",
+      107
+     ],
+     [
+      "vanderbilt-university",
+      108
+     ],
+     [
+      "university-of-lausanne",
+      109
+     ],
+     [
+      "queen-mary-university-of-london",
+      110
+     ],
+     [
+      "georgia-institute-of-technology",
+      111
+     ],
+     [
+      "university-of-geneva",
+      112
+     ],
+     [
+      "wuhan-university",
+      113
+     ],
+     [
+      "emory-university",
+      114
+     ],
+     [
+      "delft",
+      115
+     ],
+     [
+      "university-of-pittsburgh",
+      116
+     ],
+     [
+      "yonsei-university",
+      117
+     ],
+     [
+      "the-university-of-western-australia",
+      118
+     ],
+     [
+      "kyoto-university",
+      119
+     ],
+     [
+      "university-of-waterloo",
+      120
+     ],
+     [
+      "university-of-rochester",
+      121
+     ],
+     [
+      "university-of-colorado-boulder",
+      122
+     ],
+     [
+      "macquarie-university",
+      123
+     ],
+     [
+      "university-of-bern",
+      124
+     ],
+     [
+      "the-university-of-adelaide",
+      125
+     ],
+     [
+      "university-of-liverpool",
+      126
+     ],
+     [
+      "universite-paris-saclay",
+      127
+     ],
+     [
+      "radboud-university",
+      128
+     ],
+     [
+      "rice-university",
+      129
+     ],
+     [
+      "mcmaster-university",
+      130
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      131
+     ],
+     [
+      "university-of-calgary",
+      132
+     ],
+     [
+      "korea-university",
+      133
+     ],
+     [
+      "sapienza-university-of-rome",
+      134
+     ],
+     [
+      "technische-universitat-berlin",
+      135
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      136
+     ],
+     [
+      "university-of-gottingen",
+      137
+     ],
+     [
+      "kaist",
+      138
+     ],
+     [
+      "osaka-university",
+      139
+     ],
+     [
+      "tongji-university",
+      140
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      141
+     ],
+     [
+      "sorbonne",
+      142
+     ],
+     [
+      "technical-university-of-munich",
+      143
+     ],
+     [
+      "imperial",
+      144
+     ],
+     [
+      "universitat-hamburg",
+      145
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      146
+     ],
+     [
+      "caltech",
+      147
+     ],
+     [
+      "sungkyunkwan-university",
+      148
+     ],
+     [
+      "tohoku-university",
+      149
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      150
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      151
+     ],
+     [
+      "nagoya-university",
+      152
+     ],
+     [
+      "tokyo-institute-of-technology",
+      153
+     ],
+     [
+      "kit-karlsruhe-institute-of-technology",
+      154
+     ],
+     [
+      "rwth-aachen-university",
+      155
+     ],
+     [
+      "harbin-institute-of-technology",
+      156
+     ],
+     [
+      "universite-paris-cite",
+      157
+     ],
+     [
+      "university-of-basel",
+      158
+     ],
+     [
+      "epfl",
+      159
+     ],
+     [
+      "eberhard-karls-universitat-tubingen",
+      160
+     ],
+     [
+      "case-western-reserve-university",
+      161
+     ]
+    ]
+   }
+  ],
+  "emdad": [
+   {
+    "key": "art",
+    "nameAr": "الفنون والعلوم الإنسانية",
+    "nameEn": "Arts and humanities",
+    "majors": [
+     {
+      "ar": "تصميم المنتجات",
+      "en": "Product design"
+     }
+    ],
+    "institutions": [
+     [
+      "edinburgh",
+      1
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      2
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      3
+     ],
+     [
+      "nyu",
+      4
+     ],
+     [
+      "sorbonne",
+      5
+     ],
+     [
+      "universite-psl",
+      6
+     ],
+     [
+      "freie-universitaet-berlin",
+      7
+     ],
+     [
+      "kings",
+      8
+     ],
+     [
+      "leiden-university",
+      9
+     ],
+     [
+      "universite-paris-1-pantheon-sorbonne",
+      10
+     ],
+     [
+      "sapienza-university-of-rome",
+      11
+     ],
+     [
+      "university-of-amsterdam",
+      12
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      13
+     ],
+     [
+      "delft",
+      14
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      15
+     ],
+     [
+      "lse",
+      16
+     ],
+     [
+      "eberhard-karls-universitat-tubingen",
+      17
+     ],
+     [
+      "melbourne",
+      18
+     ],
+     [
+      "the-university-of-manchester",
+      19
+     ],
+     [
+      "sydney",
+      20
+     ],
+     [
+      "durham-university",
+      21
+     ],
+     [
+      "ubc",
+      22
+     ],
+     [
+      "university-of-st-andrews",
+      23
+     ],
+     [
+      "the-university-of-hong-kong",
+      24
+     ],
+     [
+      "mcgill-university",
+      25
+     ],
+     [
+      "duke-university",
+      26
+     ],
+     [
+      "anu",
+      27
+     ],
+     [
+      "university-of-texas-at-austin",
+      28
+     ],
+     [
+      "lancaster-university",
+      29
+     ],
+     [
+      "politecnico-di-milano",
+      30
+     ],
+     [
+      "university-of-glasgow",
+      31
+     ],
+     [
+      "university-of-leeds",
+      32
+     ],
+     [
+      "university-of-york",
+      33
+     ],
+     [
+      "university-of-birmingham",
+      34
+     ],
+     [
+      "the-university-of-warwick",
+      35
+     ],
+     [
+      "complutense-university-of-madrid",
+      36,
+      "masters"
+     ],
+     [
+      "universitat-de-barcelona",
+      37,
+      "masters"
+     ],
+     [
+      "brown-university",
+      38
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      39
+     ],
+     [
+      "the-university-of-sheffield",
+      40
+     ],
+     [
+      "monash-university",
+      41
+     ],
+     [
+      "the-university-of-exeter",
+      42
+     ],
+     [
+      "university-of-bristol",
+      43
+     ],
+     [
+      "indiana-university-bloomington",
+      44
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      45
+     ],
+     [
+      "usc",
+      46
+     ],
+     [
+      "autonomous-university-of-barcelona",
+      47,
+      "masters"
+     ],
+     [
+      "university-of-groningen",
+      48
+     ],
+     [
+      "university-of-geneva",
+      49
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      50
+     ],
+     [
+      "university-of-notre-dame",
+      51
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      52
+     ],
+     [
+      "kyoto-university",
+      53
+     ],
+     [
+      "university-of-cologne",
+      54
+     ],
+     [
+      "universitat-hamburg",
+      55
+     ],
+     [
+      "soas-university-of-london",
+      56
+     ],
+     [
+      "university-of-pittsburgh",
+      57
+     ],
+     [
+      "newcastle-university",
+      58
+     ],
+     [
+      "the-university-of-new-south-wales",
+      59
+     ],
+     [
+      "university-of-wisconsin-madison",
+      60
+     ],
+     [
+      "fudan-university",
+      61
+     ],
+     [
+      "gallaudet-university",
+      62,
+      "hearing"
+     ],
+     [
+      "digipen-institute-of-technology",
+      63,
+      "digipen-art"
+     ]
+    ]
+   },
+   {
+    "key": "soc",
+    "nameAr": "العلوم الاجتماعية والصحافة والإعلام",
+    "nameEn": "Social sciences, journalism and information",
+    "majors": [
+     {
+      "ar": "علم الاقتصاد",
+      "en": "Macroeconomics"
+     },
+     {
+      "ar": "الاقتصاد السياسي العالمي",
+      "en": "International Political Economy"
+     },
+     {
+      "ar": "الاقتصاديات الحضرية والإقليمية",
+      "en": "Urban & Regional Economics"
+     },
+     {
+      "ar": "الاقتصاد الرقمي",
+      "en": "Digital Economy"
+     },
+     {
+      "ar": "علم الاقتصاد الحاسوبي",
+      "en": "Computational Economics"
+     },
+     {
+      "ar": "الاقتصاد والذكاء الاصطناعي",
+      "en": "Economics and AI/Machine Learning"
+     },
+     {
+      "ar": "اقتصاد تغيير المناخ",
+      "en": "Climate Change Economics"
+     },
+     {
+      "ar": "الاقتصاد الدائري",
+      "en": "Circular Economy"
+     },
+     {
+      "ar": "التحليلات التنبؤية للسياسة",
+      "en": "Predictive Analytics for Policy"
+     },
+     {
+      "ar": "سياسة الأمن الغذائي",
+      "en": "Food Security Policy"
+     },
+     {
+      "ar": "علم الجريمة",
+      "en": "Criminology"
+     },
+     {
+      "ar": "سياسة التقنية",
+      "en": "Technology Policy"
+     }
+    ],
+    "institutions": [
+     [
+      "lse",
+      1
+     ],
+     [
+      "nyu",
+      2
+     ],
+     [
+      "anu",
+      3
+     ],
+     [
+      "university-of-amsterdam",
+      4
+     ],
+     [
+      "northwestern-university",
+      5
+     ],
+     [
+      "kings",
+      6
+     ],
+     [
+      "duke-university",
+      7
+     ],
+     [
+      "melbourne",
+      8
+     ],
+     [
+      "university-of-texas-at-austin",
+      9
+     ],
+     [
+      "ubc",
+      10
+     ],
+     [
+      "the-university-of-manchester",
+      11
+     ],
+     [
+      "the-university-of-hong-kong",
+      12
+     ],
+     [
+      "pennsylvania-state-university",
+      13
+     ],
+     [
+      "edinburgh",
+      14
+     ],
+     [
+      "sydney",
+      15
+     ],
+     [
+      "universitat-mannheim",
+      16
+     ],
+     [
+      "usc",
+      17
+     ],
+     [
+      "monash-university",
+      18
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      19
+     ],
+     [
+      "erasmus-university-rotterdam",
+      20
+     ],
+     [
+      "university-of-leeds",
+      21
+     ],
+     [
+      "sciences-po",
+      22
+     ],
+     [
+      "michigan-state",
+      23
+     ],
+     [
+      "university-of-glasgow",
+      24
+     ],
+     [
+      "university-of-wisconsin-madison",
+      25
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      26
+     ],
+     [
+      "the-ohio-state-university",
+      27
+     ],
+     [
+      "freie-universitaet-berlin",
+      28
+     ],
+     [
+      "mcgill-university",
+      29
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      30
+     ],
+     [
+      "the-university-of-warwick",
+      31
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      32
+     ],
+     [
+      "leiden-university",
+      33
+     ],
+     [
+      "indiana-university-bloomington",
+      34
+     ],
+     [
+      "georgetown",
+      35
+     ],
+     [
+      "university-of-maryland-college-park",
+      36
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      37
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      38
+     ],
+     [
+      "universitat-pompeu-fabra",
+      39,
+      "masters"
+     ],
+     [
+      "arizona-state-university",
+      40
+     ],
+     [
+      "brown-university",
+      41
+     ],
+     [
+      "queensland",
+      42
+     ],
+     [
+      "the-university-of-new-south-wales",
+      43
+     ],
+     [
+      "fudan-university",
+      44
+     ],
+     [
+      "durham-university",
+      45
+     ],
+     [
+      "vrije-universiteit-amsterdam",
+      46
+     ],
+     [
+      "city-university-of-hong-kong",
+      47
+     ],
+     [
+      "boston-university",
+      48
+     ],
+     [
+      "university-of-sussex",
+      49
+     ],
+     [
+      "university-of-bristol",
+      50
+     ],
+     [
+      "university-of-california-davis",
+      51
+     ],
+     [
+      "university-of-essex",
+      52
+     ],
+     [
+      "university-of-california-irvine",
+      53
+     ],
+     [
+      "university-of-california-santa-barbara",
+      54
+     ],
+     [
+      "universita-commerciale-luigi-bocconi",
+      55
+     ],
+     [
+      "universitat-konstanz",
+      56
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      57
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      58
+     ],
+     [
+      "kyoto-university",
+      59
+     ],
+     [
+      "university-of-groningen",
+      60
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      61
+     ],
+     [
+      "george-washington-university",
+      62
+     ],
+     [
+      "wageningen-university-research",
+      63
+     ],
+     [
+      "the-university-of-sheffield",
+      64
+     ],
+     [
+      "autonomous-university-of-barcelona",
+      65,
+      "masters"
+     ],
+     [
+      "gallaudet-university",
+      66,
+      "hearing"
+     ]
+    ]
+   },
+   {
+    "key": "bus",
+    "nameAr": "الأعمال والإدارة والقانون",
+    "nameEn": "Business, administration and law",
+    "majors": [
+     {
+      "ar": "الادارة المالية",
+      "en": "Financial management"
+     },
+     {
+      "ar": "إدارة الاستدامة",
+      "en": "Sustainability Management"
+     },
+     {
+      "ar": "إدارة التمويل والاستثمار",
+      "en": "Finance and investment management"
+     },
+     {
+      "ar": "إدارة المصارف والاسواق المالية",
+      "en": "Banking and financial markets management"
+     },
+     {
+      "ar": "إدارة المخاطر والتأمين",
+      "en": "Risk management and insurance"
+     },
+     {
+      "ar": "إدارة الطيران",
+      "en": "Aviation management"
+     },
+     {
+      "ar": "إدارة سلسلة الامدادات",
+      "en": "Supply chain management"
+     },
+     {
+      "ar": "الاستدامة المؤسسية",
+      "en": "Corporate Sustainability"
+     },
+     {
+      "ar": "القانون",
+      "en": "Law",
+      "degree": "master"
+     },
+     {
+      "ar": "القانون العام",
+      "en": "Public law",
+      "degree": "master"
+     },
+     {
+      "ar": "القانون الخاص",
+      "en": "Private law",
+      "degree": "master"
+     },
+     {
+      "ar": "القانون الجنائي",
+      "en": "Criminal law",
+      "degree": "master"
+     },
+     {
+      "ar": "التحقيق الجنائي",
+      "en": "Criminal investigation",
+      "degree": "master"
+     },
+     {
+      "ar": "القانون التجاري",
+      "en": "Commercial law",
+      "degree": "master"
+     },
+     {
+      "ar": "القانون الدولي",
+      "en": "International law",
+      "degree": "master"
+     },
+     {
+      "ar": "الدراسات القضائية",
+      "en": "Judicial studies",
+      "degree": "master"
+     }
+    ],
+    "institutions": [
+     [
+      "nyu",
+      1
+     ],
+     [
+      "erasmus-university-rotterdam",
+      2
+     ],
+     [
+      "universita-commerciale-luigi-bocconi",
+      3
+     ],
+     [
+      "lse",
+      4
+     ],
+     [
+      "northwestern-university",
+      5
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      6
+     ],
+     [
+      "london-business-school",
+      7
+     ],
+     [
+      "insead",
+      8
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      9
+     ],
+     [
+      "the-university-of-manchester",
+      10
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      11
+     ],
+     [
+      "the-university-of-hong-kong",
+      12
+     ],
+     [
+      "monash-university",
+      13
+     ],
+     [
+      "melbourne",
+      14
+     ],
+     [
+      "fudan-university",
+      15
+     ],
+     [
+      "renmin-university-of-china",
+      16
+     ],
+     [
+      "the-university-of-warwick",
+      17
+     ],
+     [
+      "duke-university",
+      18
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      19
+     ],
+     [
+      "sydney",
+      20
+     ],
+     [
+      "indiana-university-bloomington",
+      21
+     ],
+     [
+      "city-university-of-hong-kong",
+      22
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      23
+     ],
+     [
+      "pennsylvania-state-university",
+      24
+     ],
+     [
+      "singapore-management-university",
+      25
+     ],
+     [
+      "usc",
+      26
+     ],
+     [
+      "tilburg-university",
+      27
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      28
+     ],
+     [
+      "university-of-texas-at-austin",
+      29
+     ],
+     [
+      "ubc",
+      30
+     ],
+     [
+      "the-university-of-new-south-wales",
+      31
+     ],
+     [
+      "queensland",
+      32
+     ],
+     [
+      "texas-a-m-university",
+      33
+     ],
+     [
+      "university-of-florida",
+      34
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      35
+     ],
+     [
+      "universite-de-montreal",
+      36
+     ],
+     [
+      "university-of-st-gallen",
+      37
+     ],
+     [
+      "michigan-state",
+      38
+     ],
+     [
+      "seoul-national-university",
+      39
+     ],
+     [
+      "the-ohio-state-university",
+      40
+     ],
+     [
+      "arizona-state-university",
+      41
+     ],
+     [
+      "university-of-amsterdam",
+      42
+     ],
+     [
+      "universitat-mannheim",
+      43
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      44
+     ],
+     [
+      "boston-university",
+      45
+     ],
+     [
+      "university-of-birmingham",
+      46
+     ],
+     [
+      "edinburgh",
+      47
+     ],
+     [
+      "university-of-maryland-college-park",
+      48
+     ],
+     [
+      "university-of-nottingham",
+      49
+     ],
+     [
+      "purdue-university",
+      50
+     ],
+     [
+      "university-of-wisconsin-madison",
+      51
+     ],
+     [
+      "anu",
+      52
+     ],
+     [
+      "durham-university",
+      53
+     ],
+     [
+      "university-of-southampton",
+      54
+     ],
+     [
+      "university-of-glasgow",
+      55
+     ],
+     [
+      "university-of-virginia",
+      56
+     ],
+     [
+      "mcgill-university",
+      57
+     ],
+     [
+      "university-of-leeds",
+      58
+     ],
+     [
+      "yonsei-university",
+      59
+     ],
+     [
+      "kings",
+      60
+     ],
+     [
+      "lancaster-university",
+      61
+     ],
+     [
+      "kyoto-university",
+      62
+     ],
+     [
+      "university-of-toulouse",
+      63
+     ],
+     [
+      "rmit-university",
+      64
+     ],
+     [
+      "sun-yat-sen-university",
+      65
+     ],
+     [
+      "university-of-liverpool",
+      66
+     ],
+     [
+      "macquarie-university",
+      67
+     ],
+     [
+      "babson-college",
+      68
+     ],
+     [
+      "gallaudet-university",
+      69,
+      "hearing"
+     ]
+    ]
+   },
+   {
+    "key": "nat",
+    "nameAr": "العلوم الطبيعية والرياضيات والإحصاء",
+    "nameEn": "Natural sciences, mathematics and statistics",
+    "majors": [
+     {
+      "ar": "الاحياء العامة",
+      "en": "General biology"
+     },
+     {
+      "ar": "الأحياء الدقيقة",
+      "en": "Microbiology"
+     },
+     {
+      "ar": "علم الاحياء الجزيئية والخليوية",
+      "en": "Molecular and cell biology"
+     },
+     {
+      "ar": "علوم النبات",
+      "en": "Botany"
+     },
+     {
+      "ar": "علم الوراثة",
+      "en": "Genetics"
+     },
+     {
+      "ar": "علم المناعة",
+      "en": "Immunology"
+     },
+     {
+      "ar": "علم الفطريات",
+      "en": "Mycology"
+     },
+     {
+      "ar": "الكيمياء الحيوية",
+      "en": "Biochemistry"
+     },
+     {
+      "ar": "علم السموم",
+      "en": "Toxicology"
+     },
+     {
+      "ar": "علم الادوية",
+      "en": "Pharmacology"
+     },
+     {
+      "ar": "التقنية الحيوية",
+      "en": "Biotechnology"
+     },
+     {
+      "ar": "الفيروسات",
+      "en": "Virology"
+     },
+     {
+      "ar": "الكيمياء الصناعية",
+      "en": "Industrial chemistry"
+     },
+     {
+      "ar": "الكيمياء العضوية",
+      "en": "Organic chemistry"
+     },
+     {
+      "ar": "الكيمياء التحليلية",
+      "en": "Analytical chemistry"
+     },
+     {
+      "ar": "كيمياء البوليمرات",
+      "en": "Polymer chemistry"
+     },
+     {
+      "ar": "الكيمياء غير العضوية",
+      "en": "Inorganic chemistry"
+     },
+     {
+      "ar": "الكيمياء الفيزيائية",
+      "en": "Physical chemistry"
+     },
+     {
+      "ar": "علوم وإدارة موارد المياه",
+      "en": "Science and management of water resources"
+     },
+     {
+      "ar": "المفصليات والطفيليات",
+      "en": "Arthropods and parasites"
+     },
+     {
+      "ar": "نظم المعلومات الجغرافية",
+      "en": "Geographical information systems"
+     },
+     {
+      "ar": "الجيوفيزياء",
+      "en": "Geophysics"
+     },
+     {
+      "ar": "الجيولوجيا",
+      "en": "Geology"
+     },
+     {
+      "ar": "الارصاد",
+      "en": "Meteorology"
+     },
+     {
+      "ar": "الجيوماتكس",
+      "en": "Geomatics"
+     },
+     {
+      "ar": "الفيزياء",
+      "en": "Physics"
+     },
+     {
+      "ar": "الفيزياء النووية",
+      "en": "Nuclear physics"
+     },
+     {
+      "ar": "فيزياء الحالة المكثفة",
+      "en": "Condensed state physics"
+     },
+     {
+      "ar": "الفيزياء الكيميائية",
+      "en": "Chemical physics"
+     },
+     {
+      "ar": "فيزياء البصريات",
+      "en": "Optics physics"
+     },
+     {
+      "ar": "الفلك",
+      "en": "Astronomy"
+     },
+     {
+      "ar": "علم وتقنية النانو",
+      "en": "Nanoscience and technology"
+     },
+     {
+      "ar": "الفيزياء الطبية",
+      "en": "Medical physics"
+     },
+     {
+      "ar": "الرياضيات",
+      "en": "Mathematics"
+     },
+     {
+      "ar": "الاحصاء",
+      "en": "Statistics"
+     },
+     {
+      "ar": "الاحصاء الطبي",
+      "en": "Medical statistics"
+     },
+     {
+      "ar": "العلوم الاكتوارية",
+      "en": "Actuarial science"
+     },
+     {
+      "ar": "الاساليب الكمية",
+      "en": "Quantitative methods"
+     },
+     {
+      "ar": "المعلوماتية الحيوية",
+      "en": "Bioinformatics"
+     }
+    ],
+    "institutions": [
+     [
+      "sorbonne",
+      1
+     ],
+     [
+      "universite-psl",
+      2
+     ],
+     [
+      "fudan-university",
+      3
+     ],
+     [
+      "technical-university-of-munich",
+      4
+     ],
+     [
+      "epfl",
+      5
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      6
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      7
+     ],
+     [
+      "ubc",
+      8
+     ],
+     [
+      "kyoto-university",
+      9
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      10
+     ],
+     [
+      "edinburgh",
+      11
+     ],
+     [
+      "nanjing-university",
+      12
+     ],
+     [
+      "the-university-of-manchester",
+      13
+     ],
+     [
+      "university-of-wisconsin-madison",
+      14
+     ],
+     [
+      "the-university-of-hong-kong",
+      15
+     ],
+     [
+      "melbourne",
+      16
+     ],
+     [
+      "university-of-texas-at-austin",
+      17
+     ],
+     [
+      "duke-university",
+      18
+     ],
+     [
+      "northwestern-university",
+      19
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      20
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      21
+     ],
+     [
+      "mcgill-university",
+      22
+     ],
+     [
+      "university-of-california-davis",
+      23
+     ],
+     [
+      "university-of-bristol",
+      24
+     ],
+     [
+      "anu",
+      25
+     ],
+     [
+      "pennsylvania-state-university",
+      26
+     ],
+     [
+      "kings",
+      27
+     ],
+     [
+      "the-university-of-new-south-wales",
+      28
+     ],
+     [
+      "monash-university",
+      29
+     ],
+     [
+      "university-of-california-santa-barbara",
+      30
+     ],
+     [
+      "nyu",
+      31
+     ],
+     [
+      "sydney",
+      32
+     ],
+     [
+      "university-of-amsterdam",
+      33
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      34
+     ],
+     [
+      "utrecht-university",
+      35
+     ],
+     [
+      "ruprecht-karls-universitat-heidelberg",
+      36
+     ],
+     [
+      "university-of-zurich",
+      37
+     ],
+     [
+      "nanyang-technological-university-singapore",
+      38
+     ],
+     [
+      "seoul-national-university",
+      39
+     ],
+     [
+      "university-of-colorado-boulder",
+      40
+     ],
+     [
+      "university-of-gottingen",
+      41
+     ],
+     [
+      "wuhan-university",
+      42
+     ],
+     [
+      "freie-universitaet-berlin",
+      43
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      44
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      45
+     ],
+     [
+      "purdue-university",
+      46
+     ],
+     [
+      "university-of-maryland-college-park",
+      47
+     ],
+     [
+      "university-of-florida",
+      48
+     ],
+     [
+      "texas-a-m-university",
+      49
+     ],
+     [
+      "sapienza-university-of-rome",
+      50
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      51
+     ],
+     [
+      "university-of-glasgow",
+      52
+     ],
+     [
+      "kaist",
+      53
+     ],
+     [
+      "osaka-university",
+      54
+     ],
+     [
+      "university-of-california-irvine",
+      55
+     ],
+     [
+      "the-ohio-state-university",
+      56
+     ],
+     [
+      "michigan-state",
+      57
+     ],
+     [
+      "queensland",
+      58
+     ],
+     [
+      "georgia-institute-of-technology",
+      59
+     ],
+     [
+      "wageningen-university-research",
+      60
+     ],
+     [
+      "university-of-chinese-academy-of-sciences",
+      61
+     ],
+     [
+      "gallaudet-university",
+      62,
+      "hearing"
+     ],
+     [
+      "indian-institute-of-technology-delhi",
+      63
+     ]
+    ]
+   },
+   {
+    "key": "ict",
+    "nameAr": "تقنية الاتصالات والمعلومات",
+    "nameEn": "Information and Communication Technologies (ICTs)",
+    "majors": [
+     {
+      "ar": "إدارة أنظمة الشبكات",
+      "en": "Network systems administration"
+     },
+     {
+      "ar": "البرمجة وعلوم الحاسب",
+      "en": "Programming and computer science"
+     },
+     {
+      "ar": "أمن المعلومات",
+      "en": "Information security"
+     },
+     {
+      "ar": "هندسة البرمجيات",
+      "en": "Software engineering"
+     },
+     {
+      "ar": "تقنية المعلومات",
+      "en": "Information technology"
+     },
+     {
+      "ar": "نظم المعلومات",
+      "en": "Information systems"
+     },
+     {
+      "ar": "الذكاء الاصطناعي",
+      "en": "Artificial intelligence"
+     },
+     {
+      "ar": "علوم البيانات",
+      "en": "Data sciences"
+     },
+     {
+      "ar": "المعلوماتية الصحية",
+      "en": "Health informatics"
+     }
+    ],
+    "institutions": [
+     [
+      "nanyang-technological-university-singapore",
+      1
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      2
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      3
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      4
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      5
+     ],
+     [
+      "technical-university-of-munich",
+      6
+     ],
+     [
+      "nyu",
+      7
+     ],
+     [
+      "epfl",
+      8
+     ],
+     [
+      "georgia-institute-of-technology",
+      9
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      10
+     ],
+     [
+      "kaist",
+      11
+     ],
+     [
+      "university-of-waterloo",
+      12
+     ],
+     [
+      "university-of-texas-at-austin",
+      13
+     ],
+     [
+      "universite-de-montreal",
+      14
+     ],
+     [
+      "edinburgh",
+      15
+     ],
+     [
+      "city-university-of-hong-kong",
+      16
+     ],
+     [
+      "the-university-of-hong-kong",
+      17
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      18
+     ],
+     [
+      "harbin-institute-of-technology",
+      19
+     ],
+     [
+      "seoul-national-university",
+      20
+     ],
+     [
+      "ubc",
+      21
+     ],
+     [
+      "purdue-university",
+      22
+     ],
+     [
+      "fudan-university",
+      23
+     ],
+     [
+      "sydney",
+      24
+     ],
+     [
+      "usc",
+      25
+     ],
+     [
+      "monash-university",
+      26
+     ],
+     [
+      "delft",
+      27
+     ],
+     [
+      "nanjing-university",
+      28
+     ],
+     [
+      "ludwig-maximilians-universitat-munchen",
+      29
+     ],
+     [
+      "technische-universitat-berlin",
+      30
+     ],
+     [
+      "university-of-maryland-college-park",
+      31
+     ],
+     [
+      "anu",
+      32
+     ],
+     [
+      "the-university-of-new-south-wales",
+      33
+     ],
+     [
+      "kings",
+      34
+     ],
+     [
+      "universite-psl",
+      35
+     ],
+     [
+      "university-of-alberta",
+      36
+     ],
+     [
+      "wuhan-university",
+      37
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      38
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      39
+     ],
+     [
+      "melbourne",
+      40
+     ],
+     [
+      "sorbonne",
+      41
+     ],
+     [
+      "university-of-amsterdam",
+      42
+     ],
+     [
+      "the-university-of-manchester",
+      43
+     ],
+     [
+      "xi-an-jiaotong-university",
+      44
+     ],
+     [
+      "duke-university",
+      45
+     ],
+     [
+      "politecnico-di-milano",
+      46
+     ],
+     [
+      "beijing-institute-of-technology",
+      47
+     ],
+     [
+      "yonsei-university",
+      48
+     ],
+     [
+      "mcgill-university",
+      49
+     ],
+     [
+      "korea-university",
+      50
+     ],
+     [
+      "the-university-of-adelaide",
+      51
+     ],
+     [
+      "kyoto-university",
+      52
+     ],
+     [
+      "northwestern-university",
+      53
+     ],
+     [
+      "northeastern-university",
+      54
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      55
+     ],
+     [
+      "university-of-electronic-science-and-technology-of-china",
+      56
+     ],
+     [
+      "beihang-university-former-buaa",
+      57
+     ],
+     [
+      "rwth-aachen-university",
+      58
+     ],
+     [
+      "university-of-wisconsin-madison",
+      59
+     ],
+     [
+      "sun-yat-sen-university",
+      60
+     ],
+     [
+      "eindhoven-university-of-technology",
+      61
+     ],
+     [
+      "university-of-california-irvine",
+      62
+     ],
+     [
+      "macquarie-university",
+      63
+     ],
+     [
+      "sungkyunkwan-university",
+      64
+     ],
+     [
+      "university-of-california-santa-barbara",
+      65
+     ],
+     [
+      "michigan-state",
+      66
+     ],
+     [
+      "gallaudet-university",
+      67,
+      "hearing"
+     ],
+     [
+      "indian-institute-of-technology-delhi",
+      68
+     ],
+     [
+      "digipen-institute-of-technology",
+      69,
+      "digipen-ict"
+     ]
+    ]
+   },
+   {
+    "key": "eng",
+    "nameAr": "الهندسة والتصنيع والبناء",
+    "nameEn": "Engineering, manufacturing and construction",
+    "majors": [
+     {
+      "ar": "الهندسة الكيميائية",
+      "en": "Chemical engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الكيميائية",
+      "en": "Chemical engineering technology"
+     },
+     {
+      "ar": "هندسة المواد",
+      "en": "Materials engineering"
+     },
+     {
+      "ar": "تقنية هندسة مواد",
+      "en": "Materials engineering technology"
+     },
+     {
+      "ar": "الهندسة النووية",
+      "en": "Nuclear engineering"
+     },
+     {
+      "ar": "تقنية الهندسة النووية",
+      "en": "Nuclear engineering technology"
+     },
+     {
+      "ar": "الهندسة البيئية",
+      "en": "Environmental engineering"
+     },
+     {
+      "ar": "الهندسة الكهربائية",
+      "en": "Electrical engineering"
+     },
+     {
+      "ar": "هندسة الطاقة",
+      "en": "Energy engineering"
+     },
+     {
+      "ar": "تقنية هندسة الطاقة",
+      "en": "Energy engineering technology"
+     },
+     {
+      "ar": "تقنية الهندسة الكهربائية",
+      "en": "Electrical engineering technology"
+     },
+     {
+      "ar": "هندسة الالكترونيات",
+      "en": "Electronics engineering"
+     },
+     {
+      "ar": "تقنية هندسة التحكم والاتمتة",
+      "en": "Control and automation engineering technology"
+     },
+     {
+      "ar": "هندسة نظم التحكم والقياس",
+      "en": "Control & instrumentation systems engineering"
+     },
+     {
+      "ar": "تقنية هندسة الإلكترونيات والاتصالات",
+      "en": "Electronics and communication engineering technology"
+     },
+     {
+      "ar": "هندسة الحاسب الالي",
+      "en": "Computer engineering"
+     },
+     {
+      "ar": "تقنية هندسة الحاسب الالي",
+      "en": "Computer engineering technology"
+     },
+     {
+      "ar": "هندسة الشبكات",
+      "en": "Network engineering"
+     },
+     {
+      "ar": "تقنية هندسة الشبكات",
+      "en": "Network engineering technology"
+     },
+     {
+      "ar": "الهندسة الميكانيكية",
+      "en": "Mechanical engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الميكانيكية",
+      "en": "Mechanical engineering technology"
+     },
+     {
+      "ar": "الهندسة البحرية",
+      "en": "Marine engineering"
+     },
+     {
+      "ar": "تقنية الهندسة البحرية",
+      "en": "Marine engineering technology"
+     },
+     {
+      "ar": "هندسة الطيران",
+      "en": "Aviation engineering"
+     },
+     {
+      "ar": "الهندسة الطبية الحيوية",
+      "en": "Biomedical engineering"
+     },
+     {
+      "ar": "المحركات والمركبات",
+      "en": "Engines and vehicles"
+     },
+     {
+      "ar": "تقنية هندسة المركبات",
+      "en": "Vehicle engineering technology"
+     },
+     {
+      "ar": "تقنية هندسة الاجهزة الطبية",
+      "en": "Medical devices engineering technology"
+     },
+     {
+      "ar": "الهندسة الصناعية والنظم",
+      "en": "Industrial & systems engineering"
+     },
+     {
+      "ar": "تقنية الهندسة الصناعية",
+      "en": "Industrial engineering technology"
+     },
+     {
+      "ar": "هندسة التصنيع الغذائي",
+      "en": "Food processing engineering"
+     },
+     {
+      "ar": "التغذية وعلوم الاطعمة",
+      "en": "Nutrition and food sciences"
+     },
+     {
+      "ar": "هندسة التعدين",
+      "en": "Mining engineering"
+     },
+     {
+      "ar": "هنـدسـة النفط والغاز الطبيعي",
+      "en": "Oil and gas engineering"
+     },
+     {
+      "ar": "تقنية هندسة النفط والغاز الطبيعي",
+      "en": "Oil and gas engineering technology"
+     },
+     {
+      "ar": "هندسة وإدارة التشييد",
+      "en": "Construction management and engineering"
+     },
+     {
+      "ar": "الهندسة المعمارية",
+      "en": "Architectural engineering"
+     },
+     {
+      "ar": "تقنية الهندسة المعمارية",
+      "en": "Architectural engineering technology"
+     },
+     {
+      "ar": "التخطيط الحضري والاقليمي",
+      "en": "Urban and regional planning"
+     },
+     {
+      "ar": "هندسة المساحة",
+      "en": "Surveying engineering"
+     },
+     {
+      "ar": "تقنية هندسة المساحة",
+      "en": "Surveying Engineering Technology"
+     },
+     {
+      "ar": "الهندسة المدنية",
+      "en": "Civil engineering"
+     },
+     {
+      "ar": "تقنية الهندسة المدنية",
+      "en": "Civil engineering technology"
+     },
+     {
+      "ar": "هندسة الانشاءات",
+      "en": "Structural engineering"
+     },
+     {
+      "ar": "تقنية هندسة الانشاءات",
+      "en": "Structural engineering technology"
+     },
+     {
+      "ar": "الهندسة الجيوتكنيكية",
+      "en": "Geotechnical engineering"
+     },
+     {
+      "ar": "هندسة الموارد المائية",
+      "en": "Water resources engineering"
+     },
+     {
+      "ar": "هندسة النقل",
+      "en": "Transport engineering"
+     },
+     {
+      "ar": "تقنية هندسة النقل",
+      "en": "Transportation engineering technology"
+     },
+     {
+      "ar": "الادارة الهندسية",
+      "en": "Engineering management"
+     },
+     {
+      "ar": "هندسة الميكاترونكس",
+      "en": "Mechatronics engineering"
+     },
+     {
+      "ar": "الرافعات",
+      "en": "Cranes"
+     }
+    ],
+    "institutions": [
+     [
+      "nanyang-technological-university-singapore",
+      1
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      2
+     ],
+     [
+      "georgia-institute-of-technology",
+      3
+     ],
+     [
+      "delft",
+      4
+     ],
+     [
+      "epfl",
+      5
+     ],
+     [
+      "harbin-institute-of-technology",
+      6
+     ],
+     [
+      "technical-university-of-munich",
+      7
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      8
+     ],
+     [
+      "university-of-texas-at-austin",
+      9
+     ],
+     [
+      "university-of-science-and-technology-of-china",
+      10
+     ],
+     [
+      "the-hong-kong-polytechnic-university",
+      11
+     ],
+     [
+      "purdue-university",
+      12
+     ],
+     [
+      "the-hong-kong-university-of-science-and-technology",
+      13
+     ],
+     [
+      "seoul-national-university",
+      14
+     ],
+     [
+      "kaist",
+      15
+     ],
+     [
+      "the-university-of-new-south-wales",
+      16
+     ],
+     [
+      "city-university-of-hong-kong",
+      17
+     ],
+     [
+      "the-university-of-hong-kong",
+      18
+     ],
+     [
+      "fudan-university",
+      19
+     ],
+     [
+      "the-university-of-manchester",
+      20
+     ],
+     [
+      "ubc",
+      21
+     ],
+     [
+      "northwestern-university",
+      22
+     ],
+     [
+      "monash-university",
+      23
+     ],
+     [
+      "queensland",
+      24
+     ],
+     [
+      "texas-a-m-university",
+      25
+     ],
+     [
+      "sydney",
+      26
+     ],
+     [
+      "university-of-waterloo",
+      27
+     ],
+     [
+      "yonsei-university",
+      28
+     ],
+     [
+      "pennsylvania-state-university",
+      29
+     ],
+     [
+      "tongji-university",
+      30
+     ],
+     [
+      "xi-an-jiaotong-university",
+      31
+     ],
+     [
+      "tianjin-university",
+      32
+     ],
+     [
+      "nanjing-university",
+      33
+     ],
+     [
+      "rwth-aachen-university",
+      34
+     ],
+     [
+      "huazhong-university-of-science-and-technology",
+      35
+     ],
+     [
+      "politecnico-di-milano",
+      36
+     ],
+     [
+      "beihang-university",
+      37
+     ],
+     [
+      "kyoto-university",
+      38
+     ],
+     [
+      "university-of-california-santa-barbara",
+      39
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      40
+     ],
+     [
+      "southeast-university",
+      41
+     ],
+     [
+      "duke-university",
+      42
+     ],
+     [
+      "tohoku-university",
+      43
+     ],
+     [
+      "wuhan-university",
+      44
+     ],
+     [
+      "karlsruhe-institute-of-technology",
+      45
+     ],
+     [
+      "melbourne",
+      46
+     ],
+     [
+      "pohang-university-of-science-and-technology",
+      47
+     ],
+     [
+      "indian-institute-of-science",
+      48
+     ],
+     [
+      "institute-of-science-tokyo",
+      49
+     ],
+     [
+      "technische-universitat-berlin",
+      50
+     ],
+     [
+      "mcgill-university",
+      51
+     ],
+     [
+      "universite-psl",
+      52
+     ],
+     [
+      "eindhoven-university-of-technology",
+      53
+     ],
+     [
+      "korea-university",
+      54
+     ],
+     [
+      "edinburgh",
+      55
+     ],
+     [
+      "institut-polytechnique-de-paris",
+      56
+     ],
+     [
+      "indian-institute-of-technology-delhi",
+      57
+     ],
+     [
+      "northwest-agriculture-and-forestry-university",
+      58
+     ],
+     [
+      "central-south-university",
+      59
+     ],
+     [
+      "university-of-science-and-technology-beijing",
+      60
+     ],
+     [
+      "beijing-institute-of-technology",
+      61
+     ],
+     [
+      "indian-institute-of-technology-madras",
+      62
+     ],
+     [
+      "indian-institute-of-technology-kanpur",
+      63
+     ],
+     [
+      "indian-institute-of-technology-bombay",
+      64
+     ],
+     [
+      "indian-institute-of-technology-kharagpur",
+      65
+     ],
+     [
+      "zhengzhou-university",
+      66
+     ],
+     [
+      "sichuan-university",
+      67
+     ],
+     [
+      "colorado-school-of-mines",
+      68
+     ],
+     [
+      "gallaudet-university",
+      69,
+      "hearing"
+     ]
+    ]
+   },
+   {
+    "key": "agr",
+    "nameAr": "الزراعة والحراجة ومصائد الأسماك والبيطرة",
+    "nameEn": "Agriculture, forestry, fisheries and veterinary",
+    "majors": [
+     {
+      "ar": "زراعة المناطق الجافة",
+      "en": "Arid land agriculture"
+     },
+     {
+      "ar": "إنتاج الحيوان وتربيته",
+      "en": "Animal production and raising"
+     },
+     {
+      "ar": "إنتاج النبات ووقايته",
+      "en": "Plant production and protection"
+     },
+     {
+      "ar": "الاقتصاد الزراعي والتسويق الغذائي",
+      "en": "Agricultural economics and food marketing"
+     },
+     {
+      "ar": "هندسة الري والصرف",
+      "en": "Irrigation and drainage engineering"
+     },
+     {
+      "ar": "البستنة والمحاصيل",
+      "en": "Horticulture and crops"
+     }
+    ],
+    "institutions": [
+     [
+      "wageningen-university-research",
+      1
+     ],
+     [
+      "technical-university-of-munich",
+      2
+     ],
+     [
+      "university-of-california-davis",
+      3
+     ],
+     [
+      "university-of-florida",
+      4
+     ],
+     [
+      "queensland",
+      5
+     ],
+     [
+      "melbourne",
+      6
+     ],
+     [
+      "university-of-gottingen",
+      7
+     ],
+     [
+      "ubc",
+      8
+     ],
+     [
+      "purdue-university",
+      9
+     ],
+     [
+      "sydney",
+      10
+     ],
+     [
+      "edinburgh",
+      11
+     ],
+     [
+      "the-university-of-western-australia",
+      12
+     ],
+     [
+      "university-of-wisconsin-madison",
+      13
+     ],
+     [
+      "seoul-national-university",
+      14
+     ],
+     [
+      "rheinische-friedrich-wilhelms-universitat-bonn",
+      15
+     ],
+     [
+      "michigan-state",
+      16
+     ],
+     [
+      "university-of-illinois-at-urbana-champaign",
+      17
+     ],
+     [
+      "university-of-alberta",
+      18
+     ],
+     [
+      "university-of-minnesota-twin-cities",
+      19
+     ],
+     [
+      "kyoto-university",
+      20
+     ],
+     [
+      "texas-a-m-university",
+      21
+     ],
+     [
+      "china-agricultural-university",
+      22
+     ],
+     [
+      "universite-de-montpellier",
+      23
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      24
+     ],
+     [
+      "northwest-agriculture-and-forestry-university",
+      25
+     ],
+     [
+      "albert-ludwigs-universitaet-freiburg",
+      26
+     ],
+     [
+      "university-of-guelph",
+      27
+     ],
+     [
+      "the-ohio-state-university",
+      28
+     ],
+     [
+      "north-carolina-state-university",
+      29
+     ],
+     [
+      "colorado-state-university",
+      30
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      31
+     ],
+     [
+      "mcgill-university",
+      32
+     ],
+     [
+      "iowa-state-university",
+      33
+     ],
+     [
+      "university-of-naples-federico-ii",
+      34
+     ],
+     [
+      "the-university-of-georgia",
+      35
+     ],
+     [
+      "university-of-nebraska-lincoln",
+      36
+     ],
+     [
+      "universita-di-padova",
+      37
+     ],
+     [
+      "university-of-nottingham",
+      38
+     ],
+     [
+      "nanjing-agricultural-university",
+      39
+     ],
+     [
+      "university-of-massachusetts-amherst",
+      40
+     ],
+     [
+      "anu",
+      41
+     ],
+     [
+      "kansas-state-university",
+      42
+     ],
+     [
+      "university-of-milan",
+      43
+     ],
+     [
+      "university-of-florence",
+      44
+     ],
+     [
+      "washington-state-university",
+      45
+     ],
+     [
+      "university-of-maryland-college-park",
+      46
+     ],
+     [
+      "university-of-leeds",
+      47
+     ],
+     [
+      "university-of-saskatchewan",
+      48
+     ],
+     [
+      "south-china-agricultural-university",
+      49
+     ],
+     [
+      "duke-university",
+      50
+     ],
+     [
+      "huazhong-agricultural-university",
+      51
+     ],
+     [
+      "shangdong-agricultural-university",
+      52
+     ],
+     [
+      "oregon-state-university",
+      53
+     ],
+     [
+      "humboldt-universitat-zu-berlin",
+      54
+     ],
+     [
+      "university-of-hohenheim",
+      55
+     ],
+     [
+      "university-of-reading",
+      56
+     ],
+     [
+      "l-institut-agro",
+      57
+     ],
+     [
+      "hokkaido-university",
+      58
+     ],
+     [
+      "the-university-of-adelaide",
+      59
+     ],
+     [
+      "university-of-turin",
+      60
+     ],
+     [
+      "pennsylvania-state-university",
+      61
+     ],
+     [
+      "sun-yat-sen-university",
+      62
+     ],
+     [
+      "jiangsu-university",
+      63
+     ],
+     [
+      "yangzhou-university",
+      64
+     ],
+     [
+      "nanjing-forestry-university",
+      65
+     ],
+     [
+      "virginia-polytechnic-institute-and-state-university",
+      66
+     ],
+     [
+      "korea-university",
+      67
+     ],
+     [
+      "gallaudet-university",
+      68,
+      "hearing"
+     ]
+    ]
+   },
+   {
+    "key": "srv",
+    "nameAr": "الخدمات",
+    "nameEn": "Services",
+    "majors": [
+     {
+      "ar": "التدريب الرياضي",
+      "en": "Sports Training"
+     },
+     {
+      "ar": "إدارة موارد التراث",
+      "en": "Heritage resource management"
+     },
+     {
+      "ar": "الارشاد السياحي",
+      "en": "Tour guide"
+     },
+     {
+      "ar": "الصحة والسلامة المهنية",
+      "en": "Occupational health and safety"
+     },
+     {
+      "ar": "الملاحة البحرية",
+      "en": "Nautical sciences"
+     },
+     {
+      "ar": "الموانئ والنقل البحري",
+      "en": "Ports and marine transport"
+     },
+     {
+      "ar": "أنظمة الطيران",
+      "en": "Aviation systems"
+     },
+     {
+      "ar": "المراقبة الجوية",
+      "en": "Air control"
+     },
+     {
+      "ar": "سلامة التشغيل والطيران",
+      "en": "Operation And Flight Safety"
+     },
+     {
+      "ar": "قيادة القطارات",
+      "en": "Driving the trains"
+     },
+     {
+      "ar": "خدمات المحطة والركاب",
+      "en": "Station and passenger services"
+     }
+    ],
+    "institutions": [
+     [
+      "the-hong-kong-polytechnic-university",
+      1
+     ],
+     [
+      "queensland",
+      2
+     ],
+     [
+      "fudan-university",
+      3
+     ],
+     [
+      "ubc",
+      4
+     ],
+     [
+      "purdue-university",
+      5
+     ],
+     [
+      "university-of-birmingham",
+      6
+     ],
+     [
+      "university-of-surrey",
+      7
+     ],
+     [
+      "sun-yat-sen-university",
+      8
+     ],
+     [
+      "michigan-state",
+      9
+     ],
+     [
+      "griffith-university",
+      10
+     ],
+     [
+      "university-of-florida",
+      11
+     ],
+     [
+      "university-of-waterloo",
+      12
+     ],
+     [
+      "texas-a-m-university",
+      13
+     ],
+     [
+      "university-of-macau",
+      14
+     ],
+     [
+      "kyung-hee-university",
+      15
+     ],
+     [
+      "curtin-university",
+      16
+     ],
+     [
+      "sejong-university",
+      17
+     ],
+     [
+      "university-of-central-florida",
+      18
+     ],
+     [
+      "xiamen-university",
+      19
+     ],
+     [
+      "hanyang-university",
+      20
+     ],
+     [
+      "university-of-calgary",
+      21
+     ],
+     [
+      "washington-state-university",
+      22
+     ],
+     [
+      "nankai-university",
+      23
+     ],
+     [
+      "university-of-strathclyde",
+      24
+     ],
+     [
+      "university-of-houston",
+      25
+     ],
+     [
+      "macau-university-of-science-and-technology",
+      26
+     ],
+     [
+      "florida-state-university",
+      27
+     ],
+     [
+      "temple-university",
+      28
+     ],
+     [
+      "university-of-south-carolina",
+      29
+     ],
+     [
+      "university-of-south-florida",
+      30
+     ],
+     [
+      "iowa-state-university",
+      31
+     ],
+     [
+      "university-of-delaware",
+      32
+     ],
+     [
+      "university-of-guelph",
+      33
+     ],
+     [
+      "university-of-granada",
+      34
+     ],
+     [
+      "university-of-greenwich",
+      35
+     ],
+     [
+      "shanghai-jiao-tong-university",
+      36
+     ],
+     [
+      "the-university-of-hong-kong",
+      37
+     ],
+     [
+      "nyu",
+      38
+     ],
+     [
+      "the-university-of-manchester",
+      39
+     ],
+     [
+      "monash-university",
+      40
+     ],
+     [
+      "boston-university",
+      41
+     ],
+     [
+      "nanjing-university",
+      42
+     ],
+     [
+      "city-university-of-hong-kong",
+      43
+     ],
+     [
+      "university-of-bristol",
+      44
+     ],
+     [
+      "university-of-north-carolina-at-chapel-hill",
+      45
+     ],
+     [
+      "usc",
+      46
+     ],
+     [
+      "the-chinese-university-of-hong-kong",
+      47
+     ],
+     [
+      "bournemouth-university",
+      48
+     ],
+     [
+      "pennsylvania-state-university",
+      49
+     ],
+     [
+      "university-of-nevada-las-vegas",
+      50
+     ],
+     [
+      "university-of-nottingham",
+      51
+     ],
+     [
+      "universite-paris-1-pantheon-sorbonne",
+      52
+     ],
+     [
+      "university-of-alberta",
+      53
+     ],
+     [
+      "amity-university",
+      54
+     ],
+     [
+      "durham-university",
+      55
+     ],
+     [
+      "virginia-polytechnic-institute-and-state-university",
+      56
+     ],
+     [
+      "university-of-massachusetts-amherst",
+      57
+     ],
+     [
+      "university-of-leeds",
+      58
+     ],
+     [
+      "ca-foscari-university-of-venice",
+      59
+     ],
+     [
+      "korea-university",
+      60
+     ],
+     [
+      "universitat-ramon-llull",
+      61
+     ],
+     [
+      "deakin-university",
+      62
+     ],
+     [
+      "harbin-institute-of-technology",
+      63
+     ],
+     [
+      "rmit-university",
+      64
+     ],
+     [
+      "alma-mater-studiorum-university-of-bologna",
+      65
+     ],
+     [
+      "university-of-lausanne",
+      66
+     ],
+     [
+      "south-china-normal-university",
+      67
+     ],
+     [
+      "university-of-derby",
+      68
+     ],
+     [
+      "gallaudet-university",
+      69,
+      "hearing"
+     ],
+     [
+      "utrecht-university",
+      70
+     ]
+    ]
+   }
+  ]
+ }
+}

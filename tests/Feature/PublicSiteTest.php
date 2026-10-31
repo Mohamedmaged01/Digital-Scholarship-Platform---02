@@ -2,6 +2,7 @@
 
 namespace Tests\Feature;
 
+use App\Models\News;
 use App\Models\NewsletterSubscriber;
 use App\Models\UnansweredQuestion;
 use Illuminate\Foundation\Testing\RefreshDatabase;
@@ -19,19 +20,42 @@ class PublicSiteTest extends TestCase
             ->assertOk()
             ->assertSee('مسار الروّاد')
             ->assertSee('التقديم متاح حاليًا على')
-            ->assertSee('مسارات أخرى — رابط المسار والدليل الاسترشادي')
+            // التميز والصحي ببطاقات كاملة مثل بقية المسارات
+            ->assertDontSee('مسارات أخرى — رابط المسار والدليل الاسترشادي')
+            ->assertSee(route('tracks.show', 'tamayoz'), false)
+            ->assertSee(route('tracks.show', 'sahhi'), false)
             ->assertSee('مركز الاتصال الموحد')
             ->assertSee('استكشف')
             // ملاحظات الوكالة: لا عبارات تسويقية ولا أخبار تجريبية ولا نسب مطابقة وهمية
             ->assertDontSee('المقاعد محدودة')
             ->assertDontSee('الجامعات الشريكة')
             ->assertDontSee('98.2%')
-            ->assertDontSee('id="news"', false)
-            // زر «ابدأ التقديم» يفتح الموقع التعريفي الرسمي، وصورة الواجهة هي شعار البرنامج
+            // قسم الأخبار ظاهر دائمًا (رابط «المركز الإعلامي» في القائمة)، وزر الإضافة للإدارة فقط
+            ->assertSee('id="news"', false)
+            ->assertSee('لا توجد أخبار منشورة حاليًا')
+            ->assertDontSee('رفع وإضافة خبر جديد')
+            // زر «ابدأ التقديم» يفتح الموقع التعريفي الرسمي، ومعرض الواجهة: الشعار ثم صور المسارات الست
             ->assertSee('href="https://sites.moe.gov.sa/scholarship-program/"', false)
             ->assertSee('images/hero-kasp-banner.jpg', false)
+            ->assertSee('images/tracks/rowad.jpg', false)
+            ->assertSee('images/tracks/sahhi.jpg', false)
+            ->assertSee('aria-label="7 / 7"', false)
             ->assertSee('حدد مسارك')
             ->assertDontSee('hero-students-group.jpg', false);
+    }
+
+    public function test_published_news_appears_on_home_page(): void
+    {
+        News::create([
+            'title' => 'فتح التقديم على مسار الروّاد', 'excerpt' => 'موجز الإعلان الرسمي',
+            'body' => 'نص الإعلان الرسمي كاملًا', 'category' => 'announcement',
+            'published_on' => '2026-11-01', 'author' => 'وزارة التعليم', 'read_minutes' => 2,
+        ]);
+
+        $this->get('/')
+            ->assertOk()
+            ->assertSee('فتح التقديم على مسار الروّاد')
+            ->assertDontSee('لا توجد أخبار منشورة حاليًا');
     }
 
     public function test_site_switches_between_arabic_and_english(): void

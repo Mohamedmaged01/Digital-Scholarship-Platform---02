@@ -101,6 +101,27 @@ Alpine.data('heroRotator', (items) => ({
     },
 }));
 
+/* معرض صور الواجهة: يتقدّم كل 5 ثوانٍ، ويتوقف عند المرور أو التركيز، ولا يتحرك تلقائيًا مع تقليل الحركة */
+Alpine.data('heroGallery', (count) => ({
+    idx: 0,
+    paused: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+    hover: false,
+    last: Date.now(),
+    init() {
+        this.timer = setInterval(() => {
+            if (this.paused || this.hover || document.hidden) return (this.last = Date.now());
+            if (Date.now() - this.last >= 5000) this.go((this.idx + 1) % count);
+        }, 500);
+    },
+    go(i) {
+        this.idx = i;
+        this.last = Date.now();
+    },
+    destroy() {
+        clearInterval(this.timer);
+    },
+}));
+
 Alpine.data('countUp', (target) => ({
     value: 0,
     started: false,
@@ -185,6 +206,25 @@ Alpine.data('matcher', (data) => ({
             })
             .filter(Boolean)
             .sort((a, b) => rank[a.kind] - rank[b.kind]);
+    },
+}));
+
+/* ---------------- قوائم الدليل الاسترشادي: مجال ← تخصصات + مؤسسات بترتيب الدليل ---------------- */
+Alpine.data('guidelineLists', (lists) => ({
+    lists,
+    active: lists[0]?.key ?? null,
+    search: '',
+    get current() {
+        return this.lists.find((l) => l.key === this.active) ?? null;
+    },
+    get filtered() {
+        const q = this.search.trim().toLowerCase();
+        if (!this.current) return [];
+        return q ? this.current.institutions.filter((u) => `${u.name} ${u.country}`.toLowerCase().includes(q)) : this.current.institutions;
+    },
+    select(key) {
+        this.active = key;
+        this.search = '';
     },
 }));
 

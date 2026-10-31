@@ -1,7 +1,7 @@
 [
   {
     "id": "mit",
-    "nameEn": "MIT",
+    "nameEn": "Massachusetts Institute of Technology (MIT)",
     "nameAr": "معهد ماساتشوستس للتقنية",
     "city": "كامبريدج",
     "country": "الولايات المتحدة",
@@ -12,7 +12,7 @@
       "ذكاء اصطناعي"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "imperial",
@@ -27,7 +27,7 @@
       "طاقة"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "oxford",
@@ -42,7 +42,7 @@
       "قانون"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "harvard",
@@ -57,7 +57,7 @@
       "قانون"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "cambridge",
@@ -72,7 +72,7 @@
       "طب"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "stanford",
@@ -87,11 +87,11 @@
       "ذكاء اصطناعي"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "eth",
-    "nameEn": "ETH Zürich",
+    "nameEn": "ETH Zurich",
     "nameAr": "المعهد الفدرالي السويسري للتقنية",
     "city": "زيورخ",
     "country": "سويسرا",
@@ -102,11 +102,11 @@
       "روبوتات"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "nus",
-    "nameEn": "National Univ. of Singapore",
+    "nameEn": "National University of Singapore (NUS)",
     "nameAr": "جامعة سنغافورة الوطنية",
     "city": "سنغافورة",
     "country": "سنغافورة",
@@ -117,11 +117,11 @@
       "اقتصاد"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "ucl",
-    "nameEn": "UCL",
+    "nameEn": "UCL (University College London)",
     "nameAr": "يونيفرسيتي كوليدج لندن",
     "city": "لندن",
     "country": "المملكة المتحدة",
@@ -132,11 +132,11 @@
       "تعليم"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "caltech",
-    "nameEn": "Caltech",
+    "nameEn": "California Institute of Technology (Caltech)",
     "nameAr": "معهد كاليفورنيا للتقنية",
     "city": "باسادينا",
     "country": "الولايات المتحدة",
@@ -147,11 +147,11 @@
       "كيمياء"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "tokyo",
-    "nameEn": "University of Tokyo",
+    "nameEn": "The University of Tokyo",
     "nameAr": "جامعة طوكيو",
     "city": "طوكيو",
     "country": "اليابان",
@@ -162,11 +162,11 @@
       "طاقة هيدروجين"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "melbourne",
-    "nameEn": "University of Melbourne",
+    "nameEn": "The University of Melbourne",
     "nameAr": "جامعة ملبورن",
     "city": "ملبورن",
     "country": "أستراليا",
@@ -177,7 +177,7 @@
       "علوم بيئة"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "tsinghua",
@@ -192,11 +192,11 @@
       "اقتصاد"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "sorbonne",
-    "nameEn": "Sorbonne Université",
+    "nameEn": "Sorbonne University",
     "nameAr": "جامعة السوربون",
     "city": "باريس",
     "country": "فرنسا",
@@ -207,11 +207,11 @@
       "فنون"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "kaist",
-    "nameEn": "KAIST",
+    "nameEn": "KAIST - Korea Advanced Institute of Science & Technology",
     "nameAr": "المعهد الكوري المتقدم للعلوم والتقنية",
     "city": "دايجون",
     "country": "كوريا الجنوبية",
@@ -222,7 +222,7 @@
       "مواد"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "toronto",
@@ -237,11 +237,11 @@
       "صحة عامة"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "delft",
-    "nameEn": "TU Delft",
+    "nameEn": "Delft University of Technology",
     "nameAr": "جامعة دلفت للتقنية",
     "city": "دلفت",
     "country": "هولندا",
@@ -252,11 +252,11 @@
       "طيران"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "sydney",
-    "nameEn": "University of Sydney",
+    "nameEn": "The University of Sydney",
     "nameAr": "جامعة سيدني",
     "city": "سيدني",
     "country": "أستراليا",
@@ -267,11 +267,11 @@
       "زراعة ذكية"
     ],
     "website": "",
-    "status": "needs_verification"
+    "status": "verified"
   },
   {
     "id": "lse",
-    "nameEn": "London School of Economics",
+    "nameEn": "The London School of Economics and Political Science (LSE)",
     "nameAr": "كلية لندن للاقتصاد والعلوم السياسية",
     "city": "لندن",
     "country": "المملكة المتحدة",
@@ -391,7 +391,7 @@
   },
   {
     "id": "edinburgh",
-    "nameEn": "University of Edinburgh",
+    "nameEn": "The University of Edinburgh",
     "nameAr": "جامعة إدنبرة",
     "city": "إدنبرة",
     "country": "المملكة المتحدة",
@@ -450,7 +450,7 @@
   },
   {
     "id": "queensland",
-    "nameEn": "University of Queensland",
+    "nameEn": "The University of Queensland",
     "nameAr": "جامعة كوينزلاند",
     "city": "بريزبن",
     "country": "أستراليا",
@@ -465,7 +465,7 @@
   },
   {
     "id": "michigan",
-    "nameEn": "University of Michigan",
+    "nameEn": "University of Michigan-Ann Arbor",
     "nameAr": "جامعة ميشيغان",
     "city": "آن آربر",
     "country": "الولايات المتحدة",
@@ -480,7 +480,7 @@
   },
   {
     "id": "nyu",
-    "nameEn": "New York University",
+    "nameEn": "New York University (NYU)",
     "nameAr": "جامعة نيويورك",
     "city": "نيويورك",
     "country": "الولايات المتحدة",
@@ -525,7 +525,7 @@
   },
   {
     "id": "anu",
-    "nameEn": "Australian National University",
+    "nameEn": "The Australian National University",
     "nameAr": "الجامعة الوطنية الأسترالية",
     "city": "كانبرا",
     "country": "أستراليا",

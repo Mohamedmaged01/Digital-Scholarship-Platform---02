@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         DefaultContent::resetConstraints();
         DefaultContent::resetWaedPrograms();
         DefaultContent::resetGuides();
+        DefaultContent::resetGuideline();
         DefaultContent::resetPages();
         DefaultContent::resetContactMethods();
         DefaultContent::resetStations();

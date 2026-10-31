@@ -5,6 +5,7 @@ namespace App\Support;
 use App\Models\ContactMethod;
 use App\Models\Field;
 use App\Models\Guide;
+use App\Models\GuidelineInstitution;
 use App\Models\KbEntry;
 use App\Models\LegalPage;
 use App\Models\Major;
@@ -123,8 +124,68 @@ class DefaultContent
                     'institution_status' => $u['status'] ?? 'needs_verification',
                 ]);
             }
+            // مؤسسات قوائم الدليل الاسترشادي تبقى (تُدار من resetGuideline)
+            $slugs = array_merge($slugs, array_column(self::load('guideline')['universities'], 'slug'));
             University::where(fn ($q) => $q->whereNull('slug')->orWhereNotIn('slug', $slugs))->delete();
         });
+    }
+
+    /**
+     * قوائم الدليل الاسترشادي لترتيب الجامعات حسب المجالات (2026-2027): مجالات كل مسار
+     * وتخصصاتها، والمؤسسات التعليمية بترتيبها في الدليل. المؤسسات الموجودة تحتفظ باسمها العربي.
+     */
+    public static function resetGuideline(): void
+    {
+        $data = self::load('guideline');
+        $tracks = self::trackIds();
+
+        DB::transaction(function () use ($data, $tracks) {
+            foreach ($data['universities'] as $u) {
+                $uni = University::firstOrNew(['slug' => $u['slug']]);
+                $uni->fill([
+                    'name_en' => $u['nameEn'],
+                    'name_ar' => $uni->name_ar ?: $u['nameEn'],
+                    'city' => $uni->city ?? '',
+                    'country' => $uni->country ?: $u['country'],
+                    'region' => $uni->region ?: $u['region'],
+                    'fields' => $uni->fields ?? [],
+                    'website' => $uni->website ?? '',
+                    'institution_status' => 'verified',
+                    'source_id' => 'src-guide',
+                ])->save();
+            }
+
+            $unis = self::universityIds();
+            GuidelineInstitution::query()->delete();
+            foreach ($data['tracks'] as $slug => $lists) {
+                if (! isset($tracks[$slug])) {
+                    continue;
+                }
+                DB::table('tracks')->where('id', $tracks[$slug])->update([
+                    'guideline_lists' => json_encode(array_map(fn ($l) => array_diff_key($l, ['institutions' => 0]), $lists), JSON_UNESCAPED_UNICODE),
+                ]);
+                $rows = [];
+                foreach ($lists as $l) {
+                    foreach ($l['institutions'] as $i) {
+                        $rows[] = [
+                            'path_id' => $tracks[$slug], 'field_key' => $l['key'], 'institution_id' => $unis[$i[0]],
+                            'position' => $i[1], 'note' => $i[2] ?? null,
+                        ];
+                    }
+                }
+                foreach (array_chunk($rows, 250) as $chunk) {
+                    GuidelineInstitution::insert($chunk);
+                }
+            }
+        });
+    }
+
+    /** نصوص ملاحظات بطاقات المؤسسات كما وردت في الدليل (درجة الماجستير فقط…) ومصدر القوائم. */
+    public static function guidelineMeta(): array
+    {
+        $data = self::load('guideline');
+
+        return ['notes' => $data['notes'], 'source' => $data['source']];
     }
 
     /**

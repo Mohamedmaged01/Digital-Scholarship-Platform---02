@@ -58,6 +58,7 @@ class Track extends Model
             'additional_conditions' => 'array',
             'faqs' => 'array',
             'details' => 'array',
+            'guideline_lists' => 'array',
             'match_fields' => 'array',
             'institutions_count' => 'integer',
             'application_start' => 'date',

@@ -80,7 +80,9 @@
             @endif
         </div>
 
-        @unless ($hasExplorer)
+        @if ($guideline)
+            @include('tracks._guideline-lists')
+        @elseif (! $hasExplorer)
             {{-- ملاحظات 32-34: لا تُعرض قوائم غير مستندة إلى الدليل الاسترشادي --}}
             <section class="mt-12" aria-labelledby="scope-title">
                 <h2 id="scope-title" class="flex items-center gap-2.5 text-2xl font-bold text-ink">
@@ -102,7 +104,7 @@
                     {{ __('قائمة المؤسسات التعليمية والتخصصات المحددة لهذا المسار غير منشورة في المنصة حاليًا. يُرجع إلى الشروط الخاصة بالمسار والدليل الاسترشادي المعتمد.') }}
                 </p>
             </section>
-        @endunless
+        @endif
 
         {{-- ══════ المستكشف ══════ --}}
         @if ($hasExplorer)

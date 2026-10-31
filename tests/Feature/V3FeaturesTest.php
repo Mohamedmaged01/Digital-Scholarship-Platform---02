@@ -34,9 +34,10 @@ class V3FeaturesTest extends TestCase
 
     public function test_seed_imports_the_full_v3_relational_dataset(): void
     {
-        $this->assertSame(37, University::count());
+        // 37 مؤسسة من بيانات v3 + 262 مؤسسة جديدة من قوائم الدليل الاسترشادي (GuidelineListsTest)
+        $this->assertSame(299, University::count());
         $this->assertSame(54, Major::count());
-        // ملاحظات 32-34: تبقى روابط مسار التميز فقط — المسارات الأخرى تنتظر قوائم الدليل
+        // ملاحظات 32-34: روابط المستكشف لمسار التميز فقط — قوائم الروّاد والبحث والتطوير وإمداد في guideline_institutions
         $this->assertSame(26, PathMajor::count());
         $this->assertSame(119, PathMajorInstitution::count());
         $this->assertSame(['tamayoz'], PathMajor::with('track')->get()->pluck('track.slug')->unique()->values()->all());

@@ -3,6 +3,7 @@
 namespace App\Support;
 
 use App\Models\Field;
+use App\Models\GuidelineInstitution;
 use App\Models\Major;
 use App\Models\MajorConstraint;
 use App\Models\PathDegree;
@@ -111,6 +112,38 @@ class Showcase
                 'universities' => $links->pluck('institution_id')->unique()->count(),
             ],
         ];
+    }
+
+    /**
+     * قوائم الدليل الاسترشادي للمسار: لكل مجال تخصصاته ومؤسساته التعليمية بترتيب الدليل
+     * (ملاحظتا 32 و33). المسار بلا قوائم يعيد مصفوفة فارغة.
+     */
+    public static function guideline(Track $track): array
+    {
+        if (empty($track->guideline_lists)) {
+            return [];
+        }
+
+        $en = app()->getLocale() === 'en';
+        $meta = DefaultContent::guidelineMeta();
+        $institutions = GuidelineInstitution::with('institution')->where('path_id', $track->id)
+            ->orderBy('position')->get()->groupBy('field_key');
+
+        return collect($track->guideline_lists)->map(fn (array $list) => [
+            'key' => $list['key'],
+            'name' => $en ? $list['nameEn'] : $list['nameAr'],
+            'majors' => array_map(fn (array $m) => [
+                'name' => $en ? $m['en'] : $m['ar'],
+                'alt' => $en ? $m['ar'] : $m['en'],
+                'mastersOnly' => ($m['degree'] ?? null) === 'master',
+            ], $list['majors']),
+            'institutions' => ($institutions[$list['key']] ?? collect())->filter->institution->map(fn (GuidelineInstitution $g) => [
+                'position' => $g->position,
+                'name' => $g->institution->name_en,
+                'country' => $en ? __($g->institution->country) : $g->institution->country,
+                'note' => $g->note ? ($meta['notes'][$g->note][$en ? 'en' : 'ar'] ?? null) : null,
+            ])->values()->all(),
+        ])->all();
     }
 
     /**

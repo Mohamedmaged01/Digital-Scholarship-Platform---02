@@ -2,6 +2,7 @@
 
 namespace App\Support;
 
+use App\Models\GuidelineInstitution;
 use App\Models\KbEntry;
 use App\Models\Major;
 use App\Models\News;
@@ -94,15 +95,31 @@ class SiteSearch
             $add("major-{$m->id}", 'majors', __('التخصصات'), $m->name_ar, "متاح في: {$names}", $trackUrl($tracks[$paths->first()]),
                 "{$m->name_ar} {$m->name_en} تخصص");
         }
+        // تخصصات قوائم الدليل الاسترشادي (البحث والتطوير وإمداد)
+        $guideMajors = [];
+        foreach ($tracks as $t) {
+            foreach ($t->guideline_lists ?? [] as $l) {
+                foreach ($l['majors'] as $gm) {
+                    $guideMajors["{$gm['ar']}|{$gm['en']}"][$t->id] = $t;
+                }
+            }
+        }
+        foreach ($guideMajors as $key => $paths) {
+            [$ar, $en] = explode('|', $key, 2);
+            $names = collect($paths)->map(fn (Track $t) => $t->name)->implode('، ');
+            $add('gmajor-'.md5($key), 'majors', __('التخصصات'), $ar, "متاح في: {$names}", $trackUrl(reset($paths)), "{$ar} {$en} تخصص");
+        }
 
-        $uniTracks = PathMajorInstitution::select('institution_id', 'path_id')->get()->groupBy('institution_id');
+        $uniTracks = PathMajorInstitution::select('institution_id', 'path_id')->get()
+            ->concat(GuidelineInstitution::select('institution_id', 'path_id')->get())
+            ->groupBy('institution_id');
         foreach (University::orderBy('name_ar')->get() as $u) {
             $firstPath = ($uniTracks[$u->id] ?? collect())->pluck('path_id')->first();
             // المؤسسة غير المرتبطة بمسار لا تظهر (لا تُعرض جامعات خارج الدليل الاسترشادي)
             if (! $firstPath || ! isset($tracks[$firstPath])) {
                 continue;
             }
-            $add("uni-{$u->id}", 'universities', __('المؤسسات التعليمية'), $u->name_ar, "{$u->city}، {$u->country}",
+            $add("uni-{$u->id}", 'universities', __('المؤسسات التعليمية'), $u->name_ar, collect([$u->city, $u->country])->filter()->implode('، '),
                 $trackUrl($tracks[$firstPath]),
                 "{$u->name_ar} {$u->name_en} {$u->city} {$u->country} ".implode(' ', $u->fields).' جامعة');
         }

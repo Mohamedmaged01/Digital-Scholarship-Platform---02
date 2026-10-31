@@ -21,16 +21,19 @@
                     </span>
                     {{ __('متابعة حيّة — تُحدَّث من الإدارة لحظيًا') }}
                 </span>
-                <a href="{{ route('admin.news.index') }}"
-                   class="group inline-flex items-center gap-2 rounded-full bg-forest-800 px-6 py-3.5 text-sm font-bold text-gold-300 transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-[0_14px_36px_-12px_rgba(8,39,29,0.55)]">
-                    <x-lucide-file-plus-2 class="size-4.5 transition-transform group-hover:scale-110" />
-                    {{ __('رفع وإضافة خبر جديد') }}
-                </a>
+                {{-- زر الإضافة لفريق الإدارة فقط، لا للزوار --}}
+                @auth
+                    <a href="{{ route('admin.news.index') }}"
+                       class="group inline-flex items-center gap-2 rounded-full bg-forest-800 px-6 py-3.5 text-sm font-bold text-gold-300 transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-[0_14px_36px_-12px_rgba(8,39,29,0.55)]">
+                        <x-lucide-file-plus-2 class="size-4.5 transition-transform group-hover:scale-110" />
+                        {{ __('رفع وإضافة خبر جديد') }}
+                    </a>
+                @endauth
             </div>
         </div>
 
         {{-- filter tabs --}}
-        <div class="reveal mt-12 flex flex-wrap gap-2" style="--delay: .1s" role="group" aria-label="{{ __('تصنيف الأخبار') }}">
+        <div @class(['reveal mt-12 flex flex-wrap gap-2', 'hidden' => $news->isEmpty()]) style="--delay: .1s" role="group" aria-label="{{ __('تصنيف الأخبار') }}">
             @foreach ($tabs as $key => $label)
                 <button type="button" @click="filter = '{{ $key }}'" :aria-pressed="filter === '{{ $key }}'"
                         class="rounded-full border px-5 py-2.5 text-sm font-bold transition-all duration-300"
@@ -129,8 +132,18 @@
         </div>
 
         <div x-show="featuredId === null" @if ($news->isNotEmpty()) x-cloak @endif class="mt-12 rounded-3xl border border-dashed border-forest-800/20 bg-white/60 p-14 text-center">
-            <p class="text-lg font-bold text-forest-800">{{ __('لا توجد أخبار في هذا التصنيف حاليًا') }}</p>
-            <p class="mt-2 text-sm text-slate-500">{{ __('يمكن للإدارة إضافة أخبار جديدة من لوحة التحكم.') }}</p>
+            @if ($news->isEmpty())
+                <x-lucide-newspaper class="mx-auto size-10 text-gold-500" />
+                <p class="mt-4 text-lg font-bold text-forest-800">{{ __('لا توجد أخبار منشورة حاليًا') }}</p>
+                <p class="mt-2 text-sm text-slate-500">{{ __('تُنشر هنا إعلانات البرنامج الرسمية فور صدورها، ويمكنك متابعة المستجدات عبر الموقع التعريفي للبرنامج.') }}</p>
+                <a href="{{ config('kasp.apply_url') }}" target="_blank" rel="noopener noreferrer"
+                   class="mt-6 inline-flex items-center gap-2 rounded-full border border-forest-800/20 px-6 py-3 text-sm font-bold text-forest-800 transition-all hover:bg-forest-800 hover:text-gold-300">
+                    {{ __('الموقع التعريفي للبرنامج') }}
+                    <x-lucide-arrow-up-left class="rtl-flip size-4" />
+                </a>
+            @else
+                <p class="text-lg font-bold text-forest-800">{{ __('لا توجد أخبار في هذا التصنيف حاليًا') }}</p>
+            @endif
         </div>
     </div>
 

@@ -1014,7 +1014,7 @@
     "contentEn": {
       "name": "Waed Track",
       "badge": "Employment-first scholarships",
-      "description": "One of the tracks of the King Salman Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives.",
+      "description": "One of the tracks of the Custodian of the Two Holy Mosques Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives.",
       "ranking": "Scholarship countries specified in the program (fourth phase)",
       "fields": [
         "Per program and sponsoring entity"
@@ -1074,7 +1074,7 @@
         },
         {
           "label": "Countries and institutions",
-          "value": "Scholarship countries specified in the King Salman Scholarship Program (fourth phase)"
+          "value": "Scholarship countries specified in the Custodian of the Two Holy Mosques Scholarship Program (fourth phase)"
         },
         {
           "label": "Special conditions",
@@ -1096,7 +1096,7 @@
       "faqs": [
         {
           "q": "What is the Waed Track?",
-          "a": "One of the tracks of the King Salman Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives."
+          "a": "One of the tracks of the Custodian of the Two Holy Mosques Scholarship Program abroad, aimed at studying, training and requalifying students and strengthening their capabilities in promising sectors and fields, in line with the requirements of major projects and initiatives."
         },
         {
           "q": "What is the goal of the Waed Track?",
@@ -1163,12 +1163,12 @@
     ],
     "image": "/images/tracks/tamayoz.jpg",
     "applicationStatus": "closed",
-    "tier": "linked",
+    "tier": "main",
     "majorsScope": "listed",
     "contentEn": {
       "name": "Tamayoz Track",
       "badge": "Specified institutions for each major",
-      "description": "One of the tracks of the King Salman Scholarship Program abroad, aimed at raising the academic qualification of students by sending them to distinguished global institutions in specified specialized majors, each with its own institution list.",
+      "description": "One of the tracks of the Custodian of the Two Holy Mosques Scholarship Program abroad, aimed at raising the academic qualification of students by sending them to distinguished global institutions in specified specialized majors, each with its own institution list.",
       "ranking": "A specified institution list for each major",
       "fields": [
         "Law",
@@ -1455,7 +1455,7 @@
     ],
     "image": "/images/tracks/sahhi.jpg",
     "applicationStatus": "closed",
-    "tier": "linked",
+    "tier": "main",
     "majorsScope": "specified",
     "contentEn": {
       "name": "Health Track",

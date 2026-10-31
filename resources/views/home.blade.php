@@ -7,9 +7,7 @@
         @include('home.stats')
         @include('home.tracks')
         @include('home.matcher')
-        @if ($news->isNotEmpty())
-            @include('home.news')
-        @endif
+        @include('home.news')
         @include('home.roadmap')
         @include('home.vision')
         @include('home.assistant')

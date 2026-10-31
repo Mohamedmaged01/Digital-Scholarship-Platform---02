@@ -1,7 +1,7 @@
 @php
     $degrees = config('kasp.degrees');
     $tabs = ['all' => __('كافة المراحل')] + array_map(fn ($n) => __($n), array_intersect_key($degrees, array_flip(['diploma', 'bachelor', 'master', 'phd'])));
-    // ملاحظة «خامسًا»: التميز والصحي يُعرضان برابط المسار والدليل فقط، خارج المسارات الأساسية
+    // المسارات بطريقة عرض «رابط المسار والدليل فقط» تظهر في قسم مستقل أسفل البطاقات (يُضبط من لوحة التحكم)
     $mainTracks = $tracks->filter->isMain()->values();
     $linkedTracks = $tracks->reject->isMain()->values();
 @endphp

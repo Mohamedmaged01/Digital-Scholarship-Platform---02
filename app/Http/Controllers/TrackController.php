@@ -24,6 +24,7 @@ class TrackController extends Controller
         return view('tracks.show', [
             'track' => $track,
             'explorer' => Showcase::explorer($track),
+            'guideline' => Showcase::guideline($track),
             'currentGuides' => $guides->filter(fn (Guide $g) => $g->is_current && $g->status === 'active'),
             'pastGuides' => $guides->reject(fn (Guide $g) => $g->is_current && $g->status === 'active'),
             'otherTracks' => Track::where('id', '!=', $track->id)->orderBy('sort')->get(['id', 'slug', 'name', 'content_en']),
