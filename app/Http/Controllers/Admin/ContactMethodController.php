@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use App\Models\ContactMethod;
+use App\Models\SocialLink;
 use App\Support\DefaultContent;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -18,6 +19,8 @@ class ContactMethodController extends Controller
         return view('admin.contact', [
             'items' => ContactMethod::orderBy('sort')->get(),
             'editing' => $request->filled('edit') ? ContactMethod::find($request->query('edit')) : null,
+            'socials' => SocialLink::orderBy('sort')->get(),
+            'editingSocial' => $request->filled('social') ? SocialLink::find($request->query('social')) : null,
         ]);
     }
 
@@ -51,6 +54,8 @@ class ContactMethodController extends Controller
 
     private function validated(Request $request): array
     {
+        $request->merge(['href' => self::linkFor((string) $request->input('icon'), (string) $request->input('value'), (string) $request->input('href'))]);
+
         $data = $request->validate([
             'label' => ['required', 'string', 'min:2', 'max:255'],
             'value' => ['required', 'string', 'max:255'],
@@ -61,5 +66,27 @@ class ContactMethodController extends Controller
         ], ['href.regex' => 'يجب أن يبدأ الرابط بـ tel: أو mailto: أو https://']);
 
         return [...$data, 'href' => $data['href'] ?? '', 'sort' => $data['sort'] ?? 0];
+    }
+
+    /**
+     * رابط الاتصال: إن تُرك فارغًا يُكوَّن من القيمة (بريد ← mailto، هاتف ← tel، موقع ← https)،
+     * والنطاق المكتوب بلا بادئة يُضاف له https://. ما عدا ذلك يمرّ للتحقق كما هو.
+     */
+    private static function linkFor(string $icon, string $value, string $href): string
+    {
+        $domain = '/^[\w.-]+\.[a-z]{2,}(\/\S*)?$/i';
+        $href = trim($href);
+        if ($href !== '') {
+            return preg_match($domain, $href) ? "https://{$href}" : $href;
+        }
+
+        $value = trim($value);
+
+        return match ($icon) {
+            'mail' => filter_var($value, FILTER_VALIDATE_EMAIL) ? "mailto:{$value}" : '',
+            'phone' => preg_match('/^\+?[\d\s-]{3,}$/', $value) ? 'tel:'.preg_replace('/[\s-]/', '', $value) : '',
+            'globe' => preg_match('/^https?:\/\//i', $value) ? $value : (preg_match($domain, $value) ? "https://{$value}" : ''),
+            default => '',
+        };
     }
 }

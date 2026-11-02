@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\HeroSlide;
 use App\Models\News;
 use App\Models\Station;
 use App\Models\Track;
@@ -19,6 +20,7 @@ class HomeController extends Controller
             'tracks' => $tracks,
             'stations' => Station::orderBy('sort')->get(),
             'news' => News::ordered()->get(),
+            'heroSlides' => HeroSlide::where('is_active', true)->ordered()->get(),
             'quickLinks' => SiteSearch::quickLinks(),
             'stats' => Showcase::statistics('general'),
             'heroStats' => Showcase::statistics('hero'),

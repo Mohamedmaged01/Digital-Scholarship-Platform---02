@@ -6,6 +6,7 @@ use App\Models\ContactMethod;
 use App\Models\Field;
 use App\Models\Guide;
 use App\Models\GuidelineInstitution;
+use App\Models\HeroSlide;
 use App\Models\KbEntry;
 use App\Models\LegalPage;
 use App\Models\Major;
@@ -15,11 +16,13 @@ use App\Models\PathDegree;
 use App\Models\PathMajor;
 use App\Models\PathMajorInstitution;
 use App\Models\Program;
+use App\Models\SocialLink;
 use App\Models\Station;
 use App\Models\Statistic;
 use App\Models\Track;
 use App\Models\University;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\File;
 
 /**
  * المحتوى الافتراضي للمنصّة (database/data/*.json).
@@ -353,6 +356,41 @@ class DefaultContent
                 ContactMethod::create([
                     'label' => $c['label'], 'value' => $c['value'], 'href' => $c['href'], 'icon' => $c['icon'], 'sort' => $i + 1,
                 ]);
+            }
+        });
+    }
+
+    /** معرض الواجهة الافتراضي: شعار البرنامج ثم صورة كل مسار (تُستبدل الشرائح الحالية وتُحذف صورها المرفوعة). */
+    public static function resetHeroSlides(): void
+    {
+        DB::transaction(function () {
+            foreach (HeroSlide::all() as $s) {
+                if ($s->hasUploadedImage()) {
+                    File::delete(public_path($s->image));
+                }
+            }
+            HeroSlide::query()->delete();
+            HeroSlide::create([
+                'image' => 'images/hero-kasp-banner.jpg', 'link' => '#tracks', 'overlay' => false, 'sort' => 1,
+                'title_ar' => 'حدد مسارك', 'title_en' => 'Choose your track',
+                'subtitle_ar' => 'أفضل مؤسسات تعليمية حول العالم', 'subtitle_en' => "The world's top educational institutions",
+            ]);
+            foreach (Track::orderBy('sort')->get() as $i => $t) {
+                HeroSlide::create([
+                    'image' => ltrim($t->image, '/'), 'link' => $t->slug === 'waed' ? 'waed' : "tracks/{$t->slug}", 'sort' => $i + 2,
+                    'title_ar' => $t->name, 'title_en' => $t->content_en['name'] ?? '',
+                    'subtitle_ar' => $t->badge, 'subtitle_en' => $t->content_en['badge'] ?? '',
+                ]);
+            }
+        });
+    }
+
+    public static function resetSocialLinks(): void
+    {
+        DB::transaction(function () {
+            SocialLink::query()->delete();
+            foreach (config('kasp.social_links') as $i => $s) {
+                SocialLink::create($s + ['sort' => $i + 1]);
             }
         });
     }

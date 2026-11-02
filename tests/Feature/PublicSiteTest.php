@@ -35,6 +35,7 @@ class PublicSiteTest extends TestCase
             ->assertSee('لا توجد أخبار منشورة حاليًا')
             ->assertDontSee('رفع وإضافة خبر جديد')
             // زر «ابدأ التقديم» يفتح الموقع التعريفي الرسمي، ومعرض الواجهة: الشعار ثم صور المسارات الست
+            ->assertSee('href="https://uap.sa/"', false)
             ->assertSee('href="https://sites.moe.gov.sa/scholarship-program/"', false)
             ->assertSee('images/hero-kasp-banner.jpg', false)
             ->assertSee('images/tracks/rowad.jpg', false)
@@ -70,7 +71,11 @@ class PublicSiteTest extends TestCase
             ->assertSee('Scholarship tracks')
             ->assertSee('العربية');
         $this->get('/tracks/rowad')->assertOk()->assertSee('Application policies')->assertSee('All majors available');
-        $this->get('/tracks/sahhi')->assertOk()->assertSee('shown in Arabic');
+        // المسار الصحي مترجم بالكامل — لا تنبيه «يُعرض بالعربية»
+        $this->get('/tracks/sahhi')->assertOk()
+            ->assertSee('Nursing — General scholarship conditions for the Health track')
+            ->assertSee('Group One medical certificates')
+            ->assertDontSee('shown in Arabic');
 
         $this->get('/lang/ar');
         $this->get('/')->assertSee('dir="rtl"', false)->assertSee('مسار الروّاد');

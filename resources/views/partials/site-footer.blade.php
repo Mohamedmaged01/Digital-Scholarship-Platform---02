@@ -46,6 +46,19 @@
                             </li>
                         @endforeach
                     </ul>
+                    {{-- حسابات التواصل الاجتماعي — تُدار من «وسائل الاتصال» في اللوحة --}}
+                    @if ($socialLinks->isNotEmpty())
+                        <ul class="mt-6 flex flex-wrap gap-2.5" aria-label="{{ __('حسابات التواصل الاجتماعي') }}">
+                            @foreach ($socialLinks as $s)
+                                <li>
+                                    <a href="{{ $s->url }}" target="_blank" rel="noopener noreferrer" aria-label="{{ $s->name }}" title="{{ $s->name }}"
+                                       class="grid size-10 place-items-center rounded-xl border border-white/10 text-slate-300 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-400/60 hover:text-gold-300">
+                                        <x-social-icon :platform="$s->platform" class="size-4" />
+                                    </a>
+                                </li>
+                            @endforeach
+                        </ul>
+                    @endif
                 </div>
 
                 <div class="lg:col-span-2">

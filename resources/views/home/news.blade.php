@@ -136,7 +136,7 @@
                 <x-lucide-newspaper class="mx-auto size-10 text-gold-500" />
                 <p class="mt-4 text-lg font-bold text-forest-800">{{ __('لا توجد أخبار منشورة حاليًا') }}</p>
                 <p class="mt-2 text-sm text-slate-500">{{ __('تُنشر هنا إعلانات البرنامج الرسمية فور صدورها، ويمكنك متابعة المستجدات عبر الموقع التعريفي للبرنامج.') }}</p>
-                <a href="{{ config('kasp.apply_url') }}" target="_blank" rel="noopener noreferrer"
+                <a href="{{ config('kasp.program_url') }}" target="_blank" rel="noopener noreferrer"
                    class="mt-6 inline-flex items-center gap-2 rounded-full border border-forest-800/20 px-6 py-3 text-sm font-bold text-forest-800 transition-all hover:bg-forest-800 hover:text-gold-300">
                     {{ __('الموقع التعريفي للبرنامج') }}
                     <x-lucide-arrow-up-left class="rtl-flip size-4" />

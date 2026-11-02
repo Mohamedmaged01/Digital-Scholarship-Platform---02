@@ -19,8 +19,33 @@ return [
     'contact_methods' => $site['contactMethods'],
     'suggested_questions' => $site['suggestedQuestions'],
 
-    // الموقع التعريفي الرسمي للبرنامج (وزارة التعليم) — وجهة زر «ابدأ التقديم»
-    'apply_url' => 'https://sites.moe.gov.sa/scholarship-program/',
+    // الموقع التعريفي الرسمي للبرنامج (وزارة التعليم)
+    'program_url' => 'https://sites.moe.gov.sa/scholarship-program/',
+
+    /*
+     * إعدادات الواجهة الرئيسية — القيم الافتراضية فقط، تُدار من «الواجهة الرئيسية»
+     * في لوحة التحكم (جدول site_settings). زر «ابدأ التقديم» يفتح منصة قبول.
+     */
+    'home_defaults' => [
+        'apply_url' => 'https://uap.sa/',
+        'hero_title_ar' => 'مستقبلُك يبدأ من أعرق',
+        'hero_highlight_ar' => 'جامعات العالم',
+        'hero_text_ar' => 'الموقع التعريفي لبرنامج خادم الحرمين الشريفين للابتعاث، الذي يُعرّف باستراتيجية البرنامج وأهدافه ومساراته الأربعة، ويوضح الموقع شروط البرنامج العامة والخاصة، والتخصصات، والجامعات المعتمدة، كما يبيّن كيفية التقديم على البرنامج، والشرائح المستفيدة منه.',
+        'hero_title_en' => "Your future starts at the world's",
+        'hero_highlight_en' => 'leading universities',
+        'hero_text_en' => "The informational site of the Custodian of the Two Holy Mosques Scholarship Program, introducing the program's strategy, goals and four tracks. It explains the program's general and special conditions, majors and approved universities, how to apply, and who can benefit.",
+    ],
+
+    /* مواقع التواصل الاجتماعي: المنصة ← اسمها في اللوحة (الأيقونة في x-social-icon) */
+    'social_platforms' => [
+        'x' => 'X (تويتر)', 'linkedin' => 'لينكدإن', 'youtube' => 'يوتيوب', 'instagram' => 'إنستغرام',
+        'facebook' => 'فيسبوك', 'whatsapp' => 'واتساب', 'telegram' => 'تيليجرام', 'other' => 'رابط آخر',
+    ],
+    // الحسابات الرسمية كما في الموقع التعريفي للبرنامج (sites.moe.gov.sa/scholarship-program)
+    'social_links' => [
+        ['name' => 'X', 'platform' => 'x', 'url' => 'https://x.com/moe_gov_sa'],
+        ['name' => 'YouTube', 'platform' => 'youtube', 'url' => 'https://www.youtube.com/channel/UCNI3mOncSgbjIJJp01EzgVA'],
+    ],
 
     /* الدرجات المعتمدة (§I) — تطابق جدول academic_degrees. */
     'degrees' => [
@@ -132,6 +157,7 @@ return [
     /* أقسام لوحة التحكم: route => [label, icon, adminOnly] */
     'admin_sections' => [
         'admin.dashboard' => ['label' => 'نظرة عامة', 'icon' => 'layout-dashboard'],
+        'admin.home.index' => ['label' => 'الواجهة الرئيسية', 'icon' => 'layout-template', 'count' => 'slides'],
         'admin.news.index' => ['label' => 'الأخبار والإعلانات', 'icon' => 'newspaper', 'count' => 'news'],
         'admin.kb.index' => ['label' => 'بنك المعلومات', 'icon' => 'book-open-text', 'count' => 'kb'],
         'admin.pending.index' => ['label' => 'أسئلة بلا إجابة', 'icon' => 'inbox', 'count' => 'pending'],

@@ -128,15 +128,30 @@ Route::middleware(['auth', 'active'])->prefix('admin')->name('admin.')->group(fu
     });
     Route::delete('/statistics/{statistic}', [Admin\StatisticController::class, 'destroy'])->middleware('can:delete-content')->name('statistics.destroy');
 
-    // وسائل الاتصال
+    // الواجهة الرئيسية: العنوان والنص ورابط التقديم ومعرض الصور
+    Route::get('/home', [Admin\HomePageController::class, 'index'])->name('home.index');
+    Route::middleware('can:edit-content')->group(function () {
+        Route::put('/home/settings', [Admin\HomePageController::class, 'updateSettings'])->name('home.settings');
+        Route::post('/home/slides', [Admin\HomePageController::class, 'storeSlide'])->name('home.slides.store');
+        Route::put('/home/slides/{slide}', [Admin\HomePageController::class, 'updateSlide'])->name('home.slides.update');
+    });
+    Route::middleware('can:delete-content')->group(function () {
+        Route::delete('/home/slides/{slide}', [Admin\HomePageController::class, 'destroySlide'])->name('home.slides.destroy');
+        Route::post('/home/slides/reset', [Admin\HomePageController::class, 'resetSlides'])->name('home.slides.reset');
+    });
+
+    // وسائل الاتصال ومواقع التواصل الاجتماعي
     Route::get('/contact', [Admin\ContactMethodController::class, 'index'])->name('contact.index');
     Route::middleware('can:edit-content')->group(function () {
         Route::post('/contact', [Admin\ContactMethodController::class, 'store'])->name('contact.store');
         Route::put('/contact/{contact}', [Admin\ContactMethodController::class, 'update'])->name('contact.update');
+        Route::post('/social', [Admin\SocialLinkController::class, 'store'])->name('social.store');
+        Route::put('/social/{social}', [Admin\SocialLinkController::class, 'update'])->name('social.update');
     });
     Route::middleware('can:delete-content')->group(function () {
         Route::delete('/contact/{contact}', [Admin\ContactMethodController::class, 'destroy'])->name('contact.destroy');
         Route::post('/contact/reset', [Admin\ContactMethodController::class, 'reset'])->name('contact.reset');
+        Route::delete('/social/{social}', [Admin\SocialLinkController::class, 'destroy'])->name('social.destroy');
     });
 
     // السياسات والشروط

@@ -4,11 +4,13 @@ namespace App\Providers;
 
 use App\Models\ContactMethod;
 use App\Models\Guide;
+use App\Models\HeroSlide;
 use App\Models\KbEntry;
 use App\Models\LegalPage;
 use App\Models\ManagedFile;
 use App\Models\News;
 use App\Models\Program;
+use App\Models\SocialLink;
 use App\Models\Station;
 use App\Models\Statistic;
 use App\Models\Track;
@@ -36,6 +38,7 @@ class AppServiceProvider extends ServiceProvider
         // وسائل الاتصال والصفحات القانونية — تُدار من اللوحة وتظهر في التذييل والمحادثة
         View::composer(['components.chat-panel', 'partials.site-footer'], function ($view) {
             $view->with('contactMethods', once(fn () => ContactMethod::orderBy('sort')->get()));
+            $view->with('socialLinks', once(fn () => SocialLink::orderBy('sort')->get()));
             $view->with('legalPages', once(fn () => LegalPage::orderBy('sort')->get(['slug', 'title_ar'])));
             $view->with('footerTracks', once(fn () => Track::orderBy('sort')->get(['id', 'slug', 'name', 'badge', 'content_en'])));
         });
@@ -54,7 +57,8 @@ class AppServiceProvider extends ServiceProvider
                 'guides' => Guide::count(),
                 'waed' => Program::waed()->count(),
                 'statistics' => Statistic::count(),
-                'contact' => ContactMethod::count(),
+                'contact' => ContactMethod::count() + SocialLink::count(),
+                'slides' => HeroSlide::count(),
                 'pages' => LegalPage::count(),
             ]));
         });

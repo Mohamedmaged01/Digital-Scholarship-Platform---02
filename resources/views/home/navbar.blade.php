@@ -44,7 +44,7 @@
                     <x-lucide-layout-dashboard class="size-4.5" />
                     <span class="pointer-events-none absolute -bottom-9 start-1/2 -translate-x-1/2 whitespace-nowrap rounded-lg bg-forest-950 px-2.5 py-1 text-[10px] font-bold text-gold-300 opacity-0 shadow-lg transition-opacity duration-300 group-hover/ib:opacity-100">{{ __('الدخول إلى لوحة التحكم') }}</span>
                 </a>
-                <a href="{{ config('kasp.apply_url') }}" target="_blank" rel="noopener noreferrer"
+                <a href="{{ \App\Models\SiteSetting::get('apply_url') }}" target="_blank" rel="noopener noreferrer"
                    class="ms-1 inline-flex items-center gap-2 rounded-full bg-forest-800 px-6 py-3 text-sm font-bold text-white transition-all duration-300 hover:-translate-y-0.5 hover:bg-forest-700 hover:shadow-[0_12px_32px_-10px_rgba(15,70,50,0.6)]">
                     {{ __('ابدأ التقديم') }}
                     <x-lucide-arrow-up-left class="rtl-flip size-4" />

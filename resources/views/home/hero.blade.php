@@ -2,22 +2,10 @@
     $destinations = $tracks->filter->isMain()->map->tr('name')->values()->all();
     // ملاحظات 10 و38: حالة التقديم موحّدة من بيانات المسارات
     $openTracks = $tracks->where('application_status', 'open')->values();
-    // معرض الواجهة: شعار البرنامج أولًا ثم صورة كل مسار (تتبع صور المسارات في لوحة التحكم)
-    $slides = collect([[
-        'image' => asset('images/hero-kasp-banner.jpg'),
-        'alt' => __('شعار برنامج خادم الحرمين الشريفين للابتعاث مع برنامج تنمية القدرات البشرية ورؤية السعودية 2030'),
-        'title' => __('حدد مسارك'),
-        'sub' => __('أفضل مؤسسات تعليمية حول العالم'),
-        'href' => '#tracks',
-        'banner' => true,
-    ]])->concat($tracks->filter(fn ($t) => filled($t->image))->map(fn ($t) => [
-        'image' => asset(ltrim($t->image, '/')),
-        'alt' => $t->tr('name'),
-        'title' => $t->tr('name'),
-        'sub' => $t->tr('badge'),
-        'href' => $t->url(),
-        'banner' => false,
-    ]))->values();
+    // العنوان والنص ومعرض الصور تُدار من «الواجهة الرئيسية» في لوحة التحكم
+    $heroTitle = \App\Models\SiteSetting::localized('hero_title');
+    $heroHighlight = \App\Models\SiteSetting::localized('hero_highlight');
+    $slideCount = $heroSlides->count();
 @endphp
 
 <section id="home" class="relative overflow-hidden bg-cream pt-28 md:pt-36">
@@ -44,13 +32,12 @@
                 @endif
             </div>
 
-            <h1 class="animate-enter mt-7 text-balance text-[2.1rem] font-bold leading-[1.25] tracking-tight text-ink md:text-[2.5rem] xl:rtl:text-[2.3rem] xl:rtl:whitespace-nowrap" style="--delay: .1s">
-                {{ __('مستقبلُك يبدأ من') }} {{ __('أعرق') }} <span class="text-shimmer-gold">{{ __('جامعات العالم') }}</span>
+            <h1 class="animate-enter mt-7 text-balance text-[2.1rem] font-bold leading-[1.25] tracking-tight text-ink md:text-[2.5rem] xl:rtl:text-[2.3rem]" style="--delay: .1s">
+                {{ $heroTitle }} @if ($heroHighlight)<span class="text-shimmer-gold">{{ $heroHighlight }}</span>@endif
             </h1>
 
             <p class="animate-enter mt-6 max-w-xl text-lg leading-relaxed text-slate-600" style="--delay: .2s">
-                {{-- النص كما ورد في الموقع التعريفي الرسمي للبرنامج (sites.moe.gov.sa/scholarship-program) --}}
-                {{ __('الموقع التعريفي لبرنامج خادم الحرمين الشريفين للابتعاث، الذي يُعرّف باستراتيجية البرنامج وأهدافه ومساراته الأربعة، ويوضح الموقع شروط البرنامج العامة والخاصة، والتخصصات، والجامعات المعتمدة، كما يبيّن كيفية التقديم على البرنامج، والشرائح المستفيدة منه.') }}
+                {{ \App\Models\SiteSetting::localized('hero_text') }}
             </p>
 
             {{-- destination rotator --}}
@@ -85,40 +72,47 @@
                 <x-star-emblem class="animate-spin-slower absolute -top-12 end-4 size-40 text-forest-700/15 md:size-56" stroke-width="0.8" />
                 <x-star-emblem class="animate-spin-slower absolute -bottom-10 start-2 size-24 text-gold-500/25" stroke-width="0.8" />
 
-                {{-- معرض متحرك بنسبة الإطار نفسها (4:3): شعار البرنامج ثم صور المسارات --}}
-                <div x-data="heroGallery({{ $slides->count() }})" @mouseenter="hover = true" @mouseleave="hover = false" @focusin="hover = true" @focusout="hover = false"
+                {{-- معرض متحرك بنسبة الإطار نفسها (4:3) — الصور والعناوين من «الواجهة الرئيسية» في اللوحة --}}
+                <div x-data="heroGallery({{ max($slideCount, 1) }})" @mouseenter="hover = true" @mouseleave="hover = false" @focusin="hover = true" @focusout="hover = false"
                      role="region" aria-roledescription="carousel" aria-label="{{ __('معرض صور البرنامج ومساراته') }}"
                      class="relative aspect-[4/3] overflow-hidden rounded-[2.5rem] border-[5px] border-forest-800 bg-white shadow-[0_40px_80px_-30px_rgba(8,39,29,0.5)]">
-                    @foreach ($slides as $i => $s)
+                    @forelse ($heroSlides as $i => $s)
+                        @php $isBanner = $s->image === 'images/hero-kasp-banner.jpg'; @endphp
                         {{-- الشريحة الأولى فوق البقية فتظهر وحدها قبل تحميل السكربت --}}
                         <div @class(['absolute inset-0 transition-opacity duration-1000 ease-out', 'z-10' => $i === 0])
                              :class="idx === {{ $i }} ? '' : 'pointer-events-none opacity-0'" :aria-hidden="(idx !== {{ $i }}).toString()"
-                             role="group" aria-roledescription="slide" aria-label="{{ $i + 1 }} / {{ $slides->count() }}">
-                            @if ($s['banner'])
-                                <img src="{{ $s['image'] }}" alt="{{ $s['alt'] }}" class="h-full w-full object-cover" width="1600" height="1200" fetchpriority="high">
-                            @else
-                                <img src="{{ $s['image'] }}" alt="{{ $s['alt'] }}" loading="lazy" decoding="async"
-                                     class="h-full w-full object-cover transition-transform duration-[6s] ease-out" :class="idx === {{ $i }} ? 'motion-safe:scale-110' : ''">
+                             role="group" aria-roledescription="slide" aria-label="{{ $i + 1 }} / {{ $slideCount }}">
+                            <img src="{{ $s->imageUrl() }}" alt="{{ $isBanner ? __('شعار برنامج خادم الحرمين الشريفين للابتعاث مع برنامج تنمية القدرات البشرية ورؤية السعودية 2030') : $s->title() }}"
+                                 @if ($i === 0) fetchpriority="high" @else loading="lazy" decoding="async" @endif
+                                 @class(['h-full w-full object-cover', 'transition-transform duration-[6s] ease-out' => $s->overlay])
+                                 @if ($s->overlay) :class="idx === {{ $i }} ? 'motion-safe:scale-110' : ''" @endif>
+                            @if ($s->overlay)
                                 <div class="absolute inset-0 bg-gradient-to-t from-forest-950/60 via-transparent to-transparent"></div>
                             @endif
 
-                            <a href="{{ $s['href'] }}" tabindex="-1" :tabindex="idx === {{ $i }} ? 0 : -1"
-                               @class(['absolute inset-x-4 bottom-4 items-center justify-between gap-3 rounded-2xl bg-forest-900/95 px-4 py-3 shadow-lg shadow-forest-900/20 transition-colors hover:bg-forest-800 sm:inset-x-5 sm:bottom-5', 'hidden sm:flex' => $s['banner'], 'flex' => ! $s['banner']])>
-                                <div class="flex min-w-0 items-center gap-2.5">
-                                    <x-lucide-badge-check class="size-5 shrink-0 text-gold-300" />
-                                    <div class="min-w-0 leading-tight">
-                                        <div class="truncate text-xs font-bold text-white">{{ $s['title'] }}</div>
-                                        <div class="truncate text-[11px] text-white/70">{{ $s['sub'] }}</div>
+                            @if ($s->title())
+                                <a href="{{ $s->href() }}" tabindex="-1" :tabindex="idx === {{ $i }} ? 0 : -1"
+                                   @class(['absolute inset-x-4 bottom-4 items-center justify-between gap-3 rounded-2xl bg-forest-900/95 px-4 py-3 shadow-lg shadow-forest-900/20 transition-colors hover:bg-forest-800 sm:inset-x-5 sm:bottom-5', 'hidden sm:flex' => ! $s->overlay, 'flex' => $s->overlay])>
+                                    <div class="flex min-w-0 items-center gap-2.5">
+                                        <x-lucide-badge-check class="size-5 shrink-0 text-gold-300" />
+                                        <div class="min-w-0 leading-tight">
+                                            <div class="truncate text-xs font-bold text-white">{{ $s->title() }}</div>
+                                            <div class="truncate text-[11px] text-white/70">{{ $s->subtitle() }}</div>
+                                        </div>
                                     </div>
-                                </div>
-                                <span class="shrink-0 font-plex text-[10px] tracking-widest text-gold-300" dir="ltr">KASP '26</span>
-                            </a>
+                                    <span class="shrink-0 font-plex text-[10px] tracking-widest text-gold-300" dir="ltr">KASP '26</span>
+                                </a>
+                            @endif
                         </div>
-                    @endforeach
+                    @empty
+                        <img src="{{ asset('images/hero-kasp-banner.jpg') }}" alt="{{ __('شعار برنامج خادم الحرمين الشريفين للابتعاث مع برنامج تنمية القدرات البشرية ورؤية السعودية 2030') }}"
+                             class="h-full w-full object-cover" fetchpriority="high">
+                    @endforelse
 
                     {{-- مؤشرات المعرض وزر الإيقاف (لا يُعرض معرض متحرك دون إمكانية إيقافه) --}}
+                    @if ($slideCount > 1)
                     <div x-cloak class="absolute end-4 top-4 z-20 flex items-center gap-1.5 rounded-full bg-forest-900/80 py-1.5 pe-1.5 ps-3 backdrop-blur sm:end-5 sm:top-5">
-                        @foreach ($slides as $i => $s)
+                        @foreach ($heroSlides as $i => $s)
                             <button type="button" @click="go({{ $i }})" :aria-current="(idx === {{ $i }}).toString()"
                                     aria-label="{{ __('عرض الصورة :n', ['n' => $i + 1]) }}" class="h-1.5 rounded-full transition-all duration-500"
                                     :class="idx === {{ $i }} ? 'w-5 bg-gold-400' : 'w-1.5 bg-white/45 hover:bg-white/80'"></button>
@@ -130,6 +124,7 @@
                             <x-lucide-play class="size-3.5" x-show="paused" x-cloak />
                         </button>
                     </div>
+                    @endif
                 </div>
 
                 {{-- floating chip: AI --}}

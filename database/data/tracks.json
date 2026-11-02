@@ -1513,6 +1513,192 @@
           "q": "Can I edit my application after submitting it?",
           "a": "Applications cannot be edited after submission; you may delete the preference and apply again if applications are open."
         }
+      ],
+      "special_conditions": [
+        {
+          "title": "Nursing — General scholarship conditions for the Health track",
+          "items": [
+            "The applicant must be a Saudi national and medically fit.",
+            "Direct admission that is not conditional on a language requirement or course.",
+            "The applicant must not already hold a qualification at the level applied for, from inside or outside the Kingdom.",
+            "The applicant must not have been issued a scholarship decision for the same level or have received a domestic scholarship.",
+            "The program admission must not be designated for international students only.",
+            "The certificate must be equivalency-certified by the competent authority if issued by an institution outside the Kingdom.",
+            "Full-time enrolment, dedication to study, and residence in the country of study."
+          ]
+        },
+        {
+          "title": "Nursing — Specific conditions for bachelor's scholarships",
+          "items": [
+            "A general secondary school certificate or equivalent obtained within the last 5 years.",
+            "A cumulative secondary school GPA of at least 85%.",
+            "A score of 70% in the General Aptitude and Achievement tests, or through the computer-based testing (CBT) systems.",
+            "Admission from a recommended university in one of the specified scholarship countries.",
+            "Continuing in the major must not be conditional on achieving specific grades later in the program.",
+            "The bachelor's program must include clinical training and be accredited for professional practice in the country of study."
+          ]
+        },
+        {
+          "title": "Nursing — Specific conditions for master's scholarships",
+          "items": [
+            "The applicant's bachelor's GPA must be at least 2.75 out of 4, 3.75 out of 5, or 80 out of 100.",
+            "A score of 5.5 in IELTS or 46 in TOEFL iBT.",
+            "No more than five years may have passed since the applicant obtained the bachelor's degree.",
+            "The master's study must be in clinical programs only."
+          ]
+        },
+        {
+          "title": "Nursing — Countries",
+          "items": [
+            "United States - Canada - United Kingdom - Ireland - New Zealand - Australia - France."
+          ]
+        },
+        {
+          "title": "Applied medical sciences — Majors",
+          "items": [
+            "Podiatry.",
+            "Prosthetics and orthotics.",
+            "Respiratory therapy.",
+            "Occupational therapy.",
+            "Cardiac perfusion.",
+            "Cardiac technology."
+          ]
+        },
+        {
+          "title": "Applied medical sciences — Countries",
+          "items": [
+            "United States - Canada - United Kingdom - Ireland - New Zealand - Australia - France - Germany."
+          ]
+        },
+        {
+          "title": "Applied medical sciences — General scholarship conditions",
+          "items": [
+            "The applicant must be a Saudi national and medically fit.",
+            "Direct admission that is not conditional on a language requirement or course.",
+            "The applicant must not already hold a qualification at the level applied for, from inside or outside the Kingdom.",
+            "The program admission must not be designated for international students only.",
+            "The applicant must not have been issued a scholarship decision for the same level or have received a domestic scholarship.",
+            "The academic certificate must be equivalency-certified by the competent authority if issued by an institution outside the Kingdom.",
+            "Full-time enrolment, dedication to study, and residence in the country of study."
+          ]
+        },
+        {
+          "title": "Applied medical sciences — Specific conditions for bachelor's scholarships",
+          "items": [
+            "A general secondary school certificate or equivalent.",
+            "A cumulative secondary school GPA of at least 90%.",
+            "A score of 80% in the General Aptitude and Achievement tests, or through the computer-based testing (CBT) systems.",
+            "A score of 5.5 in IELTS, or 46 in TOEFL iBT.",
+            "Passing the tests and interviews required by the university.",
+            "The bachelor's program must include clinical training and be accredited for professional practice in the country of study.",
+            "Admission from a recommended university in the specified scholarship countries and in the specified specialised majors."
+          ]
+        },
+        {
+          "title": "Applied medical sciences — Specific conditions for master's scholarships",
+          "items": [
+            "The applicant's bachelor's GPA must be at least 2.75 out of 4, 3.75 out of 5, or 80 out of 100.",
+            "A score of 5.5 in IELTS or 46 in TOEFL iBT.",
+            "No more than five years may have passed since the applicant obtained the bachelor's degree.",
+            "The master's study must be in clinical programs only."
+          ]
+        },
+        {
+          "title": "Medicine — Countries for the bachelor's level",
+          "items": [
+            "United States - Canada - United Kingdom - Ireland - New Zealand - Australia."
+          ]
+        },
+        {
+          "title": "Medicine — Countries for fellowship and subspecialty",
+          "items": [
+            {
+              "text": "Group One medical certificates under the executive rules of the general regulation for professional classification and registration:",
+              "sub": [
+                "Australia – Ireland – France – Canada – United Kingdom – United States."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Medicine — Specific conditions for bachelor's scholarships",
+          "items": [
+            "A general secondary school certificate or equivalent.",
+            "A cumulative secondary school GPA of at least 95%.",
+            "A score of 85% in the General Aptitude and Achievement tests, or through the computer-based testing (CBT) systems.",
+            "A score of 5.5 in IELTS, or 46 in TOEFL iBT."
+          ]
+        },
+        {
+          "title": "Bachelor of Medicine for applicants who previously completed a science bachelor's in the United States or Canada",
+          "items": [
+            "No more than five years may have passed since obtaining the bachelor's degree."
+          ]
+        },
+        {
+          "title": "Medicine — Specific conditions for fellowship scholarships",
+          "items": [
+            "Completion of the bachelor's in medicine, with the official bachelor's graduation document and academic transcript.",
+            "A grade of \"Good\" or higher in the Bachelor of Medicine and Surgery.",
+            "Passing the professional classification and registration exam of the Saudi Commission for Health Specialties.",
+            "A score of at least 6 in IELTS, or the equivalent in TOEFL, or B2 for European countries; C2 for French and B2 for German.",
+            "Direct admission to a program accredited by a recognised accreditation body and endorsed by the cultural attaché in the country of study, or passing USMLE Step 1 and obtaining admission to an Observership or a research fellowship of no more than six months.",
+            "Endorsement of the admission by the cultural attaché in the country of study."
+          ]
+        },
+        {
+          "title": "Medicine — Specific conditions for subspecialty scholarships",
+          "items": [
+            "A specialty certificate from the Saudi Commission for Health Specialties or its equivalent, with supporting documentation from the Commission.",
+            "The accepted specialty must match or extend the applicant's previous specialty, as confirmed by the Saudi Commission for Health Specialties.",
+            "Passing the professional classification and registration exam of the Saudi Commission for Health Specialties.",
+            "Direct admission to a program accredited by a recognised accreditation body and endorsed by the cultural attaché in the country of study, or passing USMLE Step 1 and obtaining admission to an Observership or a research fellowship of no more than six months.",
+            "Endorsement of the admission by the cultural attaché in the country of study."
+          ]
+        },
+        {
+          "title": "Physicians wishing to join medical training programs in Canadian hospitals",
+          "items": [
+            "Physicians who wish to train in Canada may apply to the Health Specialties track under its criteria and conditions, except for the direct-admission requirement.",
+            "After applying under the Health track conditions and requirements, the physician may receive an initial financial guarantee for admission purposes, submitted to the attaché to help secure an admission.",
+            "Once admitted, the admission is endorsed by the attaché, and the physician must send the Ministry a copy through the \"Inquiry\" service in their Safeer account."
+          ]
+        },
+        {
+          "title": "Pharmacy — Countries for fellowship and subspecialty",
+          "items": [
+            "United States – Canada."
+          ]
+        },
+        {
+          "title": "Dentistry — Countries for fellowship and subspecialty",
+          "items": [
+            {
+              "text": "Group One dental certificates under the executive rules of the general regulation for professional classification and registration:",
+              "sub": [
+                "Australia – Ireland – Canada – United Kingdom – United States – Sweden."
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Dentistry — Specific conditions for fellowship scholarships",
+          "items": [
+            "Completion of the bachelor's degree, with the official bachelor's graduation document and academic transcript.",
+            "A grade of \"Good\" or higher in the Bachelor of Medicine and Surgery.",
+            "A score of at least 6 in IELTS, or the equivalent in TOEFL, or B2 for European countries; C2 for French and B2 for German.",
+            "Direct admission to a program accredited by a recognised accreditation body and endorsed by the cultural attaché in the country of study.",
+            "Passing the professional classification and registration exam of the Saudi Commission for Health Specialties."
+          ]
+        },
+        {
+          "title": "Dentistry — Specific conditions for subspecialty scholarships",
+          "items": [
+            "A specialty certificate from the Saudi Commission for Health Specialties or its equivalent, with supporting documentation from the Commission.",
+            "The accepted specialty must match or extend the applicant's previous specialty, as confirmed by the Saudi Commission for Health Specialties.",
+            "Passing the professional classification and registration exam of the Saudi Commission for Health Specialties."
+          ]
+        }
       ]
     }
   }
