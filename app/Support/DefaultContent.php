@@ -129,8 +129,9 @@ class DefaultContent
                     'institution_status' => $u['status'] ?? 'needs_verification',
                 ]);
             }
-            // مؤسسات قوائم الدليل الاسترشادي تبقى (تُدار من resetGuideline)
-            $slugs = array_merge($slugs, array_column(self::load('guideline')['universities'], 'slug'));
+            // مؤسسات قوائم الدليل الاسترشادي ومسار التميز تبقى (تُدار من resetGuideline وresetTamayoz)
+            $slugs = array_merge($slugs, array_column(self::load('guideline')['universities'], 'slug'),
+                array_column(self::load('tamayoz')['universities'], 'slug'));
             University::where(fn ($q) => $q->whereNull('slug')->orWhereNotIn('slug', $slugs))->delete();
         });
     }
@@ -161,7 +162,8 @@ class DefaultContent
             }
 
             $unis = self::universityIds();
-            GuidelineInstitution::query()->delete();
+            // قوائم مسار التميز تُدار من resetTamayoz
+            GuidelineInstitution::whereIn('path_id', array_values(array_intersect_key($tracks, $data['tracks'])))->delete();
             foreach ($data['tracks'] as $slug => $lists) {
                 if (! isset($tracks[$slug])) {
                     continue;
@@ -183,6 +185,120 @@ class DefaultContent
                 }
             }
         });
+    }
+
+    /**
+     * مسار التميز من ملف «تخصصات وجامعات التميز — محدث 2026م»: لكل تخصص من التخصصات المعتمدة
+     * قائمة مؤسساته — الجامعات العامة مع الإضافية الخاصة به، أو قائمته الخاصة، أو جامعات وبرامج محددة.
+     * المؤسسات الموجودة تحتفظ ببياناتها، ويُكمَل موقعها الرسمي من الملف إن كان فارغًا.
+     */
+    public static function resetTamayoz(): void
+    {
+        $trackId = Track::where('slug', 'tamayoz')->value('id');
+        if (! $trackId) {
+            return;
+        }
+        $data = self::load('tamayoz');
+
+        DB::transaction(function () use ($data, $trackId) {
+            foreach ($data['universities'] as $u) {
+                $uni = University::firstOrNew(['slug' => $u['slug']]);
+                if (! $uni->exists) {
+                    if (! isset($u['nameEn'])) {
+                        continue; // مؤسسة من قائمة أخرى لم تُستورد بعد
+                    }
+                    $uni->fill([
+                        'name_en' => $u['nameEn'], 'name_ar' => $u['nameEn'], 'city' => $u['city'] ?? '',
+                        'country' => $u['country'], 'region' => $u['region'], 'fields' => [],
+                        'website' => '', 'institution_status' => 'verified', 'source_id' => 'src-kasp',
+                    ]);
+                }
+                if (! $uni->website && ! empty($u['website'])) {
+                    $uni->website = $u['website'];
+                }
+                $uni->save();
+            }
+
+            DB::table('tracks')->where('id', $trackId)->update([
+                'guideline_lists' => json_encode(array_map(fn ($l) => [
+                    'key' => $l['key'], 'nameAr' => $l['nameAr'], 'nameEn' => $l['nameEn'], 'kind' => $l['kind'], 'majors' => [],
+                ], $data['lists']), JSON_UNESCAPED_UNICODE),
+            ]);
+
+            $unis = self::universityIds();
+            GuidelineInstitution::where('path_id', $trackId)->delete();
+            $rows = [];
+            foreach ($data['lists'] as $l) {
+                $position = [0, 0];
+                foreach ($l['institutions'] as $i) {
+                    if (! isset($unis[$i[0]])) {
+                        continue;
+                    }
+                    $extra = (int) $i[1];
+                    $rows[] = [
+                        'path_id' => $trackId, 'field_key' => $l['key'], 'institution_id' => $unis[$i[0]],
+                        'position' => ++$position[$extra], 'note' => null, 'extra' => (bool) $extra,
+                        'programs' => isset($i[2]) ? json_encode($i[2], JSON_UNESCAPED_UNICODE) : null,
+                    ];
+                }
+                // أسماء التخصصات كما وردت في الملف
+                Major::whereKey($l['key'])->update(['name_ar' => $l['nameAr'], 'name_en' => $l['nameEn']]);
+            }
+            foreach (array_chunk($rows, 250) as $chunk) {
+                GuidelineInstitution::insert($chunk);
+            }
+
+            // روابط المستكشف القديمة (غير الموثّقة) تحل محلها قوائم الملف
+            PathMajorInstitution::where('path_id', $trackId)->delete();
+            self::linkTamayozMajors();
+        });
+    }
+
+    /** تخصصات مسار التميز المعتمدة لكل درجاته — يعتمد عليها محرّك التوجيه والبحث. */
+    private static function linkTamayozMajors(): void
+    {
+        $trackId = Track::where('slug', 'tamayoz')->value('id');
+        if (! $trackId) {
+            return;
+        }
+        $existing = Major::pluck('id')->flip();
+        $majors = array_filter(array_column(self::load('tamayoz')['lists'], 'key'), fn ($id) => isset($existing[$id]));
+
+        PathMajor::where('path_id', $trackId)->delete();
+        foreach (PathDegree::where('path_id', $trackId)->pluck('degree_id') as $degree) {
+            foreach ($majors as $major) {
+                PathMajor::create(['path_id' => $trackId, 'major_id' => $major, 'degree_id' => $degree]);
+            }
+        }
+    }
+
+    /**
+     * مصدر قوائم المؤسسات في صفحة المسار: ملف مسار التميز، أو الدليل الاسترشادي لبقية المسارات.
+     *
+     * @return array{intro: string, url: ?string, name: string, version: string, rank: string, tabs: string}
+     */
+    public static function listsSource(Track $track): array
+    {
+        if ($track->slug === 'tamayoz') {
+            return [
+                'intro' => __('وفق قائمة التخصصات والجامعات المعتمدة لمسار التميز (محدثة 2026م)'),
+                'url' => null,
+                'name' => __('قائمة مسار التميز'),
+                'version' => self::load('tamayoz')['source']['version'],
+                'rank' => __('رقم :n في القائمة'),
+                'tabs' => __('تخصصات المسار'),
+            ];
+        }
+        $source = self::guidelineMeta()['source'];
+
+        return [
+            'intro' => __('وفق الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026–2027'),
+            'url' => $source['url'],
+            'name' => __('الدليل الاسترشادي'),
+            'version' => $source['version'],
+            'rank' => __('الترتيب في الدليل :n'),
+            'tabs' => __('مجالات المسار'),
+        ];
     }
 
     /** نصوص ملاحظات بطاقات المؤسسات كما وردت في الدليل (درجة الماجستير فقط…) ومصدر القوائم. */
@@ -238,6 +354,8 @@ class DefaultContent
                     ]);
                 }
             }
+            // تخصصات مسار التميز من ملف المسار (tamayoz.json)
+            self::linkTamayozMajors();
         });
     }
 

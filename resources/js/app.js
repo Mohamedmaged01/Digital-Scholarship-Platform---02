@@ -210,7 +210,7 @@ Alpine.data('matcher', (data) => ({
 }));
 
 /* ---------------- قوائم الدليل الاسترشادي: مجال ← تخصصات + مؤسسات بترتيب الدليل ---------------- */
-Alpine.data('guidelineLists', (lists) => ({
+Alpine.data('guidelineLists', (lists, titles = {}) => ({
     lists,
     active: lists[0]?.key ?? null,
     search: '',
@@ -220,7 +220,19 @@ Alpine.data('guidelineLists', (lists) => ({
     get filtered() {
         const q = this.search.trim().toLowerCase();
         if (!this.current) return [];
-        return q ? this.current.institutions.filter((u) => `${u.name} ${u.country}`.toLowerCase().includes(q)) : this.current.institutions;
+        return q
+            ? this.current.institutions.filter((u) => `${u.name} ${u.country} ${(u.programs ?? []).join(' ')}`.toLowerCase().includes(q))
+            : this.current.institutions;
+    },
+    /** مسار التميز: الجامعات الإضافية الخاصة بالتخصص أولًا ثم الجامعات العامة؛ وبقية القوائم قسم واحد */
+    get sections() {
+        const items = this.filtered;
+        const hasExtra = this.current?.institutions.some((u) => u.extra);
+        if (!hasExtra) return [{ key: 'all', title: '', items }];
+        return [
+            { key: 'extra', title: titles.extra, items: items.filter((u) => u.extra) },
+            { key: 'general', title: titles.general, items: items.filter((u) => !u.extra) },
+        ].filter((s) => s.items.length);
     },
     select(key) {
         this.active = key;

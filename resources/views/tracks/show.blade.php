@@ -116,8 +116,8 @@
             </section>
         @endif
 
-        {{-- ══════ المستكشف ══════ --}}
-        @if ($hasExplorer)
+        {{-- ══════ المستكشف (للمسارات التي ليس لها قوائم منشورة) ══════ --}}
+        @if ($hasExplorer && ! $guideline)
         <section class="mt-12" x-data="trackExplorer(@js($explorer))" aria-labelledby="explorer-title">
             <div class="flex flex-wrap items-start justify-between gap-3">
                 <div>

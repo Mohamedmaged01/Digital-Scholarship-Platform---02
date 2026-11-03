@@ -4,6 +4,7 @@ namespace Tests\Feature;
 
 use App\Models\ContactMethod;
 use App\Models\Guide;
+use App\Models\GuidelineInstitution;
 use App\Models\LegalPage;
 use App\Models\Major;
 use App\Models\PathMajor;
@@ -34,12 +35,12 @@ class V3FeaturesTest extends TestCase
 
     public function test_seed_imports_the_full_v3_relational_dataset(): void
     {
-        // 37 مؤسسة من بيانات v3 + 262 مؤسسة جديدة من قوائم الدليل الاسترشادي (GuidelineListsTest)
-        $this->assertSame(299, University::count());
+        // 37 مؤسسة من بيانات v3 + 262 من قوائم الدليل الاسترشادي + 26 من ملف مسار التميز (TamayozListsTest)
+        $this->assertSame(325, University::count());
         $this->assertSame(54, Major::count());
-        // ملاحظات 32-34: روابط المستكشف لمسار التميز فقط — قوائم الروّاد والبحث والتطوير وإمداد في guideline_institutions
-        $this->assertSame(26, PathMajor::count());
-        $this->assertSame(119, PathMajorInstitution::count());
+        // تخصصات مسار التميز الـ23 لدرجاته الثلاث؛ قوائم المؤسسات كلها في guideline_institutions
+        $this->assertSame(69, PathMajor::count());
+        $this->assertSame(0, PathMajorInstitution::count());
         $this->assertSame(['tamayoz'], PathMajor::with('track')->get()->pluck('track.slug')->unique()->values()->all());
         $this->assertSame(7, Program::waed()->count());
         $this->assertSame(6, Guide::count());
@@ -48,11 +49,11 @@ class V3FeaturesTest extends TestCase
 
     public function test_resetting_tracks_keeps_their_relations(): void
     {
-        $before = PathMajorInstitution::count();
+        $before = [PathMajor::count(), GuidelineInstitution::count()];
         DefaultContent::resetTracks();
         DefaultContent::resetUniversities();
 
-        $this->assertSame($before, PathMajorInstitution::count());
+        $this->assertSame($before, [PathMajor::count(), GuidelineInstitution::count()]);
     }
 
     /* ---------------- صفحة المسار ---------------- */
@@ -62,13 +63,17 @@ class V3FeaturesTest extends TestCase
         $tamayoz = Track::where('slug', 'tamayoz')->firstOrFail();
         $explorer = Showcase::explorer($tamayoz);
 
-        $phd = collect($explorer['degrees'])->firstWhere('id', 'professional_doctorate');
-        $law = collect($phd['majors'])->firstWhere('id', 'm-t-law');
-        $this->assertCount(7, $law['universities']);
-        $this->assertSame(['professional_doctorate'], $explorer['constraints']['m-t-law'][0]['allowedIds']);
+        // التخصصات الـ23 لكل درجة؛ المؤسسات تُعرض من قوائم ملف المسار بدل المستكشف
+        $this->assertSame(['bachelor', 'master', 'phd'], array_column($explorer['degrees'], 'id'));
+        $this->assertCount(23, $explorer['degrees'][0]['majors']);
+        $this->assertSame(23, $explorer['totals']['majors']);
+        $this->assertSame(0, $explorer['totals']['universities']);
 
         $this->get('/tracks/tamayoz')
             ->assertOk()
+            ->assertSee('23 تخصص')
+            ->assertSee('guidelineLists(', false)
+            ->assertDontSee('trackExplorer(', false)
             ->assertSee('مسار التميز')
             ->assertSee('المؤسسات التعليمية والتخصصات المحددة للمسار')
             ->assertSee('الدليل الاسترشادي — مسار التميز 2026–2027')

@@ -127,23 +127,41 @@ class Showcase
         $en = app()->getLocale() === 'en';
         $meta = DefaultContent::guidelineMeta();
         $institutions = GuidelineInstitution::with('institution')->where('path_id', $track->id)
-            ->orderBy('position')->get()->groupBy('field_key');
+            ->orderByDesc('extra')->orderBy('position')->get()->groupBy('field_key');
 
-        return collect($track->guideline_lists)->map(fn (array $list) => [
-            'key' => $list['key'],
-            'name' => $en ? $list['nameEn'] : $list['nameAr'],
-            'majors' => array_map(fn (array $m) => [
-                'name' => $en ? $m['en'] : $m['ar'],
-                'alt' => $en ? $m['ar'] : $m['en'],
-                'mastersOnly' => ($m['degree'] ?? null) === 'master',
-            ], $list['majors']),
-            'institutions' => ($institutions[$list['key']] ?? collect())->filter->institution->map(fn (GuidelineInstitution $g) => [
-                'position' => $g->position,
-                'name' => $g->institution->name_en,
-                'country' => $en ? __($g->institution->country) : $g->institution->country,
-                'note' => $g->note ? ($meta['notes'][$g->note][$en ? 'en' : 'ar'] ?? null) : null,
-            ])->values()->all(),
-        ])->all();
+        return collect($track->guideline_lists)->map(function (array $list) use ($institutions, $meta, $en) {
+            $items = ($institutions[$list['key']] ?? collect())->filter->institution;
+            $kind = $list['kind'] ?? null;
+
+            return [
+                'key' => $list['key'],
+                'name' => $en ? $list['nameEn'] : $list['nameAr'],
+                // مسار التميز: general = الجامعات العامة (+ إضافية للتخصص)، own = قائمة خاصة، programs = جامعات وبرامج محددة
+                'kind' => $kind,
+                'note' => match ($kind) {
+                    'general' => $items->contains->extra
+                        ? __('تنطبق على هذا التخصص قائمة الجامعات العامة المعتمدة لمسار التميز، مضافًا إليها جامعات خاصة بالتخصص.')
+                        : __('تنطبق على هذا التخصص قائمة الجامعات العامة المعتمدة لمسار التميز.'),
+                    'own' => __('لهذا التخصص قائمة جامعات خاصة به، ولا تنطبق عليه قائمة الجامعات العامة.'),
+                    'programs' => __('يُقبل هذا التخصص في الجامعات التالية وفق البرامج المحددة لكل جامعة.'),
+                    default => null,
+                },
+                'majors' => array_map(fn (array $m) => [
+                    'name' => $en ? $m['en'] : $m['ar'],
+                    'alt' => $en ? $m['ar'] : $m['en'],
+                    'mastersOnly' => ($m['degree'] ?? null) === 'master',
+                ], $list['majors']),
+                'institutions' => $items->map(fn (GuidelineInstitution $g) => [
+                    'position' => $g->position,
+                    'name' => $g->institution->name_en,
+                    'country' => $en ? __($g->institution->country) : $g->institution->country,
+                    'note' => $g->note ? ($meta['notes'][$g->note][$en ? 'en' : 'ar'] ?? null) : null,
+                    'extra' => (bool) $g->extra,
+                    'programs' => $g->programs ?? [],
+                    'website' => $g->institution->website ?: null,
+                ])->values()->all(),
+            ];
+        })->all();
     }
 
     /**

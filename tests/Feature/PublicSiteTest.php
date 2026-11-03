@@ -110,7 +110,7 @@ class PublicSiteTest extends TestCase
         $this->getJson('/search?q='.urlencode('أكسفورد'))
             ->assertOk()
             ->assertJsonPath('results.0.groupId', 'universities')
-            ->assertJsonPath('results.0.href', route('tracks.show', 'tamayoz'));
+            ->assertJsonPath('results.0.href', route('tracks.show', 'rowad'));
 
         $this->getJson('/search?q=a')->assertOk()->assertJsonCount(0, 'results');
     }

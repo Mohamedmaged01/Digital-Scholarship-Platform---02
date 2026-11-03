@@ -1146,14 +1146,13 @@
     "degrees": [
       "bachelor",
       "master",
-      "phd",
-      "professional_doctorate"
+      "phd"
     ],
     "ranking": "قائمة مؤسسات تعليمية محددة لكل تخصص",
     "fields": [
-      "القانون",
-      "إدارة الأعمال",
-      "العدالة الجنائية",
+      "إدارة أعمال",
+      "علوم سياسية وعلاقات دولية",
+      "عدالة جنائية",
       "الألعاب الرقمية"
     ],
     "perks": [
@@ -1171,10 +1170,10 @@
       "description": "One of the tracks of the Custodian of the Two Holy Mosques Scholarship Program abroad, aimed at raising the academic qualification of students by sending them to distinguished global institutions in specified specialized majors, each with its own institution list.",
       "ranking": "A specified institution list for each major",
       "fields": [
-        "Law",
         "Business Administration",
+        "Political Science and International Relations",
         "Criminal Justice",
-        "Digital Games"
+        "Game Design"
       ],
       "perks": [
         "A specified institution list for each major",

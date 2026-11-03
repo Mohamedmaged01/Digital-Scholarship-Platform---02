@@ -1,13 +1,20 @@
 {{--
-    قوائم الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026-2027 (ملاحظتا 32 و33):
-    لكل مجال تخصصاته، ثم المؤسسات التعليمية بترتيبها في الدليل مع ملاحظات البطاقات كما وردت.
+    قوائم المؤسسات التعليمية للمسار:
+    - الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026-2027 (ملاحظتا 32 و33): لكل مجال تخصصاته،
+      ثم المؤسسات التعليمية بترتيبها في الدليل مع ملاحظات البطاقات كما وردت.
+    - مسار التميز (ملف «تخصصات وجامعات التميز — محدث 2026م»): لكل تخصص قائمته — الجامعات العامة
+      مع الإضافية الخاصة به، أو قائمة خاصة، أو جامعات وبرامج محددة.
 --}}
 @php
-    $guideSource = \App\Support\DefaultContent::guidelineMeta()['source'];
+    $listsSource = \App\Support\DefaultContent::listsSource($track);
     $multi = count($guideline) > 1;
+    $sectionTitles = [
+        'extra' => __('جامعات إضافية خاصة بالتخصص'),
+        'general' => __('الجامعات العامة المعتمدة لتخصصات المسار'),
+    ];
 @endphp
 
-<section class="mt-12" x-data="guidelineLists(@js($guideline))" aria-labelledby="lists-title">
+<section class="mt-12" x-data="guidelineLists(@js($guideline), @js($sectionTitles))" aria-labelledby="lists-title">
     <div class="flex flex-wrap items-start justify-between gap-3">
         <div>
             <h2 id="lists-title" class="flex items-center gap-2.5 text-2xl font-bold text-ink">
@@ -15,16 +22,18 @@
                 {{ __('المؤسسات التعليمية والتخصصات المحددة للمسار') }}
             </h2>
             <p class="mt-2 text-sm text-slate-500">
-                {{ __('وفق الدليل الاسترشادي لترتيب قوائم الجامعات حسب المجالات 2026–2027') }} —
-                <a href="{{ $guideSource['url'] }}" target="_blank" rel="noopener noreferrer" class="font-bold text-forest-700 underline decoration-gold-500/60 underline-offset-4 hover:text-forest-600">{{ __('عرض الدليل (PDF)') }}</a>
+                {{ $listsSource['intro'] }}
+                @if ($listsSource['url'])
+                    — <a href="{{ $listsSource['url'] }}" target="_blank" rel="noopener noreferrer" class="font-bold text-forest-700 underline decoration-gold-500/60 underline-offset-4 hover:text-forest-600">{{ __('عرض الدليل (PDF)') }}</a>
+                @endif
             </p>
         </div>
-        <x-last-updated source="{{ __('الدليل الاسترشادي') }}" :version="$guideSource['version']" compact />
+        <x-last-updated :source="$listsSource['name']" :version="$listsSource['version']" compact />
     </div>
 
     @if ($multi)
-        {{-- المجالات --}}
-        <div class="-mx-5 mt-6 overflow-x-auto px-5 pb-1 md:mx-0 md:px-0" role="tablist" aria-label="{{ __('مجالات المسار') }}">
+        {{-- المجالات / تخصصات مسار التميز --}}
+        <div class="-mx-5 mt-6 overflow-x-auto px-5 pb-1 md:mx-0 md:px-0" role="tablist" aria-label="{{ $listsSource['tabs'] }}">
             <div class="flex gap-2 md:flex-wrap">
                 <template x-for="l in lists" :key="l.key">
                     <button type="button" role="tab" @click="select(l.key)" :aria-selected="(active === l.key).toString()"
@@ -44,6 +53,14 @@
 
     <template x-if="current">
         <div class="mt-6 space-y-6" role="tabpanel">
+            {{-- ما ينطبق على التخصص المختار (مسار التميز) --}}
+            <template x-if="current.note">
+                <p class="flex items-start gap-2 rounded-2xl border border-gold-500/30 bg-gold-500/[0.07] px-4 py-3 text-[13px] font-semibold leading-relaxed text-forest-800">
+                    <x-lucide-info class="mt-0.5 size-4 shrink-0 text-gold-600" />
+                    <span x-text="current.note"></span>
+                </p>
+            </template>
+
             {{-- التخصصات التابعة للمجال --}}
             <template x-if="current.majors.length">
                 <div class="rounded-3xl border border-forest-800/10 bg-white p-5 md:p-6">
@@ -68,7 +85,7 @@
                 </div>
             </template>
 
-            {{-- المؤسسات التعليمية بترتيب الدليل --}}
+            {{-- المؤسسات التعليمية --}}
             <div>
                 <div class="flex flex-wrap items-center justify-between gap-3">
                     <h3 class="flex items-center gap-2 text-base font-bold text-ink">
@@ -84,19 +101,48 @@
                     </label>
                 </div>
 
-                <ol class="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
-                    <template x-for="u in filtered" :key="u.position + u.name">
-                        <li class="flex items-start gap-3 rounded-2xl border border-forest-800/10 bg-white px-4 py-3.5">
-                            <span class="grid size-9 shrink-0 place-items-center rounded-xl bg-forest-800 font-plex text-[12px] font-bold text-gold-300" dir="ltr"
-                                  :aria-label="@js(__('الترتيب في الدليل :n')).replace(':n', u.position)" x-text="String(u.position).padStart(2, '0')"></span>
-                            <span class="min-w-0">
-                                <span class="block text-[13.5px] font-bold leading-snug text-ink rtl:text-right" dir="ltr" x-text="u.name"></span>
-                                <span class="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-slate-500"><x-lucide-map-pin class="size-3 text-gold-600" /><span x-text="u.country"></span></span>
-                                <span x-show="u.note" class="mt-1.5 inline-block rounded-lg bg-gold-500/15 px-2 py-1 text-[10.5px] font-bold leading-relaxed text-gold-700" x-text="u.note"></span>
-                            </span>
-                        </li>
-                    </template>
-                </ol>
+                <template x-for="s in sections" :key="s.key">
+                    <div class="mt-4">
+                        <template x-if="s.title">
+                            <h4 class="mb-3 mt-6 flex items-center gap-2 text-[13.5px] font-bold" :class="s.key === 'extra' ? 'text-gold-700' : 'text-forest-800'">
+                                <span class="size-2 rounded-full" :class="s.key === 'extra' ? 'bg-gold-500' : 'bg-forest-700'"></span>
+                                <span x-text="s.title"></span>
+                                <span class="rounded-md bg-sand px-2 py-0.5 font-plex text-[11px] text-slate-500" dir="ltr" x-text="s.items.length"></span>
+                            </h4>
+                        </template>
+                        <ol class="grid grid-cols-1 gap-2.5 sm:grid-cols-2 lg:grid-cols-3">
+                            <template x-for="u in s.items" :key="s.key + u.position + u.name">
+                                <li class="flex items-start gap-3 rounded-2xl border bg-white px-4 py-3.5" :class="u.extra ? 'border-gold-500/40' : 'border-forest-800/10'">
+                                    <span class="grid size-9 shrink-0 place-items-center rounded-xl font-plex text-[12px] font-bold" dir="ltr"
+                                          :class="u.extra ? 'bg-gold-500/15 text-gold-700' : 'bg-forest-800 text-gold-300'"
+                                          :aria-label="@js($listsSource['rank']).replace(':n', u.position)" x-text="String(u.position).padStart(2, '0')"></span>
+                                    <span class="min-w-0 flex-1">
+                                        <span class="block text-[13.5px] font-bold leading-snug text-ink rtl:text-right" dir="ltr" x-text="u.name"></span>
+                                        <span class="mt-0.5 flex items-center gap-1 text-[11px] font-semibold text-slate-500"><x-lucide-map-pin class="size-3 text-gold-600" /><span x-text="u.country"></span></span>
+                                        <span x-show="u.note" class="mt-1.5 inline-block rounded-lg bg-gold-500/15 px-2 py-1 text-[10.5px] font-bold leading-relaxed text-gold-700" x-text="u.note"></span>
+                                        <template x-if="u.programs.length">
+                                            <ul class="mt-2 space-y-1" aria-label="{{ __('البرامج المحددة') }}">
+                                                <template x-for="p in u.programs" :key="p">
+                                                    <li class="flex items-start gap-1.5 text-[11.5px] font-semibold leading-snug text-forest-700">
+                                                        <x-lucide-graduation-cap class="mt-px size-3.5 shrink-0 text-gold-600" />
+                                                        <span dir="ltr" x-text="p"></span>
+                                                    </li>
+                                                </template>
+                                            </ul>
+                                        </template>
+                                    </span>
+                                    <template x-if="u.website">
+                                        <a :href="u.website" target="_blank" rel="noopener noreferrer"
+                                           class="-me-1.5 -mt-1 grid size-8 shrink-0 place-items-center rounded-lg text-slate-400 transition-colors hover:bg-forest-50 hover:text-forest-700"
+                                           :title="@js(__('الموقع الرسمي'))" :aria-label="@js(__('الموقع الرسمي لـ :name')).replace(':name', u.name)">
+                                            <x-lucide-external-link class="size-4" />
+                                        </a>
+                                    </template>
+                                </li>
+                            </template>
+                        </ol>
+                    </div>
+                </template>
                 <p x-show="! filtered.length" x-cloak class="mt-4 rounded-2xl border border-dashed border-forest-800/20 p-8 text-center text-sm font-bold text-slate-500">{{ __('لا توجد مؤسسات مطابقة لبحثك') }}</p>
             </div>
         </div>
