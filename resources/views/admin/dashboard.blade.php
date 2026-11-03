@@ -24,6 +24,22 @@
 
 @section('admin')
 <div class="space-y-8">
+    {{-- تنبيه الرسائل الجديدة من «اتصل بنا» — يظهر لكل الحسابات حتى تُفتح الرسائل --}}
+    @if (($sectionCounts['messages_new'] ?? 0) > 0)
+        <a href="{{ route('admin.messages.index') }}" role="status"
+           class="flex items-center gap-4 rounded-3xl border border-red-200 bg-red-50 p-5 shadow-sm transition-all hover:border-red-300">
+            <span class="relative grid size-12 shrink-0 place-items-center rounded-2xl bg-red-500 text-white">
+                <x-lucide-bell class="size-5.5" />
+                <span class="absolute -end-1 -top-1 size-3 animate-ping rounded-full bg-red-400"></span>
+            </span>
+            <div class="min-w-0 flex-1">
+                <p class="text-sm font-bold text-red-700">لديك {{ \App\Models\ContactMessage::countLabel($sectionCounts['messages_new']) }} من نموذج «اتصل بنا»</p>
+                <p class="mt-0.5 text-[12px] text-red-600/80">اضغط لعرض الرسائل والرد عليها.</p>
+            </div>
+            <x-lucide-arrow-left class="rtl-flip size-5 shrink-0 text-red-500" />
+        </a>
+    @endif
+
     {{-- بطاقة الترحيب والصلاحية --}}
     <div class="flex flex-wrap items-center justify-between gap-4 rounded-3xl border border-forest-800/12 bg-white p-5 shadow-sm">
         <div class="flex items-center gap-4">

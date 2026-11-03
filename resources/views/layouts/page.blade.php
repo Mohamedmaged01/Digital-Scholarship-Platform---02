@@ -10,9 +10,9 @@
                 <span class="hidden text-[10px] font-semibold leading-tight text-slate-500 xl:block">{{ __('البوابة التعريفية') }}<br>{{ __('والإرشادية') }}</span>
             </a>
 
-            <nav class="hidden items-center gap-5 lg:flex" aria-label="{{ __('أقسام المنصة') }}">
+            <nav class="hidden items-center gap-5 xl:flex" aria-label="{{ __('أقسام المنصة') }}">
                 @foreach (\App\Support\SiteNav::links() as $l)
-                    <a href="{{ url('/').$l['href'] }}" class="text-[13px] font-semibold text-slate-600 transition-colors hover:text-forest-700">{{ $l['label'] }}</a>
+                    <a href="{{ $l['url'] }}" class="text-[13px] font-semibold text-slate-600 transition-colors hover:text-forest-700">{{ $l['label'] }}</a>
                 @endforeach
             </nav>
 

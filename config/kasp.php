@@ -36,6 +36,14 @@ return [
         'hero_text_en' => "The informational site of the Custodian of the Two Holy Mosques Scholarship Program, introducing the program's strategy, goals and four tracks. It explains the program's general and special conditions, majors and approved universities, how to apply, and who can benefit.",
     ],
 
+    /* تقييم أداء الخدمة (نموذج الوكالة): الألوان أخضر/أصفر/أحمر، والملاحظات إلزامية للأخير */
+    'service_ratings' => [
+        'satisfied' => ['label' => 'راضٍ', 'hint' => 'تم العثور على المعلومات المطلوبة بسهولة ودقة.', 'icon' => 'smile', 'tone' => 'emerald'],
+        'unsatisfied' => ['label' => 'غير راضٍ', 'hint' => 'النتائج لم تكن دقيقة أو لم تلبِّ التوقعات.', 'icon' => 'meh', 'tone' => 'amber'],
+        'needs_improvement' => ['label' => 'غير راضٍ ويحتاج إلى تطوير', 'hint' => 'تواجه عملية البحث مشاكل تقنية أو نقصًا حادًا في البيانات.', 'icon' => 'frown', 'tone' => 'red'],
+    ],
+    'rating_sources' => ['widget' => 'زر التقييم', 'assistant' => 'بعد المساعد الذكي', 'search' => 'بعد البحث في المنصة'],
+
     /* مواقع التواصل الاجتماعي: المنصة ← اسمها في اللوحة (الأيقونة في x-social-icon) */
     'social_platforms' => [
         'x' => 'X (تويتر)', 'linkedin' => 'لينكدإن', 'youtube' => 'يوتيوب', 'instagram' => 'إنستغرام',
@@ -158,6 +166,8 @@ return [
     'admin_sections' => [
         'admin.dashboard' => ['label' => 'نظرة عامة', 'icon' => 'layout-dashboard'],
         'admin.home.index' => ['label' => 'الواجهة الرئيسية', 'icon' => 'layout-template', 'count' => 'slides'],
+        'admin.messages.index' => ['label' => 'رسائل التواصل', 'icon' => 'inbox', 'count' => 'messages_new'],
+        'admin.ratings.index' => ['label' => 'تقييم الخدمة', 'icon' => 'smile', 'count' => 'ratings'],
         'admin.news.index' => ['label' => 'الأخبار والإعلانات', 'icon' => 'newspaper', 'count' => 'news'],
         'admin.kb.index' => ['label' => 'بنك المعلومات', 'icon' => 'book-open-text', 'count' => 'kb'],
         'admin.pending.index' => ['label' => 'أسئلة بلا إجابة', 'icon' => 'inbox', 'count' => 'pending'],

@@ -126,6 +126,23 @@
                     <input id="external_url" name="external_url" dir="ltr" value="{{ old('external_url', $e?->external_url) }}" class="dash-input" placeholder="https://www.moe.gov.sa/...">
                     <x-admin.error name="external_url" />
                 </div>
+                <div class="col-span-2 grid grid-cols-2 gap-3 rounded-2xl bg-sand/50 p-3">
+                    <p class="col-span-2 text-[11px] font-bold text-slate-500">زر إضافي بجوار «صفحة المسار على موقع وزارة التعليم» (اختياري)</p>
+                    <div>
+                        <label for="extra_link_label" class="dash-label">نص الزر</label>
+                        <input id="extra_link_label" name="extra_link_label" value="{{ old('extra_link_label', $e?->extra_link_label) }}" class="dash-input" placeholder="للتحقق من الجامعة والتخصص اضغط هنا">
+                        <x-admin.error name="extra_link_label" />
+                    </div>
+                    <div>
+                        <label for="extra_link_label_en" class="dash-label">Button text (English)</label>
+                        <input id="extra_link_label_en" name="extra_link_label_en" dir="ltr" value="{{ old('extra_link_label_en', $e?->content_en['extra_link_label'] ?? '') }}" class="dash-input">
+                    </div>
+                    <div class="col-span-2">
+                        <label for="extra_link_url" class="dash-label">رابط الزر</label>
+                        <input id="extra_link_url" name="extra_link_url" dir="ltr" value="{{ old('extra_link_url', $e?->extra_link_url) }}" class="dash-input" placeholder="https://ru.moe.gov.sa/Search">
+                        <x-admin.error name="extra_link_url" />
+                    </div>
+                </div>
                 <div class="col-span-2">
                     <label for="perks" class="dash-label">مزايا المسار <span class="font-medium text-slate-400">(سطر لكل ميزة)</span></label>
                     <textarea id="perks" name="perks" rows="3" class="dash-input resize-y leading-relaxed">{{ old('perks', $e ? implode("\n", $e->perks) : '') }}</textarea>

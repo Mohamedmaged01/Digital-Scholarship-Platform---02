@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\ContactMessage;
 use App\Models\ContactMethod;
 use App\Models\Guide;
 use App\Models\HeroSlide;
@@ -10,6 +11,7 @@ use App\Models\LegalPage;
 use App\Models\ManagedFile;
 use App\Models\News;
 use App\Models\Program;
+use App\Models\ServiceRating;
 use App\Models\SocialLink;
 use App\Models\Station;
 use App\Models\Statistic;
@@ -59,6 +61,8 @@ class AppServiceProvider extends ServiceProvider
                 'statistics' => Statistic::count(),
                 'contact' => ContactMethod::count() + SocialLink::count(),
                 'slides' => HeroSlide::count(),
+                'messages_new' => auth()->check() ? ContactMessage::newFor(auth()->user())->count() : 0,
+                'ratings' => ServiceRating::count(),
                 'pages' => LegalPage::count(),
             ]));
         });

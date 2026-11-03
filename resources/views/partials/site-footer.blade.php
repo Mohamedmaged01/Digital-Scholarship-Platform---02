@@ -65,7 +65,7 @@
                     <h3 class="text-sm font-bold tracking-wide text-gold-300">{{ __('المنصّة') }}</h3>
                     <ul class="mt-5 space-y-3">
                         @foreach (\App\Support\SiteNav::links() as $l)
-                            <li><a href="{{ url('/').$l['href'] }}" class="text-sm text-slate-400 transition-colors hover:text-gold-300">{{ $l['label'] }}</a></li>
+                            <li><a href="{{ $l['url'] }}" class="text-sm text-slate-400 transition-colors hover:text-gold-300">{{ $l['label'] }}</a></li>
                         @endforeach
                     </ul>
                 </div>

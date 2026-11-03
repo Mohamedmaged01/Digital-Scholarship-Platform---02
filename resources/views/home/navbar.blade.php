@@ -17,16 +17,16 @@
             </a>
 
             {{-- Desktop links --}}
-            <nav class="hidden items-center gap-6 lg:flex">
+            <nav class="hidden items-center gap-5 ltr:gap-4 xl:flex 2xl:gap-6">
                 @foreach (\App\Support\SiteNav::links() as $l)
-                    <a href="{{ $l['href'] }}"
-                       class="relative text-[13px] font-semibold text-slate-600 transition-colors after:absolute after:-bottom-1.5 after:start-0 after:h-0.5 after:w-0 after:rounded-full after:bg-gold-500 after:transition-all after:duration-300 after:content-[''] hover:text-forest-700 hover:after:w-full">
+                    <a href="{{ $l['home'] }}"
+                       class="relative whitespace-nowrap text-[13px] font-semibold text-slate-600 transition-colors after:absolute after:-bottom-1.5 after:start-0 after:h-0.5 after:w-0 after:rounded-full after:bg-gold-500 after:transition-all after:duration-300 after:content-[''] hover:text-forest-700 hover:after:w-full">
                         {{ $l['label'] }}
                     </a>
                 @endforeach
             </nav>
 
-            <div class="hidden items-center gap-2 lg:flex">
+            <div class="hidden items-center gap-2 xl:flex">
                 @foreach ($actions as $b)
                     <button type="button" @click="window.dispatchEvent(new Event('{{ $b['event'] }}'))"
                             aria-label="{{ $b['label'] }}" title="{{ $b['label'] }}{{ isset($b['hotkey']) ? " ({$b['hotkey']})" : '' }}"
@@ -52,10 +52,10 @@
             </div>
 
             {{-- Mobile toggle --}}
-            <div class="flex items-center gap-2 lg:hidden">
+            <div class="flex items-center gap-2 xl:hidden">
             <x-lang-switch />
             <button type="button" @click="menu = true" aria-label="{{ __('فتح القائمة') }}"
-                    class="grid size-11 place-items-center rounded-xl border border-forest-800/15 bg-white/60 text-forest-800 backdrop-blur lg:hidden">
+                    class="grid size-11 place-items-center rounded-xl border border-forest-800/15 bg-white/60 text-forest-800 backdrop-blur xl:hidden">
                 <x-lucide-menu class="size-5" />
             </button>
             </div>
@@ -68,7 +68,7 @@
 
     {{-- Mobile menu --}}
     <div x-show="menu" x-cloak x-transition.opacity.duration.350ms @keydown.escape.window="menu = false"
-         class="pattern-star-dark fixed inset-0 z-[60] flex flex-col bg-forest-950 lg:hidden" role="dialog" aria-modal="true" aria-label="{{ __('القائمة') }}">
+         class="pattern-star-dark fixed inset-0 z-[60] flex flex-col bg-forest-950 xl:hidden" role="dialog" aria-modal="true" aria-label="{{ __('القائمة') }}">
         <div class="flex h-20 items-center justify-between px-5">
             <x-brand-logo light class="h-10" />
             <button type="button" @click="menu = false" aria-label="{{ __('إغلاق القائمة') }}" class="grid size-11 place-items-center rounded-xl border border-white/15 text-white">
@@ -77,7 +77,7 @@
         </div>
         <nav class="flex flex-1 flex-col justify-center gap-1 px-8">
             @foreach (\App\Support\SiteNav::links() as $i => $l)
-                <a href="{{ $l['href'] }}" @click="menu = false" class="group flex items-center justify-between border-b border-white/10 py-5">
+                <a href="{{ $l['home'] }}" @click="menu = false" class="group flex items-center justify-between border-b border-white/10 py-5">
                     <span class="text-3xl font-bold text-white transition-colors group-hover:text-gold-300">{{ $l['label'] }}</span>
                     <span class="font-plex text-xs text-white/40">0{{ $i + 1 }}</span>
                 </a>

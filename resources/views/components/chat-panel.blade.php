@@ -55,6 +55,11 @@
                                     <span class="font-plex text-xs font-semibold text-slate-500 group-hover/c:text-white/80" dir="ltr">{{ $c->value }}</span>
                                 </a>
                             @endforeach
+                            {{-- نموذج «اتصل بنا» تُحفظ رسائله ويُنبَّه بها فريق الإدارة --}}
+                            <a href="{{ route('contact.show', ['from' => 'assistant']) }}"
+                               class="flex items-center justify-center gap-2 rounded-lg bg-forest-800 px-3 py-2.5 text-xs font-bold text-gold-300 transition-all hover:bg-forest-700">
+                                <x-lucide-headset class="size-4" /> {{ __('تواصل مع الموظف المسؤول') }}
+                            </a>
                         </div>
                     </template>
 

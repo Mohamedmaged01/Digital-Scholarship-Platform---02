@@ -41,7 +41,7 @@ class Track extends Model
         'application_status', 'application_start', 'application_end', 'overview_ar',
         'general_conditions', 'special_conditions', 'policies', 'differentiation_criteria',
         'content_status', 'source_id', 'academic_year_id', 'last_verified_at', 'version',
-        'tier', 'majors_scope', 'match_fields', 'institutions_count', 'external_url',
+        'tier', 'majors_scope', 'match_fields', 'institutions_count', 'external_url', 'extra_link_label', 'extra_link_url',
         'additional_conditions', 'faqs', 'details',
     ];
 

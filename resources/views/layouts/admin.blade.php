@@ -38,7 +38,7 @@
                    ])>
                     @svg('lucide-'.$s['icon'], 'size-5 shrink-0 '.($active ? 'text-forest-950' : 'text-gold-400/80'))
                     <span class="flex-1 text-sm font-bold">{{ $s['label'] }}</span>
-                    @if (($s['count'] ?? null) === 'pending' && $count > 0)
+                    @if (in_array($s['count'] ?? null, ['pending', 'messages_new'], true) && $count > 0)
                         <span dir="ltr" @class(['grid size-6 place-items-center rounded-full font-plex text-[10px] font-bold', 'bg-forest-950 text-gold-300' => $active, 'bg-red-500/20 text-red-300' => ! $active])>{{ $count }}</span>
                     @elseif ($count > 0)
                         <span dir="ltr" @class(['font-plex text-[10px] font-bold', 'text-forest-900/70' => $active, 'text-white/35' => ! $active])>{{ $count }}</span>
@@ -102,8 +102,18 @@
                 </div>
             </div>
 
+            {{-- تنبيه الرسائل الجديدة من «اتصل بنا» — لكل حسابات اللوحة --}}
+            @php $newMessages = $sectionCounts['messages_new'] ?? 0; @endphp
+            <a href="{{ route('admin.messages.index') }}" title="رسائل التواصل"
+               aria-label="{{ $newMessages ? 'رسائل التواصل — '.\App\Models\ContactMessage::countLabel($newMessages) : 'رسائل التواصل' }}"
+               class="relative ms-auto grid size-10 shrink-0 place-items-center rounded-xl border border-forest-800/15 text-forest-800 transition-all hover:border-gold-500/60 hover:text-gold-600">
+                <x-lucide-bell class="size-5" />
+                @if ($newMessages)
+                    <span class="absolute -end-1.5 -top-1.5 grid min-w-5 place-items-center rounded-full bg-red-500 px-1 font-plex text-[10px] font-bold leading-5 text-white" dir="ltr">{{ $newMessages > 99 ? '99+' : $newMessages }}</span>
+                @endif
+            </a>
             <a href="{{ route('home') }}" aria-label="إغلاق لوحة التحكم" title="العودة إلى المنصة"
-               class="ms-auto grid size-10 shrink-0 place-items-center rounded-xl border border-forest-800/15 text-forest-800 transition-all hover:border-gold-500/60 hover:text-gold-600">
+               class="grid size-10 shrink-0 place-items-center rounded-xl border border-forest-800/15 text-forest-800 transition-all hover:border-gold-500/60 hover:text-gold-600">
                 <x-lucide-x class="size-5" />
             </a>
         </header>
@@ -118,8 +128,8 @@
                 ])>
                     @svg('lucide-'.$s['icon'], 'size-3.5')
                     {{ $s['label'] }}
-                    @if (($s['count'] ?? null) === 'pending' && ($sectionCounts['pending'] ?? 0) > 0)
-                        <span class="rounded-full bg-red-500/15 px-1.5 font-plex text-[9px] font-bold text-red-500" dir="ltr">{{ $sectionCounts['pending'] }}</span>
+                    @if (in_array($s['count'] ?? null, ['pending', 'messages_new'], true) && ($sectionCounts[$s['count']] ?? 0) > 0)
+                        <span class="rounded-full bg-red-500/15 px-1.5 font-plex text-[9px] font-bold text-red-500" dir="ltr">{{ $sectionCounts[$s['count']] }}</span>
                     @endif
                 </a>
             @endforeach

@@ -28,6 +28,7 @@ class SiteSearch
         '#journey' => 'خارطه طريق محطات رحله خطوات تقديم مستندات ترشيح',
         '#assistant' => 'مساعد ذكي دردشه اسئله اجابات محاوره تواصل لوحه',
         '#faq' => 'اسئله شائعه اجابات استفسارات',
+        '/contact' => 'اتصل بنا تواصل راسلنا نموذج رساله بريد هاتف موظف دعم',
     ];
 
     private static function score(string $qNorm, array $qTokens, string $text): int
@@ -69,7 +70,7 @@ class SiteSearch
         };
 
         foreach (SiteNav::links() as $l) {
-            $add("sec-{$l['href']}", 'sections', __('أقسام المنصة'), $l['label'], __('الانتقال إلى قسم :section', ['section' => $l['label']]), $l['href'],
+            $add("sec-{$l['href']}", 'sections', __('أقسام المنصة'), $l['label'], __('الانتقال إلى قسم :section', ['section' => $l['label']]), $l['home'],
                 $l['label'].' '.(self::SECTION_KEYWORDS[$l['href']] ?? ''));
         }
         $tracks = Track::orderBy('sort')->get()->keyBy('id');

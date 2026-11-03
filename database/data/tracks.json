@@ -1699,7 +1699,10 @@
             "Passing the professional classification and registration exam of the Saudi Commission for Health Specialties."
           ]
         }
-      ]
-    }
+      ],
+      "extra_link_label": "Verify a university and major"
+    },
+    "extraLinkLabel": "للتحقق من الجامعة والتخصص اضغط هنا",
+    "extraLinkUrl": "https://ru.moe.gov.sa/Search"
   }
 ]

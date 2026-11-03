@@ -1,4 +1,6 @@
-<div x-data="{ open: false }" @open-chat.window="open = true" @keydown.escape.window="open = false">
+{{-- بعد استخدام المساعد يُطلب تقييم الخدمة عند إغلاقه (مرة واحدة في الجلسة) --}}
+<div x-data="{ open: false, asked: false }" @open-chat.window="open = true" @keydown.escape.window="open = false" @assistant-asked.window="asked = true"
+     x-init="$watch('open', (v) => { if (! v && asked) { asked = false; setTimeout(() => $dispatch('rate-service', { source: 'assistant', auto: true }), 450); } })">
     {{-- FAB --}}
     <button type="button" @click="open = !open" :aria-label="open ? @js(__('إغلاق المساعد الذكي')) : @js(__('فتح المساعد الذكي'))" :aria-expanded="open"
             class="animate-enter fixed bottom-5 left-5 z-[60] grid size-14 place-items-center rounded-full shadow-2xl transition-colors duration-300"
@@ -21,3 +23,5 @@
         <x-chat-panel class="h-full" />
     </div>
 </div>
+
+@include('partials.service-rating')

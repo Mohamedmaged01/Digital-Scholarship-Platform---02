@@ -101,6 +101,8 @@ class DefaultContent
                     'match_fields' => $t['matchFields'] ?? null,
                     'institutions_count' => $t['institutionsCount'] ?? null,
                     'external_url' => $t['externalUrl'] ?? '',
+                    'extra_link_label' => $t['extraLinkLabel'] ?? '',
+                    'extra_link_url' => $t['extraLinkUrl'] ?? '',
                     'content_en' => $t['contentEn'] ?? null,
                     'content_status' => $t['contentStatus'] ?? 'published',
                     'version' => $t['version'] ?? '2026-2027',

@@ -261,8 +261,9 @@ class V3FeaturesTest extends TestCase
             ->assertSessionHasErrors('href');
 
         $this->post('/admin/contact', ['label' => 'هاتف الطوارئ', 'value' => '911', 'href' => 'tel:911', 'icon' => 'phone'])->assertRedirect();
-        $this->assertSame(3, ContactMethod::count());
-        $this->get('/')->assertSee('tel:911', false);
+        // الافتراضية: الهاتف والدعم الفني والبريد الإلكتروني + المضافة
+        $this->assertSame(4, ContactMethod::count());
+        $this->get('/')->assertSee('tel:911', false)->assertSee('mailto:info@scholarshipepath.com', false);
     }
 
     public function test_legal_pages_escape_html_and_link_from_footer(): void

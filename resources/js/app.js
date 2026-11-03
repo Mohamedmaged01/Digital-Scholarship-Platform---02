@@ -334,6 +334,7 @@ Alpine.data('chatPanel', (askUrl, greeting, suggestions) => ({
         if (!text || this.typing) return;
         this.input = '';
         this.messages.push({ id: ++msgSeq, role: 'user', text });
+        window.dispatchEvent(new Event('assistant-asked'));
         this.typing = true;
         this.scroll();
 
@@ -370,6 +371,50 @@ Alpine.data('chatPanel', (askUrl, greeting, suggestions) => ({
     },
 }));
 
+/* ---------------- تقييم أداء الخدمة ---------------- */
+// يُطلب التقييم تلقائيًا مرة واحدة في الجلسة بعد استخدام المساعد أو البحث، وزر التقييم متاح دائمًا
+const sessionFlag = (key, value) => {
+    try {
+        return value === undefined ? sessionStorage.getItem(key) : sessionStorage.setItem(key, value);
+    } catch {
+        return null;
+    }
+};
+const requestRating = (source) => setTimeout(() => window.dispatchEvent(new CustomEvent('rate-service', { detail: { source, auto: true } })), 450);
+
+Alpine.data('serviceRating', (url) => ({
+    open: false,
+    source: 'widget',
+    rating: '',
+    notes: '',
+    sending: false,
+    done: false,
+    error: '',
+    get notesRequired() {
+        return this.rating === 'needs_improvement';
+    },
+    show({ source = 'widget', auto = false } = {}) {
+        if (auto && (sessionFlag('kasp-rated') || sessionFlag('kasp-rating-asked'))) return;
+        if (auto) sessionFlag('kasp-rating-asked', '1');
+        Object.assign(this, { source, open: true, done: false, error: '' });
+    },
+    async submit() {
+        if (!this.rating) return (this.error = t('اختر التقييم المناسب أولًا'));
+        if (this.notesRequired && !this.notes.trim()) return (this.error = t('يرجى كتابة الملاحظات لمساعدتنا على معرفة مكان الخلل'));
+        this.sending = true;
+        this.error = '';
+        try {
+            await http(url, { method: 'POST', body: { rating: this.rating, notes: this.notes, source: this.source } });
+            sessionFlag('kasp-rated', '1');
+            Object.assign(this, { done: true, rating: '', notes: '' });
+        } catch {
+            this.error = t('تعذّر إرسال التقييم، حاول مرة أخرى.');
+        } finally {
+            this.sending = false;
+        }
+    },
+}));
+
 /* ---------------- البحث في المنصة ---------------- */
 Alpine.data('searchOverlay', (searchUrl, quickLinks, icons) => ({
     open: false,
@@ -379,9 +424,16 @@ Alpine.data('searchOverlay', (searchUrl, quickLinks, icons) => ({
     loading: false,
     icons,
     timer: null,
+    searched: false,
     init() {
         window.addEventListener('open-search', () => this.show());
-        this.$watch('open', (v) => (document.body.style.overflow = v ? 'hidden' : ''));
+        this.$watch('open', (v) => {
+            document.body.style.overflow = v ? 'hidden' : '';
+            if (!v && this.searched) {
+                this.searched = false;
+                requestRating('search');
+            }
+        });
         this.$watch('query', () => {
             this.active = 0;
             clearTimeout(this.timer);
@@ -404,6 +456,7 @@ Alpine.data('searchOverlay', (searchUrl, quickLinks, icons) => ({
         try {
             const res = await http(`${searchUrl}?q=${encodeURIComponent(q)}`);
             if (q === this.query) this.results = res.results;
+            this.searched = true;
         } catch {
             this.results = [];
         } finally {

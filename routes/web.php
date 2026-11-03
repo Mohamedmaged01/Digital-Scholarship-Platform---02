@@ -3,10 +3,12 @@
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\AssistantController;
 use App\Http\Controllers\Auth\LoginController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LegalPageController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\SearchController;
+use App\Http\Controllers\ServiceRatingController;
 use App\Http\Controllers\TrackController;
 use App\Http\Controllers\WaedController;
 use Illuminate\Support\Facades\Route;
@@ -17,6 +19,8 @@ Route::get('/tracks/{track:slug}', [TrackController::class, 'show'])->name('trac
 Route::get('/waed', [WaedController::class, 'index'])->name('waed.index');
 Route::get('/waed/{program:slug}', [WaedController::class, 'show'])->name('waed.show');
 Route::get('/pages/{page}', [LegalPageController::class, 'show'])->name('pages.show');
+Route::get('/contact', [ContactController::class, 'show'])->name('contact.show');
+Route::post('/contact', [ContactController::class, 'store'])->middleware('throttle:6,1')->name('contact.store');
 
 // تبديل لغة الواجهة (العربية / الإنجليزية)
 Route::get('/lang/{locale}', function (string $locale) {
@@ -30,6 +34,7 @@ Route::middleware('throttle:40,1')->group(function () {
     Route::post('/assistant/ask', AssistantController::class)->name('assistant.ask');
     Route::get('/search', SearchController::class)->name('search');
     Route::post('/newsletter', NewsletterController::class)->name('newsletter.subscribe');
+    Route::post('/feedback', ServiceRatingController::class)->name('feedback.store');
 });
 
 /* ---------------- المصادقة ---------------- */
@@ -153,6 +158,13 @@ Route::middleware(['auth', 'active'])->prefix('admin')->name('admin.')->group(fu
         Route::post('/contact/reset', [Admin\ContactMethodController::class, 'reset'])->name('contact.reset');
         Route::delete('/social/{social}', [Admin\SocialLinkController::class, 'destroy'])->name('social.destroy');
     });
+
+    // رسائل «اتصل بنا» — تظهر لكل الحسابات مع تنبيه بالجديد منها
+    Route::get('/messages', [Admin\ContactMessageController::class, 'index'])->name('messages.index');
+    Route::delete('/messages/{message}', [Admin\ContactMessageController::class, 'destroy'])->middleware('can:delete-content')->name('messages.destroy');
+
+    // تقييمات أداء الخدمة
+    Route::get('/ratings', [Admin\ServiceRatingController::class, 'index'])->name('ratings.index');
 
     // السياسات والشروط
     Route::get('/pages', [Admin\LegalPageController::class, 'index'])->name('pages.index');

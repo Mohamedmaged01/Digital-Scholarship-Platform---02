@@ -45,7 +45,9 @@ class TrackController extends Controller
     public function update(Request $request, Track $track): RedirectResponse
     {
         $data = $this->validated($request);
-        $track->update([...$data, 'code' => $data['code'] ?: $track->code]);
+        $en = $track->content_en ?? [];
+        $en['extra_link_label'] = (string) $request->input('extra_link_label_en', '');
+        $track->update([...$data, 'code' => $data['code'] ?: $track->code, 'content_en' => $en]);
 
         return redirect()->route('admin.tracks.index')->with('status', 'تم حفظ التعديلات');
     }
@@ -84,6 +86,10 @@ class TrackController extends Controller
             'match_fields.*' => ['string', 'exists:fields,id'],
             'institutions_count' => ['nullable', 'integer', 'min:1', 'max:5000'],
             'external_url' => ['nullable', 'url:https', 'max:500'],
+            // زر إضافي بجوار «صفحة المسار على موقع وزارة التعليم»
+            'extra_link_label' => ['nullable', 'string', 'max:255', 'required_with:extra_link_url'],
+            'extra_link_label_en' => ['nullable', 'string', 'max:255'],
+            'extra_link_url' => ['nullable', 'url:https', 'max:500'],
             'details' => ['nullable', 'string', 'max:10000'],
             'policies' => ['nullable', 'string', 'max:20000'],
             'general_conditions' => ['nullable', 'string', 'max:20000'],
@@ -111,6 +117,8 @@ class TrackController extends Controller
             'match_fields' => array_values($data['match_fields'] ?? []) ?: null,
             'institutions_count' => $data['institutions_count'] ?? null,
             'external_url' => $data['external_url'] ?? '',
+            'extra_link_label' => $data['extra_link_label'] ?? '',
+            'extra_link_url' => $data['extra_link_url'] ?? '',
             'details' => TrackContent::parseDetails($data['details'] ?? ''),
             'policies' => TrackContent::parseSections($data['policies'] ?? ''),
             'general_conditions' => TrackContent::parseSections($data['general_conditions'] ?? ''),

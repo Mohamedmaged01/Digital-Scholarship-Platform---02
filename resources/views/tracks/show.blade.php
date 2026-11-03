@@ -72,11 +72,21 @@
                     @endforeach
                 </ul>
             @endif
-            @if ($track->external_url)
-                <a href="{{ $track->external_url }}" target="_blank" rel="noopener noreferrer"
-                   class="mt-5 inline-flex items-center gap-2 rounded-full bg-forest-800 px-6 py-3 text-sm font-bold text-gold-300 transition-all hover:bg-forest-700">
-                    <x-lucide-external-link class="size-4" /> {{ __('صفحة المسار على موقع وزارة التعليم') }}
-                </a>
+            @if ($track->external_url || $track->extra_link_url)
+                <div class="mt-5 flex flex-wrap gap-3">
+                    @if ($track->external_url)
+                        <a href="{{ $track->external_url }}" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 rounded-full bg-forest-800 px-6 py-3 text-sm font-bold text-gold-300 transition-all hover:bg-forest-700">
+                            <x-lucide-external-link class="size-4" /> {{ __('صفحة المسار على موقع وزارة التعليم') }}
+                        </a>
+                    @endif
+                    @if ($track->extra_link_url)
+                        <a href="{{ $track->extra_link_url }}" target="_blank" rel="noopener noreferrer"
+                           class="inline-flex items-center gap-2 rounded-full border border-forest-800/25 px-6 py-3 text-sm font-bold text-forest-800 transition-all hover:border-forest-800 hover:bg-forest-800 hover:text-gold-300">
+                            <x-lucide-search-check class="size-4" /> {{ $track->tr('extra_link_label') }}
+                        </a>
+                    @endif
+                </div>
             @endif
         </div>
 
