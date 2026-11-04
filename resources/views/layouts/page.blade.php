@@ -6,8 +6,6 @@
         <div class="mx-auto flex h-16 max-w-7xl items-center justify-between gap-4 px-5 md:px-8">
             <a href="{{ route('home') }}" class="flex min-w-0 items-center gap-3" aria-label="{{ __('الرئيسية — برنامج خادم الحرمين الشريفين للابتعاث') }}">
                 <x-brand-logo class="h-10" />
-                <span class="hidden h-7 w-px bg-forest-800/15 xl:block"></span>
-                <span class="hidden text-[10px] font-semibold leading-tight text-slate-500 xl:block">{{ __('البوابة التعريفية') }}<br>{{ __('والإرشادية') }}</span>
             </a>
 
             <nav class="hidden items-center gap-5 xl:flex" aria-label="{{ __('أقسام المنصة') }}">

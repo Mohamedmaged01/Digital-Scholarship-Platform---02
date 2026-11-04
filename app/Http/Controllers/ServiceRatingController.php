@@ -14,7 +14,7 @@ class ServiceRatingController extends Controller
     {
         $data = $request->validate([
             'rating' => ['required', Rule::in(ServiceRating::RATINGS)],
-            'notes' => ['nullable', 'required_if:rating,needs_improvement', 'string', 'max:2000'],
+            'notes' => ['nullable', 'required_if:rating,needs_improvement,unsatisfied', 'string', 'max:2000'],
             'source' => ['nullable', Rule::in(ServiceRating::SOURCES)],
         ]);
 

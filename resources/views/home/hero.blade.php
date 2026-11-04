@@ -127,19 +127,6 @@
                     @endif
                 </div>
 
-                {{-- floating chip: AI --}}
-                <a href="#matcher" class="animate-float-y absolute -top-7 start-3 rounded-2xl border border-forest-800/10 bg-white/90 p-4 shadow-xl shadow-forest-900/10 backdrop-blur transition-colors hover:border-gold-500/50 md:-start-5">
-                    <div class="flex items-center gap-3">
-                        <span class="grid size-10 place-items-center rounded-xl bg-forest-700 text-gold-300">
-                            <x-lucide-list-checks class="size-5" />
-                        </span>
-                        <div class="leading-tight">
-                            <div class="text-[11px] font-medium text-slate-500">{{ __('محرك التوجيه') }}</div>
-                            <div class="mt-0.5 text-sm font-bold text-forest-800">{{ __('مطابقة مع ضوابط كل مسار') }}</div>
-                        </div>
-                    </div>
-                </a>
-
                 {{-- floating chip: vision --}}
                 <div class="animate-float-y-soft absolute -bottom-8 end-4 hidden rounded-2xl bg-forest-800 p-4 pe-6 text-white shadow-2xl shadow-forest-900/40 sm:block md:-end-4">
                     <div class="flex items-center gap-3">

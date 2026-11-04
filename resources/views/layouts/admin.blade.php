@@ -136,6 +136,30 @@
         </div>
 
         <main class="flex-1 p-5 md:p-8">
+            {{-- تحديثات قاعدة البيانات التي وصلت مع الكود ولم تُطبَّق على الخادم --}}
+            @if (! empty($pendingUpdates))
+                <div role="alert" class="mb-6 flex flex-wrap items-center gap-4 rounded-2xl border border-red-300 bg-red-50 px-5 py-4">
+                    <span class="grid size-11 shrink-0 place-items-center rounded-xl bg-red-500 text-white"><x-lucide-database-zap class="size-5" /></span>
+                    <div class="min-w-0 flex-1">
+                        <p class="text-sm font-bold text-red-700">قاعدة البيانات تحتاج إلى تحديث ({{ count($pendingUpdates) }} {{ count($pendingUpdates) > 2 && count($pendingUpdates) < 11 ? 'تحديثات' : 'تحديث' }} معلّقة)</p>
+                        <p class="mt-0.5 text-[12px] leading-relaxed text-red-600/85">
+                            بعض أجزاء الموقع (مثل «اتصل بنا» وتقييم الخدمة وقوائم المسارات) لن تعمل حتى تُطبَّق التحديثات.
+                            @cannot('manage-users') تواصل مع مدير النظام لتطبيقها. @endcannot
+                        </p>
+                    </div>
+                    @can('manage-users')
+                        <form method="POST" action="{{ route('admin.system.migrate') }}" x-data="{ busy: false }" @submit="busy = true">
+                            @csrf
+                            <button type="submit" :disabled="busy"
+                                    class="inline-flex items-center gap-2 rounded-full bg-red-600 px-5 py-2.5 text-xs font-bold text-white transition-all hover:bg-red-700 disabled:opacity-60">
+                                <x-lucide-refresh-cw class="size-4" ::class="busy && 'animate-spin'" />
+                                <span x-text="busy ? 'جارٍ التطبيق…' : 'تطبيق التحديثات الآن'">تطبيق التحديثات الآن</span>
+                            </button>
+                        </form>
+                    @endcan
+                </div>
+            @endif
+
             @if (session('status'))
                 <div x-data="{ show: true }" x-show="show" x-init="setTimeout(() => show = false, 3500)" x-transition.opacity role="status"
                      class="mb-6 flex items-center gap-2.5 rounded-2xl border border-emerald-300 bg-emerald-50 px-5 py-3.5 text-sm font-bold text-emerald-700">

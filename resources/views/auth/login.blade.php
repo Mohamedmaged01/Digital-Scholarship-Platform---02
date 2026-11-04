@@ -5,11 +5,6 @@
 
 @php
     $inputCls = 'w-full rounded-2xl border border-white/15 bg-white/[0.06] py-3.5 pe-11 ps-11 text-left text-sm font-medium text-white outline-none backdrop-blur transition-all placeholder:text-slate-500 focus:border-gold-400/70 focus:bg-white/[0.09] focus:ring-4 focus:ring-gold-500/10';
-    $demoAccounts = app()->isLocal() ? [
-        ['email' => 'admin@kasp.gov.sa', 'password' => 'Admin@2026', 'role' => 'مدير النظام — صلاحيات كاملة'],
-        ['email' => 'editor@kasp.gov.sa', 'password' => 'Editor@2026', 'role' => 'محرّر المحتوى — إنشاء وتعديل'],
-        ['email' => 'viewer@kasp.gov.sa', 'password' => 'Viewer@2026', 'role' => 'مطّلع — استعراض فقط'],
-    ] : [];
 @endphp
 
 @section('content')
@@ -84,27 +79,6 @@
                 كلمات المرور مشفّرة بخوارزمية bcrypt ولا تُخزَّن كنص صريح
             </p>
         </form>
-
-        @if ($demoAccounts)
-            <div class="mt-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5">
-                <p class="flex items-center gap-2 text-xs font-bold text-gold-300">
-                    <x-lucide-info class="size-4" />
-                    حسابات تجريبية (بيئة التطوير فقط)
-                </p>
-                <div class="mt-3.5 space-y-2">
-                    @foreach ($demoAccounts as $a)
-                        <button type="button" @click="email = @js($a['email']); password = @js($a['password'])"
-                                class="group flex w-full items-center justify-between gap-3 rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-3 text-start transition-all hover:border-gold-400/50 hover:bg-white/[0.07]">
-                            <span class="min-w-0">
-                                <span dir="ltr" class="block truncate font-plex text-xs font-bold text-white">{{ $a['email'] }}</span>
-                                <span class="mt-0.5 block text-[10px] text-slate-400">{{ $a['role'] }}</span>
-                            </span>
-                            <span dir="ltr" class="shrink-0 rounded-lg bg-forest-800 px-2.5 py-1 font-plex text-[10px] font-bold text-gold-300 transition-colors group-hover:bg-gold-500 group-hover:text-forest-950">{{ $a['password'] }}</span>
-                        </button>
-                    @endforeach
-                </div>
-            </div>
-        @endif
     </div>
 </div>
 @endsection

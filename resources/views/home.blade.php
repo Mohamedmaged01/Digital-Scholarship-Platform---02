@@ -10,7 +10,6 @@
         @include('home.news')
         @include('home.roadmap')
         @include('home.vision')
-        @include('home.assistant')
         @include('home.faq')
     </main>
     @include('partials.site-footer')

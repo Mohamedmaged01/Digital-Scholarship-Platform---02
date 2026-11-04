@@ -1,10 +1,11 @@
-{{-- لوحة محادثة المساعد الذكي — تُستخدم في قسم المساعد وفي النافذة العائمة --}}
+{{-- لوحة محادثة المساعد الذكي — في النافذة العائمة؛ نتائج البحث في أسئلة المساعد تُطرح عليها مباشرة --}}
 @php
     $greeting = __('أهلًا بك في مساعِد الابتعاث الذكي. اسألني عن سياسات التقديم، والشروط العامة والخاصة بكل مسار، ومنصات التقديم.');
 @endphp
 
 <div
     x-data="chatPanel(@js(route('assistant.ask')), @js($greeting), @js(array_map(fn ($q) => __($q), config('kasp.suggested_questions'))))"
+    @ask-assistant.window="send($event.detail)"
     {{ $attributes->class('flex flex-col overflow-hidden rounded-3xl border border-forest-800/12 bg-white shadow-[0_36px_80px_-30px_rgba(8,39,29,0.35)]') }}
 >
     {{-- header --}}

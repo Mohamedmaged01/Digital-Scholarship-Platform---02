@@ -30,7 +30,6 @@
             <div class="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12">
                 <div class="lg:col-span-4">
                     <x-brand-logo light class="h-16" loading="lazy" />
-                    <p class="mt-3 text-xs font-semibold text-slate-400">{{ __('البوابة التعريفية والإرشادية للابتعاث') }}</p>
                     <p class="mt-6 max-w-sm text-sm leading-loose text-slate-400">
                         {{ __('بوابة تعريفية وإرشادية لمسارات برنامج خادم الحرمين الشريفين للابتعاث الخارجي، تجمع الشروط والضوابط ورحلة المستفيد في مكان واحد.') }}
                     </p>
@@ -108,8 +107,38 @@
                 </div>
             </div>
 
+            {{-- مركز المعرفة ورحلة المبتعث والمساعدة والتواصل (ملاحظة الوكالة: تكون في ذيل الصفحة) --}}
+            <div class="mt-14 grid gap-4 md:grid-cols-3" x-data>
+                <a href="{{ url('/') }}#faq" class="group rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-400/50 hover:bg-white/[0.07]">
+                    <h3 class="flex items-center gap-2.5 text-sm font-bold text-gold-300">
+                        <x-lucide-library-big class="size-5 shrink-0" /> {{ __('مركز المعرفة') }}
+                    </h3>
+                    <p class="mt-3 flex items-center gap-1.5 text-sm text-slate-300 transition-colors group-hover:text-white">
+                        {{ __('الأسئلة الشائعة') }} <x-lucide-arrow-left class="rtl-flip size-3.5 text-gold-500" />
+                    </p>
+                </a>
+                <a href="{{ url('/') }}#journey" class="group rounded-2xl border border-white/10 bg-white/[0.04] p-5 transition-all duration-300 hover:-translate-y-0.5 hover:border-gold-400/50 hover:bg-white/[0.07]">
+                    <h3 class="flex items-center gap-2.5 text-sm font-bold text-gold-300">
+                        <x-lucide-route class="size-5 shrink-0" /> {{ __('رحلة المبتعث') }}
+                    </h3>
+                    <p class="mt-3 flex items-center gap-1.5 text-sm leading-relaxed text-slate-300 transition-colors group-hover:text-white">
+                        {{ __('ملخص للمراحل من التقديم حتى بدء الدراسة.') }} <x-lucide-arrow-left class="rtl-flip size-3.5 shrink-0 text-gold-500" />
+                    </p>
+                </a>
+                <div class="rounded-2xl border border-white/10 bg-white/[0.04] p-5">
+                    <h3 class="flex items-center gap-2.5 text-sm font-bold text-gold-300">
+                        <x-lucide-life-buoy class="size-5 shrink-0" /> {{ __('المساعدة والتواصل') }}
+                    </h3>
+                    <ul class="mt-3 flex flex-wrap gap-x-4 gap-y-2 text-sm text-slate-300">
+                        <li><button type="button" @click="$dispatch('open-chat')" class="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300"><x-lucide-bot class="size-4 text-gold-500" /> {{ __('المساعد الذكي') }}</button></li>
+                        <li><a href="{{ route('contact.show') }}" class="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300"><x-lucide-headset class="size-4 text-gold-500" /> {{ __('خدمات المستفيدين') }}</a></li>
+                        <li><button type="button" @click="$dispatch('rate-service', { source: 'widget' })" class="inline-flex items-center gap-1.5 transition-colors hover:text-gold-300"><x-lucide-message-square-warning class="size-4 text-gold-500" /> {{ __('الإبلاغ عن الملاحظات') }}</button></li>
+                    </ul>
+                </div>
+            </div>
+
             {{-- إخلاء مسؤولية المحتوى (§F): المنصة تعريفية، والمصدر المعتمد هو المرجع. --}}
-            <div class="mt-14 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4">
+            <div class="mt-4 rounded-2xl border border-white/10 bg-white/[0.04] px-6 py-4">
                 <p class="text-xs leading-loose text-slate-400">
                     {{ __('المعلومات الواردة في هذه المنصة تعريفية وإرشادية، ويجب الرجوع إلى المصدر المعتمد المحدّث للتحقق من الشروط والضوابط قبل اتخاذ أي إجراء. لا تمثل المنصة جهة قبول أو قرار نهائي.') }}
                 </p>

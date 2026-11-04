@@ -32,8 +32,16 @@ class ContactAndRatingTest extends TestCase
     public function test_nav_order_and_contact_page(): void
     {
         $home = $this->get('/')->assertOk();
-        $home->assertSeeInOrder(['الرئيسية', 'المسارات', 'المسار الأنسب لك', 'رحلة المستفيد', 'قنوات الدعم', 'الأخبار', 'الأسئلة الشائعة', 'اتصل بنا']);
+        $home->assertSeeInOrder(['الرئيسية', 'المسارات', 'المسار الأنسب لك', 'رحلة المستفيد', 'الأخبار', 'الأسئلة الشائعة', 'اتصل بنا']);
         $home->assertSee('href="'.url('contact').'"', false);
+        // «قنوات الدعم» وقسم المساعد حُذفا من الرئيسية لعدم التكرار — المساعد في النافذة العائمة
+        $home->assertDontSee('قنوات الدعم')->assertDontSee('id="assistant"', false)->assertDontSee('البوابة التعريفية<br>', false)
+            ->assertDontSee('مطابقة مع ضوابط كل مسار')->assertSee('chatPanel(', false);
+        // ذيل الصفحة: مركز المعرفة ورحلة المبتعث والمساعدة والتواصل
+        $home->assertSeeInOrder(['مركز المعرفة', 'رحلة المبتعث', 'ملخص للمراحل من التقديم حتى بدء الدراسة.', 'المساعدة والتواصل', 'المساعد الذكي', 'خدمات المستفيدين', 'الإبلاغ عن الملاحظات']);
+
+        // صفحة الدخول بلا بيانات الحسابات
+        $this->get('/login')->assertOk()->assertDontSee('Admin@2026')->assertDontSee('حسابات تجريبية');
 
         $this->get('/contact')->assertOk()
             ->assertSee('نموذج تواصل معنا')
@@ -92,8 +100,9 @@ class ContactAndRatingTest extends TestCase
     {
         $this->postJson('/feedback', ['rating' => 'satisfied', 'source' => 'assistant'])->assertOk();
         $this->postJson('/feedback', ['rating' => 'unsatisfied', 'notes' => 'النتائج قليلة'])->assertOk();
-        // الملاحظات إلزامية عند «غير راضٍ ويحتاج إلى تطوير»
+        // الملاحظات إلزامية عند «راضٍ ويحتاج إلى تطوير» و«غير راضٍ»
         $this->postJson('/feedback', ['rating' => 'needs_improvement'])->assertUnprocessable()->assertJsonValidationErrors('notes');
+        $this->postJson('/feedback', ['rating' => 'unsatisfied', 'notes' => ''])->assertUnprocessable()->assertJsonValidationErrors('notes');
         $this->postJson('/feedback', ['rating' => 'needs_improvement', 'notes' => 'البحث بطيء', 'source' => 'search'])->assertOk();
         $this->postJson('/feedback', ['rating' => 'excellent'])->assertUnprocessable();
 
@@ -101,7 +110,7 @@ class ContactAndRatingTest extends TestCase
         $this->assertDatabaseHas('service_ratings', ['rating' => 'needs_improvement', 'notes' => 'البحث بطيء', 'source' => 'search']);
 
         $this->actingAs($this->user('viewer@kasp.gov.sa'))->get('/admin/ratings')->assertOk()
-            ->assertSee('غير راضٍ ويحتاج إلى تطوير')->assertSee('البحث بطيء')->assertSee('33%');
+            ->assertSeeInOrder(['راضٍ', 'راضٍ ويحتاج إلى تطوير', 'غير راضٍ'])->assertSee('البحث بطيء')->assertSee('33%');
         $this->get('/admin/ratings?rating=unsatisfied')->assertOk()->assertSee('النتائج قليلة')->assertDontSee('البحث بطيء');
 
         // نموذج التقييم والزر العائم في الواجهة

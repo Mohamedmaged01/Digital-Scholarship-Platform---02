@@ -1,6 +1,6 @@
 {{--
     تقييم أداء الخدمة (نموذج الوكالة): زر عائم بجوار المساعد الذكي، ويظهر النموذج تلقائيًا
-    بعد إغلاق المساعد أو نافذة البحث. الملاحظات إلزامية عند «غير راضٍ ويحتاج إلى تطوير».
+    بعد إغلاق المساعد أو نافذة البحث. حقل الملاحظات يظهر (إلزاميًا) عند «راضٍ ويحتاج إلى تطوير» و«غير راضٍ».
 --}}
 @php
     $ratings = config('kasp.service_ratings');
@@ -63,10 +63,10 @@
                 @endforeach
             </fieldset>
 
-            <div>
+            <div x-show="notesRequired" x-cloak x-transition.opacity>
                 <label for="rating-notes" class="flex items-center gap-1.5 text-[12px] font-bold text-forest-800">
-                    <x-lucide-notebook-pen class="size-3.5 text-gold-600" /> {{ __('ملاحظات إضافية') }}
-                    <span x-show="notesRequired" class="text-red-500">({{ __('إلزامية') }})</span>
+                    <x-lucide-notebook-pen class="size-3.5 text-gold-600" /> {{ __('ملاحظات المستفيد') }}
+                    <span class="text-red-500">({{ __('إلزامية') }})</span>
                 </label>
                 <p class="mt-1 text-[11px] text-slate-400">{{ __('إذا كان لديك أي مقترحات أو تفاصيل أخرى لتحسين محرك البحث، يرجى كتابتها هنا:') }}</p>
                 <textarea id="rating-notes" x-model="notes" rows="3" maxlength="2000" :required="notesRequired"

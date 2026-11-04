@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 /** تقييم المستفيد لأداء الخدمة (البحث والمساعد الذكي). */
 class ServiceRating extends Model
 {
-    public const RATINGS = ['satisfied', 'unsatisfied', 'needs_improvement'];
+    public const RATINGS = ['satisfied', 'needs_improvement', 'unsatisfied'];
 
     public const SOURCES = ['widget', 'assistant', 'search'];
 

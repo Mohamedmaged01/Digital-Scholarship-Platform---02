@@ -26,7 +26,6 @@ class SiteSearch
         '#matcher' => 'مطابقة توصية توافق اسئلة توجيه ضوابط',
         '#news' => 'اخبار اعلانات اعلام مستجدات',
         '#journey' => 'خارطه طريق محطات رحله خطوات تقديم مستندات ترشيح',
-        '#assistant' => 'مساعد ذكي دردشه اسئله اجابات محاوره تواصل لوحه',
         '#faq' => 'اسئله شائعه اجابات استفسارات',
         '/contact' => 'اتصل بنا تواصل راسلنا نموذج رساله بريد هاتف موظف دعم',
     ];
@@ -136,7 +135,7 @@ class SiteSearch
             $add("faq-{$i}", 'faq', __('الأسئلة الشائعة'), $f['q'], self::excerpt($f['a']), '#faq', "{$f['q']} {$f['a']}");
         }
         foreach (KbEntry::all() as $k) {
-            $add("kb-{$k->id}", 'kb', __('أسئلة المساعد الذكي'), $k->question, self::excerpt($k->answer), '#assistant',
+            $add("kb-{$k->id}", 'kb', __('أسئلة المساعد الذكي'), $k->question, self::excerpt($k->answer), '#chat',
                 "{$k->question} ".implode(' ', $k->keywords).' سؤال مساعد');
         }
 

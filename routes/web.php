@@ -48,6 +48,8 @@ Route::post('/logout', [LoginController::class, 'destroy'])->middleware('auth')-
 Route::middleware(['auth', 'active'])->prefix('admin')->name('admin.')->group(function () {
     Route::get('/', Admin\DashboardController::class)->name('dashboard');
     Route::get('/search', Admin\SearchController::class)->name('search');
+    // تطبيق تحديثات قاعدة البيانات المعلّقة (للمدير فقط)
+    Route::post('/system/migrate', [Admin\SystemController::class, 'migrate'])->middleware('can:manage-users')->name('system.migrate');
 
     // الأخبار والإعلانات
     Route::get('/news', [Admin\NewsController::class, 'index'])->name('news.index');

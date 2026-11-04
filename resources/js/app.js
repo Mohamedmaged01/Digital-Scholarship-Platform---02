@@ -402,8 +402,9 @@ Alpine.data('serviceRating', (url) => ({
     sending: false,
     done: false,
     error: '',
+    /** «راضٍ ويحتاج إلى تطوير» و«غير راضٍ» يُظهران حقل الملاحظات ويجعلانه إلزاميًا */
     get notesRequired() {
-        return this.rating === 'needs_improvement';
+        return ['needs_improvement', 'unsatisfied'].includes(this.rating);
     },
     show({ source = 'widget', auto = false } = {}) {
         if (auto && (sessionFlag('kasp-rated') || sessionFlag('kasp-rating-asked'))) return;
@@ -416,7 +417,7 @@ Alpine.data('serviceRating', (url) => ({
         this.sending = true;
         this.error = '';
         try {
-            await http(url, { method: 'POST', body: { rating: this.rating, notes: this.notes, source: this.source } });
+            await http(url, { method: 'POST', body: { rating: this.rating, notes: this.notesRequired ? this.notes : '', source: this.source } });
             sessionFlag('kasp-rated', '1');
             Object.assign(this, { done: true, rating: '', notes: '' });
         } catch {
@@ -496,6 +497,12 @@ Alpine.data('searchOverlay', (searchUrl, quickLinks, icons) => ({
     go(r) {
         if (!r) return;
         this.open = false;
+        // أسئلة بنك المعلومات: تُطرح على المساعد الذكي في النافذة العائمة
+        if (r.href === '#chat') {
+            window.dispatchEvent(new Event('open-chat'));
+            setTimeout(() => window.dispatchEvent(new CustomEvent('ask-assistant', { detail: r.title })), 250);
+            return;
+        }
         if (!r.href.startsWith('#')) {
             window.location.href = r.href;
             return;
